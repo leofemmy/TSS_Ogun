@@ -1,0 +1,1568 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7CFABEAA-4DA8-45E7-B5FF-C484C5DD6F5C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BankReconciliation</RootNamespace>
+    <AssemblyName>BankReconciliation</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>coins.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutomaticUpdater">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\wyBuild\AutomaticUpdater\AutomaticUpdater.dll</HintPath>
+    </Reference>
+    <Reference Include="BondLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BondLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Docs.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.Wizard, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v20.1.Win, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1.Extensions, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EPPlus">
+      <HintPath>..\..\TestExcel\TestExcel\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="MosesClassLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TaxSmartSuite\bin\Debug\MosesClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SmsClientLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\SmsClientLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TaxSmartConfiguration">
+      <HintPath>..\TaxSmartConfiguration.dll</HintPath>
+    </Reference>
+    <Reference Include="TaxSmartConfiguration.Winform">
+      <HintPath>..\TaxSmartConfiguration.Winform.dll</HintPath>
+    </Reference>
+    <Reference Include="TaxSmartSuite">
+      <HintPath>..\TaxSmartSuite\bin\x86\Debug\TaxSmartSuite.exe</HintPath>
+    </Reference>
+    <Reference Include="TaxSmartSuite.AutoUpdate">
+      <HintPath>..\..\REEMS\REEMS\TaxSmartSuite.AutoUpdate.dll</HintPath>
+    </Reference>
+    <Reference Include="Tripous, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TaxSmartSuite\bin\Debug\Tripous.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\DialogResult.cs" />
+    <Compile Include="Class\EmailModel.cs" />
+    <Compile Include="Class\EncryptionConfiguration.cs" />
+    <Compile Include="Class\GetReceiptNumber.cs" />
+    <Compile Include="Class\GridCheckMarksSelection.cs" />
+    <Compile Include="Class\GridRadioGroupColumnHelper.cs" />
+    <Compile Include="Class\HttpServiceManager.cs" />
+    <Compile Include="Class\MessageBoxManager.cs" />
+    <Compile Include="Class\PasswordStrength.cs" />
+    <Compile Include="Class\ResetPasswordService.cs" />
+    <Compile Include="Class\SingleApplication.cs" />
+    <Compile Include="Class\Token.cs" />
+    <Compile Include="Dataset\Account.cs" />
+    <Compile Include="Dataset\Allocation.cs" />
+    <Compile Include="Dataset\Bank.cs" />
+    <Compile Include="Dataset\BankDetails.cs" />
+    <Compile Include="Dataset\dsTransaction.cs">
+      <DependentUpon>dsTransaction.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\dsTransaction.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTransaction.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset\NTCollection.cs" />
+    <Compile Include="Dataset\NtmBank.cs" />
+    <Compile Include="Dataset\Payment.cs" />
+    <Compile Include="Dataset\PostedList.cs" />
+    <Compile Include="Dataset\PostingRequest.cs" />
+    <Compile Include="Dataset\Reems.cs" />
+    <Compile Include="Dataset\ReportSchedule.cs" />
+    <Compile Include="Dataset\Reportyear.cs" />
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAccountBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAccountBank.designer.cs">
+      <DependentUpon>FrmAccountBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAgencyUk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAgencyUk.Designer.cs">
+      <DependentUpon>FrmAgencyUk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAnalysis.Designer.cs">
+      <DependentUpon>FrmAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmBatch.Designer.cs">
+      <DependentUpon>FrmBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmChangePassword.Designer.cs" />
+    <Compile Include="Forms\FrmClear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmClear.Designer.cs">
+      <DependentUpon>FrmClear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCloseFinanical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCloseFinanical.Designer.cs">
+      <DependentUpon>FrmCloseFinanical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCompareValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCompareValue.Designer.cs">
+      <DependentUpon>FrmCompareValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmBankInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmBankInput.Designer.cs">
+      <DependentUpon>FrmBankInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCashiers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCashiers.designer.cs">
+      <DependentUpon>FrmCashiers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCollectionControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCollectionControl.Designer.cs">
+      <DependentUpon>FrmCollectionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCollectView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCollectView.Designer.cs">
+      <DependentUpon>FrmCollectView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDelist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDelist.Designer.cs">
+      <DependentUpon>FrmDelist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmExchangeRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmExchangeRate.Designer.cs">
+      <DependentUpon>FrmExchangeRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmExecption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmExecption.Designer.cs">
+      <DependentUpon>FrmExecption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frmexistbatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frmexistbatch.Designer.cs">
+      <DependentUpon>Frmexistbatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFinanicalYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFinanicalYear.Designer.cs">
+      <DependentUpon>FrmFinanicalYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFirstApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFirstApproval.Designer.cs">
+      <DependentUpon>FrmFirstApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmGenView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGenView.Designer.cs">
+      <DependentUpon>FrmGenView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmGet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGet.Designer.cs">
+      <DependentUpon>FrmGet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmIGR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmIGR.Designer.cs">
+      <DependentUpon>FrmIGR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmLogin.Designer.cs" />
+    <Compile Include="Forms\FrmMatched.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMatched.Designer.cs">
+      <DependentUpon>FrmMatched.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMessage.Designer.cs">
+      <DependentUpon>FrmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMinistryApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMinistryApproval.Designer.cs">
+      <DependentUpon>FrmMinistryApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPeriods.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPeriods.Designer.cs">
+      <DependentUpon>FrmPeriods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPostExPayDirect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPostExPayDirect.Designer.cs">
+      <DependentUpon>FrmPostExPayDirect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPosting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPosting.Designer.cs">
+      <DependentUpon>FrmPosting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPostTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPostTransaction.Designer.cs">
+      <DependentUpon>FrmPostTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmReclassified.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReclassified.Designer.cs">
+      <DependentUpon>FrmReclassified.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmReclassifiedResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReclassifiedResult.Designer.cs">
+      <DependentUpon>FrmReclassifiedResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmReconciliationperid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReconciliationperid.Designer.cs">
+      <DependentUpon>FrmReconciliationperid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmReportIGR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReportIGR.Designer.cs">
+      <DependentUpon>FrmReportIGR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmReportPosting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReportPosting.Designer.cs">
+      <DependentUpon>FrmReportPosting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRequest.Designer.cs">
+      <DependentUpon>FrmRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmRequestNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRequestNew.Designer.cs">
+      <DependentUpon>FrmRequestNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmRevenuetemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRevenuetemp.Designer.cs">
+      <DependentUpon>FrmRevenuetemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSchedule.Designer.cs">
+      <DependentUpon>FrmSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmStateRef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmStateRef.Designer.cs">
+      <DependentUpon>FrmStateRef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSummaryAG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSummaryAG.Designer.cs">
+      <DependentUpon>FrmSummaryAG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSwept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSwept.Designer.cs">
+      <DependentUpon>FrmSwept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTempRevenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTempRevenue.Designer.cs">
+      <DependentUpon>FrmTempRevenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTest.Designer.cs">
+      <DependentUpon>FrmTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmtoken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmtoken.Designer.cs">
+      <DependentUpon>frmtoken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTransaction.Designer.cs">
+      <DependentUpon>FrmTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTransactionPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTransactionPost.Designer.cs">
+      <DependentUpon>FrmTransactionPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTransactionSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTransactionSetup.Designer.cs">
+      <DependentUpon>FrmTransactionSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frmunswept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frmunswept.Designer.cs">
+      <DependentUpon>Frmunswept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmUpload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmUpload.Designer.cs">
+      <DependentUpon>FrmUpload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmValidateExPayDirect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmValidateExPayDirect.Designer.cs">
+      <DependentUpon>FrmValidateExPayDirect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmViewAllocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmViewAllocation.Designer.cs">
+      <DependentUpon>FrmViewAllocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmViewTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmViewTransaction.Designer.cs">
+      <DependentUpon>FrmViewTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmYearly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmYearly.Designer.cs">
+      <DependentUpon>FrmYearly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmZonalTemp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmZonalTemp.Designer.cs">
+      <DependentUpon>FrmZonalTemp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MDIMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MDIMain.designer.cs">
+      <DependentUpon>MDIMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MDIMains.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MDIMains.Designer.cs">
+      <DependentUpon>MDIMains.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\XtraRepAgencyDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepAgencyDetails.Designer.cs">
+      <DependentUpon>XtraRepAgencyDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepAkwaIGR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepAkwaIGR.Designer.cs">
+      <DependentUpon>XtraRepAkwaIGR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepAkwaPay.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepAkwaPay.Designer.cs">
+      <DependentUpon>XtraRepAkwaPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepAllocatereport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepAllocatereport.Designer.cs">
+      <DependentUpon>XtraRepAllocatereport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepBankDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepBankDetails.Designer.cs">
+      <DependentUpon>XtraRepBankDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepBankPayDirect.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepBankPayDirect.Designer.cs">
+      <DependentUpon>XtraRepBankPayDirect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepBankReems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepBankReems.Designer.cs">
+      <DependentUpon>XtraRepBankReems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepBothBankPaydirect.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepBothBankPaydirect.Designer.cs">
+      <DependentUpon>XtraRepBothBankPaydirect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepConsolidateCrosstab.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepConsolidateCrosstab.Designer.cs">
+      <DependentUpon>XtraRepConsolidateCrosstab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepConsolidated.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepConsolidated.Designer.cs">
+      <DependentUpon>XtraRepConsolidated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepCrossTab.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepCrossTab.Designer.cs">
+      <DependentUpon>XtraRepCrossTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepCrossTabCon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepCrossTabCon.Designer.cs">
+      <DependentUpon>XtraRepCrossTabCon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepDeltaIGR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepDeltaIGR.Designer.cs">
+      <DependentUpon>XtraRepDeltaIGR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepGen.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepGen.Designer.cs">
+      <DependentUpon>XtraRepGen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepIGRAccount.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepIGRAccount.Designer.cs">
+      <DependentUpon>XtraRepIGRAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepDetails.Designer.cs">
+      <DependentUpon>XtraRepDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepIGRAccountDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepIGRAccountDetails.Designer.cs">
+      <DependentUpon>XtraRepIGRAccountDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepIGRAccounts.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepIGRAccounts.Designer.cs">
+      <DependentUpon>XtraRepIGRAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepIGRPay.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepIGRPay.Designer.cs">
+      <DependentUpon>XtraRepIGRPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepIGRSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepIGRSummary.Designer.cs">
+      <DependentUpon>XtraRepIGRSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReportAccounts.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReportAccounts.Designer.cs">
+      <DependentUpon>XtraReportAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReposting.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReposting.Designer.cs">
+      <DependentUpon>XtraReposting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepPay.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepPay.Designer.cs">
+      <DependentUpon>XtraRepPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\xtrarepPayAnalysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\xtrarepPayAnalysis.Designer.cs">
+      <DependentUpon>xtrarepPayAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepPayDirect.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepPayDirect.Designer.cs">
+      <DependentUpon>XtraRepPayDirect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepPayDirectBank.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepPayDirectBank.Designer.cs">
+      <DependentUpon>XtraRepPayDirectBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepPayment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepPayment.Designer.cs">
+      <DependentUpon>XtraRepPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepPeriodSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepPeriodSummary.Designer.cs">
+      <DependentUpon>XtraRepPeriodSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepPosted.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepPosted.Designer.cs">
+      <DependentUpon>XtraRepPosted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepPostedlist.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepPostedlist.Designer.cs">
+      <DependentUpon>XtraRepPostedlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepPostedTrans.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepPostedTrans.Designer.cs">
+      <DependentUpon>XtraRepPostedTrans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepReconDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepReconDetails.Designer.cs">
+      <DependentUpon>XtraRepReconDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepReconDetailsReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepReconDetailsReport.Designer.cs">
+      <DependentUpon>XtraRepReconDetailsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepReportControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepReportControl.Designer.cs">
+      <DependentUpon>XtraRepReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\xtraRepRequest.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\xtraRepRequest.Designer.cs">
+      <DependentUpon>xtraRepRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepReversal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepReversal.Designer.cs">
+      <DependentUpon>XtraRepReversal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepSchedule.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepSchedule.Designer.cs">
+      <DependentUpon>XtraRepSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepSubSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepSubSummary.Designer.cs">
+      <DependentUpon>XtraRepSubSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepSummary.Designer.cs">
+      <DependentUpon>XtraRepSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepSummrayAgency.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepSummrayAgency.Designer.cs">
+      <DependentUpon>XtraRepSummrayAgency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepSummRevenue.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepSummRevenue.Designer.cs">
+      <DependentUpon>XtraRepSummRevenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepTransaction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepTransaction.Designer.cs">
+      <DependentUpon>XtraRepTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepUnswept.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepUnswept.Designer.cs">
+      <DependentUpon>XtraRepUnswept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepyear.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepyear.Designer.cs">
+      <DependentUpon>XtraRepyear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\xtraRepyearly.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\xtraRepyearly.Designer.cs">
+      <DependentUpon>xtraRepyearly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraSwept.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraSwept.Designer.cs">
+      <DependentUpon>XtraSwept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tblTransactionPostingRequestViewPostBankStatment.cs">
+      <DependentUpon>tblTransactionPostingRequestViewPostBankStatment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="tblTransactionPostingRequestViewPostBankStatment.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tblTransactionPostingRequestViewPostBankStatment.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CentralAkwa\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CentralDetla\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Centralogun\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Centraloyo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Collections\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ProcessSms\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ReceiptCollection\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ReconciliationUpload\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\StateAkwa\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\StateDelta\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\StateOgun\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\StateOyo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAccountBank.resx">
+      <DependentUpon>FrmAccountBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAgencyUk.resx">
+      <DependentUpon>FrmAgencyUk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAnalysis.resx">
+      <DependentUpon>FrmAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmBatch.resx">
+      <DependentUpon>FrmBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmChangePassword.resx" />
+    <EmbeddedResource Include="Forms\FrmClear.resx">
+      <DependentUpon>FrmClear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCloseFinanical.resx">
+      <DependentUpon>FrmCloseFinanical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCompareValue.resx">
+      <DependentUpon>FrmCompareValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmBankInput.resx">
+      <DependentUpon>FrmBankInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCashiers.resx">
+      <DependentUpon>FrmCashiers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCollectionControl.resx">
+      <DependentUpon>FrmCollectionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCollectView.resx">
+      <DependentUpon>FrmCollectView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDelist.resx">
+      <DependentUpon>FrmDelist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmExchangeRate.resx">
+      <DependentUpon>FrmExchangeRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmExecption.resx">
+      <DependentUpon>FrmExecption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frmexistbatch.resx">
+      <DependentUpon>Frmexistbatch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFinanicalYear.resx">
+      <DependentUpon>FrmFinanicalYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFirstApproval.resx">
+      <DependentUpon>FrmFirstApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmGenView.resx">
+      <DependentUpon>FrmGenView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmGet.resx">
+      <DependentUpon>FrmGet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmIGR.resx">
+      <DependentUpon>FrmIGR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLogin.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMatched.resx">
+      <DependentUpon>FrmMatched.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMessage.resx">
+      <DependentUpon>FrmMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMinistryApproval.resx">
+      <DependentUpon>FrmMinistryApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPeriods.resx">
+      <DependentUpon>FrmPeriods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPostExPayDirect.resx">
+      <DependentUpon>FrmPostExPayDirect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPosting.resx">
+      <DependentUpon>FrmPosting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPostTransaction.resx">
+      <DependentUpon>FrmPostTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReclassified.resx">
+      <DependentUpon>FrmReclassified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReclassifiedResult.resx">
+      <DependentUpon>FrmReclassifiedResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReconciliationperid.resx">
+      <DependentUpon>FrmReconciliationperid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReportIGR.resx">
+      <DependentUpon>FrmReportIGR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReportPosting.resx">
+      <DependentUpon>FrmReportPosting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmRequest.resx">
+      <DependentUpon>FrmRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmRequestNew.resx">
+      <DependentUpon>FrmRequestNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmRevenuetemp.resx">
+      <DependentUpon>FrmRevenuetemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSchedule.resx">
+      <DependentUpon>FrmSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmStateRef.resx">
+      <DependentUpon>FrmStateRef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSummaryAG.resx">
+      <DependentUpon>FrmSummaryAG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSwept.resx">
+      <DependentUpon>FrmSwept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTempRevenue.resx">
+      <DependentUpon>FrmTempRevenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTest.resx">
+      <DependentUpon>FrmTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmtoken.resx">
+      <DependentUpon>frmtoken.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTransaction.resx">
+      <DependentUpon>FrmTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTransactionPost.resx">
+      <DependentUpon>FrmTransactionPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTransactionSetup.resx">
+      <DependentUpon>FrmTransactionSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frmunswept.resx">
+      <DependentUpon>Frmunswept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmUpload.resx">
+      <DependentUpon>FrmUpload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmValidateExPayDirect.resx">
+      <DependentUpon>FrmValidateExPayDirect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmViewAllocation.resx">
+      <DependentUpon>FrmViewAllocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmViewTransaction.resx">
+      <DependentUpon>FrmViewTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmYearly.resx">
+      <DependentUpon>FrmYearly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmZonalTemp.resx">
+      <DependentUpon>FrmZonalTemp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MDIMain.resx">
+      <DependentUpon>MDIMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MDIMains.resx">
+      <DependentUpon>MDIMains.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\xrTranAccount.resx">
+      <DependentUpon>xrTranAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepAgencyDetails.resx">
+      <DependentUpon>XtraRepAgencyDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepAkwaIGR.resx">
+      <DependentUpon>XtraRepAkwaIGR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepAkwaPay.resx">
+      <DependentUpon>XtraRepAkwaPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepAllocatereport.resx">
+      <DependentUpon>XtraRepAllocatereport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepBankDetails.resx">
+      <DependentUpon>XtraRepBankDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepBankPayDirect.resx">
+      <DependentUpon>XtraRepBankPayDirect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepBankReems.resx">
+      <DependentUpon>XtraRepBankReems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepBothBankPaydirect.resx">
+      <DependentUpon>XtraRepBothBankPaydirect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepConsolidateCrosstab.resx">
+      <DependentUpon>XtraRepConsolidateCrosstab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepConsolidated.resx">
+      <DependentUpon>XtraRepConsolidated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepCrossTab.resx">
+      <DependentUpon>XtraRepCrossTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepCrossTabCon.resx">
+      <DependentUpon>XtraRepCrossTabCon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepDeltaIGR.resx">
+      <DependentUpon>XtraRepDeltaIGR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepGen.resx">
+      <DependentUpon>XtraRepGen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepIGRAccount.resx">
+      <DependentUpon>XtraRepIGRAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepDetails.resx">
+      <DependentUpon>XtraRepDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepGeneral.resx">
+      <DependentUpon>XtraRepGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepIGRAccountDetails.resx">
+      <DependentUpon>XtraRepIGRAccountDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepIGRAccounts.resx">
+      <DependentUpon>XtraRepIGRAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepIGRPay.resx">
+      <DependentUpon>XtraRepIGRPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepIGRSummary.resx">
+      <DependentUpon>XtraRepIGRSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReportAccounts.resx">
+      <DependentUpon>XtraReportAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepPay.resx">
+      <DependentUpon>XtraRepPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\xtrarepPayAnalysis.resx">
+      <DependentUpon>xtrarepPayAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepPayDirect.resx">
+      <DependentUpon>XtraRepPayDirect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepPayDirectBank.resx">
+      <DependentUpon>XtraRepPayDirectBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepPayment.resx">
+      <DependentUpon>XtraRepPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepPeriodSummary.resx">
+      <DependentUpon>XtraRepPeriodSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepPosted.resx">
+      <DependentUpon>XtraRepPosted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepPostedlist.resx">
+      <DependentUpon>XtraRepPostedlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepPostedTrans.resx">
+      <DependentUpon>XtraRepPostedTrans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepReconDetails.resx">
+      <DependentUpon>XtraRepReconDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepReconDetailsReport.resx">
+      <DependentUpon>XtraRepReconDetailsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepReportControl.resx">
+      <DependentUpon>XtraRepReportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\xtraRepRequest.resx">
+      <DependentUpon>xtraRepRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepReversal.resx">
+      <DependentUpon>XtraRepReversal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepSchedule.resx">
+      <DependentUpon>XtraRepSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepStatments.resx">
+      <DependentUpon>XtraRepStatments.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report\XtraRepSubSummary.resx">
+      <DependentUpon>XtraRepSubSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepSummary.resx">
+      <DependentUpon>XtraRepSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepSummrayAgency.resx">
+      <DependentUpon>XtraRepSummrayAgency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepSummRevenue.resx">
+      <DependentUpon>XtraRepSummRevenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepTransaction.resx">
+      <DependentUpon>XtraRepTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepUnswept.resx">
+      <DependentUpon>XtraRepUnswept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepyear.resx">
+      <DependentUpon>XtraRepyear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\xtraRepyearly.resx">
+      <DependentUpon>xtraRepyearly.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraSwept.resx">
+      <DependentUpon>XtraSwept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\BankReconciliation.Dataset.Account.datasource" />
+    <None Include="Properties\DataSources\BankReconciliation.Dataset.Bank.datasource" />
+    <None Include="Properties\DataSources\BankReconciliation.Dataset.BankDetails.datasource" />
+    <None Include="Properties\DataSources\BankReconciliation.Dataset.NTCollection.datasource" />
+    <None Include="Properties\DataSources\BankReconciliation.Dataset.NtmBank.datasource" />
+    <None Include="Properties\DataSources\BankReconciliation.Dataset.Payment.datasource" />
+    <None Include="Properties\DataSources\BankReconciliation.Dataset.PostedList.datasource" />
+    <None Include="Properties\DataSources\BankReconciliation.Dataset.PostingRequest.datasource" />
+    <None Include="Properties\DataSources\BankReconciliation.Dataset.Reems.datasource" />
+    <None Include="Properties\DataSources\BankReconciliation.Dataset.ReportSchedule.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Report\xrTranAccount.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\xrTranAccount.Designer.cs">
+      <DependentUpon>xrTranAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepGeneral.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepGeneral.Designer.cs">
+      <DependentUpon>XtraRepGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepStatments.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepStatments.Designer.cs">
+      <DependentUpon>XtraRepStatments.cs</DependentUpon>
+    </Compile>
+    <None Include="tblTransactionPostingRequestViewPostBankStatment.xsc">
+      <DependentUpon>tblTransactionPostingRequestViewPostBankStatment.xsd</DependentUpon>
+    </None>
+    <None Include="tblTransactionPostingRequestViewPostBankStatment.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tblTransactionPostingRequestViewPostBankStatment.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="tblTransactionPostingRequestViewPostBankStatment.xss">
+      <DependentUpon>tblTransactionPostingRequestViewPostBankStatment.xsd</DependentUpon>
+    </None>
+    <None Include="Web References\CentralAkwa\collectionmanager.wsdl" />
+    <None Include="Web References\CentralAkwa\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CentralDetla\collectionmanager.wsdl" />
+    <None Include="Web References\CentralDetla\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Centralogun\collectionmanager.wsdl" />
+    <None Include="Web References\Centralogun\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Centraloyo\collectionmanager.wsdl" />
+    <None Include="Web References\Centraloyo\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Collections\ReceiptService.wsdl" />
+    <None Include="Web References\Collections\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ProcessSms\processSms.wsdl" />
+    <None Include="Web References\ProcessSms\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ReceiptCollection\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ReceiptCollection\serverreems.wsdl" />
+    <None Include="Web References\ReconciliationUpload\reems.wsdl" />
+    <None Include="Web References\ReconciliationUpload\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\StateAkwa\collectionmanager.wsdl" />
+    <None Include="Web References\StateAkwa\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\StateDelta\collectionmanager.wsdl" />
+    <None Include="Web References\StateDelta\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\StateOgun\collectionmanager.wsdl" />
+    <None Include="Web References\StateOgun\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\StateOyo\collectionmanager.wsdl" />
+    <None Include="Web References\StateOyo\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Dataset\dsTransaction.xsc">
+      <DependentUpon>dsTransaction.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset\dsTransaction.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTransaction.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset\dsTransaction.xss">
+      <DependentUpon>dsTransaction.xsd</DependentUpon>
+    </None>
+    <None Include="tmart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogIn2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="coins.ico" />
+    <None Include="Web References\ProcessSms\processSms.disco" />
+    <None Include="Web References\StateDelta\collectionmanager.disco" />
+    <None Include="Web References\StateAkwa\collectionmanager.disco" />
+    <None Include="Web References\StateOyo\collectionmanager.disco" />
+    <None Include="Web References\StateOgun\collectionmanager.disco" />
+    <None Include="Web References\CentralAkwa\collectionmanager.disco" />
+    <None Include="Web References\Centralogun\collectionmanager.disco" />
+    <None Include="Web References\Centraloyo\collectionmanager.disco" />
+    <None Include="Web References\CentralDetla\collectionmanager.disco" />
+    <None Include="Web References\ReconciliationUpload\reems.disco" />
+    <None Include="Web References\Collections\ReceiptService.disco" />
+    <None Include="Web References\ReceiptCollection\serverreems.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://74.208.222.197/OYI_IPS/collectionmanager.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\StateOyo\</RelPath>
+      <UpdateFromURL>http://74.208.222.197/OYI_IPS/collectionmanager.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BankReconciliation_StateOyo_CollectionManager</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.ogunstaterevenue.com/OGS_IPS/CollectionManager.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\StateOgun\</RelPath>
+      <UpdateFromURL>http://www.ogunstaterevenue.com/OGS_IPS/CollectionManager.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BankReconciliation_StateOgun_CollectionManager</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://74.208.222.200/state_akwaibom/collectionmanager.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\StateAkwa\</RelPath>
+      <UpdateFromURL>http://74.208.222.200/state_akwaibom/collectionmanager.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BankReconciliation_StateAkwa_CollectionManager</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.deltabir.com/DSI_IPS/collectionmanager.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\StateDelta\</RelPath>
+      <UpdateFromURL>http://www.deltabir.com/DSI_IPS/collectionmanager.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BankReconciliation_StateDelta_CollectionManager</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.ogunstaterevenue.com/OGS_IPS/ReceiptService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Collections\</RelPath>
+      <UpdateFromURL>http://www.ogunstaterevenue.com/OGS_IPS/ReceiptService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BankReconciliation_Collections_ReceiptService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.reemsonline.com/interswitch/reems.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ReconciliationUpload\</RelPath>
+      <UpdateFromURL>http://www.reemsonline.com/interswitch/reems.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BankReconciliation_ReconciliationUpload_REEMS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.reemsonline.com/serverreems.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ReceiptCollection\</RelPath>
+      <UpdateFromURL>http://www.reemsonline.com/serverreems.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BankReconciliation_ReceiptCollection_SERVERREEMS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.reemsonline.com/SMS/processSms.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ProcessSms\</RelPath>
+      <UpdateFromURL>http://www.reemsonline.com/SMS/processSms.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BankReconciliation_ProcessSms_ProcessSms</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.reemsonline.com/state_akwaibom/collectionmanager.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CentralAkwa\</RelPath>
+      <UpdateFromURL>http://www.reemsonline.com/state_akwaibom/collectionmanager.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BankReconciliation_CentralAkwa_CollectionManager</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.reemsonline.com/DSI_IPS/collectionmanager.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CentralDetla\</RelPath>
+      <UpdateFromURL>http://www.reemsonline.com/DSI_IPS/collectionmanager.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BankReconciliation_CentralDetla_CollectionManager</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.reemsonline.com/OGS_IPS/collectionmanager.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Centralogun\</RelPath>
+      <UpdateFromURL>http://www.reemsonline.com/OGS_IPS/collectionmanager.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BankReconciliation_Centralogun_CollectionManager</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.reemsonline.com/OYI_IPS/collectionmanager.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Centraloyo\</RelPath>
+      <UpdateFromURL>http://www.reemsonline.com/OYI_IPS/collectionmanager.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>BankReconciliation_Centraloyo_CollectionManager</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties DocumentXCommentEditorState="&lt;HtmlEditState&gt;&#xA;  &lt;Attributes /&gt;&#xA;&lt;/HtmlEditState&gt;" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

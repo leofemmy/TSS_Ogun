@@ -1,0 +1,50 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BankReconciliation.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="BankReconciliation_ReceiptCollection_SERVERREEMS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.reemsonline.com/serverreems.asmx</Value>
+    </Setting>
+    <Setting Name="BankReconciliation_Collections_ReceiptService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.ogunstaterevenue.com/OGS_IPS/ReceiptService.asmx</Value>
+    </Setting>
+    <Setting Name="BankReconciliation_ReconciliationUpload_REEMS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.reemsonline.com/interswitch/reems.asmx</Value>
+    </Setting>
+    <Setting Name="BankReconciliation_CentralDetla_CollectionManager" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.reemsonline.com/DSI_IPS/collectionmanager.asmx</Value>
+    </Setting>
+    <Setting Name="BankReconciliation_Centraloyo_CollectionManager" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.reemsonline.com/OYI_IPS/collectionmanager.asmx</Value>
+    </Setting>
+    <Setting Name="BankReconciliation_CentralAkwa_CollectionManager" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.reemsonline.com/state_akwaibom/collectionmanager.asmx</Value>
+    </Setting>
+    <Setting Name="BankReconciliation_StateOyo_CollectionManager" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://74.208.222.197/OYI_IPS/collectionmanager.asmx</Value>
+    </Setting>
+    <Setting Name="BankReconciliation_StateAkwa_CollectionManager" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://74.208.222.200/state_akwaibom/collectionmanager.asmx</Value>
+    </Setting>
+    <Setting Name="BankReconciliation_StateDelta_CollectionManager" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.deltabir.com/DSI_IPS/collectionmanager.asmx</Value>
+    </Setting>
+    <Setting Name="BankReconciliation_StateOgun_CollectionManager" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.ogunstaterevenue.com/OGS_IPS/CollectionManager.asmx</Value>
+    </Setting>
+    <Setting Name="BankReconciliation_ProcessSms_ProcessSms" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.reemsonline.com/SMS/processSms.asmx</Value>
+    </Setting>
+    <Setting Name="BankReconciliation_Centralogun_CollectionManager" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.reemsonline.com/OGS_IPS/collectionmanager.asmx</Value>
+    </Setting>
+    <Setting Name="TaxSmartSuiteRevised_oyoConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=FEMSY;Initial Catalog=TaxSmartSuiteRevisedNewDelta18072016;Persist Security Info=True;User ID=sa;Password=1975&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=FEMSY;Initial Catalog=TaxSmartSuiteRevisedNewDelta18072016;Persist Security Info=True;User ID=sa;Password=1975</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

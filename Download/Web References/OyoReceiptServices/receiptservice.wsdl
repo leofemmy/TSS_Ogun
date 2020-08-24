@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://microsoft.com/webservices/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://microsoft.com/webservices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/webservices/">
+      <s:element name="UploadData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="statecode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="statecode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadDataUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="StationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadDataUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadDataUpdateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadDataCentral">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="statecode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadDataCentralResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadDataCentralResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadDataUpdateCentral">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="statecode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadDataUpdateCentralResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadDataUpdateCentralResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadStationPrintedReceipts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="statecode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadStationPrintedReceiptsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadStationPrintedReceiptsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uploadIssueReceipt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="statecode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="uploadIssueReceiptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uploadIssueReceiptResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadDataIssueReceipt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="statecode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadDataIssueReceiptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadDataIssueReceiptResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadDataUpdateIssueReceipts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="statecode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadDataUpdateIssueReceiptsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadDataUpdateIssueReceiptsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogReceiptsReprintRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ICMAeReceipts" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentRefNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ControlNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RequestSentBy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReasonForRequest" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReprintType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewRevCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewRevName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewAgencyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewAgencyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewPayerName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewPayerAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogReceiptsReprintRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LogReceiptsReprintRequestResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogReceiptsReprint">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="statecode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogReceiptsReprintResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LogReceiptsReprintResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SplitCollection">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ParentRefNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ParentUTIN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stationcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SplitCollectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SplitCollectionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSplitCollection">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSplitCollectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateSplitCollectionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPayerInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="utin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="searchtype" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPayerInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPayerInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiptRequestLog_OnDemand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="paymentrefnumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stationcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sentby" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReceiptRequestLog_OnDemandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiptRequestLog_OnDemandResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReceipt_OnDemand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stationcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReceipt_OnDemandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReceipt_OnDemandResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReceiptUpdate_OnDemand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReceiptUpdate_OnDemandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReceiptUpdate_OnDemandResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReceiptReprintApproved">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReceiptReprintApprovedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReceiptReprintApprovedResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateReceiptReprintApproved">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PayRefs">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateReceiptReprintApprovedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateReceiptReprintApprovedResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UploadDataSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadData" />
+  </wsdl:message>
+  <wsdl:message name="UploadDataSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadData" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadDataUpdate" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadDataUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataCentralSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadDataCentral" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataCentralSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadDataCentralResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataUpdateCentralSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadDataUpdateCentral" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataUpdateCentralSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadDataUpdateCentralResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadStationPrintedReceiptsSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadStationPrintedReceipts" />
+  </wsdl:message>
+  <wsdl:message name="UploadStationPrintedReceiptsSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadStationPrintedReceiptsResponse" />
+  </wsdl:message>
+  <wsdl:message name="uploadIssueReceiptSoapIn">
+    <wsdl:part name="parameters" element="tns:uploadIssueReceipt" />
+  </wsdl:message>
+  <wsdl:message name="uploadIssueReceiptSoapOut">
+    <wsdl:part name="parameters" element="tns:uploadIssueReceiptResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataIssueReceiptSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadDataIssueReceipt" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataIssueReceiptSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadDataIssueReceiptResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataUpdateIssueReceiptsSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadDataUpdateIssueReceipts" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataUpdateIssueReceiptsSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadDataUpdateIssueReceiptsResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogReceiptsReprintRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:LogReceiptsReprintRequest" />
+  </wsdl:message>
+  <wsdl:message name="LogReceiptsReprintRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:LogReceiptsReprintRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogReceiptsReprintSoapIn">
+    <wsdl:part name="parameters" element="tns:LogReceiptsReprint" />
+  </wsdl:message>
+  <wsdl:message name="LogReceiptsReprintSoapOut">
+    <wsdl:part name="parameters" element="tns:LogReceiptsReprintResponse" />
+  </wsdl:message>
+  <wsdl:message name="SplitCollectionSoapIn">
+    <wsdl:part name="parameters" element="tns:SplitCollection" />
+  </wsdl:message>
+  <wsdl:message name="SplitCollectionSoapOut">
+    <wsdl:part name="parameters" element="tns:SplitCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSplitCollectionSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSplitCollection" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSplitCollectionSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSplitCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPayerInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:getPayerInfo" />
+  </wsdl:message>
+  <wsdl:message name="getPayerInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:getPayerInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReceiptRequestLog_OnDemandSoapIn">
+    <wsdl:part name="parameters" element="tns:ReceiptRequestLog_OnDemand" />
+  </wsdl:message>
+  <wsdl:message name="ReceiptRequestLog_OnDemandSoapOut">
+    <wsdl:part name="parameters" element="tns:ReceiptRequestLog_OnDemandResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReceipt_OnDemandSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReceipt_OnDemand" />
+  </wsdl:message>
+  <wsdl:message name="GetReceipt_OnDemandSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReceipt_OnDemandResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReceiptUpdate_OnDemandSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReceiptUpdate_OnDemand" />
+  </wsdl:message>
+  <wsdl:message name="GetReceiptUpdate_OnDemandSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReceiptUpdate_OnDemandResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReceiptReprintApprovedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReceiptReprintApproved" />
+  </wsdl:message>
+  <wsdl:message name="GetReceiptReprintApprovedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReceiptReprintApprovedResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateReceiptReprintApprovedSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateReceiptReprintApproved" />
+  </wsdl:message>
+  <wsdl:message name="UpdateReceiptReprintApprovedSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateReceiptReprintApprovedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ReceiptServiceSoap">
+    <wsdl:operation name="UploadData">
+      <wsdl:input message="tns:UploadDataSoapIn" />
+      <wsdl:output message="tns:UploadDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadData">
+      <wsdl:input message="tns:DownloadDataSoapIn" />
+      <wsdl:output message="tns:DownloadDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataUpdate">
+      <wsdl:input message="tns:DownloadDataUpdateSoapIn" />
+      <wsdl:output message="tns:DownloadDataUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataCentral">
+      <wsdl:input message="tns:DownloadDataCentralSoapIn" />
+      <wsdl:output message="tns:DownloadDataCentralSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataUpdateCentral">
+      <wsdl:input message="tns:DownloadDataUpdateCentralSoapIn" />
+      <wsdl:output message="tns:DownloadDataUpdateCentralSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadStationPrintedReceipts">
+      <wsdl:input message="tns:UploadStationPrintedReceiptsSoapIn" />
+      <wsdl:output message="tns:UploadStationPrintedReceiptsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadIssueReceipt">
+      <wsdl:input message="tns:uploadIssueReceiptSoapIn" />
+      <wsdl:output message="tns:uploadIssueReceiptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataIssueReceipt">
+      <wsdl:input message="tns:DownloadDataIssueReceiptSoapIn" />
+      <wsdl:output message="tns:DownloadDataIssueReceiptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataUpdateIssueReceipts">
+      <wsdl:input message="tns:DownloadDataUpdateIssueReceiptsSoapIn" />
+      <wsdl:output message="tns:DownloadDataUpdateIssueReceiptsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogReceiptsReprintRequest">
+      <wsdl:input message="tns:LogReceiptsReprintRequestSoapIn" />
+      <wsdl:output message="tns:LogReceiptsReprintRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogReceiptsReprint">
+      <wsdl:input message="tns:LogReceiptsReprintSoapIn" />
+      <wsdl:output message="tns:LogReceiptsReprintSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SplitCollection">
+      <wsdl:input message="tns:SplitCollectionSoapIn" />
+      <wsdl:output message="tns:SplitCollectionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSplitCollection">
+      <wsdl:input message="tns:UpdateSplitCollectionSoapIn" />
+      <wsdl:output message="tns:UpdateSplitCollectionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPayerInfo">
+      <wsdl:input message="tns:getPayerInfoSoapIn" />
+      <wsdl:output message="tns:getPayerInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiptRequestLog_OnDemand">
+      <wsdl:input message="tns:ReceiptRequestLog_OnDemandSoapIn" />
+      <wsdl:output message="tns:ReceiptRequestLog_OnDemandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReceipt_OnDemand">
+      <wsdl:input message="tns:GetReceipt_OnDemandSoapIn" />
+      <wsdl:output message="tns:GetReceipt_OnDemandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReceiptUpdate_OnDemand">
+      <wsdl:input message="tns:GetReceiptUpdate_OnDemandSoapIn" />
+      <wsdl:output message="tns:GetReceiptUpdate_OnDemandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReceiptReprintApproved">
+      <wsdl:input message="tns:GetReceiptReprintApprovedSoapIn" />
+      <wsdl:output message="tns:GetReceiptReprintApprovedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceiptReprintApproved">
+      <wsdl:input message="tns:UpdateReceiptReprintApprovedSoapIn" />
+      <wsdl:output message="tns:UpdateReceiptReprintApprovedSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ReceiptServiceSoap" type="tns:ReceiptServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UploadData">
+      <soap:operation soapAction="http://microsoft.com/webservices/UploadData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadData">
+      <soap:operation soapAction="http://microsoft.com/webservices/DownloadData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataUpdate">
+      <soap:operation soapAction="http://microsoft.com/webservices/DownloadDataUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataCentral">
+      <soap:operation soapAction="http://microsoft.com/webservices/DownloadDataCentral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataUpdateCentral">
+      <soap:operation soapAction="http://microsoft.com/webservices/DownloadDataUpdateCentral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadStationPrintedReceipts">
+      <soap:operation soapAction="http://microsoft.com/webservices/UploadStationPrintedReceipts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadIssueReceipt">
+      <soap:operation soapAction="http://microsoft.com/webservices/uploadIssueReceipt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataIssueReceipt">
+      <soap:operation soapAction="http://microsoft.com/webservices/DownloadDataIssueReceipt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataUpdateIssueReceipts">
+      <soap:operation soapAction="http://microsoft.com/webservices/DownloadDataUpdateIssueReceipts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogReceiptsReprintRequest">
+      <soap:operation soapAction="http://microsoft.com/webservices/LogReceiptsReprintRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogReceiptsReprint">
+      <soap:operation soapAction="http://microsoft.com/webservices/LogReceiptsReprint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SplitCollection">
+      <soap:operation soapAction="http://microsoft.com/webservices/SplitCollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSplitCollection">
+      <soap:operation soapAction="http://microsoft.com/webservices/UpdateSplitCollection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPayerInfo">
+      <soap:operation soapAction="http://microsoft.com/webservices/getPayerInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiptRequestLog_OnDemand">
+      <soap:operation soapAction="http://microsoft.com/webservices/ReceiptRequestLog_OnDemand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceipt_OnDemand">
+      <soap:operation soapAction="http://microsoft.com/webservices/GetReceipt_OnDemand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceiptUpdate_OnDemand">
+      <soap:operation soapAction="http://microsoft.com/webservices/GetReceiptUpdate_OnDemand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceiptReprintApproved">
+      <soap:operation soapAction="http://microsoft.com/webservices/GetReceiptReprintApproved" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceiptReprintApproved">
+      <soap:operation soapAction="http://microsoft.com/webservices/UpdateReceiptReprintApproved" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ReceiptServiceSoap12" type="tns:ReceiptServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UploadData">
+      <soap12:operation soapAction="http://microsoft.com/webservices/UploadData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadData">
+      <soap12:operation soapAction="http://microsoft.com/webservices/DownloadData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataUpdate">
+      <soap12:operation soapAction="http://microsoft.com/webservices/DownloadDataUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataCentral">
+      <soap12:operation soapAction="http://microsoft.com/webservices/DownloadDataCentral" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataUpdateCentral">
+      <soap12:operation soapAction="http://microsoft.com/webservices/DownloadDataUpdateCentral" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadStationPrintedReceipts">
+      <soap12:operation soapAction="http://microsoft.com/webservices/UploadStationPrintedReceipts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadIssueReceipt">
+      <soap12:operation soapAction="http://microsoft.com/webservices/uploadIssueReceipt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataIssueReceipt">
+      <soap12:operation soapAction="http://microsoft.com/webservices/DownloadDataIssueReceipt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataUpdateIssueReceipts">
+      <soap12:operation soapAction="http://microsoft.com/webservices/DownloadDataUpdateIssueReceipts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogReceiptsReprintRequest">
+      <soap12:operation soapAction="http://microsoft.com/webservices/LogReceiptsReprintRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogReceiptsReprint">
+      <soap12:operation soapAction="http://microsoft.com/webservices/LogReceiptsReprint" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SplitCollection">
+      <soap12:operation soapAction="http://microsoft.com/webservices/SplitCollection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSplitCollection">
+      <soap12:operation soapAction="http://microsoft.com/webservices/UpdateSplitCollection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPayerInfo">
+      <soap12:operation soapAction="http://microsoft.com/webservices/getPayerInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiptRequestLog_OnDemand">
+      <soap12:operation soapAction="http://microsoft.com/webservices/ReceiptRequestLog_OnDemand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceipt_OnDemand">
+      <soap12:operation soapAction="http://microsoft.com/webservices/GetReceipt_OnDemand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceiptUpdate_OnDemand">
+      <soap12:operation soapAction="http://microsoft.com/webservices/GetReceiptUpdate_OnDemand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReceiptReprintApproved">
+      <soap12:operation soapAction="http://microsoft.com/webservices/GetReceiptReprintApproved" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceiptReprintApproved">
+      <soap12:operation soapAction="http://microsoft.com/webservices/UpdateReceiptReprintApproved" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReceiptService">
+    <wsdl:port name="ReceiptServiceSoap" binding="tns:ReceiptServiceSoap">
+      <soap:address location="http://74.208.222.197/state_oyo/receiptservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ReceiptServiceSoap12" binding="tns:ReceiptServiceSoap12">
+      <soap12:address location="http://74.208.222.197/state_oyo/receiptservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

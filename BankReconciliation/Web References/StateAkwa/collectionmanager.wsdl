@@ -1,0 +1,2568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://microsoft.com/webservices/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://microsoft.com/webservices/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/webservices/">
+      <s:element name="CollectionTransfer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_dataset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CollectionTransferResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CollectionTransferResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="statecode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadDataUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSetCredentials">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="statecode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadDataUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadDataUpdateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadDataTaxSmart">
+        <s:complexType />
+      </s:element>
+      <s:element name="DownloadDataTaxSmartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadDataTaxSmartResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadDataUpdateTaxSmart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadDataUpdateTaxSmartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadDataUpdateTaxSmartResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaxPayerUploadData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="statecode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaxPayerUploadDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TaxPayerUploadDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaxAgentUploadData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="statecode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TaxAgentUploadDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TaxAgentUploadDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPaymentInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="statecode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="keyword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="taxPayerType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPaymentInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPaymentInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPaymentInfo2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="statecode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="keyword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="taxPayerType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="localusername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Consultantid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPaymentInfo2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPaymentInfo2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TccReverse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="statecode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="consultantid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="reversaltype" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="localusername" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TccReverseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TccReverseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateUtin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UTIN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="statecode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PayerType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TccNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidateUtinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ValidateUtinResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TccAdvancePayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="statecode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TccAdvancePaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TccAdvancePaymentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchPaymentForPAYENormalisation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="users" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="keyword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FetchPaymentForPAYENormalisationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FetchPaymentForPAYENormalisationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadTaxAgentPaymentHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadTaxAgentPaymentHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadTaxAgentPaymentHistoryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadTaxAgentAnnualReturn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="users" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadTaxAgentAnnualReturnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadTaxAgentAnnualReturnResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PAYEPaymentBreakDown">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="TaxAgentUTIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Year" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Postedby" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PAYEPaymentBreakDownResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PAYEPaymentBreakDownResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PAYEReverseBreakDown">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BatchID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Users" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PAYEReverseBreakDownResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PAYEReverseBreakDownResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PAYEReverseTaxAgentPaymentHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PAYEReverseTaxAgentPaymentHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PAYEReverseTaxAgentPaymentHistoryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PAYEReverseTaxAgentNormalisation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="users" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PAYEReverseTaxAgentNormalisationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PAYEReverseTaxAgentNormalisationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaxAgentAnnualReturn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TaxAgentUtin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="staffNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaxAgentAnnualReturnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTaxAgentAnnualReturnResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoFetchPayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UTIN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="consultantid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoFetchPaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCCdoFetchPaymentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoNormalization">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_dataset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="LocalUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultantID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoNormalizationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCCdoNormalizationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoTransactionLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_dataset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="consultantid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoTransactionLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCCdoTransactionLogResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoTransactionLogReversal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BatchNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoTransactionLogReversalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCCdoTransactionLogReversalResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoFetchForNormalization">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_dataset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="consultantid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoFetchForNormalizationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCCdoFetchForNormalizationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TccdoPaymentNormalisationReversal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentRefNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UTIN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TccdoPaymentNormalisationReversalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TccdoPaymentNormalisationReversalResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoSubstitutionFetch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentRefNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UTIN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="consultantid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoSubstitutionFetchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCCdoSubstitutionFetchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoReversalrequestLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BatchNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentRefNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UTIN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TCCNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RequestedBy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessingTaxOfficeCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="_dataset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestComment" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoReversalrequestLogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCCdoReversalrequestLogResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoCheckApprovalStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessingTaxOfficeCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoCheckApprovalStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCCdoCheckApprovalStatusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoCheckApprovalStatus_Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_dataset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessingTaxOfficeCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoCheckApprovalStatus_UpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCCdoCheckApprovalStatus_UpdateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoCheckReversalRequestApprovalStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessingTaxOfficeCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoCheckReversalRequestApprovalStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCCdoCheckReversalRequestApprovalStatusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoCheckReversalRequestApprovalStatus_Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_dataset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessingTaxOfficeCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoCheckReversalRequestApprovalStatus_UpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCCdoCheckReversalRequestApprovalStatus_UpdateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaxAgent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UTIN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaxAgentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTaxAgentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaxPAYE_SINGLE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UTIN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmployeeUTIN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaxPAYE_SINGLEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTaxPAYE_SINGLEResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaxPAYE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UTIN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaxPAYEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTaxPAYEResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaxPAYE_Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="TaxAgentUtin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTaxPAYE_UpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTaxPAYE_UpdateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCGetAnnualReturn_TaxAgent_SINGLE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TaxAgentUtin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmployeeUTIN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCGetAnnualReturn_TaxAgent_SINGLEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCCGetAnnualReturn_TaxAgent_SINGLEResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCGetAnnualReturn_TaxAgent_ALL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TaxAgentUtin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCGetAnnualReturn_TaxAgent_ALLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCCGetAnnualReturn_TaxAgent_ALLResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCGetAnnualReturn_TaxAgent_ALL_Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="TaxAgentUtin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCGetAnnualReturn_TaxAgent_ALL_UpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCCGetAnnualReturn_TaxAgent_ALL_UpdateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCUpdateTaxPayerUTIN_AnnualReturn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCUpdateTaxPayerUTIN_AnnualReturnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCCUpdateTaxPayerUTIN_AnnualReturnResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCGetAnnualReturn_Group">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="StationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCGetAnnualReturn_GroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCCGetAnnualReturn_GroupResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCGetAnnualReturn_Group_CheckStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCGetAnnualReturn_Group_CheckStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCCGetAnnualReturn_Group_CheckStatusResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoModificationRequests">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TCCNO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UTIN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TCCType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaxOffice" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RequestTypeID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="OldValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="RequestedBy" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoModificationRequestsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCCdoModificationRequestsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoModificationCheckApproval">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="_ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TCCdoModificationCheckApprovalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TCCdoModificationCheckApprovalResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TccAssessmentUpload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TccAssessmentUploadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TccAssessmentUploadResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelistUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DelistUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DelistUpdateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CollectionTransferSoapIn">
+    <wsdl:part name="parameters" element="tns:CollectionTransfer" />
+  </wsdl:message>
+  <wsdl:message name="CollectionTransferSoapOut">
+    <wsdl:part name="parameters" element="tns:CollectionTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadData" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadDataUpdate" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadDataUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataTaxSmartSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadDataTaxSmart" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataTaxSmartSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadDataTaxSmartResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataUpdateTaxSmartSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadDataUpdateTaxSmart" />
+  </wsdl:message>
+  <wsdl:message name="DownloadDataUpdateTaxSmartSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadDataUpdateTaxSmartResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaxPayerUploadDataSoapIn">
+    <wsdl:part name="parameters" element="tns:TaxPayerUploadData" />
+  </wsdl:message>
+  <wsdl:message name="TaxPayerUploadDataSoapOut">
+    <wsdl:part name="parameters" element="tns:TaxPayerUploadDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="TaxAgentUploadDataSoapIn">
+    <wsdl:part name="parameters" element="tns:TaxAgentUploadData" />
+  </wsdl:message>
+  <wsdl:message name="TaxAgentUploadDataSoapOut">
+    <wsdl:part name="parameters" element="tns:TaxAgentUploadDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPaymentInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPaymentInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPaymentInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPaymentInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPaymentInfo2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetPaymentInfo2" />
+  </wsdl:message>
+  <wsdl:message name="GetPaymentInfo2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetPaymentInfo2Response" />
+  </wsdl:message>
+  <wsdl:message name="TccReverseSoapIn">
+    <wsdl:part name="parameters" element="tns:TccReverse" />
+  </wsdl:message>
+  <wsdl:message name="TccReverseSoapOut">
+    <wsdl:part name="parameters" element="tns:TccReverseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUtinSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidateUtin" />
+  </wsdl:message>
+  <wsdl:message name="ValidateUtinSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidateUtinResponse" />
+  </wsdl:message>
+  <wsdl:message name="TccAdvancePaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:TccAdvancePayment" />
+  </wsdl:message>
+  <wsdl:message name="TccAdvancePaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:TccAdvancePaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="FetchPaymentForPAYENormalisationSoapIn">
+    <wsdl:part name="parameters" element="tns:FetchPaymentForPAYENormalisation" />
+  </wsdl:message>
+  <wsdl:message name="FetchPaymentForPAYENormalisationSoapOut">
+    <wsdl:part name="parameters" element="tns:FetchPaymentForPAYENormalisationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadTaxAgentPaymentHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:UploadTaxAgentPaymentHistory" />
+  </wsdl:message>
+  <wsdl:message name="UploadTaxAgentPaymentHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:UploadTaxAgentPaymentHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadTaxAgentAnnualReturnSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadTaxAgentAnnualReturn" />
+  </wsdl:message>
+  <wsdl:message name="UploadTaxAgentAnnualReturnSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadTaxAgentAnnualReturnResponse" />
+  </wsdl:message>
+  <wsdl:message name="PAYEPaymentBreakDownSoapIn">
+    <wsdl:part name="parameters" element="tns:PAYEPaymentBreakDown" />
+  </wsdl:message>
+  <wsdl:message name="PAYEPaymentBreakDownSoapOut">
+    <wsdl:part name="parameters" element="tns:PAYEPaymentBreakDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="PAYEReverseBreakDownSoapIn">
+    <wsdl:part name="parameters" element="tns:PAYEReverseBreakDown" />
+  </wsdl:message>
+  <wsdl:message name="PAYEReverseBreakDownSoapOut">
+    <wsdl:part name="parameters" element="tns:PAYEReverseBreakDownResponse" />
+  </wsdl:message>
+  <wsdl:message name="PAYEReverseTaxAgentPaymentHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:PAYEReverseTaxAgentPaymentHistory" />
+  </wsdl:message>
+  <wsdl:message name="PAYEReverseTaxAgentPaymentHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:PAYEReverseTaxAgentPaymentHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="PAYEReverseTaxAgentNormalisationSoapIn">
+    <wsdl:part name="parameters" element="tns:PAYEReverseTaxAgentNormalisation" />
+  </wsdl:message>
+  <wsdl:message name="PAYEReverseTaxAgentNormalisationSoapOut">
+    <wsdl:part name="parameters" element="tns:PAYEReverseTaxAgentNormalisationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTaxAgentAnnualReturnSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTaxAgentAnnualReturn" />
+  </wsdl:message>
+  <wsdl:message name="GetTaxAgentAnnualReturnSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTaxAgentAnnualReturnResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoFetchPaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:TCCdoFetchPayment" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoFetchPaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:TCCdoFetchPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoNormalizationSoapIn">
+    <wsdl:part name="parameters" element="tns:TCCdoNormalization" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoNormalizationSoapOut">
+    <wsdl:part name="parameters" element="tns:TCCdoNormalizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoTransactionLogSoapIn">
+    <wsdl:part name="parameters" element="tns:TCCdoTransactionLog" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoTransactionLogSoapOut">
+    <wsdl:part name="parameters" element="tns:TCCdoTransactionLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoTransactionLogReversalSoapIn">
+    <wsdl:part name="parameters" element="tns:TCCdoTransactionLogReversal" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoTransactionLogReversalSoapOut">
+    <wsdl:part name="parameters" element="tns:TCCdoTransactionLogReversalResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoFetchForNormalizationSoapIn">
+    <wsdl:part name="parameters" element="tns:TCCdoFetchForNormalization" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoFetchForNormalizationSoapOut">
+    <wsdl:part name="parameters" element="tns:TCCdoFetchForNormalizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="TccdoPaymentNormalisationReversalSoapIn">
+    <wsdl:part name="parameters" element="tns:TccdoPaymentNormalisationReversal" />
+  </wsdl:message>
+  <wsdl:message name="TccdoPaymentNormalisationReversalSoapOut">
+    <wsdl:part name="parameters" element="tns:TccdoPaymentNormalisationReversalResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoSubstitutionFetchSoapIn">
+    <wsdl:part name="parameters" element="tns:TCCdoSubstitutionFetch" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoSubstitutionFetchSoapOut">
+    <wsdl:part name="parameters" element="tns:TCCdoSubstitutionFetchResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoReversalrequestLogSoapIn">
+    <wsdl:part name="parameters" element="tns:TCCdoReversalrequestLog" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoReversalrequestLogSoapOut">
+    <wsdl:part name="parameters" element="tns:TCCdoReversalrequestLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoCheckApprovalStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:TCCdoCheckApprovalStatus" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoCheckApprovalStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:TCCdoCheckApprovalStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoCheckApprovalStatus_UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:TCCdoCheckApprovalStatus_Update" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoCheckApprovalStatus_UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:TCCdoCheckApprovalStatus_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoCheckReversalRequestApprovalStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:TCCdoCheckReversalRequestApprovalStatus" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoCheckReversalRequestApprovalStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:TCCdoCheckReversalRequestApprovalStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoCheckReversalRequestApprovalStatus_UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:TCCdoCheckReversalRequestApprovalStatus_Update" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoCheckReversalRequestApprovalStatus_UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:TCCdoCheckReversalRequestApprovalStatus_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTaxAgentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTaxAgent" />
+  </wsdl:message>
+  <wsdl:message name="GetTaxAgentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTaxAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTaxPAYE_SINGLESoapIn">
+    <wsdl:part name="parameters" element="tns:GetTaxPAYE_SINGLE" />
+  </wsdl:message>
+  <wsdl:message name="GetTaxPAYE_SINGLESoapOut">
+    <wsdl:part name="parameters" element="tns:GetTaxPAYE_SINGLEResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTaxPAYESoapIn">
+    <wsdl:part name="parameters" element="tns:GetTaxPAYE" />
+  </wsdl:message>
+  <wsdl:message name="GetTaxPAYESoapOut">
+    <wsdl:part name="parameters" element="tns:GetTaxPAYEResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTaxPAYE_UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTaxPAYE_Update" />
+  </wsdl:message>
+  <wsdl:message name="GetTaxPAYE_UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTaxPAYE_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCCGetAnnualReturn_TaxAgent_SINGLESoapIn">
+    <wsdl:part name="parameters" element="tns:TCCGetAnnualReturn_TaxAgent_SINGLE" />
+  </wsdl:message>
+  <wsdl:message name="TCCGetAnnualReturn_TaxAgent_SINGLESoapOut">
+    <wsdl:part name="parameters" element="tns:TCCGetAnnualReturn_TaxAgent_SINGLEResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCCGetAnnualReturn_TaxAgent_ALLSoapIn">
+    <wsdl:part name="parameters" element="tns:TCCGetAnnualReturn_TaxAgent_ALL" />
+  </wsdl:message>
+  <wsdl:message name="TCCGetAnnualReturn_TaxAgent_ALLSoapOut">
+    <wsdl:part name="parameters" element="tns:TCCGetAnnualReturn_TaxAgent_ALLResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCCGetAnnualReturn_TaxAgent_ALL_UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:TCCGetAnnualReturn_TaxAgent_ALL_Update" />
+  </wsdl:message>
+  <wsdl:message name="TCCGetAnnualReturn_TaxAgent_ALL_UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:TCCGetAnnualReturn_TaxAgent_ALL_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCCUpdateTaxPayerUTIN_AnnualReturnSoapIn">
+    <wsdl:part name="parameters" element="tns:TCCUpdateTaxPayerUTIN_AnnualReturn" />
+  </wsdl:message>
+  <wsdl:message name="TCCUpdateTaxPayerUTIN_AnnualReturnSoapOut">
+    <wsdl:part name="parameters" element="tns:TCCUpdateTaxPayerUTIN_AnnualReturnResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCCGetAnnualReturn_GroupSoapIn">
+    <wsdl:part name="parameters" element="tns:TCCGetAnnualReturn_Group" />
+  </wsdl:message>
+  <wsdl:message name="TCCGetAnnualReturn_GroupSoapOut">
+    <wsdl:part name="parameters" element="tns:TCCGetAnnualReturn_GroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCCGetAnnualReturn_Group_CheckStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:TCCGetAnnualReturn_Group_CheckStatus" />
+  </wsdl:message>
+  <wsdl:message name="TCCGetAnnualReturn_Group_CheckStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:TCCGetAnnualReturn_Group_CheckStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoModificationRequestsSoapIn">
+    <wsdl:part name="parameters" element="tns:TCCdoModificationRequests" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoModificationRequestsSoapOut">
+    <wsdl:part name="parameters" element="tns:TCCdoModificationRequestsResponse" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoModificationCheckApprovalSoapIn">
+    <wsdl:part name="parameters" element="tns:TCCdoModificationCheckApproval" />
+  </wsdl:message>
+  <wsdl:message name="TCCdoModificationCheckApprovalSoapOut">
+    <wsdl:part name="parameters" element="tns:TCCdoModificationCheckApprovalResponse" />
+  </wsdl:message>
+  <wsdl:message name="TccAssessmentUploadSoapIn">
+    <wsdl:part name="parameters" element="tns:TccAssessmentUpload" />
+  </wsdl:message>
+  <wsdl:message name="TccAssessmentUploadSoapOut">
+    <wsdl:part name="parameters" element="tns:TccAssessmentUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="DelistUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:DelistUpdate" />
+  </wsdl:message>
+  <wsdl:message name="DelistUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:DelistUpdateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CollectionManagerSoap">
+    <wsdl:operation name="CollectionTransfer">
+      <wsdl:input message="tns:CollectionTransferSoapIn" />
+      <wsdl:output message="tns:CollectionTransferSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadData">
+      <wsdl:input message="tns:DownloadDataSoapIn" />
+      <wsdl:output message="tns:DownloadDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataUpdate">
+      <wsdl:input message="tns:DownloadDataUpdateSoapIn" />
+      <wsdl:output message="tns:DownloadDataUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataTaxSmart">
+      <wsdl:input message="tns:DownloadDataTaxSmartSoapIn" />
+      <wsdl:output message="tns:DownloadDataTaxSmartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataUpdateTaxSmart">
+      <wsdl:input message="tns:DownloadDataUpdateTaxSmartSoapIn" />
+      <wsdl:output message="tns:DownloadDataUpdateTaxSmartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaxPayerUploadData">
+      <wsdl:input message="tns:TaxPayerUploadDataSoapIn" />
+      <wsdl:output message="tns:TaxPayerUploadDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TaxAgentUploadData">
+      <wsdl:input message="tns:TaxAgentUploadDataSoapIn" />
+      <wsdl:output message="tns:TaxAgentUploadDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentInfo">
+      <wsdl:input message="tns:GetPaymentInfoSoapIn" />
+      <wsdl:output message="tns:GetPaymentInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentInfo2">
+      <wsdl:input message="tns:GetPaymentInfo2SoapIn" />
+      <wsdl:output message="tns:GetPaymentInfo2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TccReverse">
+      <wsdl:input message="tns:TccReverseSoapIn" />
+      <wsdl:output message="tns:TccReverseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUtin">
+      <wsdl:input message="tns:ValidateUtinSoapIn" />
+      <wsdl:output message="tns:ValidateUtinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TccAdvancePayment">
+      <wsdl:input message="tns:TccAdvancePaymentSoapIn" />
+      <wsdl:output message="tns:TccAdvancePaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchPaymentForPAYENormalisation">
+      <wsdl:input message="tns:FetchPaymentForPAYENormalisationSoapIn" />
+      <wsdl:output message="tns:FetchPaymentForPAYENormalisationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadTaxAgentPaymentHistory">
+      <wsdl:input message="tns:UploadTaxAgentPaymentHistorySoapIn" />
+      <wsdl:output message="tns:UploadTaxAgentPaymentHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadTaxAgentAnnualReturn">
+      <wsdl:input message="tns:UploadTaxAgentAnnualReturnSoapIn" />
+      <wsdl:output message="tns:UploadTaxAgentAnnualReturnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PAYEPaymentBreakDown">
+      <wsdl:input message="tns:PAYEPaymentBreakDownSoapIn" />
+      <wsdl:output message="tns:PAYEPaymentBreakDownSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PAYEReverseBreakDown">
+      <wsdl:input message="tns:PAYEReverseBreakDownSoapIn" />
+      <wsdl:output message="tns:PAYEReverseBreakDownSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PAYEReverseTaxAgentPaymentHistory">
+      <wsdl:input message="tns:PAYEReverseTaxAgentPaymentHistorySoapIn" />
+      <wsdl:output message="tns:PAYEReverseTaxAgentPaymentHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PAYEReverseTaxAgentNormalisation">
+      <wsdl:input message="tns:PAYEReverseTaxAgentNormalisationSoapIn" />
+      <wsdl:output message="tns:PAYEReverseTaxAgentNormalisationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxAgentAnnualReturn">
+      <wsdl:input message="tns:GetTaxAgentAnnualReturnSoapIn" />
+      <wsdl:output message="tns:GetTaxAgentAnnualReturnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoFetchPayment">
+      <wsdl:input message="tns:TCCdoFetchPaymentSoapIn" />
+      <wsdl:output message="tns:TCCdoFetchPaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoNormalization">
+      <wsdl:input message="tns:TCCdoNormalizationSoapIn" />
+      <wsdl:output message="tns:TCCdoNormalizationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoTransactionLog">
+      <wsdl:input message="tns:TCCdoTransactionLogSoapIn" />
+      <wsdl:output message="tns:TCCdoTransactionLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoTransactionLogReversal">
+      <wsdl:input message="tns:TCCdoTransactionLogReversalSoapIn" />
+      <wsdl:output message="tns:TCCdoTransactionLogReversalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoFetchForNormalization">
+      <wsdl:input message="tns:TCCdoFetchForNormalizationSoapIn" />
+      <wsdl:output message="tns:TCCdoFetchForNormalizationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TccdoPaymentNormalisationReversal">
+      <wsdl:input message="tns:TccdoPaymentNormalisationReversalSoapIn" />
+      <wsdl:output message="tns:TccdoPaymentNormalisationReversalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoSubstitutionFetch">
+      <wsdl:input message="tns:TCCdoSubstitutionFetchSoapIn" />
+      <wsdl:output message="tns:TCCdoSubstitutionFetchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoReversalrequestLog">
+      <wsdl:input message="tns:TCCdoReversalrequestLogSoapIn" />
+      <wsdl:output message="tns:TCCdoReversalrequestLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoCheckApprovalStatus">
+      <wsdl:input message="tns:TCCdoCheckApprovalStatusSoapIn" />
+      <wsdl:output message="tns:TCCdoCheckApprovalStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoCheckApprovalStatus_Update">
+      <wsdl:input message="tns:TCCdoCheckApprovalStatus_UpdateSoapIn" />
+      <wsdl:output message="tns:TCCdoCheckApprovalStatus_UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoCheckReversalRequestApprovalStatus">
+      <wsdl:input message="tns:TCCdoCheckReversalRequestApprovalStatusSoapIn" />
+      <wsdl:output message="tns:TCCdoCheckReversalRequestApprovalStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoCheckReversalRequestApprovalStatus_Update">
+      <wsdl:input message="tns:TCCdoCheckReversalRequestApprovalStatus_UpdateSoapIn" />
+      <wsdl:output message="tns:TCCdoCheckReversalRequestApprovalStatus_UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxAgent">
+      <wsdl:input message="tns:GetTaxAgentSoapIn" />
+      <wsdl:output message="tns:GetTaxAgentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxPAYE_SINGLE">
+      <wsdl:input message="tns:GetTaxPAYE_SINGLESoapIn" />
+      <wsdl:output message="tns:GetTaxPAYE_SINGLESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxPAYE">
+      <wsdl:input message="tns:GetTaxPAYESoapIn" />
+      <wsdl:output message="tns:GetTaxPAYESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxPAYE_Update">
+      <wsdl:input message="tns:GetTaxPAYE_UpdateSoapIn" />
+      <wsdl:output message="tns:GetTaxPAYE_UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCCGetAnnualReturn_TaxAgent_SINGLE">
+      <wsdl:input message="tns:TCCGetAnnualReturn_TaxAgent_SINGLESoapIn" />
+      <wsdl:output message="tns:TCCGetAnnualReturn_TaxAgent_SINGLESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCCGetAnnualReturn_TaxAgent_ALL">
+      <wsdl:input message="tns:TCCGetAnnualReturn_TaxAgent_ALLSoapIn" />
+      <wsdl:output message="tns:TCCGetAnnualReturn_TaxAgent_ALLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCCGetAnnualReturn_TaxAgent_ALL_Update">
+      <wsdl:input message="tns:TCCGetAnnualReturn_TaxAgent_ALL_UpdateSoapIn" />
+      <wsdl:output message="tns:TCCGetAnnualReturn_TaxAgent_ALL_UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCCUpdateTaxPayerUTIN_AnnualReturn">
+      <wsdl:input message="tns:TCCUpdateTaxPayerUTIN_AnnualReturnSoapIn" />
+      <wsdl:output message="tns:TCCUpdateTaxPayerUTIN_AnnualReturnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCCGetAnnualReturn_Group">
+      <wsdl:input message="tns:TCCGetAnnualReturn_GroupSoapIn" />
+      <wsdl:output message="tns:TCCGetAnnualReturn_GroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCCGetAnnualReturn_Group_CheckStatus">
+      <wsdl:input message="tns:TCCGetAnnualReturn_Group_CheckStatusSoapIn" />
+      <wsdl:output message="tns:TCCGetAnnualReturn_Group_CheckStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoModificationRequests">
+      <wsdl:input message="tns:TCCdoModificationRequestsSoapIn" />
+      <wsdl:output message="tns:TCCdoModificationRequestsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoModificationCheckApproval">
+      <wsdl:input message="tns:TCCdoModificationCheckApprovalSoapIn" />
+      <wsdl:output message="tns:TCCdoModificationCheckApprovalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TccAssessmentUpload">
+      <wsdl:input message="tns:TccAssessmentUploadSoapIn" />
+      <wsdl:output message="tns:TccAssessmentUploadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DelistUpdate">
+      <wsdl:input message="tns:DelistUpdateSoapIn" />
+      <wsdl:output message="tns:DelistUpdateSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CollectionManagerSoap" type="tns:CollectionManagerSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CollectionTransfer">
+      <soap:operation soapAction="http://microsoft.com/webservices/CollectionTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadData">
+      <soap:operation soapAction="http://microsoft.com/webservices/DownloadData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataUpdate">
+      <soap:operation soapAction="http://microsoft.com/webservices/DownloadDataUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataTaxSmart">
+      <soap:operation soapAction="http://microsoft.com/webservices/DownloadDataTaxSmart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataUpdateTaxSmart">
+      <soap:operation soapAction="http://microsoft.com/webservices/DownloadDataUpdateTaxSmart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaxPayerUploadData">
+      <soap:operation soapAction="http://microsoft.com/webservices/TaxPayerUploadData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaxAgentUploadData">
+      <soap:operation soapAction="http://microsoft.com/webservices/TaxAgentUploadData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentInfo">
+      <soap:operation soapAction="http://microsoft.com/webservices/GetPaymentInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentInfo2">
+      <soap:operation soapAction="http://microsoft.com/webservices/GetPaymentInfo2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TccReverse">
+      <soap:operation soapAction="http://microsoft.com/webservices/TccReverse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUtin">
+      <soap:operation soapAction="http://microsoft.com/webservices/ValidateUtin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TccAdvancePayment">
+      <soap:operation soapAction="http://microsoft.com/webservices/TccAdvancePayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchPaymentForPAYENormalisation">
+      <soap:operation soapAction="http://microsoft.com/webservices/FetchPaymentForPAYENormalisation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadTaxAgentPaymentHistory">
+      <soap:operation soapAction="http://microsoft.com/webservices/UploadTaxAgentPaymentHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadTaxAgentAnnualReturn">
+      <soap:operation soapAction="http://microsoft.com/webservices/UploadTaxAgentAnnualReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PAYEPaymentBreakDown">
+      <soap:operation soapAction="http://microsoft.com/webservices/PAYEPaymentBreakDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PAYEReverseBreakDown">
+      <soap:operation soapAction="http://microsoft.com/webservices/PAYEReverseBreakDown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PAYEReverseTaxAgentPaymentHistory">
+      <soap:operation soapAction="http://microsoft.com/webservices/PAYEReverseTaxAgentPaymentHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PAYEReverseTaxAgentNormalisation">
+      <soap:operation soapAction="http://microsoft.com/webservices/PAYEReverseTaxAgentNormalisation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxAgentAnnualReturn">
+      <soap:operation soapAction="http://microsoft.com/webservices/GetTaxAgentAnnualReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoFetchPayment">
+      <soap:operation soapAction="http://microsoft.com/webservices/TCCdoFetchPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoNormalization">
+      <soap:operation soapAction="http://microsoft.com/webservices/TCCdoNormalization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoTransactionLog">
+      <soap:operation soapAction="http://microsoft.com/webservices/TCCdoTransactionLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoTransactionLogReversal">
+      <soap:operation soapAction="http://microsoft.com/webservices/TCCdoTransactionLogReversal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoFetchForNormalization">
+      <soap:operation soapAction="http://microsoft.com/webservices/TCCdoFetchForNormalization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TccdoPaymentNormalisationReversal">
+      <soap:operation soapAction="http://microsoft.com/webservices/TccdoPaymentNormalisationReversal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoSubstitutionFetch">
+      <soap:operation soapAction="http://microsoft.com/webservices/TCCdoSubstitutionFetch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoReversalrequestLog">
+      <soap:operation soapAction="http://microsoft.com/webservices/TCCdoReversalrequestLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoCheckApprovalStatus">
+      <soap:operation soapAction="http://microsoft.com/webservices/TCCdoCheckApprovalStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoCheckApprovalStatus_Update">
+      <soap:operation soapAction="http://microsoft.com/webservices/TCCdoCheckApprovalStatus_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoCheckReversalRequestApprovalStatus">
+      <soap:operation soapAction="http://microsoft.com/webservices/TCCdoCheckReversalRequestApprovalStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoCheckReversalRequestApprovalStatus_Update">
+      <soap:operation soapAction="http://microsoft.com/webservices/TCCdoCheckReversalRequestApprovalStatus_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxAgent">
+      <soap:operation soapAction="http://microsoft.com/webservices/GetTaxAgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxPAYE_SINGLE">
+      <soap:operation soapAction="http://microsoft.com/webservices/GetTaxPAYE_SINGLE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxPAYE">
+      <soap:operation soapAction="http://microsoft.com/webservices/GetTaxPAYE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxPAYE_Update">
+      <soap:operation soapAction="http://microsoft.com/webservices/GetTaxPAYE_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCGetAnnualReturn_TaxAgent_SINGLE">
+      <soap:operation soapAction="http://microsoft.com/webservices/TCCGetAnnualReturn_TaxAgent_SINGLE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCGetAnnualReturn_TaxAgent_ALL">
+      <soap:operation soapAction="http://microsoft.com/webservices/TCCGetAnnualReturn_TaxAgent_ALL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCGetAnnualReturn_TaxAgent_ALL_Update">
+      <soap:operation soapAction="http://microsoft.com/webservices/TCCGetAnnualReturn_TaxAgent_ALL_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCUpdateTaxPayerUTIN_AnnualReturn">
+      <soap:operation soapAction="http://microsoft.com/webservices/TCCUpdateTaxPayerUTIN_AnnualReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCGetAnnualReturn_Group">
+      <soap:operation soapAction="http://microsoft.com/webservices/TCCGetAnnualReturn_Group" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCGetAnnualReturn_Group_CheckStatus">
+      <soap:operation soapAction="http://microsoft.com/webservices/TCCGetAnnualReturn_Group_CheckStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoModificationRequests">
+      <soap:operation soapAction="http://microsoft.com/webservices/TCCdoModificationRequests" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoModificationCheckApproval">
+      <soap:operation soapAction="http://microsoft.com/webservices/TCCdoModificationCheckApproval" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TccAssessmentUpload">
+      <soap:operation soapAction="http://microsoft.com/webservices/TccAssessmentUpload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelistUpdate">
+      <soap:operation soapAction="http://microsoft.com/webservices/DelistUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CollectionManagerSoap12" type="tns:CollectionManagerSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CollectionTransfer">
+      <soap12:operation soapAction="http://microsoft.com/webservices/CollectionTransfer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadData">
+      <soap12:operation soapAction="http://microsoft.com/webservices/DownloadData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataUpdate">
+      <soap12:operation soapAction="http://microsoft.com/webservices/DownloadDataUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataTaxSmart">
+      <soap12:operation soapAction="http://microsoft.com/webservices/DownloadDataTaxSmart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadDataUpdateTaxSmart">
+      <soap12:operation soapAction="http://microsoft.com/webservices/DownloadDataUpdateTaxSmart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaxPayerUploadData">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TaxPayerUploadData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TaxAgentUploadData">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TaxAgentUploadData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentInfo">
+      <soap12:operation soapAction="http://microsoft.com/webservices/GetPaymentInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentInfo2">
+      <soap12:operation soapAction="http://microsoft.com/webservices/GetPaymentInfo2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TccReverse">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TccReverse" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateUtin">
+      <soap12:operation soapAction="http://microsoft.com/webservices/ValidateUtin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TccAdvancePayment">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TccAdvancePayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchPaymentForPAYENormalisation">
+      <soap12:operation soapAction="http://microsoft.com/webservices/FetchPaymentForPAYENormalisation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadTaxAgentPaymentHistory">
+      <soap12:operation soapAction="http://microsoft.com/webservices/UploadTaxAgentPaymentHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadTaxAgentAnnualReturn">
+      <soap12:operation soapAction="http://microsoft.com/webservices/UploadTaxAgentAnnualReturn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PAYEPaymentBreakDown">
+      <soap12:operation soapAction="http://microsoft.com/webservices/PAYEPaymentBreakDown" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PAYEReverseBreakDown">
+      <soap12:operation soapAction="http://microsoft.com/webservices/PAYEReverseBreakDown" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PAYEReverseTaxAgentPaymentHistory">
+      <soap12:operation soapAction="http://microsoft.com/webservices/PAYEReverseTaxAgentPaymentHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PAYEReverseTaxAgentNormalisation">
+      <soap12:operation soapAction="http://microsoft.com/webservices/PAYEReverseTaxAgentNormalisation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxAgentAnnualReturn">
+      <soap12:operation soapAction="http://microsoft.com/webservices/GetTaxAgentAnnualReturn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoFetchPayment">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TCCdoFetchPayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoNormalization">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TCCdoNormalization" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoTransactionLog">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TCCdoTransactionLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoTransactionLogReversal">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TCCdoTransactionLogReversal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoFetchForNormalization">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TCCdoFetchForNormalization" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TccdoPaymentNormalisationReversal">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TccdoPaymentNormalisationReversal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoSubstitutionFetch">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TCCdoSubstitutionFetch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoReversalrequestLog">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TCCdoReversalrequestLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoCheckApprovalStatus">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TCCdoCheckApprovalStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoCheckApprovalStatus_Update">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TCCdoCheckApprovalStatus_Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoCheckReversalRequestApprovalStatus">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TCCdoCheckReversalRequestApprovalStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoCheckReversalRequestApprovalStatus_Update">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TCCdoCheckReversalRequestApprovalStatus_Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxAgent">
+      <soap12:operation soapAction="http://microsoft.com/webservices/GetTaxAgent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxPAYE_SINGLE">
+      <soap12:operation soapAction="http://microsoft.com/webservices/GetTaxPAYE_SINGLE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxPAYE">
+      <soap12:operation soapAction="http://microsoft.com/webservices/GetTaxPAYE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTaxPAYE_Update">
+      <soap12:operation soapAction="http://microsoft.com/webservices/GetTaxPAYE_Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCGetAnnualReturn_TaxAgent_SINGLE">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TCCGetAnnualReturn_TaxAgent_SINGLE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCGetAnnualReturn_TaxAgent_ALL">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TCCGetAnnualReturn_TaxAgent_ALL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCGetAnnualReturn_TaxAgent_ALL_Update">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TCCGetAnnualReturn_TaxAgent_ALL_Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCUpdateTaxPayerUTIN_AnnualReturn">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TCCUpdateTaxPayerUTIN_AnnualReturn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCGetAnnualReturn_Group">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TCCGetAnnualReturn_Group" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCGetAnnualReturn_Group_CheckStatus">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TCCGetAnnualReturn_Group_CheckStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoModificationRequests">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TCCdoModificationRequests" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TCCdoModificationCheckApproval">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TCCdoModificationCheckApproval" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TccAssessmentUpload">
+      <soap12:operation soapAction="http://microsoft.com/webservices/TccAssessmentUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DelistUpdate">
+      <soap12:operation soapAction="http://microsoft.com/webservices/DelistUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CollectionManager">
+    <wsdl:port name="CollectionManagerSoap" binding="tns:CollectionManagerSoap">
+      <soap:address location="http://74.208.222.200/state_akwaibom/collectionmanager.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CollectionManagerSoap12" binding="tns:CollectionManagerSoap12">
+      <soap12:address location="http://74.208.222.200/state_akwaibom/collectionmanager.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

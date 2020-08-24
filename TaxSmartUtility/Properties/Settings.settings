@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TaxSmartUtility.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TaxSmartUtility_ProcessSms_ProcessSms" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.reemsonline.com/SMS/processSms.asmx</Value>
+    </Setting>
+    <Setting Name="TaxSmartUtility_ServiceRefernce_CollectionManager" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://deltabir.com/DSI_IPS/CollectionManager.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

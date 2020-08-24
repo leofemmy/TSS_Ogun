@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Download.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Download_DeltaBir_ReceiptService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://deltabir.com/state_delta/receiptservice.asmx</Value>
+    </Setting>
+    <Setting Name="Download_OyoReceiptServices_ReceiptService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://74.208.222.197/state_oyo/receiptservice.asmx</Value>
+    </Setting>
+    <Setting Name="Download_ReceiptServices_ReceiptService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.ogunstaterevenue.com/State_Ogun/ReceiptService.asmx</Value>
+    </Setting>
+    <Setting Name="Download_AkwaIbomReceiptServices_ReceiptService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://74.208.222.200/state_akwaibom/receiptservice.asmx</Value>
+    </Setting>
+    <Setting Name="Download_Kogireceiptservice_ReceiptService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://kogibir.com/state_kogi/receiptservice.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

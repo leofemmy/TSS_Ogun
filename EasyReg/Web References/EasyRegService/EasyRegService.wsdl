@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="doSelectLoginTypes">
+        <s:complexType />
+      </s:element>
+      <s:element name="doSelectLoginTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doSelectLoginTypesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="doLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="LogintypeId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="doLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doLoginResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="doSelectUsers">
+        <s:complexType />
+      </s:element>
+      <s:element name="doSelectUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doSelectUsersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="doSelectVehicleTypes">
+        <s:complexType />
+      </s:element>
+      <s:element name="doSelectVehicleTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doSelectVehicleTypesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="doSelectVehicleCapacity">
+        <s:complexType />
+      </s:element>
+      <s:element name="doSelectVehicleCapacityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doSelectVehicleCapacityResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoEnableDisables">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="datatable" />
+            <s:element minOccurs="0" maxOccurs="1" name="logintypeid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoEnableDisablesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoEnableDisablesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateUsers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="statelistid" />
+            <s:element minOccurs="0" maxOccurs="1" name="revenuelistid" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" />
+            <s:element minOccurs="0" maxOccurs="1" name="logintypeid" />
+            <s:element minOccurs="0" maxOccurs="1" name="agentlistid" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateUsersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="doVehicleRegistration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PlateNum" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChasisNum" />
+            <s:element minOccurs="0" maxOccurs="1" name="EngineNum" />
+            <s:element minOccurs="0" maxOccurs="1" name="VehicleColour" />
+            <s:element minOccurs="0" maxOccurs="1" name="VehicleMake" />
+            <s:element minOccurs="0" maxOccurs="1" name="VehicleType" />
+            <s:element minOccurs="0" maxOccurs="1" name="VehicleCapacity" />
+            <s:element minOccurs="0" maxOccurs="1" name="placeofreg" />
+            <s:element minOccurs="0" maxOccurs="1" name="Othername" />
+            <s:element minOccurs="0" maxOccurs="1" name="Surname" />
+            <s:element minOccurs="0" maxOccurs="1" name="AptNum" />
+            <s:element minOccurs="0" maxOccurs="1" name="StreetName" />
+            <s:element minOccurs="0" maxOccurs="1" name="Town" />
+            <s:element minOccurs="0" maxOccurs="1" name="State" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telephone" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="doVehicleRegistrationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doVehicleRegistrationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="doCalculateLicenseFee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="issuesdate" />
+            <s:element minOccurs="0" maxOccurs="1" name="expirydate" />
+            <s:element minOccurs="0" maxOccurs="1" name="platenumber" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="doCalculateLicenseFeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doCalculateLicenseFeeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="doSelectLoginTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:doSelectLoginTypes" />
+  </wsdl:message>
+  <wsdl:message name="doSelectLoginTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:doSelectLoginTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="doLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:doLogin" />
+  </wsdl:message>
+  <wsdl:message name="doLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:doLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="doSelectUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:doSelectUsers" />
+  </wsdl:message>
+  <wsdl:message name="doSelectUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:doSelectUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="doSelectVehicleTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:doSelectVehicleTypes" />
+  </wsdl:message>
+  <wsdl:message name="doSelectVehicleTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:doSelectVehicleTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="doSelectVehicleCapacitySoapIn">
+    <wsdl:part name="parameters" element="tns:doSelectVehicleCapacity" />
+  </wsdl:message>
+  <wsdl:message name="doSelectVehicleCapacitySoapOut">
+    <wsdl:part name="parameters" element="tns:doSelectVehicleCapacityResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoEnableDisablesSoapIn">
+    <wsdl:part name="parameters" element="tns:DoEnableDisables" />
+  </wsdl:message>
+  <wsdl:message name="DoEnableDisablesSoapOut">
+    <wsdl:part name="parameters" element="tns:DoEnableDisablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateUsers" />
+  </wsdl:message>
+  <wsdl:message name="CreateUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="doVehicleRegistrationSoapIn">
+    <wsdl:part name="parameters" element="tns:doVehicleRegistration" />
+  </wsdl:message>
+  <wsdl:message name="doVehicleRegistrationSoapOut">
+    <wsdl:part name="parameters" element="tns:doVehicleRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="doCalculateLicenseFeeSoapIn">
+    <wsdl:part name="parameters" element="tns:doCalculateLicenseFee" />
+  </wsdl:message>
+  <wsdl:message name="doCalculateLicenseFeeSoapOut">
+    <wsdl:part name="parameters" element="tns:doCalculateLicenseFeeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EasyRegServiceSoap">
+    <wsdl:operation name="doSelectLoginTypes">
+      <wsdl:input message="tns:doSelectLoginTypesSoapIn" />
+      <wsdl:output message="tns:doSelectLoginTypesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="doLogin">
+      <wsdl:input message="tns:doLoginSoapIn" />
+      <wsdl:output message="tns:doLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="doSelectUsers">
+      <wsdl:input message="tns:doSelectUsersSoapIn" />
+      <wsdl:output message="tns:doSelectUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="doSelectVehicleTypes">
+      <wsdl:input message="tns:doSelectVehicleTypesSoapIn" />
+      <wsdl:output message="tns:doSelectVehicleTypesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="doSelectVehicleCapacity">
+      <wsdl:input message="tns:doSelectVehicleCapacitySoapIn" />
+      <wsdl:output message="tns:doSelectVehicleCapacitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoEnableDisables">
+      <wsdl:input message="tns:DoEnableDisablesSoapIn" />
+      <wsdl:output message="tns:DoEnableDisablesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUsers">
+      <wsdl:input message="tns:CreateUsersSoapIn" />
+      <wsdl:output message="tns:CreateUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="doVehicleRegistration">
+      <wsdl:input message="tns:doVehicleRegistrationSoapIn" />
+      <wsdl:output message="tns:doVehicleRegistrationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="doCalculateLicenseFee">
+      <wsdl:input message="tns:doCalculateLicenseFeeSoapIn" />
+      <wsdl:output message="tns:doCalculateLicenseFeeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EasyRegServiceSoap" type="tns:EasyRegServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="doSelectLoginTypes">
+      <soap:operation soapAction="http://tempuri.org/doSelectLoginTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doLogin">
+      <soap:operation soapAction="http://tempuri.org/doLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doSelectUsers">
+      <soap:operation soapAction="http://tempuri.org/doSelectUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doSelectVehicleTypes">
+      <soap:operation soapAction="http://tempuri.org/doSelectVehicleTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doSelectVehicleCapacity">
+      <soap:operation soapAction="http://tempuri.org/doSelectVehicleCapacity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoEnableDisables">
+      <soap:operation soapAction="http://tempuri.org/DoEnableDisables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUsers">
+      <soap:operation soapAction="http://tempuri.org/CreateUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doVehicleRegistration">
+      <soap:operation soapAction="http://tempuri.org/doVehicleRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doCalculateLicenseFee">
+      <soap:operation soapAction="http://tempuri.org/doCalculateLicenseFee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EasyRegServiceSoap12" type="tns:EasyRegServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="doSelectLoginTypes">
+      <soap12:operation soapAction="http://tempuri.org/doSelectLoginTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doLogin">
+      <soap12:operation soapAction="http://tempuri.org/doLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doSelectUsers">
+      <soap12:operation soapAction="http://tempuri.org/doSelectUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doSelectVehicleTypes">
+      <soap12:operation soapAction="http://tempuri.org/doSelectVehicleTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doSelectVehicleCapacity">
+      <soap12:operation soapAction="http://tempuri.org/doSelectVehicleCapacity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoEnableDisables">
+      <soap12:operation soapAction="http://tempuri.org/DoEnableDisables" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUsers">
+      <soap12:operation soapAction="http://tempuri.org/CreateUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doVehicleRegistration">
+      <soap12:operation soapAction="http://tempuri.org/doVehicleRegistration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doCalculateLicenseFee">
+      <soap12:operation soapAction="http://tempuri.org/doCalculateLicenseFee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EasyRegService">
+    <wsdl:port name="EasyRegServiceSoap" binding="tns:EasyRegServiceSoap">
+      <soap:address location="http://localhost/Reemsonline/EasyRegService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EasyRegServiceSoap12" binding="tns:EasyRegServiceSoap12">
+      <soap12:address location="http://localhost/Reemsonline/EasyRegService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

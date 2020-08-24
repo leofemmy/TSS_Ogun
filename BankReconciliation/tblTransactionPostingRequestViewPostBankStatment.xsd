@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="tblTransactionPostingRequestViewPostBankStatment" targetNamespace="http://tempuri.org/tblTransactionPostingRequestViewPostBankStatment.xsd" xmlns:mstns="http://tempuri.org/tblTransactionPostingRequestViewPostBankStatment.xsd" xmlns="http://tempuri.org/tblTransactionPostingRequestViewPostBankStatment.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TaxSmartSuiteRevised_oyoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TaxSmartSuiteRevised_oyoConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BankReconciliation.Properties.Settings.GlobalReference.Default.TaxSmartSuiteRevised_oyoConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewPostingRequestBankTableAdapter" GeneratorDataComponentClassName="ViewPostingRequestBankTableAdapter" Name="ViewPostingRequestBank" UserDataComponentName="ViewPostingRequestBankTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TaxSmartSuiteRevised_oyoConnectionString (Settings)" DbObjectName="TaxSmartSuiteRevisedNewOG26022016.dbo.ViewPostingRequestBank" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        BankName, BankShortCode, BatchName, OpeningBalance, ClosingBalance, TotalCredit, TotalDebit, RequestedBy, RequestedDate, IsApproved, ApprovedBy, ApprovedDate, FinancialperiodID, StartDate, EndDate, 
+                         PostingRequestID, BankAccountID, Description, ReconID
+FROM            ViewPostingRequestBank
+WHERE        (IsApproved = 1) AND (PeriodId IS NULL)
+ORDER BY BatchCode, BankName</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="BankName" DataSetColumn="BankName" />
+              <Mapping SourceColumn="BankShortCode" DataSetColumn="BankShortCode" />
+              <Mapping SourceColumn="BatchName" DataSetColumn="BatchName" />
+              <Mapping SourceColumn="OpeningBalance" DataSetColumn="OpeningBalance" />
+              <Mapping SourceColumn="ClosingBalance" DataSetColumn="ClosingBalance" />
+              <Mapping SourceColumn="TotalCredit" DataSetColumn="TotalCredit" />
+              <Mapping SourceColumn="TotalDebit" DataSetColumn="TotalDebit" />
+              <Mapping SourceColumn="RequestedBy" DataSetColumn="RequestedBy" />
+              <Mapping SourceColumn="RequestedDate" DataSetColumn="RequestedDate" />
+              <Mapping SourceColumn="IsApproved" DataSetColumn="IsApproved" />
+              <Mapping SourceColumn="ApprovedBy" DataSetColumn="ApprovedBy" />
+              <Mapping SourceColumn="ApprovedDate" DataSetColumn="ApprovedDate" />
+              <Mapping SourceColumn="FinancialperiodID" DataSetColumn="FinancialperiodID" />
+              <Mapping SourceColumn="StartDate" DataSetColumn="StartDate" />
+              <Mapping SourceColumn="EndDate" DataSetColumn="EndDate" />
+              <Mapping SourceColumn="PostingRequestID" DataSetColumn="PostingRequestID" />
+              <Mapping SourceColumn="BankAccountID" DataSetColumn="BankAccountID" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="ReconID" DataSetColumn="ReconID" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="TaxSmartSuiteRevised_oyoConnectionString (Settings)" DbObjectName="TaxSmartSuiteRevisedNewOgun.dbo.ViewPostingRequestBank" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ApprovedBy, ApprovedDate, BankName, BankShortCode, BatchCode, BatchName, ClosingBalance, EndDate, FinancialperiodID, IsApproved, OpeningBalance, RequestedBy, RequestedDate, StartDate, TotalCredit, TotalDebit FROM ViewPostingRequestBank WHERE (IsApproved = 1) AND (PeriodId IS NULL) ORDER BY BatchCode, BankName</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewPostbankStatmentTableAdapter" GeneratorDataComponentClassName="ViewPostbankStatmentTableAdapter" Name="ViewPostbankStatment" UserDataComponentName="ViewPostbankStatmentTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TaxSmartSuiteRevised_oyoConnectionString (Settings)" DbObjectName="TaxSmartSuiteRevisedNewOG18052016195030.dbo.ViewPostbankStatment" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        BSDate, Credit, BSID, BankShortCode, FinancialperiodID, PostingRequestID, PayerName
+FROM            ViewPostbankStatment</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="BSDate" DataSetColumn="BSDate" />
+              <Mapping SourceColumn="Credit" DataSetColumn="Credit" />
+              <Mapping SourceColumn="BSID" DataSetColumn="BSID" />
+              <Mapping SourceColumn="BankShortCode" DataSetColumn="BankShortCode" />
+              <Mapping SourceColumn="FinancialperiodID" DataSetColumn="FinancialperiodID" />
+              <Mapping SourceColumn="PostingRequestID" DataSetColumn="PostingRequestID" />
+              <Mapping SourceColumn="PayerName" DataSetColumn="PayerName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewPostingRequestDetailsTableAdapter" GeneratorDataComponentClassName="ViewPostingRequestDetailsTableAdapter" Name="ViewPostingRequestDetails" UserDataComponentName="ViewPostingRequestDetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TaxSmartSuiteRevised_oyoConnectionString (Settings)" DbObjectName="TaxSmartSuiteRevisedNewAkwaServer.dbo.ViewPostingRequestDetails" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        BSDate, Amount, PostingRequestID
+FROM            ViewPostingRequestDetails</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="BSDate" DataSetColumn="BSDate" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+              <Mapping SourceColumn="PostingRequestID" DataSetColumn="PostingRequestID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewUnsweptTransactionTableAdapter" GeneratorDataComponentClassName="ViewUnsweptTransactionTableAdapter" Name="ViewUnsweptTransaction" UserDataComponentName="ViewUnsweptTransactionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TaxSmartSuiteRevised_oyoConnectionString (Settings)" DbObjectName="TaxSmartSuiteRevisedNewAkwaServer.dbo.ViewUnsweptTransaction" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        BankName, BSDate, BSID, Credit, Amount, FinancialperiodID, Periods, AccountNumber, BankShortCode, StartDate, EndDate, BankAccountID, 
+                         CurrencyCode, ExchangeRate
+FROM            ViewUnsweptTransaction</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="BankName" DataSetColumn="BankName" />
+              <Mapping SourceColumn="BSDate" DataSetColumn="BSDate" />
+              <Mapping SourceColumn="BSID" DataSetColumn="BSID" />
+              <Mapping SourceColumn="Credit" DataSetColumn="Credit" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+              <Mapping SourceColumn="FinancialperiodID" DataSetColumn="FinancialperiodID" />
+              <Mapping SourceColumn="Periods" DataSetColumn="Periods" />
+              <Mapping SourceColumn="AccountNumber" DataSetColumn="AccountNumber" />
+              <Mapping SourceColumn="BankShortCode" DataSetColumn="BankShortCode" />
+              <Mapping SourceColumn="StartDate" DataSetColumn="StartDate" />
+              <Mapping SourceColumn="EndDate" DataSetColumn="EndDate" />
+              <Mapping SourceColumn="BankAccountID" DataSetColumn="BankAccountID" />
+              <Mapping SourceColumn="CurrencyCode" DataSetColumn="CurrencyCode" />
+              <Mapping SourceColumn="ExchangeRate" DataSetColumn="ExchangeRate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewSweptTransactionTableAdapter" GeneratorDataComponentClassName="ViewSweptTransactionTableAdapter" Name="ViewSweptTransaction" UserDataComponentName="ViewSweptTransactionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TaxSmartSuiteRevised_oyoConnectionString (Settings)" DbObjectName="TaxSmartSuiteRevisedNewAkwaServer.dbo.ViewSweptTransaction" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        BankName, BSDate, BSID, Credit, Amount, FinancialperiodID, Periods, AccountNumber, Description, Status, PaymentRefNumber, 
+                         BankShortCode, StartDate, EndDate, BankAccountID, CurrencyCode, ExchangeRate
+FROM            ViewSweptTransaction</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="BankName" DataSetColumn="BankName" />
+              <Mapping SourceColumn="BSDate" DataSetColumn="BSDate" />
+              <Mapping SourceColumn="BSID" DataSetColumn="BSID" />
+              <Mapping SourceColumn="Credit" DataSetColumn="Credit" />
+              <Mapping SourceColumn="Amount" DataSetColumn="Amount" />
+              <Mapping SourceColumn="FinancialperiodID" DataSetColumn="FinancialperiodID" />
+              <Mapping SourceColumn="Periods" DataSetColumn="Periods" />
+              <Mapping SourceColumn="AccountNumber" DataSetColumn="AccountNumber" />
+              <Mapping SourceColumn="Description" DataSetColumn="Description" />
+              <Mapping SourceColumn="Status" DataSetColumn="Status" />
+              <Mapping SourceColumn="PaymentRefNumber" DataSetColumn="PaymentRefNumber" />
+              <Mapping SourceColumn="BankShortCode" DataSetColumn="BankShortCode" />
+              <Mapping SourceColumn="StartDate" DataSetColumn="StartDate" />
+              <Mapping SourceColumn="EndDate" DataSetColumn="EndDate" />
+              <Mapping SourceColumn="BankAccountID" DataSetColumn="BankAccountID" />
+              <Mapping SourceColumn="CurrencyCode" DataSetColumn="CurrencyCode" />
+              <Mapping SourceColumn="ExchangeRate" DataSetColumn="ExchangeRate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewPayAnalysisTableAdapter" GeneratorDataComponentClassName="ViewPayAnalysisTableAdapter" Name="ViewPayAnalysis" UserDataComponentName="ViewPayAnalysisTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TaxSmartSuiteRevised_oyoConnectionString (Settings)" DbObjectName="TaxSmartSuiteRevisedNewAkwaServer.dbo.ViewPayAnalysis" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MONTH, year, Payer, Amont, MonthAmt
+FROM            ViewPayAnalysis</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MONTH" DataSetColumn="MONTH" />
+              <Mapping SourceColumn="year" DataSetColumn="year" />
+              <Mapping SourceColumn="Payer" DataSetColumn="Payer" />
+              <Mapping SourceColumn="Amont" DataSetColumn="Amont" />
+              <Mapping SourceColumn="MonthAmt" DataSetColumn="MonthAmt" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="tblTransactionPostingRequestViewPostBankStatment" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="tblTransactionPostingRequestViewPostBankStatment" msprop:Generator_UserDSName="tblTransactionPostingRequestViewPostBankStatment">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ViewPostingRequestBank" msprop:Generator_TableClassName="ViewPostingRequestBankDataTable" msprop:Generator_TableVarName="tableViewPostingRequestBank" msprop:Generator_RowChangedName="ViewPostingRequestBankRowChanged" msprop:Generator_TablePropName="ViewPostingRequestBank" msprop:Generator_RowDeletingName="ViewPostingRequestBankRowDeleting" msprop:Generator_RowChangingName="ViewPostingRequestBankRowChanging" msprop:Generator_RowEvHandlerName="ViewPostingRequestBankRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewPostingRequestBankRowDeleted" msprop:Generator_RowClassName="ViewPostingRequestBankRow" msprop:Generator_UserTableName="ViewPostingRequestBank" msprop:Generator_RowEvArgName="ViewPostingRequestBankRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BankName" msprop:Generator_ColumnVarNameInTable="columnBankName" msprop:Generator_ColumnPropNameInRow="BankName" msprop:Generator_ColumnPropNameInTable="BankNameColumn" msprop:Generator_UserColumnName="BankName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BankShortCode" msprop:Generator_ColumnVarNameInTable="columnBankShortCode" msprop:Generator_ColumnPropNameInRow="BankShortCode" msprop:Generator_ColumnPropNameInTable="BankShortCodeColumn" msprop:Generator_UserColumnName="BankShortCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BatchName" msprop:Generator_ColumnVarNameInTable="columnBatchName" msprop:Generator_ColumnPropNameInRow="BatchName" msprop:Generator_ColumnPropNameInTable="BatchNameColumn" msprop:Generator_UserColumnName="BatchName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OpeningBalance" msprop:Generator_ColumnVarNameInTable="columnOpeningBalance" msprop:Generator_ColumnPropNameInRow="OpeningBalance" msprop:Generator_ColumnPropNameInTable="OpeningBalanceColumn" msprop:Generator_UserColumnName="OpeningBalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ClosingBalance" msprop:Generator_ColumnVarNameInTable="columnClosingBalance" msprop:Generator_ColumnPropNameInRow="ClosingBalance" msprop:Generator_ColumnPropNameInTable="ClosingBalanceColumn" msprop:Generator_UserColumnName="ClosingBalance" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalCredit" msprop:Generator_ColumnVarNameInTable="columnTotalCredit" msprop:Generator_ColumnPropNameInRow="TotalCredit" msprop:Generator_ColumnPropNameInTable="TotalCreditColumn" msprop:Generator_UserColumnName="TotalCredit" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TotalDebit" msprop:Generator_ColumnVarNameInTable="columnTotalDebit" msprop:Generator_ColumnPropNameInRow="TotalDebit" msprop:Generator_ColumnPropNameInTable="TotalDebitColumn" msprop:Generator_UserColumnName="TotalDebit" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RequestedBy" msprop:Generator_ColumnVarNameInTable="columnRequestedBy" msprop:Generator_ColumnPropNameInRow="RequestedBy" msprop:Generator_ColumnPropNameInTable="RequestedByColumn" msprop:Generator_UserColumnName="RequestedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RequestedDate" msprop:Generator_ColumnVarNameInTable="columnRequestedDate" msprop:Generator_ColumnPropNameInRow="RequestedDate" msprop:Generator_ColumnPropNameInTable="RequestedDateColumn" msprop:Generator_UserColumnName="RequestedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IsApproved" msprop:Generator_ColumnVarNameInTable="columnIsApproved" msprop:Generator_ColumnPropNameInRow="IsApproved" msprop:Generator_ColumnPropNameInTable="IsApprovedColumn" msprop:Generator_UserColumnName="IsApproved" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ApprovedBy" msprop:Generator_ColumnVarNameInTable="columnApprovedBy" msprop:Generator_ColumnPropNameInRow="ApprovedBy" msprop:Generator_ColumnPropNameInTable="ApprovedByColumn" msprop:Generator_UserColumnName="ApprovedBy" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApprovedDate" msprop:Generator_ColumnVarNameInTable="columnApprovedDate" msprop:Generator_ColumnPropNameInRow="ApprovedDate" msprop:Generator_ColumnPropNameInTable="ApprovedDateColumn" msprop:Generator_UserColumnName="ApprovedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FinancialperiodID" msprop:Generator_ColumnVarNameInTable="columnFinancialperiodID" msprop:Generator_ColumnPropNameInRow="FinancialperiodID" msprop:Generator_ColumnPropNameInTable="FinancialperiodIDColumn" msprop:Generator_UserColumnName="FinancialperiodID" type="xs:int" minOccurs="0" />
+              <xs:element name="StartDate" msprop:Generator_ColumnVarNameInTable="columnStartDate" msprop:Generator_ColumnPropNameInRow="StartDate" msprop:Generator_ColumnPropNameInTable="StartDateColumn" msprop:Generator_UserColumnName="StartDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EndDate" msprop:Generator_ColumnVarNameInTable="columnEndDate" msprop:Generator_ColumnPropNameInRow="EndDate" msprop:Generator_ColumnPropNameInTable="EndDateColumn" msprop:Generator_UserColumnName="EndDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PostingRequestID" msprop:Generator_ColumnVarNameInTable="columnPostingRequestID" msprop:Generator_ColumnPropNameInRow="PostingRequestID" msprop:Generator_ColumnPropNameInTable="PostingRequestIDColumn" msprop:Generator_UserColumnName="PostingRequestID" type="xs:int" />
+              <xs:element name="BankAccountID" msprop:Generator_ColumnVarNameInTable="columnBankAccountID" msprop:Generator_ColumnPropNameInRow="BankAccountID" msprop:Generator_ColumnPropNameInTable="BankAccountIDColumn" msprop:Generator_UserColumnName="BankAccountID" type="xs:int" minOccurs="0" />
+              <xs:element name="Description" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReconID" msprop:Generator_ColumnVarNameInTable="columnReconID" msprop:Generator_ColumnPropNameInRow="ReconID" msprop:Generator_ColumnPropNameInTable="ReconIDColumn" msprop:Generator_UserColumnName="ReconID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ViewPostbankStatment" msprop:Generator_TableClassName="ViewPostbankStatmentDataTable" msprop:Generator_TableVarName="tableViewPostbankStatment" msprop:Generator_RowChangedName="ViewPostbankStatmentRowChanged" msprop:Generator_TablePropName="ViewPostbankStatment" msprop:Generator_RowDeletingName="ViewPostbankStatmentRowDeleting" msprop:Generator_RowChangingName="ViewPostbankStatmentRowChanging" msprop:Generator_RowEvHandlerName="ViewPostbankStatmentRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewPostbankStatmentRowDeleted" msprop:Generator_RowClassName="ViewPostbankStatmentRow" msprop:Generator_UserTableName="ViewPostbankStatment" msprop:Generator_RowEvArgName="ViewPostbankStatmentRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BSDate" msprop:Generator_ColumnVarNameInTable="columnBSDate" msprop:Generator_ColumnPropNameInRow="BSDate" msprop:Generator_ColumnPropNameInTable="BSDateColumn" msprop:Generator_UserColumnName="BSDate" type="xs:dateTime" />
+              <xs:element name="Credit" msprop:Generator_ColumnVarNameInTable="columnCredit" msprop:Generator_ColumnPropNameInRow="Credit" msprop:Generator_ColumnPropNameInTable="CreditColumn" msprop:Generator_UserColumnName="Credit" type="xs:decimal" />
+              <xs:element name="BSID" msprop:Generator_ColumnVarNameInTable="columnBSID" msprop:Generator_ColumnPropNameInRow="BSID" msprop:Generator_ColumnPropNameInTable="BSIDColumn" msprop:Generator_UserColumnName="BSID" type="xs:int" />
+              <xs:element name="BankShortCode" msprop:Generator_ColumnVarNameInTable="columnBankShortCode" msprop:Generator_ColumnPropNameInRow="BankShortCode" msprop:Generator_ColumnPropNameInTable="BankShortCodeColumn" msprop:Generator_UserColumnName="BankShortCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FinancialperiodID" msprop:Generator_ColumnVarNameInTable="columnFinancialperiodID" msprop:Generator_ColumnPropNameInRow="FinancialperiodID" msprop:Generator_ColumnPropNameInTable="FinancialperiodIDColumn" msprop:Generator_UserColumnName="FinancialperiodID" type="xs:int" minOccurs="0" />
+              <xs:element name="PostingRequestID" msprop:Generator_ColumnVarNameInTable="columnPostingRequestID" msprop:Generator_ColumnPropNameInRow="PostingRequestID" msprop:Generator_ColumnPropNameInTable="PostingRequestIDColumn" msprop:Generator_UserColumnName="PostingRequestID" type="xs:int" />
+              <xs:element name="PayerName" msprop:Generator_ColumnVarNameInTable="columnPayerName" msprop:Generator_ColumnPropNameInRow="PayerName" msprop:Generator_ColumnPropNameInTable="PayerNameColumn" msprop:Generator_UserColumnName="PayerName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ViewPostingRequestDetails" msprop:Generator_TableClassName="ViewPostingRequestDetailsDataTable" msprop:Generator_TableVarName="tableViewPostingRequestDetails" msprop:Generator_TablePropName="ViewPostingRequestDetails" msprop:Generator_RowDeletingName="ViewPostingRequestDetailsRowDeleting" msprop:Generator_RowChangingName="ViewPostingRequestDetailsRowChanging" msprop:Generator_RowEvHandlerName="ViewPostingRequestDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewPostingRequestDetailsRowDeleted" msprop:Generator_UserTableName="ViewPostingRequestDetails" msprop:Generator_RowChangedName="ViewPostingRequestDetailsRowChanged" msprop:Generator_RowEvArgName="ViewPostingRequestDetailsRowChangeEvent" msprop:Generator_RowClassName="ViewPostingRequestDetailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BSDate" msprop:Generator_ColumnVarNameInTable="columnBSDate" msprop:Generator_ColumnPropNameInRow="BSDate" msprop:Generator_ColumnPropNameInTable="BSDateColumn" msprop:Generator_UserColumnName="BSDate" type="xs:dateTime" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" />
+              <xs:element name="PostingRequestID" msprop:Generator_ColumnVarNameInTable="columnPostingRequestID" msprop:Generator_ColumnPropNameInRow="PostingRequestID" msprop:Generator_ColumnPropNameInTable="PostingRequestIDColumn" msprop:Generator_UserColumnName="PostingRequestID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ViewUnsweptTransaction" msprop:Generator_TableClassName="ViewUnsweptTransactionDataTable" msprop:Generator_TableVarName="tableViewUnsweptTransaction" msprop:Generator_RowChangedName="ViewUnsweptTransactionRowChanged" msprop:Generator_TablePropName="ViewUnsweptTransaction" msprop:Generator_RowDeletingName="ViewUnsweptTransactionRowDeleting" msprop:Generator_RowChangingName="ViewUnsweptTransactionRowChanging" msprop:Generator_RowEvHandlerName="ViewUnsweptTransactionRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewUnsweptTransactionRowDeleted" msprop:Generator_RowClassName="ViewUnsweptTransactionRow" msprop:Generator_UserTableName="ViewUnsweptTransaction" msprop:Generator_RowEvArgName="ViewUnsweptTransactionRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BankName" msprop:Generator_ColumnVarNameInTable="columnBankName" msprop:Generator_ColumnPropNameInRow="BankName" msprop:Generator_ColumnPropNameInTable="BankNameColumn" msprop:Generator_UserColumnName="BankName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BSDate" msprop:Generator_ColumnVarNameInTable="columnBSDate" msprop:Generator_ColumnPropNameInRow="BSDate" msprop:Generator_ColumnPropNameInTable="BSDateColumn" msprop:Generator_UserColumnName="BSDate" type="xs:dateTime" />
+              <xs:element name="BSID" msprop:Generator_ColumnVarNameInTable="columnBSID" msprop:Generator_ColumnPropNameInRow="BSID" msprop:Generator_ColumnPropNameInTable="BSIDColumn" msprop:Generator_UserColumnName="BSID" type="xs:int" />
+              <xs:element name="Credit" msprop:Generator_ColumnVarNameInTable="columnCredit" msprop:Generator_ColumnPropNameInRow="Credit" msprop:Generator_ColumnPropNameInTable="CreditColumn" msprop:Generator_UserColumnName="Credit" type="xs:decimal" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FinancialperiodID" msprop:Generator_ColumnVarNameInTable="columnFinancialperiodID" msprop:Generator_ColumnPropNameInRow="FinancialperiodID" msprop:Generator_ColumnPropNameInTable="FinancialperiodIDColumn" msprop:Generator_UserColumnName="FinancialperiodID" type="xs:int" minOccurs="0" />
+              <xs:element name="Periods" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPeriods" msprop:Generator_ColumnPropNameInRow="Periods" msprop:Generator_ColumnPropNameInTable="PeriodsColumn" msprop:Generator_UserColumnName="Periods" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="31" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AccountNumber" msprop:Generator_ColumnVarNameInTable="columnAccountNumber" msprop:Generator_ColumnPropNameInRow="AccountNumber" msprop:Generator_ColumnPropNameInTable="AccountNumberColumn" msprop:Generator_UserColumnName="AccountNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BankShortCode" msprop:Generator_ColumnVarNameInTable="columnBankShortCode" msprop:Generator_ColumnPropNameInRow="BankShortCode" msprop:Generator_ColumnPropNameInTable="BankShortCodeColumn" msprop:Generator_UserColumnName="BankShortCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StartDate" msprop:Generator_ColumnVarNameInTable="columnStartDate" msprop:Generator_ColumnPropNameInRow="StartDate" msprop:Generator_ColumnPropNameInTable="StartDateColumn" msprop:Generator_UserColumnName="StartDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EndDate" msprop:Generator_ColumnVarNameInTable="columnEndDate" msprop:Generator_ColumnPropNameInRow="EndDate" msprop:Generator_ColumnPropNameInTable="EndDateColumn" msprop:Generator_UserColumnName="EndDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BankAccountID" msprop:Generator_ColumnVarNameInTable="columnBankAccountID" msprop:Generator_ColumnPropNameInRow="BankAccountID" msprop:Generator_ColumnPropNameInTable="BankAccountIDColumn" msprop:Generator_UserColumnName="BankAccountID" type="xs:int" />
+              <xs:element name="CurrencyCode" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCurrencyCode" msprop:Generator_ColumnPropNameInRow="CurrencyCode" msprop:Generator_ColumnPropNameInTable="CurrencyCodeColumn" msprop:Generator_UserColumnName="CurrencyCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="43" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExchangeRate" msprop:Generator_ColumnVarNameInTable="columnExchangeRate" msprop:Generator_ColumnPropNameInRow="ExchangeRate" msprop:Generator_ColumnPropNameInTable="ExchangeRateColumn" msprop:Generator_UserColumnName="ExchangeRate" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ViewSweptTransaction" msprop:Generator_TableClassName="ViewSweptTransactionDataTable" msprop:Generator_TableVarName="tableViewSweptTransaction" msprop:Generator_TablePropName="ViewSweptTransaction" msprop:Generator_RowDeletingName="ViewSweptTransactionRowDeleting" msprop:Generator_RowChangingName="ViewSweptTransactionRowChanging" msprop:Generator_RowEvHandlerName="ViewSweptTransactionRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewSweptTransactionRowDeleted" msprop:Generator_UserTableName="ViewSweptTransaction" msprop:Generator_RowChangedName="ViewSweptTransactionRowChanged" msprop:Generator_RowEvArgName="ViewSweptTransactionRowChangeEvent" msprop:Generator_RowClassName="ViewSweptTransactionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BankName" msprop:Generator_ColumnVarNameInTable="columnBankName" msprop:Generator_ColumnPropNameInRow="BankName" msprop:Generator_ColumnPropNameInTable="BankNameColumn" msprop:Generator_UserColumnName="BankName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BSDate" msprop:Generator_ColumnVarNameInTable="columnBSDate" msprop:Generator_ColumnPropNameInRow="BSDate" msprop:Generator_ColumnPropNameInTable="BSDateColumn" msprop:Generator_UserColumnName="BSDate" type="xs:dateTime" />
+              <xs:element name="BSID" msprop:Generator_ColumnVarNameInTable="columnBSID" msprop:Generator_ColumnPropNameInRow="BSID" msprop:Generator_ColumnPropNameInTable="BSIDColumn" msprop:Generator_UserColumnName="BSID" type="xs:int" />
+              <xs:element name="Credit" msprop:Generator_ColumnVarNameInTable="columnCredit" msprop:Generator_ColumnPropNameInRow="Credit" msprop:Generator_ColumnPropNameInTable="CreditColumn" msprop:Generator_UserColumnName="Credit" type="xs:decimal" />
+              <xs:element name="Amount" msprop:Generator_ColumnVarNameInTable="columnAmount" msprop:Generator_ColumnPropNameInRow="Amount" msprop:Generator_ColumnPropNameInTable="AmountColumn" msprop:Generator_UserColumnName="Amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FinancialperiodID" msprop:Generator_ColumnVarNameInTable="columnFinancialperiodID" msprop:Generator_ColumnPropNameInRow="FinancialperiodID" msprop:Generator_ColumnPropNameInTable="FinancialperiodIDColumn" msprop:Generator_UserColumnName="FinancialperiodID" type="xs:int" minOccurs="0" />
+              <xs:element name="Periods" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPeriods" msprop:Generator_ColumnPropNameInRow="Periods" msprop:Generator_ColumnPropNameInTable="PeriodsColumn" msprop:Generator_UserColumnName="Periods" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="31" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AccountNumber" msprop:Generator_ColumnVarNameInTable="columnAccountNumber" msprop:Generator_ColumnPropNameInRow="AccountNumber" msprop:Generator_ColumnPropNameInTable="AccountNumberColumn" msprop:Generator_UserColumnName="AccountNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_UserColumnName="Status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PaymentRefNumber" msprop:Generator_ColumnVarNameInTable="columnPaymentRefNumber" msprop:Generator_ColumnPropNameInRow="PaymentRefNumber" msprop:Generator_ColumnPropNameInTable="PaymentRefNumberColumn" msprop:Generator_UserColumnName="PaymentRefNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BankShortCode" msprop:Generator_ColumnVarNameInTable="columnBankShortCode" msprop:Generator_ColumnPropNameInRow="BankShortCode" msprop:Generator_ColumnPropNameInTable="BankShortCodeColumn" msprop:Generator_UserColumnName="BankShortCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StartDate" msprop:Generator_ColumnVarNameInTable="columnStartDate" msprop:Generator_ColumnPropNameInRow="StartDate" msprop:Generator_ColumnPropNameInTable="StartDateColumn" msprop:Generator_UserColumnName="StartDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EndDate" msprop:Generator_ColumnVarNameInTable="columnEndDate" msprop:Generator_ColumnPropNameInRow="EndDate" msprop:Generator_ColumnPropNameInTable="EndDateColumn" msprop:Generator_UserColumnName="EndDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BankAccountID" msprop:Generator_ColumnVarNameInTable="columnBankAccountID" msprop:Generator_ColumnPropNameInRow="BankAccountID" msprop:Generator_ColumnPropNameInTable="BankAccountIDColumn" msprop:Generator_UserColumnName="BankAccountID" type="xs:int" />
+              <xs:element name="CurrencyCode" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCurrencyCode" msprop:Generator_ColumnPropNameInRow="CurrencyCode" msprop:Generator_ColumnPropNameInTable="CurrencyCodeColumn" msprop:Generator_UserColumnName="CurrencyCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="43" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExchangeRate" msprop:Generator_ColumnVarNameInTable="columnExchangeRate" msprop:Generator_ColumnPropNameInRow="ExchangeRate" msprop:Generator_ColumnPropNameInTable="ExchangeRateColumn" msprop:Generator_UserColumnName="ExchangeRate" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ViewPayAnalysis" msprop:Generator_TableClassName="ViewPayAnalysisDataTable" msprop:Generator_TableVarName="tableViewPayAnalysis" msprop:Generator_RowChangedName="ViewPayAnalysisRowChanged" msprop:Generator_TablePropName="ViewPayAnalysis" msprop:Generator_RowDeletingName="ViewPayAnalysisRowDeleting" msprop:Generator_RowChangingName="ViewPayAnalysisRowChanging" msprop:Generator_RowEvHandlerName="ViewPayAnalysisRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewPayAnalysisRowDeleted" msprop:Generator_RowClassName="ViewPayAnalysisRow" msprop:Generator_UserTableName="ViewPayAnalysis" msprop:Generator_RowEvArgName="ViewPayAnalysisRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MONTH" msprop:Generator_ColumnVarNameInTable="columnMONTH" msprop:Generator_ColumnPropNameInRow="MONTH" msprop:Generator_ColumnPropNameInTable="MONTHColumn" msprop:Generator_UserColumnName="MONTH" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="year" msprop:Generator_ColumnVarNameInTable="columnyear" msprop:Generator_ColumnPropNameInRow="year" msprop:Generator_ColumnPropNameInTable="yearColumn" msprop:Generator_UserColumnName="year" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Payer" msprop:Generator_ColumnVarNameInTable="columnPayer" msprop:Generator_ColumnPropNameInRow="Payer" msprop:Generator_ColumnPropNameInTable="PayerColumn" msprop:Generator_UserColumnName="Payer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Amont" msprop:Generator_ColumnVarNameInTable="columnAmont" msprop:Generator_ColumnPropNameInRow="Amont" msprop:Generator_ColumnPropNameInTable="AmontColumn" msprop:Generator_UserColumnName="Amont" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MonthAmt" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMonthAmt" msprop:Generator_ColumnPropNameInRow="MonthAmt" msprop:Generator_ColumnPropNameInTable="MonthAmtColumn" msprop:Generator_UserColumnName="MonthAmt" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint2" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ViewPostingRequestBank" />
+      <xs:field xpath="mstns:PostingRequestID" />
+    </xs:unique>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ViewPostbankStatment" />
+      <xs:field xpath="mstns:BSID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="ViewPostingRequestBank_ViewPostbankStatment" msdata:parent="ViewPostingRequestBank" msdata:child="ViewPostbankStatment" msdata:parentkey="BankShortCode FinancialperiodID PostingRequestID" msdata:childkey="BankShortCode FinancialperiodID PostingRequestID" msprop:Generator_UserChildTable="ViewPostbankStatment" msprop:Generator_ChildPropName="GetViewPostbankStatmentRows" msprop:Generator_UserRelationName="ViewPostingRequestBank_ViewPostbankStatment" msprop:Generator_ParentPropName="ViewPostingRequestBankRowParent" msprop:Generator_RelationVarName="relationViewPostingRequestBank_ViewPostbankStatment" msprop:Generator_UserParentTable="ViewPostingRequestBank" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

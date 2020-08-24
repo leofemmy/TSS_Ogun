@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<BankDirectory>
+  <Bank>
+    <Name>Abigi Microfinance Bank</Name>
+    <Code>ABMFB</Code>
+  </Bank>
+  <Bank>
+    <Name>Access Bank Nigeria Plc</Name>
+    <Code>Abp</Code>
+  </Bank>
+  <Bank>
+    <Name>Afribank Plc</Name>
+    <Code>Afb</Code>
+  </Bank>
+  <Bank>
+    <Name>Astra Polaris Microfinance Bank</Name>
+    <Code>AMFB</Code>
+  </Bank>
+  <Bank>
+    <Name>BOND BANK</Name>
+    <Code>BOND</Code>
+  </Bank>
+  <Bank>
+    <Name>BOROMU MICROFINANCE BNK</Name>
+    <Code>BMFB</Code>
+  </Bank>
+  <Bank>
+    <Name>Diamond Bank Plc</Name>
+    <Code>Dbp</Code>
+  </Bank>
+  <Bank>
+    <Name>Ecobank Nigeria</Name>
+    <Code>Eco</Code>
+  </Bank>
+  <Bank>
+    <Name>Ecobank Nigeria 2 (oceanic)</Name>
+    <Code>ECO2</Code>
+  </Bank>
+  <Bank>
+    <Name>Ekuombe Microfinance Bank</Name>
+    <Code>EMFB</Code>
+  </Bank>
+  <Bank>
+    <Name>EMRALDS MICROFINANCE BANK</Name>
+    <Code>ERMB</Code>
+  </Bank>
+   <Bank>
+    <Name>Enterprise Bank Plc</Name>
+    <Code>ENB</Code>
+  </Bank>
+  <Bank>
+    <Name>Equitorial Trust Bank</Name>
+    <Code>Etb</Code>
+  </Bank>
+   <Bank>
+    <Name>Fidelity Bank Plc</Name>
+    <Code>Fbp</Code>
+  </Bank>
+  <Bank>
+    <Name>First Bank Of Nigeria Plc</Name>
+    <Code>Fbn</Code>
+  </Bank>
+   <Bank>
+    <Name>First City Monument Bank</Name>
+    <Code>Fcmb</Code>
+  </Bank>
+  <Bank>
+    <Name>First Inland Bank Plc</Name>
+    <Code>Fib</Code>
+  </Bank>
+   <Bank>
+    <Name>Forsight Microfinance Bank</Name>
+    <Code>FOMB</Code>
+  </Bank>
+  <Bank>
+    <Name>Gateway Savings Loans Limited</Name>
+    <Code>GSL</Code>
+  </Bank>
+   <Bank>
+    <Name>Guaranty Trust Bank Plc</Name>
+    <Code>Gtb</Code>
+  </Bank>
+  <Bank>
+    <Name>Ikenne Microfinance Bank</Name>
+    <Code>IMFB</Code>
+  </Bank>
+   <Bank>
+    <Name>Intercontinental Bank Plc</Name>
+    <Code>Ibp</Code>
+  </Bank>
+  <Bank>
+    <Name>Keystone Bank Ltd</Name>
+    <Code>ksb</Code>
+  </Bank>
+   <Bank>
+    <Name>Lavender Microfinance Bank</Name>
+    <Code>LMFB</Code>
+  </Bank>
+  <Bank>
+    <Name>Mainstreet Bank Ltd</Name>
+    <Code>msb</Code>
+  </Bank>
+   <Bank>
+    <Name>Oceanic Bank International</Name>
+    <Code>Obi</Code>
+  </Bank>
+  <Bank>
+    <Name>Platinumhabib Bank</Name>
+    <Code>PHB</Code>
+  </Bank>
+   <Bank>
+    <Name>Sagamu Microfinance Bank</Name>
+    <Code>SMFB</Code>
+  </Bank>
+  <Bank>
+    <Name>Skye Bank Plc</Name>
+    <Code>Skye</Code>
+  </Bank>
+   <Bank>
+    <Name>Stanbic Ibtc Plc</Name>
+    <Code>Stanbic</Code>
+  </Bank>
+  <Bank>
+    <Name>Sterling Bank Plc</Name>
+    <Code>Sbp</Code>
+  </Bank>
+   <Bank>
+    <Name>Trust Microfinance Bank Limited</Name>
+    <Code>TMB</Code>
+  </Bank>
+  <Bank>
+    <Name>Union Bank Of Nigera Plc</Name>
+    <Code>Ubn</Code>
+  </Bank>
+   <Bank>
+    <Name>United Bank For Africa Plc</Name>
+    <Code>Uba</Code>
+  </Bank>
+  <Bank>
+    <Name>Unity Bank Plc</Name>
+    <Code>Unity</Code>
+  </Bank>
+   <Bank>
+    <Name>Wema Bank Plc</Name>
+    <Code>Wema</Code>
+  </Bank>
+  <Bank>
+    <Name>Zenith Bank International</Name>
+    <Code>Zib</Code>
+  </Bank>
+   <Bank>
+    <Name>Heritage Bank</Name>
+    <Code>HBP</Code>
+  </Bank>
+  </BankDirectory>

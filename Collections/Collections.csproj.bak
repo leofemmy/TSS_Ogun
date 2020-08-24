@@ -1,0 +1,1289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B496C5E-2C93-4931-B8A0-68A16E9DB6A8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Collection</RootNamespace>
+    <AssemblyName>Collections</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>ts.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutomaticUpdater">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\wyBuild\AutomaticUpdater\AutomaticUpdater.dll</HintPath>
+    </Reference>
+    <Reference Include="BondLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\BondLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Control Panel, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Control Panel\bin\x86\Release\Control Panel.exe</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Docs.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.Wizard, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v20.1.Win, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1.Extensions, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraWizard.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="LinqToExcel, Version=1.11.0.0, Culture=neutral, PublicKeyToken=9c8ea65a58f03f1f, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\LinqToExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MosesClassLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TaxSmartSuite\bin\Debug\MosesClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Data.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Interfaces, Version=1.13.52.2, Culture=neutral, PublicKeyToken=0669cf0452175907, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TaxSmartConfiguration">
+      <HintPath>..\TaxSmartConfiguration.dll</HintPath>
+    </Reference>
+    <Reference Include="TaxSmartConfiguration.Winform">
+      <HintPath>..\..\REEMS\REEMS\TaxSmartConfiguration.Winform.dll</HintPath>
+    </Reference>
+    <Reference Include="TaxSmartSuite.AutoUpdate">
+      <HintPath>..\..\REEMS\REEMS\TaxSmartSuite.AutoUpdate.dll</HintPath>
+    </Reference>
+    <Reference Include="Tripous, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TaxSmartSuite\bin\Debug\Tripous.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\AmountToWords.cs" />
+    <Compile Include="Classes\BackUpDB.cs" />
+    <Compile Include="Classes\DataTableConverter.cs" />
+    <Compile Include="Classes\DialogResult.cs" />
+    <Compile Include="Classes\EncryptionConfiguration.cs" />
+    <Compile Include="Classes\GridCheckMarksSelection.cs" />
+    <Compile Include="Classes\InputBox.cs" />
+    <Compile Include="Classes\NavBars.cs" />
+    <Compile Include="Classes\PasswordStrength.cs" />
+    <Compile Include="Classes\Token.cs" />
+    <Compile Include="DataSet\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\Main.cs" />
+    <Compile Include="DataSet\ReportDs.cs">
+      <DependentUpon>ReportDs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\ReportDs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportDs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\ReportManifestClass.cs" />
+    <Compile Include="DataSet\Reports.cs" />
+    <Compile Include="DataSet\Reports2.cs" />
+    <Compile Include="DataSet\Reversal.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAgecnyMainfest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAgecnyMainfest.Designer.cs">
+      <DependentUpon>FrmAgecnyMainfest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmArmsApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmArmsApproval.Designer.cs">
+      <DependentUpon>FrmArmsApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmArmsDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmArmsDisplay.Designer.cs">
+      <DependentUpon>FrmArmsDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmArmsSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmArmsSearch.Designer.cs">
+      <DependentUpon>FrmArmsSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCashiers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCashiers.designer.cs">
+      <DependentUpon>FrmCashiers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCentralData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCentralData.Designer.cs">
+      <DependentUpon>FrmCentralData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmChangePassword.Designer.cs">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frmcontrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frmcontrol.Designer.cs">
+      <DependentUpon>Frmcontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCreatMainfest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCreatMainfest.Designer.cs">
+      <DependentUpon>FrmCreatMainfest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCriteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCriteria.Designer.cs">
+      <DependentUpon>FrmCriteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDemand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDemand.Designer.cs">
+      <DependentUpon>FrmDemand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDetailsReceipts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDetailsReceipts.Designer.cs">
+      <DependentUpon>FrmDetailsReceipts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet\FrmDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSet\FrmDownload.designer.cs">
+      <DependentUpon>FrmDownload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDisplay.Designer.cs">
+      <DependentUpon>FrmDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmDownloadSources.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDownloadSources.designer.cs">
+      <DependentUpon>FrmDownloadSources.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frmduplicate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frmduplicate.Designer.cs">
+      <DependentUpon>Frmduplicate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmExport.designer.cs">
+      <DependentUpon>FrmExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmFirstApproval.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmFirstApproval.Designer.cs">
+      <DependentUpon>FrmFirstApproval.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGeneral.Designer.cs">
+      <DependentUpon>FrmGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmGenerate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGenerate.Designer.cs">
+      <DependentUpon>FrmGenerate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmGetApproved.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmGetApproved.Designer.cs">
+      <DependentUpon>FrmGetApproved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmImports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmImports.designer.cs">
+      <DependentUpon>FrmImports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmIssueReceipts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmIssueReceipts.Designer.cs">
+      <DependentUpon>FrmIssueReceipts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmIssueReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmIssueReport.Designer.cs">
+      <DependentUpon>FrmIssueReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmLocal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmLocal.designer.cs">
+      <DependentUpon>FrmLocal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmLogin.designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMainFest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMainFest.designer.cs">
+      <DependentUpon>FrmMainFest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMissingExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMissingExcel.Designer.cs">
+      <DependentUpon>FrmMissingExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmModification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmModification.Designer.cs">
+      <DependentUpon>FrmModification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPayDirect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPayDirect.designer.cs">
+      <DependentUpon>FrmPayDirect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPayment.Designer.cs">
+      <DependentUpon>FrmPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPending.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPending.Designer.cs">
+      <DependentUpon>FrmPending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPendReceipts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPendReceipts.Designer.cs">
+      <DependentUpon>FrmPendReceipts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPrintOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPrintOption.designer.cs">
+      <DependentUpon>FrmPrintOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmPrintRevenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPrintRevenue.Designer.cs">
+      <DependentUpon>FrmPrintRevenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmProfile.Designer.cs">
+      <DependentUpon>FrmProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmReceiptCancel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReceiptCancel.Designer.cs">
+      <DependentUpon>FrmReceiptCancel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmReceiptCentreMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReceiptCentreMap.Designer.cs">
+      <DependentUpon>FrmReceiptCentreMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmReceiptDemand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReceiptDemand.Designer.cs">
+      <DependentUpon>FrmReceiptDemand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmReceipts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReceipts.designer.cs">
+      <DependentUpon>FrmReceipts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmReceiptsCentre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReceiptsCentre.Designer.cs">
+      <DependentUpon>FrmReceiptsCentre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmReceiveRec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReceiveRec.Designer.cs">
+      <DependentUpon>FrmReceiveRec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmReprinted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReprinted.Designer.cs">
+      <DependentUpon>FrmReprinted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmReprintHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmReprintHoc.Designer.cs">
+      <DependentUpon>FrmReprintHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmRevException.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRevException.Designer.cs">
+      <DependentUpon>FrmRevException.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSearchReceipts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSearchReceipts.Designer.cs">
+      <DependentUpon>FrmSearchReceipts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSplit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSplit.Designer.cs">
+      <DependentUpon>FrmSplit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmStationDownload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmStationDownload.Designer.cs">
+      <DependentUpon>FrmStationDownload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmStationMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmStationMap.designer.cs">
+      <DependentUpon>FrmStationMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmStationname.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmStationname.Designer.cs">
+      <DependentUpon>FrmStationname.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmStations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmStations.designer.cs">
+      <DependentUpon>FrmStations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSummaryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSummaryReport.designer.cs">
+      <DependentUpon>FrmSummaryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmTCO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmTCO.Designer.cs">
+      <DependentUpon>FrmTCO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MDIMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MDIMain.Designer.cs">
+      <DependentUpon>MDIMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordStrengthControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PasswordStrengthControl.Designer.cs">
+      <DependentUpon>PasswordStrengthControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\XRepReceiptoyo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XRepReceiptoyo.Designer.cs">
+      <DependentUpon>XRepReceiptoyo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XRepReceiptreprint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XRepReceiptreprint.designer.cs">
+      <DependentUpon>XRepReceiptreprint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepCustozime.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepCustozime.Designer.cs">
+      <DependentUpon>XtraRepCustozime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepDetails.Designer.cs">
+      <DependentUpon>XtraRepDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepDetailStation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepDetailStation.Designer.cs">
+      <DependentUpon>XtraRepDetailStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepExecptionReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepExecptionReport.Designer.cs">
+      <DependentUpon>XtraRepExecptionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepPayment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepPayment.Designer.cs">
+      <DependentUpon>XtraRepPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepPayments.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepPayments.Designer.cs">
+      <DependentUpon>XtraRepPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepReceiptAkwa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepReceiptAkwa.Designer.cs">
+      <DependentUpon>XtraRepReceiptAkwa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepReceiptDeltaSapele.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepReceiptDeltaSapele.Designer.cs">
+      <DependentUpon>XtraRepReceiptDeltaSapele.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepReversal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepReversal.Designer.cs">
+      <DependentUpon>XtraRepReversal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepTelly.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepTelly.Designer.cs">
+      <DependentUpon>XtraRepTelly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraRepUnreceipted.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraRepUnreceipted.Designer.cs">
+      <DependentUpon>XtraRepUnreceipted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm1.designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\AkwaIbomReceiptServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\DeltaBir\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\interswitchng\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Kogireceiptservice\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\OyoReceiptServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\processSms\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Reemsonline\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\TestReceiptServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAgecnyMainfest.resx">
+      <DependentUpon>FrmAgecnyMainfest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmArmsApproval.resx">
+      <DependentUpon>FrmArmsApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmArmsDisplay.resx">
+      <DependentUpon>FrmArmsDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmArmsSearch.resx">
+      <DependentUpon>FrmArmsSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCashiers.resx">
+      <DependentUpon>FrmCashiers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCentralData.resx">
+      <DependentUpon>FrmCentralData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmChangePassword.resx">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frmcontrol.resx">
+      <DependentUpon>Frmcontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCreatMainfest.resx">
+      <DependentUpon>FrmCreatMainfest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCriteria.resx">
+      <DependentUpon>FrmCriteria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDemand.resx">
+      <DependentUpon>FrmDemand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDetailsReceipts.resx">
+      <DependentUpon>FrmDetailsReceipts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataSet\FrmDownload.resx">
+      <DependentUpon>FrmDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDisplay.resx">
+      <DependentUpon>FrmDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDownloadSources.resx">
+      <DependentUpon>FrmDownloadSources.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frmduplicate.resx">
+      <DependentUpon>Frmduplicate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmExport.resx">
+      <DependentUpon>FrmExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmFirstApproval.resx">
+      <DependentUpon>FrmFirstApproval.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmGeneral.resx">
+      <DependentUpon>FrmGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmGenerate.resx">
+      <DependentUpon>FrmGenerate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmGetApproved.resx">
+      <DependentUpon>FrmGetApproved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmImports.resx">
+      <DependentUpon>FrmImports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmIssueReceipts.resx">
+      <DependentUpon>FrmIssueReceipts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmIssueReport.resx">
+      <DependentUpon>FrmIssueReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLocal.resx">
+      <DependentUpon>FrmLocal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMainFest.resx">
+      <DependentUpon>FrmMainFest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMissingExcel.resx">
+      <DependentUpon>FrmMissingExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmModification.resx">
+      <DependentUpon>FrmModification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPayDirect.resx">
+      <DependentUpon>FrmPayDirect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPayment.resx">
+      <DependentUpon>FrmPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPending.resx">
+      <DependentUpon>FrmPending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPendReceipts.resx">
+      <DependentUpon>FrmPendReceipts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPrintOption.resx">
+      <DependentUpon>FrmPrintOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmPrintRevenue.resx">
+      <DependentUpon>FrmPrintRevenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmProfile.resx">
+      <DependentUpon>FrmProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReceiptCancel.resx">
+      <DependentUpon>FrmReceiptCancel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReceiptCentreMap.resx">
+      <DependentUpon>FrmReceiptCentreMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReceiptDemand.resx">
+      <DependentUpon>FrmReceiptDemand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReceipts.resx">
+      <DependentUpon>FrmReceipts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReceiptsCentre.resx">
+      <DependentUpon>FrmReceiptsCentre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReceiveRec.resx">
+      <DependentUpon>FrmReceiveRec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReprinted.resx">
+      <DependentUpon>FrmReprinted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmReprintHoc.resx">
+      <DependentUpon>FrmReprintHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmRevException.resx">
+      <DependentUpon>FrmRevException.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSearchReceipts.resx">
+      <DependentUpon>FrmSearchReceipts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSplit.resx">
+      <DependentUpon>FrmSplit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmStationDownload.resx">
+      <DependentUpon>FrmStationDownload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmStationMap.resx">
+      <DependentUpon>FrmStationMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmStationname.resx">
+      <DependentUpon>FrmStationname.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmStations.resx">
+      <DependentUpon>FrmStations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSummaryReport.resx">
+      <DependentUpon>FrmSummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmTCO.resx">
+      <DependentUpon>FrmTCO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MDIMain.resx">
+      <DependentUpon>MDIMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasswordStrengthControl.resx">
+      <DependentUpon>PasswordStrengthControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XRepAgency.resx">
+      <DependentUpon>XRepAgency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XRepAgencyDetail.resx">
+      <DependentUpon>XRepAgencyDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XRepGenerate.resx">
+      <DependentUpon>XRepGenerate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XRepGlobalManifest.resx">
+      <DependentUpon>XRepGlobalManifest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XRepManifest.resx">
+      <DependentUpon>XRepManifest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XRepPendTransaction.resx">
+      <DependentUpon>XRepPendTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XRepReceipt.resx">
+      <DependentUpon>XRepReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XRepReceiptoyo.resx">
+      <DependentUpon>XRepReceiptoyo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XRepReceiptReport.resx">
+      <DependentUpon>XRepReceiptReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XRepReceiptreprint.resx">
+      <DependentUpon>XRepReceiptreprint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XRepReprintManifest.resx">
+      <DependentUpon>XRepReprintManifest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XRepRevenue.resx">
+      <DependentUpon>XRepRevenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XRepRevenueDetails.resx">
+      <DependentUpon>XRepRevenueDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XRepSDetails.resx">
+      <DependentUpon>XRepSDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XRepSummaryMaster.resx">
+      <DependentUpon>XRepSummaryMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepCustozime.resx">
+      <DependentUpon>XtraRepCustozime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepDetails.resx">
+      <DependentUpon>XtraRepDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepDetailStation.resx">
+      <DependentUpon>XtraRepDetailStation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepExecptionReport.resx">
+      <DependentUpon>XtraRepExecptionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraReport2.resx">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepPayment.resx">
+      <DependentUpon>XtraRepPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepPayments.resx">
+      <DependentUpon>XtraRepPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepReceiptAkwa.resx">
+      <DependentUpon>XtraRepReceiptAkwa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepReceiptDeltaSapele.resx">
+      <DependentUpon>XtraRepReceiptDeltaSapele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepReversal.resx">
+      <DependentUpon>XtraRepReversal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepTelly.resx">
+      <DependentUpon>XtraRepTelly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtraRepUnreceipted.resx">
+      <DependentUpon>XtraRepUnreceipted.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\XtRepDetails.resx">
+      <DependentUpon>XtRepDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Collection.DataSet.ReportManifestClass.datasource" />
+    <None Include="Properties\DataSources\Collection.DataSet.Reports.datasource" />
+    <None Include="Properties\DataSources\Collection.DataSet.Reports2.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Report\XRepAgency.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XRepAgency.Designer.cs">
+      <DependentUpon>XRepAgency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XRepAgencyDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XRepAgencyDetail.Designer.cs">
+      <DependentUpon>XRepAgencyDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XRepGenerate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XRepGenerate.Designer.cs">
+      <DependentUpon>XRepGenerate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XRepGlobalManifest.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XRepGlobalManifest.Designer.cs">
+      <DependentUpon>XRepGlobalManifest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XRepManifest.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XRepManifest.Designer.cs">
+      <DependentUpon>XRepManifest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XRepPendTransaction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XRepPendTransaction.Designer.cs">
+      <DependentUpon>XRepPendTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XRepReceipt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XRepReceipt.Designer.cs">
+      <DependentUpon>XRepReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XRepReceiptReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XRepReceiptReport.Designer.cs">
+      <DependentUpon>XRepReceiptReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XRepReprintManifest.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XRepReprintManifest.Designer.cs">
+      <DependentUpon>XRepReprintManifest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XRepRevenue.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XRepRevenue.Designer.cs">
+      <DependentUpon>XRepRevenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XRepRevenueDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XRepRevenueDetails.Designer.cs">
+      <DependentUpon>XRepRevenueDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XRepSDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XRepSDetails.Designer.cs">
+      <DependentUpon>XRepSDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XRepSummaryMaster.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XRepSummaryMaster.Designer.cs">
+      <DependentUpon>XRepSummaryMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtraReport2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtraReport2.Designer.cs">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\XtRepDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\XtRepDetails.Designer.cs">
+      <DependentUpon>XtRepDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ReceiptServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <None Include="Web References\AkwaIbomReceiptServices\receiptservice.wsdl" />
+    <None Include="Web References\AkwaIbomReceiptServices\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\DeltaBir\receiptservice.wsdl" />
+    <None Include="Web References\DeltaBir\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\interswitchng\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Kogireceiptservice\receiptservice.wsdl" />
+    <None Include="Web References\Kogireceiptservice\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\OyoReceiptServices\receiptservice.wsdl" />
+    <None Include="Web References\OyoReceiptServices\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\processSms\processSms.wsdl" />
+    <None Include="Web References\processSms\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Reemsonline\getnewdate.wsdl" />
+    <None Include="Web References\Reemsonline\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\TestReceiptServices\ReceiptService.wsdl" />
+    <None Include="Web References\TestReceiptServices\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tmart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\ReportDs.xsc">
+      <DependentUpon>ReportDs.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\ReportDs.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportDs.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet\ReportDs.xss">
+      <DependentUpon>ReportDs.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\LogIn2.jpg" />
+    <None Include="Web References\ReceiptServices\receiptservice.wsdl" />
+    <None Include="Web References\ReceiptServices\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://deltabir.com/DSI_IPS/receiptservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\DeltaBir\</RelPath>
+      <UpdateFromURL>http://deltabir.com/DSI_IPS/receiptservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Collections_DeltaBir_ReceiptService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/oyo/ReceiptService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\TestReceiptServices\</RelPath>
+      <UpdateFromURL>http://localhost/oyo/ReceiptService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Collections_TestReceiptServices_ReceiptService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://reemsonline.com/getnewdate.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Reemsonline\</RelPath>
+      <UpdateFromURL>http://reemsonline.com/getnewdate.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Collections_Reemsonline_GetNewDate</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://74.208.222.200/state_akwaibom/receiptservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\AkwaIbomReceiptServices\</RelPath>
+      <UpdateFromURL>http://74.208.222.200/state_akwaibom/receiptservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Collections_AkwaIbomReceiptServices_ReceiptService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.ogunstaterevenue.com/OGS_IPS/ReceiptService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ReceiptServices\</RelPath>
+      <UpdateFromURL>http://www.ogunstaterevenue.com/OGS_IPS/ReceiptService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Collections_ReceiptServices_ReceiptService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://oyostatebir.com/OYI_IPS/ReceiptService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\OyoReceiptServices\</RelPath>
+      <UpdateFromURL>http://oyostatebir.com/OYI_IPS/ReceiptService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Collections_OyoReceiptServices_ReceiptService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.reemsonline.com/servicesinternal/receiptservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Kogireceiptservice\</RelPath>
+      <UpdateFromURL>http://www.reemsonline.com/servicesinternal/receiptservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Collections_Kogireceiptservice_ReceiptService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://www.reemsonline.com/SMS/processSms.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\processSms\</RelPath>
+      <UpdateFromURL>http://www.reemsonline.com/SMS/processSms.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Collections_processSms_ProcessSms</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://orion.interswitchng.com/bookonhold/bookonhold.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\interswitchng\</RelPath>
+      <UpdateFromURL>https://orion.interswitchng.com/bookonhold/bookonhold.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>
+      </CachedAppSettingsObjectName>
+      <CachedSettingsPropName>
+      </CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ts.ico" />
+    <Content Include="twux.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Web References\processSms\processSms.disco" />
+    <None Include="Web References\DeltaBir\receiptservice.disco" />
+    <None Include="Web References\AkwaIbomReceiptServices\receiptservice.disco" />
+    <None Include="Web References\interswitchng\bookonhold.disco" />
+    <None Include="Web References\TestReceiptServices\ReceiptService.disco" />
+    <None Include="Web References\Kogireceiptservice\receiptservice.disco" />
+    <None Include="Web References\OyoReceiptServices\receiptservice.disco" />
+    <None Include="Web References\Reemsonline\getnewdate.disco" />
+    <None Include="Web References\ReceiptServices\receiptservice.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TaxSmartSuite\TaxSmartSuite.csproj">
+      <Project>{c1ac8f90-27fc-421f-bb86-c92112a069e9}</Project>
+      <Name>TaxSmartSuite</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
