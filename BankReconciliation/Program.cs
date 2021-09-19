@@ -33,7 +33,7 @@ namespace BankReconciliation
 
             string GH = MosesClassLibrary.Security.Encryption.Decrypt("XSP+kdUZvsyEuNRLXy+lWGxwzndM35Lj");
             string var = MosesClassLibrary.Security.Encryption.Decrypt("3V1el5Ftwt3JJqu+HasHtg==");
-            string vars = MosesClassLibrary.Security.Encryption.Decrypt("8KvMOu2fsrQcHHj+sc5lpg==");
+            string vars = MosesClassLibrary.Security.Encryption.Decrypt("TPa7tFbIUYRBs5LESu/2Hg==");
             string var2 = MosesClassLibrary.Security.Encryption.Decrypt("DCb5DBDO2BtbqsOLHpWJ7A==");
             string var4 = MosesClassLibrary.Security.Encryption.Decrypt("D30t9qV1aA8NKPPPz61kmjatzwmaDX2S");
             

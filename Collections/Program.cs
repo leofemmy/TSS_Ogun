@@ -45,14 +45,16 @@ namespace Collection
 
             string var2 = MosesClassLibrary.Security.Encryption.Decrypt("cowkqU3RAp5NnBQP5LAEFg==");
 
-            string var3 = MosesClassLibrary.Security.Encryption.Decrypt("xGna95S/v9xyEImP1sgHoQ==");
+            string var3 = MosesClassLibrary.Security.Encryption.Decrypt("fUGCTv0mBudxLzAy/UpOnQ==");
+
+            string var3s = MosesClassLibrary.Security.Encryption.Decrypt("XGTBpxxY8m7A26IoVgykqg==");
 
             string varg3 = MosesClassLibrary.Security.Encryption.Decrypt("zFinOJ+88wFMs2p5XphOxg==");
             string varg4 = MosesClassLibrary.Security.Encryption.Decrypt("wAJGdHnaqS8HiltluSOXVQ==");
 
             string var4 = MosesClassLibrary.Security.Encryption.Decrypt("Udn/YDBdmprYCzNIai3VLHXPXP+jepSe");
 
-            var gte = MosesClassLibrary.Security.Encryption.Encrypt("Password@1234");
+            var gte = MosesClassLibrary.Security.Encryption.Encrypt("password@1234");
 
             isCentralData = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["IsCentralData"]) == 1 ? true : false;
 #if true
