@@ -36,6 +36,7 @@ namespace Collection.Report
         private void Detail_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
             var fullPath = System.IO.Path.Combine(System.Windows.Forms.Application.StartupPath, logoPath);
+
             if (!string.IsNullOrWhiteSpace(fullPath) && System.IO.File.Exists(fullPath))
                 xrPictureBox1.Image = Image.FromFile(fullPath);
             xrPictureBox2.Image = Image.FromFile(fullPath);
@@ -44,7 +45,25 @@ namespace Collection.Report
 
             xrLabel50.Text = testrval;
 
+            string payval = this.GetCurrentColumnValue("PaymentPeriod").ToString();
+
+
             xrLabel51.Text = testrval;
+
+            if (!string.IsNullOrWhiteSpace(payval))
+            {
+                xrLabel58.Visible = true;
+                xrLabel59.Visible = true;
+                xrLabel4.Visible = true;
+                xrLabel21.Visible = true;
+            }
+            else
+            {
+                xrLabel58.Visible = false;
+                xrLabel4.Visible = false;
+                xrLabel59.Visible = false; xrLabel21.Visible = false;
+            }
+            
 
             string strrep = string.Format("REPRINTED");
 

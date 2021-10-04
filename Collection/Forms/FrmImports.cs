@@ -7,6 +7,8 @@ using System.Windows.Forms;
 using TaxSmartSuite.Class;
 using Collection.Classess;
 using System.Data.OleDb;
+using MosesClassLibrary.Security;
+
 //using TaxSmartSuite.Dataset;
 
 namespace Collection.Forms

@@ -2577,8 +2577,6 @@ namespace Collection.DataSet {
             
             private global::System.Data.DataColumn columnDateDiff;
             
-            private global::System.Data.DataColumn columnUploadStatus;
-            
             private global::System.Data.DataColumn columnStationCode;
             
             private global::System.Data.DataColumn columnStationName;
@@ -2612,6 +2610,8 @@ namespace Collection.DataSet {
             private global::System.Data.DataColumn columnIsMemorandum;
             
             private global::System.Data.DataColumn columnCurrencyCode;
+            
+            private global::System.Data.DataColumn columnPaymentPeriod;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -2920,14 +2920,6 @@ namespace Collection.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn UploadStatusColumn {
-                get {
-                    return this.columnUploadStatus;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn StationCodeColumn {
                 get {
                     return this.columnStationCode;
@@ -3064,6 +3056,14 @@ namespace Collection.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn PaymentPeriodColumn {
+                get {
+                    return this.columnPaymentPeriod;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3134,7 +3134,6 @@ namespace Collection.DataSet {
                         System.DateTime EReceiptsDate, 
                         string GeneratedBy, 
                         int DateDiff, 
-                        string UploadStatus, 
                         string StationCode, 
                         string StationName, 
                         System.DateTime ChequeValueDate, 
@@ -3150,7 +3149,8 @@ namespace Collection.DataSet {
                         int IsRecordExit, 
                         int IsPayDirect, 
                         int IsMemorandum, 
-                        string CurrencyCode) {
+                        string CurrencyCode, 
+                        string PaymentPeriod) {
                 tblCollectionReportRow rowtblCollectionReportRow = ((tblCollectionReportRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Provider,
@@ -3187,7 +3187,6 @@ namespace Collection.DataSet {
                         EReceiptsDate,
                         GeneratedBy,
                         DateDiff,
-                        UploadStatus,
                         StationCode,
                         StationName,
                         null,
@@ -3204,7 +3203,8 @@ namespace Collection.DataSet {
                         IsRecordExit,
                         IsPayDirect,
                         IsMemorandum,
-                        CurrencyCode};
+                        CurrencyCode,
+                        PaymentPeriod};
                 rowtblCollectionReportRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtblCollectionReportRow);
                 return rowtblCollectionReportRow;
@@ -3268,7 +3268,6 @@ namespace Collection.DataSet {
                 this.columnEReceiptsDate = base.Columns["EReceiptsDate"];
                 this.columnGeneratedBy = base.Columns["GeneratedBy"];
                 this.columnDateDiff = base.Columns["DateDiff"];
-                this.columnUploadStatus = base.Columns["UploadStatus"];
                 this.columnStationCode = base.Columns["StationCode"];
                 this.columnStationName = base.Columns["StationName"];
                 this.columnID = base.Columns["ID"];
@@ -3286,6 +3285,7 @@ namespace Collection.DataSet {
                 this.columnIsPayDirect = base.Columns["IsPayDirect"];
                 this.columnIsMemorandum = base.Columns["IsMemorandum"];
                 this.columnCurrencyCode = base.Columns["CurrencyCode"];
+                this.columnPaymentPeriod = base.Columns["PaymentPeriod"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3359,8 +3359,6 @@ namespace Collection.DataSet {
                 base.Columns.Add(this.columnGeneratedBy);
                 this.columnDateDiff = new global::System.Data.DataColumn("DateDiff", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDateDiff);
-                this.columnUploadStatus = new global::System.Data.DataColumn("UploadStatus", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUploadStatus);
                 this.columnStationCode = new global::System.Data.DataColumn("StationCode", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnStationCode);
                 this.columnStationName = new global::System.Data.DataColumn("StationName", typeof(string), null, global::System.Data.MappingType.Element);
@@ -3395,6 +3393,8 @@ namespace Collection.DataSet {
                 base.Columns.Add(this.columnIsMemorandum);
                 this.columnCurrencyCode = new global::System.Data.DataColumn("CurrencyCode", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCurrencyCode);
+                this.columnPaymentPeriod = new global::System.Data.DataColumn("PaymentPeriod", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPaymentPeriod);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnPaymentRefNumber}, true));
                 this.columnProvider.MaxLength = 500;
@@ -3428,7 +3428,6 @@ namespace Collection.DataSet {
                 this.columnAmountWords.MaxLength = 2000;
                 this.columnEReceipts.MaxLength = 50;
                 this.columnGeneratedBy.MaxLength = 50;
-                this.columnUploadStatus.MaxLength = 50;
                 this.columnStationCode.MaxLength = 50;
                 this.columnStationName.MaxLength = 50;
                 this.columnID.AutoIncrement = true;
@@ -3444,12 +3443,12 @@ namespace Collection.DataSet {
                 this.columnDatePrinted.ReadOnly = true;
                 this.columnControlNumber.ReadOnly = true;
                 this.columnBatchNumber.ReadOnly = true;
-                this.columnPaymentDate.AllowDBNull = false;
                 this.columnIsRecordExit.ReadOnly = true;
                 this.columnIsPayDirect.ReadOnly = true;
                 this.columnIsMemorandum.ReadOnly = true;
                 this.columnCurrencyCode.AllowDBNull = false;
                 this.columnCurrencyCode.MaxLength = 5;
+                this.columnPaymentPeriod.MaxLength = 1000;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7485,22 +7484,6 @@ namespace Collection.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string UploadStatus {
-                get {
-                    try {
-                        return ((string)(this[this.tabletblCollectionReport.UploadStatusColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'UploadStatus\' in table \'tblCollectionReport\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletblCollectionReport.UploadStatusColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string StationCode {
                 get {
                     try {
@@ -7691,7 +7674,12 @@ namespace Collection.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime PaymentDate {
                 get {
-                    return ((global::System.DateTime)(this[this.tabletblCollectionReport.PaymentDateColumn]));
+                    try {
+                        return ((global::System.DateTime)(this[this.tabletblCollectionReport.PaymentDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PaymentDate\' in table \'tblCollectionReport\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tabletblCollectionReport.PaymentDateColumn] = value;
@@ -7754,6 +7742,22 @@ namespace Collection.DataSet {
                 }
                 set {
                     this[this.tabletblCollectionReport.CurrencyCodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string PaymentPeriod {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblCollectionReport.PaymentPeriodColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PaymentPeriod\' in table \'tblCollectionReport\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblCollectionReport.PaymentPeriodColumn] = value;
                 }
             }
             
@@ -8155,18 +8159,6 @@ namespace Collection.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsUploadStatusNull() {
-                return this.IsNull(this.tabletblCollectionReport.UploadStatusColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetUploadStatusNull() {
-                this[this.tabletblCollectionReport.UploadStatusColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsStationCodeNull() {
                 return this.IsNull(this.tabletblCollectionReport.StationCodeColumn);
             }
@@ -8299,6 +8291,18 @@ namespace Collection.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPaymentDateNull() {
+                return this.IsNull(this.tabletblCollectionReport.PaymentDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPaymentDateNull() {
+                this[this.tabletblCollectionReport.PaymentDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsIsRecordExitNull() {
                 return this.IsNull(this.tabletblCollectionReport.IsRecordExitColumn);
             }
@@ -8331,6 +8335,18 @@ namespace Collection.DataSet {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetIsMemorandumNull() {
                 this[this.tabletblCollectionReport.IsMemorandumColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsPaymentPeriodNull() {
+                return this.IsNull(this.tabletblCollectionReport.PaymentPeriodColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPaymentPeriodNull() {
+                this[this.tabletblCollectionReport.PaymentPeriodColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -11334,7 +11350,6 @@ SELECT ReceiptPrintHistoryID, PaymenRefNumber, DepositSlipNumber, PaymentDate, P
             tableMapping.ColumnMappings.Add("EReceiptsDate", "EReceiptsDate");
             tableMapping.ColumnMappings.Add("GeneratedBy", "GeneratedBy");
             tableMapping.ColumnMappings.Add("DateDiff", "DateDiff");
-            tableMapping.ColumnMappings.Add("UploadStatus", "UploadStatus");
             tableMapping.ColumnMappings.Add("StationCode", "StationCode");
             tableMapping.ColumnMappings.Add("StationName", "StationName");
             tableMapping.ColumnMappings.Add("ID", "ID");
@@ -11352,118 +11367,29 @@ SELECT ReceiptPrintHistoryID, PaymenRefNumber, DepositSlipNumber, PaymentDate, P
             tableMapping.ColumnMappings.Add("IsPayDirect", "IsPayDirect");
             tableMapping.ColumnMappings.Add("IsMemorandum", "IsMemorandum");
             tableMapping.ColumnMappings.Add("CurrencyCode", "CurrencyCode");
+            tableMapping.ColumnMappings.Add("PaymentPeriod", "PaymentPeriod");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Collection].[tblCollectionReport] WHERE (([ID] = @Original_ID) AND (" +
-                "(@IsNull_Provider = 1 AND [Provider] IS NULL) OR ([Provider] = @Original_Provide" +
-                "r)) AND ((@IsNull_Channel = 1 AND [Channel] IS NULL) OR ([Channel] = @Original_C" +
-                "hannel)) AND ([PaymentRefNumber] = @Original_PaymentRefNumber) AND ((@IsNull_Dep" +
-                "ositSlipNumber = 1 AND [DepositSlipNumber] IS NULL) OR ([DepositSlipNumber] = @O" +
-                "riginal_DepositSlipNumber)) AND ((@IsNull_PayerID = 1 AND [PayerID] IS NULL) OR " +
-                "([PayerID] = @Original_PayerID)) AND ((@IsNull_Amount = 1 AND [Amount] IS NULL) " +
-                "OR ([Amount] = @Original_Amount)) AND ((@IsNull_PaymentMethod = 1 AND [PaymentMe" +
-                "thod] IS NULL) OR ([PaymentMethod] = @Original_PaymentMethod)) AND ((@IsNull_Che" +
-                "queNumber = 1 AND [ChequeNumber] IS NULL) OR ([ChequeNumber] = @Original_ChequeN" +
-                "umber)) AND ((@IsNull_ChequeValueDate = 1 AND [ChequeValueDate] IS NULL) OR ([Ch" +
-                "equeValueDate] = @Original_ChequeValueDate)) AND ((@IsNull_ChequeStatus = 1 AND " +
-                "[ChequeStatus] IS NULL) OR ([ChequeStatus] = @Original_ChequeStatus)) AND ((@IsN" +
-                "ull_DateChequeReturned = 1 AND [DateChequeReturned] IS NULL) OR ([DateChequeRetu" +
-                "rned] = @Original_DateChequeReturned)) AND ((@IsNull_TelephoneNumber = 1 AND [Te" +
-                "lephoneNumber] IS NULL) OR ([TelephoneNumber] = @Original_TelephoneNumber)) AND " +
-                "((@IsNull_ReceiptNo = 1 AND [ReceiptNo] IS NULL) OR ([ReceiptNo] = @Original_Rec" +
-                "eiptNo)) AND ((@IsNull_ReceiptDate = 1 AND [ReceiptDate] IS NULL) OR ([ReceiptDa" +
-                "te] = @Original_ReceiptDate)) AND ((@IsNull_User = 1 AND [User] IS NULL) OR ([Us" +
-                "er] = @Original_User)) AND ((@IsNull_RevenueCode = 1 AND [RevenueCode] IS NULL) " +
-                "OR ([RevenueCode] = @Original_RevenueCode)) AND ((@IsNull_Description = 1 AND [D" +
-                "escription] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_C" +
-                "hequeBankCode = 1 AND [ChequeBankCode] IS NULL) OR ([ChequeBankCode] = @Original" +
-                "_ChequeBankCode)) AND ((@IsNull_ChequeBankName = 1 AND [ChequeBankName] IS NULL)" +
-                " OR ([ChequeBankName] = @Original_ChequeBankName)) AND ((@IsNull_AgencyName = 1 " +
-                "AND [AgencyName] IS NULL) OR ([AgencyName] = @Original_AgencyName)) AND ((@IsNul" +
-                "l_AgencyCode = 1 AND [AgencyCode] IS NULL) OR ([AgencyCode] = @Original_AgencyCo" +
-                "de)) AND ((@IsNull_BankCode = 1 AND [BankCode] IS NULL) OR ([BankCode] = @Origin" +
-                "al_BankCode)) AND ((@IsNull_BankName = 1 AND [BankName] IS NULL) OR ([BankName] " +
-                "= @Original_BankName)) AND ((@IsNull_BranchCode = 1 AND [BranchCode] IS NULL) OR" +
-                " ([BranchCode] = @Original_BranchCode)) AND ((@IsNull_BranchName = 1 AND [Branch" +
-                "Name] IS NULL) OR ([BranchName] = @Original_BranchName)) AND ((@IsNull_ZoneCode " +
-                "= 1 AND [ZoneCode] IS NULL) OR ([ZoneCode] = @Original_ZoneCode)) AND ((@IsNull_" +
-                "ZoneName = 1 AND [ZoneName] IS NULL) OR ([ZoneName] = @Original_ZoneName)) AND (" +
-                "(@IsNull_Username = 1 AND [Username] IS NULL) OR ([Username] = @Original_Usernam" +
-                "e)) AND ((@IsNull_EReceipts = 1 AND [EReceipts] IS NULL) OR ([EReceipts] = @Orig" +
-                "inal_EReceipts)) AND ((@IsNull_EReceiptsDate = 1 AND [EReceiptsDate] IS NULL) OR" +
-                " ([EReceiptsDate] = @Original_EReceiptsDate)) AND ((@IsNull_StationCode = 1 AND " +
-                "[StationCode] IS NULL) OR ([StationCode] = @Original_StationCode)) AND ((@IsNull" +
-                "_StationName = 1 AND [StationName] IS NULL) OR ([StationName] = @Original_Statio" +
-                "nName)) AND ([PaymentDate] = @Original_PaymentDate) AND ([CurrencyCode] = @Origi" +
-                "nal_CurrencyCode))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Collection].[tblCollectionReport] WHERE (([ID] = @Original_ID) AND ([PaymentRefNumber] = @Original_PaymentRefNumber) AND ((@IsNull_Amount = 1 AND [Amount] IS NULL) OR ([Amount] = @Original_Amount)) AND ((@IsNull_ChequeValueDate = 1 AND [ChequeValueDate] IS NULL) OR ([ChequeValueDate] = @Original_ChequeValueDate)) AND ((@IsNull_DateChequeReturned = 1 AND [DateChequeReturned] IS NULL) OR ([DateChequeReturned] = @Original_DateChequeReturned)) AND ((@IsNull_ReceiptDate = 1 AND [ReceiptDate] IS NULL) OR ([ReceiptDate] = @Original_ReceiptDate)) AND ((@IsNull_EReceiptsDate = 1 AND [EReceiptsDate] IS NULL) OR ([EReceiptsDate] = @Original_EReceiptsDate)) AND ((@IsNull_PaymentDate = 1 AND [PaymentDate] IS NULL) OR ([PaymentDate] = @Original_PaymentDate)) AND ([CurrencyCode] = @Original_CurrencyCode) AND ((@IsNull_PaymentPeriod = 1 AND [PaymentPeriod] IS NULL) OR ([PaymentPeriod] = @Original_PaymentPeriod)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Provider", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Provider", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Provider", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Provider", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Channel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Channel", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Channel", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Channel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PaymentRefNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentRefNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DepositSlipNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepositSlipNumber", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepositSlipNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepositSlipNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PayerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PayerID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PayerID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PayerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Amount", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Amount", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PaymentMethod", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentMethod", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PaymentMethod", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentMethod", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ChequeNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeNumber", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ChequeNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ChequeValueDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeValueDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ChequeValueDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeValueDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ChequeStatus", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeStatus", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ChequeStatus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeStatus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DateChequeReturned", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateChequeReturned", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateChequeReturned", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateChequeReturned", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TelephoneNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TelephoneNumber", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TelephoneNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TelephoneNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ReceiptNo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReceiptNo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ReceiptNo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReceiptNo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ReceiptDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReceiptDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ReceiptDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReceiptDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_User", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "User", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_User", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "User", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RevenueCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RevenueCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RevenueCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RevenueCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Description", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Description", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ChequeBankCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeBankCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ChequeBankCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeBankCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ChequeBankName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeBankName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ChequeBankName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeBankName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AgencyName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AgencyName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AgencyName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AgencyName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AgencyCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AgencyCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AgencyCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AgencyCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BankCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BankCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BankCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BankCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BankName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BankName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BankName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BankName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BranchCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BranchCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BranchCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BranchCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BranchName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BranchName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BranchName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BranchName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ZoneCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ZoneCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ZoneCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ZoneCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ZoneName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ZoneName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ZoneName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ZoneName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Username", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Username", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Username", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Username", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EReceipts", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EReceipts", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EReceipts", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EReceipts", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EReceiptsDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EReceiptsDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EReceiptsDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EReceiptsDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_StationCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StationCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StationCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StationCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_StationName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StationName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StationName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StationName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PaymentDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PaymentDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CurrencyCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CurrencyCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PaymentPeriod", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentPeriod", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PaymentPeriod", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentPeriod", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [Collection].[tblCollectionReport] ([Provider], [Channel], [PaymentRe" +
@@ -11472,26 +11398,26 @@ SELECT ReceiptPrintHistoryID, PaymenRefNumber, DepositSlipNumber, PaymentDate, P
                 "phoneNumber], [ReceiptNo], [ReceiptDate], [PayerAddress], [User], [RevenueCode]," +
                 " [Description], [ChequeBankCode], [ChequeBankName], [AgencyName], [AgencyCode], " +
                 "[BankCode], [BankName], [BranchCode], [BranchName], [ZoneCode], [ZoneName], [Use" +
-                "rname], [AmountWords], [EReceipts], [EReceiptsDate], [GeneratedBy], [UploadStatu" +
-                "s], [StationCode], [StationName], [PaymentDate], [CurrencyCode]) VALUES (@Provid" +
-                "er, @Channel, @PaymentRefNumber, @DepositSlipNumber, @PayerID, @PayerName, @Amou" +
-                "nt, @PaymentMethod, @ChequeNumber, @ChequeValueDate, @ChequeStatus, @DateChequeR" +
-                "eturned, @TelephoneNumber, @ReceiptNo, @ReceiptDate, @PayerAddress, @User, @Reve" +
-                "nueCode, @Description, @ChequeBankCode, @ChequeBankName, @AgencyName, @AgencyCod" +
-                "e, @BankCode, @BankName, @BranchCode, @BranchName, @ZoneCode, @ZoneName, @Userna" +
-                "me, @AmountWords, @EReceipts, @EReceiptsDate, @GeneratedBy, @UploadStatus, @Stat" +
-                "ionCode, @StationName, @PaymentDate, @CurrencyCode);\r\nSELECT ID, Provider, Chann" +
-                "el, PaymentRefNumber, DepositSlipNumber, PayerID, PayerName, Amount, PaymentMeth" +
-                "od, ChequeNumber, ChequeValueDate, ChequeStatus, DateChequeReturned, TelephoneNu" +
-                "mber, ReceiptNo, ReceiptDate, PayerAddress, NULL AS Status, [User], RevenueCode," +
-                " Description, ChequeBankCode, ChequeBankName, AgencyName, AgencyCode, BankCode, " +
-                "BankName, BranchCode, BranchName, ZoneCode, ZoneName, Username, NULL AS State, A" +
-                "mountWords, NULL AS URL, EReceipts, EReceiptsDate, GeneratedBy, NULL AS DateVali" +
-                "datedAgainst, NULL AS DateDiff, UploadStatus, NULL AS PrintedBY, NULL AS DatePri" +
-                "nted, NULL AS ControlNumber, NULL AS BatchNumber, StationCode, StationName, Paym" +
-                "entDate, NULL AS IsRecordExit, NULL AS IsPayDirect, NULL AS IsMemorandum, Curren" +
-                "cyCode FROM Collection.tblCollectionReport WHERE (PaymentRefNumber = @PaymentRef" +
-                "Number)";
+                "rname], [AmountWords], [EReceipts], [EReceiptsDate], [GeneratedBy], [StationCode" +
+                "], [StationName], [PaymentDate], [CurrencyCode], [PaymentPeriod]) VALUES (@Provi" +
+                "der, @Channel, @PaymentRefNumber, @DepositSlipNumber, @PayerID, @PayerName, @Amo" +
+                "unt, @PaymentMethod, @ChequeNumber, @ChequeValueDate, @ChequeStatus, @DateCheque" +
+                "Returned, @TelephoneNumber, @ReceiptNo, @ReceiptDate, @PayerAddress, @User, @Rev" +
+                "enueCode, @Description, @ChequeBankCode, @ChequeBankName, @AgencyName, @AgencyCo" +
+                "de, @BankCode, @BankName, @BranchCode, @BranchName, @ZoneCode, @ZoneName, @Usern" +
+                "ame, @AmountWords, @EReceipts, @EReceiptsDate, @GeneratedBy, @StationCode, @Stat" +
+                "ionName, @PaymentDate, @CurrencyCode, @PaymentPeriod);\r\nSELECT ID, Provider, Cha" +
+                "nnel, PaymentRefNumber, DepositSlipNumber, PayerID, PayerName, Amount, PaymentMe" +
+                "thod, ChequeNumber, ChequeValueDate, ChequeStatus, DateChequeReturned, Telephone" +
+                "Number, ReceiptNo, ReceiptDate, PayerAddress, NULL AS Status, [User], RevenueCod" +
+                "e, Description, ChequeBankCode, ChequeBankName, AgencyName, AgencyCode, BankCode" +
+                ", BankName, BranchCode, BranchName, ZoneCode, ZoneName, Username, NULL AS State," +
+                " AmountWords, NULL AS URL, EReceipts, EReceiptsDate, GeneratedBy, NULL AS DateVa" +
+                "lidatedAgainst, NULL AS DateDiff, NULL AS PrintedBY, NULL AS DatePrinted, NULL A" +
+                "S ControlNumber, NULL AS BatchNumber, StationCode, StationName, PaymentDate, NUL" +
+                "L AS IsRecordExit, NULL AS IsPayDirect, NULL AS IsMemorandum, CurrencyCode, Paym" +
+                "entPeriod FROM Collection.tblCollectionReport WHERE (PaymentRefNumber = @Payment" +
+                "RefNumber)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Provider", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Provider", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Channel", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Channel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11527,11 +11453,11 @@ SELECT ReceiptPrintHistoryID, PaymenRefNumber, DepositSlipNumber, PaymentDate, P
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EReceipts", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EReceipts", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EReceiptsDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EReceiptsDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GeneratedBy", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GeneratedBy", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UploadStatus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UploadStatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StationCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StationCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StationName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StationName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PaymentDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CurrencyCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CurrencyCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PaymentPeriod", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentPeriod", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [Collection].[tblCollectionReport] SET [Provider] = @Provider, [Channel] =" +
@@ -11547,60 +11473,30 @@ SELECT ReceiptPrintHistoryID, PaymenRefNumber, DepositSlipNumber, PaymentDate, P
                 "BranchCode] = @BranchCode, [BranchName] = @BranchName, [ZoneCode] = @ZoneCode, [" +
                 "ZoneName] = @ZoneName, [Username] = @Username, [AmountWords] = @AmountWords, [ER" +
                 "eceipts] = @EReceipts, [EReceiptsDate] = @EReceiptsDate, [GeneratedBy] = @Genera" +
-                "tedBy, [UploadStatus] = @UploadStatus, [StationCode] = @StationCode, [StationNam" +
-                "e] = @StationName, [PaymentDate] = @PaymentDate, [CurrencyCode] = @CurrencyCode " +
-                "WHERE (([ID] = @Original_ID) AND ((@IsNull_Provider = 1 AND [Provider] IS NULL) " +
-                "OR ([Provider] = @Original_Provider)) AND ((@IsNull_Channel = 1 AND [Channel] IS" +
-                " NULL) OR ([Channel] = @Original_Channel)) AND ([PaymentRefNumber] = @Original_P" +
-                "aymentRefNumber) AND ((@IsNull_DepositSlipNumber = 1 AND [DepositSlipNumber] IS " +
-                "NULL) OR ([DepositSlipNumber] = @Original_DepositSlipNumber)) AND ((@IsNull_Paye" +
-                "rID = 1 AND [PayerID] IS NULL) OR ([PayerID] = @Original_PayerID)) AND ((@IsNull" +
-                "_Amount = 1 AND [Amount] IS NULL) OR ([Amount] = @Original_Amount)) AND ((@IsNul" +
-                "l_PaymentMethod = 1 AND [PaymentMethod] IS NULL) OR ([PaymentMethod] = @Original" +
-                "_PaymentMethod)) AND ((@IsNull_ChequeNumber = 1 AND [ChequeNumber] IS NULL) OR (" +
-                "[ChequeNumber] = @Original_ChequeNumber)) AND ((@IsNull_ChequeValueDate = 1 AND " +
-                "[ChequeValueDate] IS NULL) OR ([ChequeValueDate] = @Original_ChequeValueDate)) A" +
-                "ND ((@IsNull_ChequeStatus = 1 AND [ChequeStatus] IS NULL) OR ([ChequeStatus] = @" +
-                "Original_ChequeStatus)) AND ((@IsNull_DateChequeReturned = 1 AND [DateChequeRetu" +
-                "rned] IS NULL) OR ([DateChequeReturned] = @Original_DateChequeReturned)) AND ((@" +
-                "IsNull_TelephoneNumber = 1 AND [TelephoneNumber] IS NULL) OR ([TelephoneNumber] " +
-                "= @Original_TelephoneNumber)) AND ((@IsNull_ReceiptNo = 1 AND [ReceiptNo] IS NUL" +
-                "L) OR ([ReceiptNo] = @Original_ReceiptNo)) AND ((@IsNull_ReceiptDate = 1 AND [Re" +
-                "ceiptDate] IS NULL) OR ([ReceiptDate] = @Original_ReceiptDate)) AND ((@IsNull_Us" +
-                "er = 1 AND [User] IS NULL) OR ([User] = @Original_User)) AND ((@IsNull_RevenueCo" +
-                "de = 1 AND [RevenueCode] IS NULL) OR ([RevenueCode] = @Original_RevenueCode)) AN" +
-                "D ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Orig" +
-                "inal_Description)) AND ((@IsNull_ChequeBankCode = 1 AND [ChequeBankCode] IS NULL" +
-                ") OR ([ChequeBankCode] = @Original_ChequeBankCode)) AND ((@IsNull_ChequeBankName" +
-                " = 1 AND [ChequeBankName] IS NULL) OR ([ChequeBankName] = @Original_ChequeBankNa" +
-                "me)) AND ((@IsNull_AgencyName = 1 AND [AgencyName] IS NULL) OR ([AgencyName] = @" +
-                "Original_AgencyName)) AND ((@IsNull_AgencyCode = 1 AND [AgencyCode] IS NULL) OR " +
-                "([AgencyCode] = @Original_AgencyCode)) AND ((@IsNull_BankCode = 1 AND [BankCode]" +
-                " IS NULL) OR ([BankCode] = @Original_BankCode)) AND ((@IsNull_BankName = 1 AND [" +
-                "BankName] IS NULL) OR ([BankName] = @Original_BankName)) AND ((@IsNull_BranchCod" +
-                "e = 1 AND [BranchCode] IS NULL) OR ([BranchCode] = @Original_BranchCode)) AND ((" +
-                "@IsNull_BranchName = 1 AND [BranchName] IS NULL) OR ([BranchName] = @Original_Br" +
-                "anchName)) AND ((@IsNull_ZoneCode = 1 AND [ZoneCode] IS NULL) OR ([ZoneCode] = @" +
-                "Original_ZoneCode)) AND ((@IsNull_ZoneName = 1 AND [ZoneName] IS NULL) OR ([Zone" +
-                "Name] = @Original_ZoneName)) AND ((@IsNull_Username = 1 AND [Username] IS NULL) " +
-                "OR ([Username] = @Original_Username)) AND ((@IsNull_EReceipts = 1 AND [EReceipts" +
-                "] IS NULL) OR ([EReceipts] = @Original_EReceipts)) AND ((@IsNull_EReceiptsDate =" +
-                " 1 AND [EReceiptsDate] IS NULL) OR ([EReceiptsDate] = @Original_EReceiptsDate)) " +
-                "AND ((@IsNull_StationCode = 1 AND [StationCode] IS NULL) OR ([StationCode] = @Or" +
-                "iginal_StationCode)) AND ((@IsNull_StationName = 1 AND [StationName] IS NULL) OR" +
-                " ([StationName] = @Original_StationName)) AND ([PaymentDate] = @Original_Payment" +
-                "Date) AND ([CurrencyCode] = @Original_CurrencyCode));\r\nSELECT ID, Provider, Chan" +
-                "nel, PaymentRefNumber, DepositSlipNumber, PayerID, PayerName, Amount, PaymentMet" +
-                "hod, ChequeNumber, ChequeValueDate, ChequeStatus, DateChequeReturned, TelephoneN" +
-                "umber, ReceiptNo, ReceiptDate, PayerAddress, NULL AS Status, [User], RevenueCode" +
-                ", Description, ChequeBankCode, ChequeBankName, AgencyName, AgencyCode, BankCode," +
-                " BankName, BranchCode, BranchName, ZoneCode, ZoneName, Username, NULL AS State, " +
-                "AmountWords, NULL AS URL, EReceipts, EReceiptsDate, GeneratedBy, NULL AS DateVal" +
-                "idatedAgainst, NULL AS DateDiff, UploadStatus, NULL AS PrintedBY, NULL AS DatePr" +
-                "inted, NULL AS ControlNumber, NULL AS BatchNumber, StationCode, StationName, Pay" +
-                "mentDate, NULL AS IsRecordExit, NULL AS IsPayDirect, NULL AS IsMemorandum, Curre" +
-                "ncyCode FROM Collection.tblCollectionReport WHERE (PaymentRefNumber = @PaymentRe" +
-                "fNumber)";
+                "tedBy, [StationCode] = @StationCode, [StationName] = @StationName, [PaymentDate]" +
+                " = @PaymentDate, [CurrencyCode] = @CurrencyCode, [PaymentPeriod] = @PaymentPerio" +
+                "d WHERE (([ID] = @Original_ID) AND ([PaymentRefNumber] = @Original_PaymentRefNum" +
+                "ber) AND ((@IsNull_Amount = 1 AND [Amount] IS NULL) OR ([Amount] = @Original_Amo" +
+                "unt)) AND ((@IsNull_ChequeValueDate = 1 AND [ChequeValueDate] IS NULL) OR ([Cheq" +
+                "ueValueDate] = @Original_ChequeValueDate)) AND ((@IsNull_DateChequeReturned = 1 " +
+                "AND [DateChequeReturned] IS NULL) OR ([DateChequeReturned] = @Original_DateChequ" +
+                "eReturned)) AND ((@IsNull_ReceiptDate = 1 AND [ReceiptDate] IS NULL) OR ([Receip" +
+                "tDate] = @Original_ReceiptDate)) AND ((@IsNull_EReceiptsDate = 1 AND [EReceiptsD" +
+                "ate] IS NULL) OR ([EReceiptsDate] = @Original_EReceiptsDate)) AND ((@IsNull_Paym" +
+                "entDate = 1 AND [PaymentDate] IS NULL) OR ([PaymentDate] = @Original_PaymentDate" +
+                ")) AND ([CurrencyCode] = @Original_CurrencyCode) AND ((@IsNull_PaymentPeriod = 1" +
+                " AND [PaymentPeriod] IS NULL) OR ([PaymentPeriod] = @Original_PaymentPeriod)));\r" +
+                "\nSELECT ID, Provider, Channel, PaymentRefNumber, DepositSlipNumber, PayerID, Pay" +
+                "erName, Amount, PaymentMethod, ChequeNumber, ChequeValueDate, ChequeStatus, Date" +
+                "ChequeReturned, TelephoneNumber, ReceiptNo, ReceiptDate, PayerAddress, NULL AS S" +
+                "tatus, [User], RevenueCode, Description, ChequeBankCode, ChequeBankName, AgencyN" +
+                "ame, AgencyCode, BankCode, BankName, BranchCode, BranchName, ZoneCode, ZoneName," +
+                " Username, NULL AS State, AmountWords, NULL AS URL, EReceipts, EReceiptsDate, Ge" +
+                "neratedBy, NULL AS DateValidatedAgainst, NULL AS DateDiff, NULL AS PrintedBY, NU" +
+                "LL AS DatePrinted, NULL AS ControlNumber, NULL AS BatchNumber, StationCode, Stat" +
+                "ionName, PaymentDate, NULL AS IsRecordExit, NULL AS IsPayDirect, NULL AS IsMemor" +
+                "andum, CurrencyCode, PaymentPeriod FROM Collection.tblCollectionReport WHERE (Pa" +
+                "ymentRefNumber = @PaymentRefNumber)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Provider", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Provider", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Channel", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Channel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -11636,84 +11532,35 @@ SELECT ReceiptPrintHistoryID, PaymenRefNumber, DepositSlipNumber, PaymentDate, P
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EReceipts", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EReceipts", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EReceiptsDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EReceiptsDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GeneratedBy", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GeneratedBy", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UploadStatus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UploadStatus", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StationCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StationCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StationName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StationName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PaymentDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CurrencyCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CurrencyCode", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PaymentPeriod", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentPeriod", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Provider", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Provider", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Provider", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Provider", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Channel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Channel", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Channel", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Channel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PaymentRefNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentRefNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DepositSlipNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepositSlipNumber", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DepositSlipNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DepositSlipNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PayerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PayerID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PayerID", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PayerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Amount", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Amount", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PaymentMethod", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentMethod", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PaymentMethod", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentMethod", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ChequeNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeNumber", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ChequeNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ChequeValueDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeValueDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ChequeValueDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeValueDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ChequeStatus", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeStatus", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ChequeStatus", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeStatus", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DateChequeReturned", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateChequeReturned", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateChequeReturned", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateChequeReturned", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TelephoneNumber", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TelephoneNumber", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TelephoneNumber", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TelephoneNumber", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ReceiptNo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReceiptNo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ReceiptNo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReceiptNo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ReceiptDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReceiptDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ReceiptDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ReceiptDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_User", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "User", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_User", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "User", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RevenueCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RevenueCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RevenueCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RevenueCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Description", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Description", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ChequeBankCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeBankCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ChequeBankCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeBankCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ChequeBankName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeBankName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ChequeBankName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ChequeBankName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AgencyName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AgencyName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AgencyName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AgencyName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AgencyCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AgencyCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AgencyCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AgencyCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BankCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BankCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BankCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BankCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BankName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BankName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BankName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BankName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BranchCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BranchCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BranchCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BranchCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BranchName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BranchName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BranchName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BranchName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ZoneCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ZoneCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ZoneCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ZoneCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ZoneName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ZoneName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ZoneName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ZoneName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Username", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Username", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Username", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Username", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EReceipts", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EReceipts", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EReceipts", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EReceipts", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_EReceiptsDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EReceiptsDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EReceiptsDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EReceiptsDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_StationCode", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StationCode", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StationCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StationCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_StationName", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StationName", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_StationName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "StationName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PaymentDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PaymentDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CurrencyCode", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CurrencyCode", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PaymentPeriod", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentPeriod", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PaymentPeriod", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PaymentPeriod", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Collection.Properties.Settings.Default.TaxSmartSuiteRevisedNewOG14022017ConnectionString;
+            this._connection.ConnectionString = global::Collection.Properties.Settings.Default.TaxSmartSuiteConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11722,11 +11569,10 @@ SELECT ReceiptPrintHistoryID, PaymenRefNumber, DepositSlipNumber, PaymentDate, P
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        ID, Provider, Channel, PaymentRefNumber, DepositSlipNumber, PayerID, PayerName, Amount, PaymentMethod, ChequeNumber, ChequeValueDate, ChequeStatus, DateChequeReturned, TelephoneNumber, 
-                         ReceiptNo, ReceiptDate, PayerAddress, NULL AS Status, [User], RevenueCode, Description, ChequeBankCode, ChequeBankName, AgencyName, AgencyCode, BankCode, BankName, BranchCode, BranchName, 
-                         ZoneCode, ZoneName, Username, NULL AS State, AmountWords, NULL AS URL, EReceipts, EReceiptsDate, GeneratedBy, NULL AS DateValidatedAgainst, NULL AS DateDiff, UploadStatus, NULL 
-                         AS PrintedBY, NULL AS DatePrinted, NULL AS ControlNumber, NULL AS BatchNumber, StationCode, StationName, PaymentDate, NULL AS IsRecordExit, NULL AS IsPayDirect, NULL AS IsMemorandum, 
-                         CurrencyCode
+            this._commandCollection[0].CommandText = @"SELECT        ID, Provider, Channel, PaymentRefNumber, DepositSlipNumber, PayerID, PayerName, Amount, PaymentMethod, ChequeNumber, ChequeValueDate, ChequeStatus, DateChequeReturned, TelephoneNumber, ReceiptNo, 
+                         ReceiptDate, PayerAddress, NULL AS Status, [User], RevenueCode, Description, ChequeBankCode, ChequeBankName, AgencyName, AgencyCode, BankCode, BankName, BranchCode, BranchName, ZoneCode, ZoneName, 
+                         Username, NULL AS State, AmountWords, NULL AS URL, EReceipts, EReceiptsDate, GeneratedBy, NULL AS DateValidatedAgainst, NULL AS DateDiff, NULL AS PrintedBY, NULL AS DatePrinted, NULL AS ControlNumber, NULL 
+                         AS BatchNumber, StationCode, StationName, PaymentDate, NULL AS IsRecordExit, NULL AS IsPayDirect, NULL AS IsMemorandum, CurrencyCode, PaymentPeriod
 FROM            Collection.tblCollectionReport";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
@@ -11788,303 +11634,75 @@ FROM            Collection.tblCollectionReport";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(
-                    int Original_ID, 
-                    string Original_Provider, 
-                    string Original_Channel, 
-                    string Original_PaymentRefNumber, 
-                    string Original_DepositSlipNumber, 
-                    string Original_PayerID, 
-                    global::System.Nullable<decimal> Original_Amount, 
-                    string Original_PaymentMethod, 
-                    string Original_ChequeNumber, 
-                    global::System.Nullable<global::System.DateTime> Original_ChequeValueDate, 
-                    string Original_ChequeStatus, 
-                    global::System.Nullable<global::System.DateTime> Original_DateChequeReturned, 
-                    string Original_TelephoneNumber, 
-                    string Original_ReceiptNo, 
-                    global::System.Nullable<global::System.DateTime> Original_ReceiptDate, 
-                    string Original_User, 
-                    string Original_RevenueCode, 
-                    string Original_Description, 
-                    string Original_ChequeBankCode, 
-                    string Original_ChequeBankName, 
-                    string Original_AgencyName, 
-                    string Original_AgencyCode, 
-                    string Original_BankCode, 
-                    string Original_BankName, 
-                    string Original_BranchCode, 
-                    string Original_BranchName, 
-                    string Original_ZoneCode, 
-                    string Original_ZoneName, 
-                    string Original_Username, 
-                    string Original_EReceipts, 
-                    global::System.Nullable<global::System.DateTime> Original_EReceiptsDate, 
-                    string Original_StationCode, 
-                    string Original_StationName, 
-                    System.DateTime Original_PaymentDate, 
-                    string Original_CurrencyCode) {
+        public virtual int Delete(int Original_ID, string Original_PaymentRefNumber, global::System.Nullable<decimal> Original_Amount, global::System.Nullable<global::System.DateTime> Original_ChequeValueDate, global::System.Nullable<global::System.DateTime> Original_DateChequeReturned, global::System.Nullable<global::System.DateTime> Original_ReceiptDate, global::System.Nullable<global::System.DateTime> Original_EReceiptsDate, global::System.Nullable<global::System.DateTime> Original_PaymentDate, string Original_CurrencyCode, string Original_PaymentPeriod) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
-            if ((Original_Provider == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Provider));
-            }
-            if ((Original_Channel == null)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Channel));
-            }
             if ((Original_PaymentRefNumber == null)) {
                 throw new global::System.ArgumentNullException("Original_PaymentRefNumber");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_PaymentRefNumber));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_PaymentRefNumber));
             }
-            if ((Original_DepositSlipNumber == null)) {
+            if ((Original_Amount.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((decimal)(Original_Amount.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ChequeValueDate.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((System.DateTime)(Original_ChequeValueDate.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Original_DateChequeReturned.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(Original_DateChequeReturned.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_DepositSlipNumber));
+            if ((Original_ReceiptDate.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((System.DateTime)(Original_ReceiptDate.Value));
             }
-            if ((Original_PayerID == null)) {
+            else {
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_PayerID));
-            }
-            if ((Original_Amount.HasValue == true)) {
+            if ((Original_EReceiptsDate.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((decimal)(Original_Amount.Value));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((System.DateTime)(Original_EReceiptsDate.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Original_PaymentMethod == null)) {
+            if ((Original_PaymentDate.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((System.DateTime)(Original_PaymentDate.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_PaymentMethod));
-            }
-            if ((Original_ChequeNumber == null)) {
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((string)(Original_ChequeNumber));
-            }
-            if ((Original_ChequeValueDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((System.DateTime)(Original_ChequeValueDate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ChequeStatus == null)) {
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((string)(Original_ChequeStatus));
-            }
-            if ((Original_DateChequeReturned.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((System.DateTime)(Original_DateChequeReturned.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            if ((Original_TelephoneNumber == null)) {
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[23].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[23].Value = ((string)(Original_TelephoneNumber));
-            }
-            if ((Original_ReceiptNo == null)) {
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[25].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[25].Value = ((string)(Original_ReceiptNo));
-            }
-            if ((Original_ReceiptDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[27].Value = ((System.DateTime)(Original_ReceiptDate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[27].Value = global::System.DBNull.Value;
-            }
-            if ((Original_User == null)) {
-                this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[29].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[29].Value = ((string)(Original_User));
-            }
-            if ((Original_RevenueCode == null)) {
-                this.Adapter.DeleteCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[31].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[31].Value = ((string)(Original_RevenueCode));
-            }
-            if ((Original_Description == null)) {
-                this.Adapter.DeleteCommand.Parameters[32].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[33].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[32].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[33].Value = ((string)(Original_Description));
-            }
-            if ((Original_ChequeBankCode == null)) {
-                this.Adapter.DeleteCommand.Parameters[34].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[35].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[34].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[35].Value = ((string)(Original_ChequeBankCode));
-            }
-            if ((Original_ChequeBankName == null)) {
-                this.Adapter.DeleteCommand.Parameters[36].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[37].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[36].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[37].Value = ((string)(Original_ChequeBankName));
-            }
-            if ((Original_AgencyName == null)) {
-                this.Adapter.DeleteCommand.Parameters[38].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[39].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[38].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[39].Value = ((string)(Original_AgencyName));
-            }
-            if ((Original_AgencyCode == null)) {
-                this.Adapter.DeleteCommand.Parameters[40].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[41].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[40].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[41].Value = ((string)(Original_AgencyCode));
-            }
-            if ((Original_BankCode == null)) {
-                this.Adapter.DeleteCommand.Parameters[42].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[43].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[42].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[43].Value = ((string)(Original_BankCode));
-            }
-            if ((Original_BankName == null)) {
-                this.Adapter.DeleteCommand.Parameters[44].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[45].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[44].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[45].Value = ((string)(Original_BankName));
-            }
-            if ((Original_BranchCode == null)) {
-                this.Adapter.DeleteCommand.Parameters[46].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[47].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[46].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[47].Value = ((string)(Original_BranchCode));
-            }
-            if ((Original_BranchName == null)) {
-                this.Adapter.DeleteCommand.Parameters[48].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[49].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[48].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[49].Value = ((string)(Original_BranchName));
-            }
-            if ((Original_ZoneCode == null)) {
-                this.Adapter.DeleteCommand.Parameters[50].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[51].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[50].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[51].Value = ((string)(Original_ZoneCode));
-            }
-            if ((Original_ZoneName == null)) {
-                this.Adapter.DeleteCommand.Parameters[52].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[53].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[52].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[53].Value = ((string)(Original_ZoneName));
-            }
-            if ((Original_Username == null)) {
-                this.Adapter.DeleteCommand.Parameters[54].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[55].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[54].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[55].Value = ((string)(Original_Username));
-            }
-            if ((Original_EReceipts == null)) {
-                this.Adapter.DeleteCommand.Parameters[56].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[57].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[56].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[57].Value = ((string)(Original_EReceipts));
-            }
-            if ((Original_EReceiptsDate.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[58].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[59].Value = ((System.DateTime)(Original_EReceiptsDate.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[58].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[59].Value = global::System.DBNull.Value;
-            }
-            if ((Original_StationCode == null)) {
-                this.Adapter.DeleteCommand.Parameters[60].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[61].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[60].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[61].Value = ((string)(Original_StationCode));
-            }
-            if ((Original_StationName == null)) {
-                this.Adapter.DeleteCommand.Parameters[62].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[63].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[62].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[63].Value = ((string)(Original_StationName));
-            }
-            this.Adapter.DeleteCommand.Parameters[64].Value = ((System.DateTime)(Original_PaymentDate));
             if ((Original_CurrencyCode == null)) {
                 throw new global::System.ArgumentNullException("Original_CurrencyCode");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[65].Value = ((string)(Original_CurrencyCode));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_CurrencyCode));
+            }
+            if ((Original_PaymentPeriod == null)) {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_PaymentPeriod));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -12141,11 +11759,11 @@ FROM            Collection.tblCollectionReport";
                     string EReceipts, 
                     global::System.Nullable<global::System.DateTime> EReceiptsDate, 
                     string GeneratedBy, 
-                    string UploadStatus, 
                     string StationCode, 
                     string StationName, 
-                    System.DateTime PaymentDate, 
-                    string CurrencyCode) {
+                    global::System.Nullable<global::System.DateTime> PaymentDate, 
+                    string CurrencyCode, 
+                    string PaymentPeriod) {
             if ((Provider == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -12350,30 +11968,35 @@ FROM            Collection.tblCollectionReport";
             else {
                 this.Adapter.InsertCommand.Parameters[33].Value = ((string)(GeneratedBy));
             }
-            if ((UploadStatus == null)) {
+            if ((StationCode == null)) {
                 this.Adapter.InsertCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[34].Value = ((string)(UploadStatus));
+                this.Adapter.InsertCommand.Parameters[34].Value = ((string)(StationCode));
             }
-            if ((StationCode == null)) {
+            if ((StationName == null)) {
                 this.Adapter.InsertCommand.Parameters[35].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[35].Value = ((string)(StationCode));
+                this.Adapter.InsertCommand.Parameters[35].Value = ((string)(StationName));
             }
-            if ((StationName == null)) {
-                this.Adapter.InsertCommand.Parameters[36].Value = global::System.DBNull.Value;
+            if ((PaymentDate.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[36].Value = ((System.DateTime)(PaymentDate.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[36].Value = ((string)(StationName));
+                this.Adapter.InsertCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[37].Value = ((System.DateTime)(PaymentDate));
             if ((CurrencyCode == null)) {
                 throw new global::System.ArgumentNullException("CurrencyCode");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[38].Value = ((string)(CurrencyCode));
+                this.Adapter.InsertCommand.Parameters[37].Value = ((string)(CurrencyCode));
+            }
+            if ((PaymentPeriod == null)) {
+                this.Adapter.InsertCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[38].Value = ((string)(PaymentPeriod));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -12430,46 +12053,21 @@ FROM            Collection.tblCollectionReport";
                     string EReceipts, 
                     global::System.Nullable<global::System.DateTime> EReceiptsDate, 
                     string GeneratedBy, 
-                    string UploadStatus, 
                     string StationCode, 
                     string StationName, 
-                    System.DateTime PaymentDate, 
+                    global::System.Nullable<global::System.DateTime> PaymentDate, 
                     string CurrencyCode, 
+                    string PaymentPeriod, 
                     int Original_ID, 
-                    string Original_Provider, 
-                    string Original_Channel, 
                     string Original_PaymentRefNumber, 
-                    string Original_DepositSlipNumber, 
-                    string Original_PayerID, 
                     global::System.Nullable<decimal> Original_Amount, 
-                    string Original_PaymentMethod, 
-                    string Original_ChequeNumber, 
                     global::System.Nullable<global::System.DateTime> Original_ChequeValueDate, 
-                    string Original_ChequeStatus, 
                     global::System.Nullable<global::System.DateTime> Original_DateChequeReturned, 
-                    string Original_TelephoneNumber, 
-                    string Original_ReceiptNo, 
                     global::System.Nullable<global::System.DateTime> Original_ReceiptDate, 
-                    string Original_User, 
-                    string Original_RevenueCode, 
-                    string Original_Description, 
-                    string Original_ChequeBankCode, 
-                    string Original_ChequeBankName, 
-                    string Original_AgencyName, 
-                    string Original_AgencyCode, 
-                    string Original_BankCode, 
-                    string Original_BankName, 
-                    string Original_BranchCode, 
-                    string Original_BranchName, 
-                    string Original_ZoneCode, 
-                    string Original_ZoneName, 
-                    string Original_Username, 
-                    string Original_EReceipts, 
                     global::System.Nullable<global::System.DateTime> Original_EReceiptsDate, 
-                    string Original_StationCode, 
-                    string Original_StationName, 
-                    System.DateTime Original_PaymentDate, 
-                    string Original_CurrencyCode) {
+                    global::System.Nullable<global::System.DateTime> Original_PaymentDate, 
+                    string Original_CurrencyCode, 
+                    string Original_PaymentPeriod) {
             if ((Provider == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -12674,292 +12272,104 @@ FROM            Collection.tblCollectionReport";
             else {
                 this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(GeneratedBy));
             }
-            if ((UploadStatus == null)) {
+            if ((StationCode == null)) {
                 this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(UploadStatus));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(StationCode));
             }
-            if ((StationCode == null)) {
+            if ((StationName == null)) {
                 this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(StationCode));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(StationName));
             }
-            if ((StationName == null)) {
-                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+            if ((PaymentDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((System.DateTime)(PaymentDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(StationName));
+                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[37].Value = ((System.DateTime)(PaymentDate));
             if ((CurrencyCode == null)) {
                 throw new global::System.ArgumentNullException("CurrencyCode");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(CurrencyCode));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(CurrencyCode));
+            }
+            if ((PaymentPeriod == null)) {
+                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(PaymentPeriod));
             }
             this.Adapter.UpdateCommand.Parameters[39].Value = ((int)(Original_ID));
-            if ((Original_Provider == null)) {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_Provider));
-            }
-            if ((Original_Channel == null)) {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(Original_Channel));
-            }
             if ((Original_PaymentRefNumber == null)) {
                 throw new global::System.ArgumentNullException("Original_PaymentRefNumber");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[44].Value = ((string)(Original_PaymentRefNumber));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_PaymentRefNumber));
             }
-            if ((Original_DepositSlipNumber == null)) {
+            if ((Original_Amount.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((decimal)(Original_Amount.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[42].Value = global::System.DBNull.Value;
+            }
+            if ((Original_ChequeValueDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[44].Value = ((System.DateTime)(Original_ChequeValueDate.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[44].Value = global::System.DBNull.Value;
+            }
+            if ((Original_DateChequeReturned.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[46].Value = ((System.DateTime)(Original_DateChequeReturned.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[46].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[45].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[46].Value = ((string)(Original_DepositSlipNumber));
+            if ((Original_ReceiptDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[48].Value = ((System.DateTime)(Original_ReceiptDate.Value));
             }
-            if ((Original_PayerID == null)) {
+            else {
                 this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[48].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[47].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[48].Value = ((string)(Original_PayerID));
-            }
-            if ((Original_Amount.HasValue == true)) {
+            if ((Original_EReceiptsDate.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[50].Value = ((decimal)(Original_Amount.Value));
+                this.Adapter.UpdateCommand.Parameters[50].Value = ((System.DateTime)(Original_EReceiptsDate.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[49].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[50].Value = global::System.DBNull.Value;
             }
-            if ((Original_PaymentMethod == null)) {
+            if ((Original_PaymentDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[52].Value = ((System.DateTime)(Original_PaymentDate.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[52].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.UpdateCommand.Parameters[51].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[52].Value = ((string)(Original_PaymentMethod));
-            }
-            if ((Original_ChequeNumber == null)) {
-                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[54].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[53].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[54].Value = ((string)(Original_ChequeNumber));
-            }
-            if ((Original_ChequeValueDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[56].Value = ((System.DateTime)(Original_ChequeValueDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[55].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[56].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ChequeStatus == null)) {
-                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[58].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[57].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[58].Value = ((string)(Original_ChequeStatus));
-            }
-            if ((Original_DateChequeReturned.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[60].Value = ((System.DateTime)(Original_DateChequeReturned.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[59].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[60].Value = global::System.DBNull.Value;
-            }
-            if ((Original_TelephoneNumber == null)) {
-                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[62].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[61].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[62].Value = ((string)(Original_TelephoneNumber));
-            }
-            if ((Original_ReceiptNo == null)) {
-                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[64].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[64].Value = ((string)(Original_ReceiptNo));
-            }
-            if ((Original_ReceiptDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[66].Value = ((System.DateTime)(Original_ReceiptDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[66].Value = global::System.DBNull.Value;
-            }
-            if ((Original_User == null)) {
-                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[68].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[68].Value = ((string)(Original_User));
-            }
-            if ((Original_RevenueCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[70].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[69].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[70].Value = ((string)(Original_RevenueCode));
-            }
-            if ((Original_Description == null)) {
-                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[72].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[71].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[72].Value = ((string)(Original_Description));
-            }
-            if ((Original_ChequeBankCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[74].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[73].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[74].Value = ((string)(Original_ChequeBankCode));
-            }
-            if ((Original_ChequeBankName == null)) {
-                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[76].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[75].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[76].Value = ((string)(Original_ChequeBankName));
-            }
-            if ((Original_AgencyName == null)) {
-                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[78].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[77].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[78].Value = ((string)(Original_AgencyName));
-            }
-            if ((Original_AgencyCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[80].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[79].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[80].Value = ((string)(Original_AgencyCode));
-            }
-            if ((Original_BankCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[82].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[81].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[82].Value = ((string)(Original_BankCode));
-            }
-            if ((Original_BankName == null)) {
-                this.Adapter.UpdateCommand.Parameters[83].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[84].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[83].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[84].Value = ((string)(Original_BankName));
-            }
-            if ((Original_BranchCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[85].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[86].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[85].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[86].Value = ((string)(Original_BranchCode));
-            }
-            if ((Original_BranchName == null)) {
-                this.Adapter.UpdateCommand.Parameters[87].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[88].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[87].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[88].Value = ((string)(Original_BranchName));
-            }
-            if ((Original_ZoneCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[89].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[90].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[89].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[90].Value = ((string)(Original_ZoneCode));
-            }
-            if ((Original_ZoneName == null)) {
-                this.Adapter.UpdateCommand.Parameters[91].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[92].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[91].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[92].Value = ((string)(Original_ZoneName));
-            }
-            if ((Original_Username == null)) {
-                this.Adapter.UpdateCommand.Parameters[93].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[94].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[93].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[94].Value = ((string)(Original_Username));
-            }
-            if ((Original_EReceipts == null)) {
-                this.Adapter.UpdateCommand.Parameters[95].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[96].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[95].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[96].Value = ((string)(Original_EReceipts));
-            }
-            if ((Original_EReceiptsDate.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[97].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[98].Value = ((System.DateTime)(Original_EReceiptsDate.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[97].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[98].Value = global::System.DBNull.Value;
-            }
-            if ((Original_StationCode == null)) {
-                this.Adapter.UpdateCommand.Parameters[99].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[100].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[99].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[100].Value = ((string)(Original_StationCode));
-            }
-            if ((Original_StationName == null)) {
-                this.Adapter.UpdateCommand.Parameters[101].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[102].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[101].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[102].Value = ((string)(Original_StationName));
-            }
-            this.Adapter.UpdateCommand.Parameters[103].Value = ((System.DateTime)(Original_PaymentDate));
             if ((Original_CurrencyCode == null)) {
                 throw new global::System.ArgumentNullException("Original_CurrencyCode");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[104].Value = ((string)(Original_CurrencyCode));
+                this.Adapter.UpdateCommand.Parameters[53].Value = ((string)(Original_CurrencyCode));
+            }
+            if ((Original_PaymentPeriod == null)) {
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[55].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[55].Value = ((string)(Original_PaymentPeriod));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -13015,47 +12425,22 @@ FROM            Collection.tblCollectionReport";
                     string EReceipts, 
                     global::System.Nullable<global::System.DateTime> EReceiptsDate, 
                     string GeneratedBy, 
-                    string UploadStatus, 
                     string StationCode, 
                     string StationName, 
-                    System.DateTime PaymentDate, 
+                    global::System.Nullable<global::System.DateTime> PaymentDate, 
                     string CurrencyCode, 
+                    string PaymentPeriod, 
                     int Original_ID, 
-                    string Original_Provider, 
-                    string Original_Channel, 
                     string Original_PaymentRefNumber, 
-                    string Original_DepositSlipNumber, 
-                    string Original_PayerID, 
                     global::System.Nullable<decimal> Original_Amount, 
-                    string Original_PaymentMethod, 
-                    string Original_ChequeNumber, 
                     global::System.Nullable<global::System.DateTime> Original_ChequeValueDate, 
-                    string Original_ChequeStatus, 
                     global::System.Nullable<global::System.DateTime> Original_DateChequeReturned, 
-                    string Original_TelephoneNumber, 
-                    string Original_ReceiptNo, 
                     global::System.Nullable<global::System.DateTime> Original_ReceiptDate, 
-                    string Original_User, 
-                    string Original_RevenueCode, 
-                    string Original_Description, 
-                    string Original_ChequeBankCode, 
-                    string Original_ChequeBankName, 
-                    string Original_AgencyName, 
-                    string Original_AgencyCode, 
-                    string Original_BankCode, 
-                    string Original_BankName, 
-                    string Original_BranchCode, 
-                    string Original_BranchName, 
-                    string Original_ZoneCode, 
-                    string Original_ZoneName, 
-                    string Original_Username, 
-                    string Original_EReceipts, 
                     global::System.Nullable<global::System.DateTime> Original_EReceiptsDate, 
-                    string Original_StationCode, 
-                    string Original_StationName, 
-                    System.DateTime Original_PaymentDate, 
-                    string Original_CurrencyCode) {
-            return this.Update(Provider, Channel, Original_PaymentRefNumber, DepositSlipNumber, PayerID, PayerName, Amount, PaymentMethod, ChequeNumber, ChequeValueDate, ChequeStatus, DateChequeReturned, TelephoneNumber, ReceiptNo, ReceiptDate, PayerAddress, User, RevenueCode, Description, ChequeBankCode, ChequeBankName, AgencyName, AgencyCode, BankCode, BankName, BranchCode, BranchName, ZoneCode, ZoneName, Username, AmountWords, EReceipts, EReceiptsDate, GeneratedBy, UploadStatus, StationCode, StationName, PaymentDate, CurrencyCode, Original_ID, Original_Provider, Original_Channel, Original_PaymentRefNumber, Original_DepositSlipNumber, Original_PayerID, Original_Amount, Original_PaymentMethod, Original_ChequeNumber, Original_ChequeValueDate, Original_ChequeStatus, Original_DateChequeReturned, Original_TelephoneNumber, Original_ReceiptNo, Original_ReceiptDate, Original_User, Original_RevenueCode, Original_Description, Original_ChequeBankCode, Original_ChequeBankName, Original_AgencyName, Original_AgencyCode, Original_BankCode, Original_BankName, Original_BranchCode, Original_BranchName, Original_ZoneCode, Original_ZoneName, Original_Username, Original_EReceipts, Original_EReceiptsDate, Original_StationCode, Original_StationName, Original_PaymentDate, Original_CurrencyCode);
+                    global::System.Nullable<global::System.DateTime> Original_PaymentDate, 
+                    string Original_CurrencyCode, 
+                    string Original_PaymentPeriod) {
+            return this.Update(Provider, Channel, Original_PaymentRefNumber, DepositSlipNumber, PayerID, PayerName, Amount, PaymentMethod, ChequeNumber, ChequeValueDate, ChequeStatus, DateChequeReturned, TelephoneNumber, ReceiptNo, ReceiptDate, PayerAddress, User, RevenueCode, Description, ChequeBankCode, ChequeBankName, AgencyName, AgencyCode, BankCode, BankName, BranchCode, BranchName, ZoneCode, ZoneName, Username, AmountWords, EReceipts, EReceiptsDate, GeneratedBy, StationCode, StationName, PaymentDate, CurrencyCode, PaymentPeriod, Original_ID, Original_PaymentRefNumber, Original_Amount, Original_ChequeValueDate, Original_DateChequeReturned, Original_ReceiptDate, Original_EReceiptsDate, Original_PaymentDate, Original_CurrencyCode, Original_PaymentPeriod);
         }
     }
     
