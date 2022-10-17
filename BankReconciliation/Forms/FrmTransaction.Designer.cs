@@ -185,11 +185,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
+            this.splitContainerControl1.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel1)).BeginInit();
+            this.splitContainerControl2.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel2)).BeginInit();
             this.splitContainerControl2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -201,11 +207,19 @@
             this.groupBox7.SuspendLayout();
             this.xtraTabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3.Panel1)).BeginInit();
+            this.splitContainerControl3.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3.Panel2)).BeginInit();
+            this.splitContainerControl3.Panel2.SuspendLayout();
             this.splitContainerControl3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl4.Panel1)).BeginInit();
+            this.splitContainerControl4.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl4.Panel2)).BeginInit();
+            this.splitContainerControl4.Panel2.SuspendLayout();
             this.splitContainerControl4.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).BeginInit();
@@ -218,6 +232,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl5.Panel1)).BeginInit();
+            this.splitContainerControl5.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl5.Panel2)).BeginInit();
+            this.splitContainerControl5.Panel2.SuspendLayout();
             this.splitContainerControl5.SuspendLayout();
             this.groupBox14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl6)).BeginInit();
@@ -230,6 +248,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup3.Properties)).BeginInit();
             this.xtraTabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl6.Panel1)).BeginInit();
+            this.splitContainerControl6.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl6.Panel2)).BeginInit();
+            this.splitContainerControl6.Panel2.SuspendLayout();
             this.splitContainerControl6.SuspendLayout();
             this.groupBox17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl8)).BeginInit();
@@ -276,8 +298,14 @@
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl1.Location = new System.Drawing.Point(4, 160);
             this.splitContainerControl1.Name = "splitContainerControl1";
+            // 
+            // splitContainerControl1.Panel1
+            // 
             this.splitContainerControl1.Panel1.Controls.Add(this.xtraTabControl1);
             this.splitContainerControl1.Panel1.Text = "Panel1";
+            // 
+            // splitContainerControl1.Panel2
+            // 
             this.splitContainerControl1.Panel2.Text = "Panel2";
             this.splitContainerControl1.Size = new System.Drawing.Size(954, 525);
             this.splitContainerControl1.SplitterPosition = 946;
@@ -317,8 +345,14 @@
             this.splitContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl2.Location = new System.Drawing.Point(0, 112);
             this.splitContainerControl2.Name = "splitContainerControl2";
+            // 
+            // splitContainerControl2.Panel1
+            // 
             this.splitContainerControl2.Panel1.Controls.Add(this.groupBox1);
             this.splitContainerControl2.Panel1.Text = "Panel1";
+            // 
+            // splitContainerControl2.Panel2
+            // 
             this.splitContainerControl2.Panel2.Text = "Panel2";
             this.splitContainerControl2.Size = new System.Drawing.Size(934, 377);
             this.splitContainerControl2.SplitterPosition = 861;
@@ -545,8 +579,14 @@
             this.splitContainerControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl3.Location = new System.Drawing.Point(0, 76);
             this.splitContainerControl3.Name = "splitContainerControl3";
+            // 
+            // splitContainerControl3.Panel1
+            // 
             this.splitContainerControl3.Panel1.Controls.Add(this.groupBox2);
             this.splitContainerControl3.Panel1.Text = "Panel1";
+            // 
+            // splitContainerControl3.Panel2
+            // 
             this.splitContainerControl3.Panel2.Controls.Add(this.splitContainerControl4);
             this.splitContainerControl3.Panel2.Text = "Panel2";
             this.splitContainerControl3.Size = new System.Drawing.Size(934, 413);
@@ -588,8 +628,14 @@
             this.splitContainerControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl4.Location = new System.Drawing.Point(0, 0);
             this.splitContainerControl4.Name = "splitContainerControl4";
+            // 
+            // splitContainerControl4.Panel1
+            // 
             this.splitContainerControl4.Panel1.Controls.Add(this.groupBox6);
             this.splitContainerControl4.Panel1.Text = "Panel1";
+            // 
+            // splitContainerControl4.Panel2
+            // 
             this.splitContainerControl4.Panel2.Controls.Add(this.groupBox3);
             this.splitContainerControl4.Panel2.Text = "Panel2";
             this.splitContainerControl4.Size = new System.Drawing.Size(614, 405);
@@ -797,8 +843,14 @@
             this.splitContainerControl5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl5.Location = new System.Drawing.Point(0, 84);
             this.splitContainerControl5.Name = "splitContainerControl5";
+            // 
+            // splitContainerControl5.Panel1
+            // 
             this.splitContainerControl5.Panel1.Controls.Add(this.groupBox14);
             this.splitContainerControl5.Panel1.Text = "Panel1";
+            // 
+            // splitContainerControl5.Panel2
+            // 
             this.splitContainerControl5.Panel2.Controls.Add(this.groupBox15);
             this.splitContainerControl5.Panel2.Text = "Panel2";
             this.splitContainerControl5.Size = new System.Drawing.Size(934, 405);
@@ -953,8 +1005,14 @@
             this.splitContainerControl6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerControl6.Location = new System.Drawing.Point(0, 73);
             this.splitContainerControl6.Name = "splitContainerControl6";
+            // 
+            // splitContainerControl6.Panel1
+            // 
             this.splitContainerControl6.Panel1.Controls.Add(this.groupBox17);
             this.splitContainerControl6.Panel1.Text = "Panel1";
+            // 
+            // splitContainerControl6.Panel2
+            // 
             this.splitContainerControl6.Panel2.Controls.Add(this.groupBox18);
             this.splitContainerControl6.Panel2.Text = "Panel2";
             this.splitContainerControl6.Size = new System.Drawing.Size(934, 416);
@@ -1867,11 +1925,17 @@
             this.panelContainer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).EndInit();
+            this.splitContainerControl1.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel1)).EndInit();
+            this.splitContainerControl2.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).EndInit();
             this.splitContainerControl2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -1884,11 +1948,19 @@
             this.xtraScrollableControl2.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.xtraTabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3.Panel1)).EndInit();
+            this.splitContainerControl3.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3.Panel2)).EndInit();
+            this.splitContainerControl3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl3)).EndInit();
             this.splitContainerControl3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl4.Panel1)).EndInit();
+            this.splitContainerControl4.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl4.Panel2)).EndInit();
+            this.splitContainerControl4.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl4)).EndInit();
             this.splitContainerControl4.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
@@ -1901,6 +1973,10 @@
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl5.Panel1)).EndInit();
+            this.splitContainerControl5.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl5.Panel2)).EndInit();
+            this.splitContainerControl5.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl5)).EndInit();
             this.splitContainerControl5.ResumeLayout(false);
             this.groupBox14.ResumeLayout(false);
@@ -1913,6 +1989,10 @@
             this.groupBox13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup3.Properties)).EndInit();
             this.xtraTabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl6.Panel1)).EndInit();
+            this.splitContainerControl6.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl6.Panel2)).EndInit();
+            this.splitContainerControl6.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl6)).EndInit();
             this.splitContainerControl6.ResumeLayout(false);
             this.groupBox17.ResumeLayout(false);

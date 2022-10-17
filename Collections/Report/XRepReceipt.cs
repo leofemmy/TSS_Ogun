@@ -8,6 +8,13 @@ using Collection.Classess;
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Collections.Generic;
+using Collection.Classes;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using System.Net;
+using System.Web.Script.Serialization;
+using System.Text;
 
 namespace Collection.Report
 {
@@ -15,14 +22,55 @@ namespace Collection.Report
     {
         DataTable dt = new DataTable();
 
+        BarCode barcode = new BarCode();
+
         public string logoPath;
+
+        //const string serviceMethod = "/api/v1/QrCoder/encode-string";
+
         public XRepReceipt()
         {
             InitializeComponent();
 
             xrLabel49.BeforePrint += xrLabel49_BeforePrint;
+
+            //var BarcodeServiceUrl = System.Configuration.ConfigurationManager.AppSettings["BaseURL"];
         }
 
+        private string PopulatebarCode(string stringraw)
+        {
+            string apiUrl = System.Configuration.ConfigurationManager.AppSettings["BaseURL"];
+
+            //string apiUrl = "http://services.oyostatebir.com/AssessmentRepositoryService";
+
+            var sources = string.Empty;
+
+            string inputJson = string.Empty; string json = string.Empty;
+
+            WebClient client = new WebClient();
+
+            client.Headers["Content-type"] = "application/json";
+            client.Encoding = Encoding.UTF8;
+
+            var paymentRefNo = stringraw;//"OYPDMS226QQ272";  //GTB|BRH|OGUNPYD|16-03-2021|489879
+            var encodedPaymentRefNo = AppWebExtension.Base64UrlEncode(paymentRefNo.TrimEnd().ToString());
+            var serviceBaseUrl = System.Configuration.ConfigurationManager.AppSettings["serviceBaseUrl"]; //"http://services.oyostatebir.com/AssessmentRepositoryService";
+            var serviceMethod = "/api/v1/PaymentCollections/int/generate-online-receipt?&P0dTUM4S=";
+            var receiptPathToEncode = $"{serviceBaseUrl}{serviceMethod}{encodedPaymentRefNo}";
+
+            object inputs = new
+            {
+                rawString = receiptPathToEncode,// "P0dTUM4S=T1lQRE1TMjI2UVEyNzI",// stringraw.Trim(),
+            };
+            inputJson = (new JavaScriptSerializer()).Serialize(inputs);
+            json = client.UploadString(apiUrl + "/api/v1/QrCoder/encode-string", inputJson);
+            BarcodeResponse myDeserializedClass = JsonConvert.DeserializeObject<BarcodeResponse>(json);
+            sources = myDeserializedClass.data.qrImageUrl;
+
+
+            return sources;
+
+        }
         void xrLabel49_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
 
@@ -33,6 +81,7 @@ namespace Collection.Report
             //SetTextWatermark((XRepReceipt)sender);
         }
 
+
         private void Detail_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
             var fullPath = System.IO.Path.Combine(System.Windows.Forms.Application.StartupPath, logoPath);
@@ -41,12 +90,24 @@ namespace Collection.Report
                 xrPictureBox1.Image = Image.FromFile(fullPath);
             xrPictureBox2.Image = Image.FromFile(fullPath);
 
-            string testrval = string.Format("<{0}><{1}><{2}>", this.GetCurrentColumnValue("PayerName").ToString(), string.Format("{0:n}", this.GetCurrentColumnValue("Amount")), this.GetCurrentColumnValue("EReceipts").ToString());
+            string testrval = string.Format("<{0}><{1}><{2}><{3}>", this.GetCurrentColumnValue("PaymentRefNumber").ToString(), this.GetCurrentColumnValue("PayerName").ToString(), string.Format("{0:n}", this.GetCurrentColumnValue("Amount")), this.GetCurrentColumnValue("EReceipts").ToString());
 
             xrLabel50.Text = testrval;
 
             string payval = this.GetCurrentColumnValue("PaymentPeriod").ToString();
 
+            var bvcode = PopulatebarCode(this.GetCurrentColumnValue("PaymentRefNumber").ToString());// note i will pass payment ref number here
+
+
+            // var bvcode = PopulatebarCode("GTB|BRH|OGUNPYD|16-03-2021|489879");
+
+            xrPictureBox3.ImageUrl = bvcode;
+
+            xrPictureBox4.ImageUrl = bvcode;
+
+
+            //var gh = BarCode.GenerateConfirmDocBarcode1(payval);
+            //var gh = GetStringData(testrval); // barcode.GenerateConfirmDocBarcode(testrval).GetAwaiter().GetResult();
 
             xrLabel51.Text = testrval;
 
@@ -63,7 +124,7 @@ namespace Collection.Report
                 xrLabel4.Visible = false;
                 xrLabel59.Visible = false; xrLabel21.Visible = false;
             }
-            
+
 
             string strrep = string.Format("REPRINTED");
 

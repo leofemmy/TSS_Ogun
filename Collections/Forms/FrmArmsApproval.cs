@@ -32,6 +32,7 @@ namespace Collection.Forms
         RepositoryItemGridLookUpEdit repComboLookBoxCredit = new RepositoryItemGridLookUpEdit();
 
         GridColumn colView = new GridColumn();
+
         GridCheckMarksSelection selection;
 
         DataTable tableTrans = new DataTable();

@@ -23,6 +23,9 @@ using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraPrinting.Drawing;
 using LinqToExcel;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using Newtonsoft.Json;
 
 namespace Collection.Forms
 {
@@ -83,7 +86,7 @@ namespace Collection.Forms
         private string user;
 
         DataTable temTable = new DataTable();
-       
+
         private string strCollectionReportID;
 
         public FrmReceipts()
@@ -1557,7 +1560,7 @@ namespace Collection.Forms
                 //{
                 //    intval = Convert.ToInt32(radioGroup1.EditValue);
                 //}
-
+                //GenerateConfirmDocBarcode1
 
                 if (!isReprint)
                 {
@@ -2218,6 +2221,9 @@ namespace Collection.Forms
             NavBars.ToolStripEnableDisableControls(toolStrip, Tag as String);
         }
 
+      
+
+
         void CountMain()
         {
             try
@@ -2353,4 +2359,5 @@ namespace Collection.Forms
     {
         public virtual string PaymentRefNumber { get; set; }
     }
+
 }

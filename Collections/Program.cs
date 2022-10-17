@@ -59,7 +59,7 @@ namespace Collection
 
             string var4 = MosesClassLibrary.Security.Encryption.Decrypt("Udn/YDBdmprYCzNIai3VLHXPXP+jepSe");
 
-            var gte = MosesClassLibrary.Security.Encryption.Encrypt("password@1234");
+            var gte = MosesClassLibrary.Security.Encryption.Encrypt("Hamad@1234");
 
             isCentralData = Convert.ToInt32(System.Configuration.ConfigurationManager.AppSettings["IsCentralData"]) == 1 ? true : false;
 #if true

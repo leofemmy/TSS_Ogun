@@ -53,43 +53,43 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
             this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.navBarItemExit = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemCheck = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemIGR = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemTransactionType = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemBank = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemTransaction = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemBanks = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemFiscal = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItemDefaultAgency = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItemDefaultRevenue = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItemDefaultZonalRevenue = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItemRefernceletter = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItemTransaction = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItemBank = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBITMReconciliationPeriod = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItemBanks = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemHelp = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemCollectionControl = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemSchedule = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItemPostingRequest = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItemClosePeriod = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem1 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem2 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItemCollectionControl = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem4 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem5 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItem7 = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarList = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarYear = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarClearTrans = new DevExpress.XtraNavBar.NavBarItem();
             this.navBItmReclassified = new DevExpress.XtraNavBar.NavBarItem();
             this.navBaritmApprovalReclass = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBITmMinisrty = new DevExpress.XtraNavBar.NavBarItem();
             this.navBitmGet = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarList = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItemIGR = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItemTransactionType = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItem3 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItemSchedule = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItemHelp = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItemToken = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBITMReconciliationPeriod = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBITmMinisrty = new DevExpress.XtraNavBar.NavBarItem();
             this.navBarItem6 = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItemCheck = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarItemExit = new DevExpress.XtraNavBar.NavBarItem();
-            this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
-            this.navBarItemFiscal = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarItemToken = new DevExpress.XtraNavBar.NavBarItem();
             this.panelContainer = new DevExpress.XtraEditors.PanelControl();
             this.digitalGauge2 = new DevExpress.XtraGauges.Win.Gauges.Digital.DigitalGauge();
             this.digitalBackgroundLayerComponent2 = new DevExpress.XtraGauges.Win.Gauges.Digital.DigitalBackgroundLayerComponent();
@@ -357,6 +357,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1132, 507);
             this.tableLayoutPanel2.TabIndex = 4;
+            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // navBarControl1
             // 
@@ -454,17 +455,112 @@
             this.navBarGroup1.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
             this.navBarGroup1.Hint = "Parameter";
             this.navBarGroup1.ImageOptions.LargeImageIndex = 3;
-            this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemDefaultAgency),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemDefaultRevenue),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemDefaultZonalRevenue),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemRefernceletter),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemTransaction),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem1),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemBank),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem5)});
             this.navBarGroup1.Name = "navBarGroup1";
             this.navBarGroup1.Tag = "011-003";
+            // 
+            // navBarGroup2
+            // 
+            this.navBarGroup2.Caption = "Transaction";
+            this.navBarGroup2.Expanded = true;
+            this.navBarGroup2.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
+            this.navBarGroup2.Hint = "Transaction";
+            this.navBarGroup2.ImageOptions.LargeImageIndex = 16;
+            this.navBarGroup2.Name = "navBarGroup2";
+            this.navBarGroup2.Tag = "011-001";
+            // 
+            // navBarGroup3
+            // 
+            this.navBarGroup3.Caption = "Transaction Report";
+            this.navBarGroup3.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
+            this.navBarGroup3.Hint = "Transaction Report";
+            this.navBarGroup3.ImageOptions.LargeImageIndex = 5;
+            this.navBarGroup3.Name = "navBarGroup3";
+            this.navBarGroup3.Tag = "011-002";
+            // 
+            // navBarGroup4
+            // 
+            this.navBarGroup4.Appearance.Options.UseTextOptions = true;
+            this.navBarGroup4.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.navBarGroup4.Caption = "System";
+            this.navBarGroup4.Expanded = true;
+            this.navBarGroup4.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
+            this.navBarGroup4.Hint = "Applicaton Functions";
+            this.navBarGroup4.ImageOptions.LargeImageIndex = 1;
+            this.navBarGroup4.Name = "navBarGroup4";
+            this.navBarGroup4.Tag = "011-005";
+            // 
+            // navBarGroup5
+            // 
+            this.navBarGroup5.Caption = "navBarGroup5";
+            this.navBarGroup5.Expanded = true;
+            this.navBarGroup5.Name = "navBarGroup5";
+            // 
+            // navBarItemExit
+            // 
+            this.navBarItemExit.Appearance.Options.UseTextOptions = true;
+            this.navBarItemExit.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.navBarItemExit.Caption = "Exit Application";
+            this.navBarItemExit.Hint = "Exit Application";
+            this.navBarItemExit.ImageOptions.SmallImageIndex = 44;
+            this.navBarItemExit.Name = "navBarItemExit";
+            this.navBarItemExit.Tag = "011-005-001";
+            // 
+            // navBarItemCheck
+            // 
+            this.navBarItemCheck.Caption = "Check Update";
+            this.navBarItemCheck.Hint = "Check Update";
+            this.navBarItemCheck.ImageOptions.SmallImageIndex = 0;
+            this.navBarItemCheck.Name = "navBarItemCheck";
+            this.navBarItemCheck.Tag = "011-005-002";
+            // 
+            // navBarItemIGR
+            // 
+            this.navBarItemIGR.Caption = "IGR Report";
+            this.navBarItemIGR.Hint = "IGR Report";
+            this.navBarItemIGR.ImageOptions.SmallImageIndex = 42;
+            this.navBarItemIGR.Name = "navBarItemIGR";
+            this.navBarItemIGR.Tag = "011-002-001";
+            // 
+            // navBarItemTransactionType
+            // 
+            this.navBarItemTransactionType.Caption = "Transaction Type";
+            this.navBarItemTransactionType.Hint = "Transaction Type";
+            this.navBarItemTransactionType.ImageOptions.SmallImageIndex = 43;
+            this.navBarItemTransactionType.Name = "navBarItemTransactionType";
+            this.navBarItemTransactionType.Tag = "011-002-002";
+            this.navBarItemTransactionType.Visible = false;
+            // 
+            // navBarItemBank
+            // 
+            this.navBarItemBank.Caption = "Bank Account";
+            this.navBarItemBank.Hint = "Bank Account";
+            this.navBarItemBank.ImageOptions.SmallImageIndex = 25;
+            this.navBarItemBank.Name = "navBarItemBank";
+            this.navBarItemBank.Tag = "011-003-007";
+            // 
+            // navBarItemTransaction
+            // 
+            this.navBarItemTransaction.Caption = "Transaction Definition";
+            this.navBarItemTransaction.Hint = "Transaction Definition";
+            this.navBarItemTransaction.ImageOptions.SmallImageIndex = 40;
+            this.navBarItemTransaction.Name = "navBarItemTransaction";
+            this.navBarItemTransaction.Tag = "011-003-005";
+            // 
+            // navBarItemBanks
+            // 
+            this.navBarItemBanks.Caption = "Bank Statement Import";
+            this.navBarItemBanks.Hint = "Bank Statement Import";
+            this.navBarItemBanks.ImageOptions.SmallImageIndex = 39;
+            this.navBarItemBanks.Name = "navBarItemBanks";
+            this.navBarItemBanks.Tag = "011-001-001";
+            // 
+            // navBarItemFiscal
+            // 
+            this.navBarItemFiscal.Caption = "Fiscal Period";
+            this.navBarItemFiscal.Hint = "Fiscal Period";
+            this.navBarItemFiscal.ImageOptions.SmallImageIndex = 41;
+            this.navBarItemFiscal.Name = "navBarItemFiscal";
+            this.navBarItemFiscal.Tag = "011-003-006";
             // 
             // navBarItemDefaultAgency
             // 
@@ -498,79 +594,28 @@
             this.navBarItemRefernceletter.Name = "navBarItemRefernceletter";
             this.navBarItemRefernceletter.Tag = "011-003-004";
             // 
-            // navBarItemTransaction
+            // navBarItemHelp
             // 
-            this.navBarItemTransaction.Caption = "Transaction Definition";
-            this.navBarItemTransaction.Hint = "Transaction Definition";
-            this.navBarItemTransaction.ImageOptions.SmallImageIndex = 40;
-            this.navBarItemTransaction.Name = "navBarItemTransaction";
-            this.navBarItemTransaction.Tag = "011-003-005";
+            this.navBarItemHelp.Caption = "Help";
+            this.navBarItemHelp.Hint = "Apllication Help";
+            this.navBarItemHelp.ImageOptions.SmallImageIndex = 4;
+            this.navBarItemHelp.Name = "navBarItemHelp";
+            this.navBarItemHelp.Tag = "011-005-003";
             // 
-            // navBarItem1
+            // navBarItemCollectionControl
             // 
-            this.navBarItem1.Caption = "Financial Period";
-            this.navBarItem1.Hint = "Financial Period";
-            this.navBarItem1.ImageOptions.SmallImageIndex = 23;
-            this.navBarItem1.Name = "navBarItem1";
-            this.navBarItem1.Tag = "011-003-010";
+            this.navBarItemCollectionControl.Caption = "Collection Summary";
+            this.navBarItemCollectionControl.Hint = "Collection Summary";
+            this.navBarItemCollectionControl.ImageOptions.SmallImageIndex = 40;
+            this.navBarItemCollectionControl.Name = "navBarItemCollectionControl";
+            this.navBarItemCollectionControl.Tag = "011-001-003";
             // 
-            // navBarItemBank
+            // navBarItemSchedule
             // 
-            this.navBarItemBank.Caption = "Bank Account";
-            this.navBarItemBank.Hint = "Bank Account";
-            this.navBarItemBank.ImageOptions.SmallImageIndex = 25;
-            this.navBarItemBank.Name = "navBarItemBank";
-            this.navBarItemBank.Tag = "011-003-007";
-            // 
-            // navBarItem5
-            // 
-            this.navBarItem5.Caption = "Exchange Rate";
-            this.navBarItem5.Hint = "Exchange Rate";
-            this.navBarItem5.ImageOptions.SmallImageIndex = 23;
-            this.navBarItem5.Name = "navBarItem5";
-            this.navBarItem5.Tag = "011-003-009";
-            // 
-            // navBarGroup2
-            // 
-            this.navBarGroup2.Caption = "Transaction";
-            this.navBarGroup2.Expanded = true;
-            this.navBarGroup2.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
-            this.navBarGroup2.Hint = "Transaction";
-            this.navBarGroup2.ImageOptions.LargeImageIndex = 16;
-            this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBITMReconciliationPeriod),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemBanks),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemPostingRequest),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemClosePeriod),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem2),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemCollectionControl),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem7),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem4),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarYear),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarClearTrans),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBItmReclassified),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBaritmApprovalReclass),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBITmMinisrty),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBitmGet),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarList)});
-            this.navBarGroup2.Name = "navBarGroup2";
-            this.navBarGroup2.Tag = "011-001";
-            // 
-            // navBITMReconciliationPeriod
-            // 
-            this.navBITMReconciliationPeriod.Caption = "Create Reconciliation Period";
-            this.navBITMReconciliationPeriod.Hint = "Reconciliation Period";
-            this.navBITMReconciliationPeriod.ImageOptions.SmallImageIndex = 1;
-            this.navBITMReconciliationPeriod.Name = "navBITMReconciliationPeriod";
-            this.navBITMReconciliationPeriod.Tag = "011-001-022";
-            // 
-            // navBarItemBanks
-            // 
-            this.navBarItemBanks.Caption = "Bank Statement Import";
-            this.navBarItemBanks.Hint = "Bank Statement Import";
-            this.navBarItemBanks.ImageOptions.SmallImageIndex = 39;
-            this.navBarItemBanks.Name = "navBarItemBanks";
-            this.navBarItemBanks.Tag = "011-001-001";
+            this.navBarItemSchedule.Caption = "Reconciliation Report";
+            this.navBarItemSchedule.Hint = "Reconciliation Report";
+            this.navBarItemSchedule.Name = "navBarItemSchedule";
+            this.navBarItemSchedule.Tag = "011-002-003";
             // 
             // navBarItemPostingRequest
             // 
@@ -588,6 +633,14 @@
             this.navBarItemClosePeriod.Name = "navBarItemClosePeriod";
             this.navBarItemClosePeriod.Tag = "011-001-006";
             // 
+            // navBarItem1
+            // 
+            this.navBarItem1.Caption = "Financial Period";
+            this.navBarItem1.Hint = "Financial Period";
+            this.navBarItem1.ImageOptions.SmallImageIndex = 23;
+            this.navBarItem1.Name = "navBarItem1";
+            this.navBarItem1.Tag = "011-003-010";
+            // 
             // navBarItem2
             // 
             this.navBarItem2.Caption = "Close Financial Period";
@@ -596,13 +649,29 @@
             this.navBarItem2.Name = "navBarItem2";
             this.navBarItem2.Tag = "011-003-011";
             // 
-            // navBarItemCollectionControl
+            // navBarItem3
             // 
-            this.navBarItemCollectionControl.Caption = "Collection Summary";
-            this.navBarItemCollectionControl.Hint = "Collection Summary";
-            this.navBarItemCollectionControl.ImageOptions.SmallImageIndex = 40;
-            this.navBarItemCollectionControl.Name = "navBarItemCollectionControl";
-            this.navBarItemCollectionControl.Tag = "011-001-003";
+            this.navBarItem3.Caption = "Unswept Transaction";
+            this.navBarItem3.Hint = "Unswept Transaction";
+            this.navBarItem3.ImageOptions.SmallImageIndex = 42;
+            this.navBarItem3.Name = "navBarItem3";
+            this.navBarItem3.Tag = "011-002-004";
+            // 
+            // navBarItem4
+            // 
+            this.navBarItem4.Caption = "Swept Transaction";
+            this.navBarItem4.Hint = "Swept Transaction";
+            this.navBarItem4.ImageOptions.SmallImageIndex = 19;
+            this.navBarItem4.Name = "navBarItem4";
+            this.navBarItem4.Tag = "011-003-012";
+            // 
+            // navBarItem5
+            // 
+            this.navBarItem5.Caption = "Exchange Rate";
+            this.navBarItem5.Hint = "Exchange Rate";
+            this.navBarItem5.ImageOptions.SmallImageIndex = 23;
+            this.navBarItem5.Name = "navBarItem5";
+            this.navBarItem5.Tag = "011-003-009";
             // 
             // navBarItem7
             // 
@@ -612,13 +681,13 @@
             this.navBarItem7.Name = "navBarItem7";
             this.navBarItem7.Tag = "011-001-006";
             // 
-            // navBarItem4
+            // navBarList
             // 
-            this.navBarItem4.Caption = "Swept Transaction";
-            this.navBarItem4.Hint = "Swept Transaction";
-            this.navBarItem4.ImageOptions.SmallImageIndex = 19;
-            this.navBarItem4.Name = "navBarItem4";
-            this.navBarItem4.Tag = "011-003-012";
+            this.navBarList.Caption = "Delist Transaction";
+            this.navBarList.Hint = "Delist Transaction";
+            this.navBarList.ImageOptions.SmallImageIndex = 3;
+            this.navBarList.Name = "navBarList";
+            this.navBarList.Tag = "011-001-015";
             // 
             // navBarYear
             // 
@@ -652,14 +721,6 @@
             this.navBaritmApprovalReclass.Name = "navBaritmApprovalReclass";
             this.navBaritmApprovalReclass.Tag = "011-001-020";
             // 
-            // navBITmMinisrty
-            // 
-            this.navBITmMinisrty.Caption = "Ministry Approval";
-            this.navBITmMinisrty.Hint = "Ministry Approval";
-            this.navBITmMinisrty.ImageOptions.SmallImageIndex = 27;
-            this.navBITmMinisrty.Name = "navBITmMinisrty";
-            this.navBITmMinisrty.Tag = "011-001-022";
-            // 
             // navBitmGet
             // 
             this.navBitmGet.Caption = "Get Approved Transaction";
@@ -668,86 +729,28 @@
             this.navBitmGet.Name = "navBitmGet";
             this.navBitmGet.Tag = "011-001-021";
             // 
-            // navBarList
+            // navBITMReconciliationPeriod
             // 
-            this.navBarList.Caption = "Delist Transaction";
-            this.navBarList.Hint = "Delist Transaction";
-            this.navBarList.ImageOptions.SmallImageIndex = 3;
-            this.navBarList.Name = "navBarList";
-            this.navBarList.Tag = "011-001-015";
+            this.navBITMReconciliationPeriod.Caption = "Create Reconciliation Period";
+            this.navBITMReconciliationPeriod.Hint = "Reconciliation Period";
+            this.navBITMReconciliationPeriod.ImageOptions.SmallImageIndex = 1;
+            this.navBITMReconciliationPeriod.Name = "navBITMReconciliationPeriod";
+            this.navBITMReconciliationPeriod.Tag = "011-001-022";
             // 
-            // navBarGroup3
+            // navBITmMinisrty
             // 
-            this.navBarGroup3.Caption = "Transaction Report";
-            this.navBarGroup3.Expanded = true;
-            this.navBarGroup3.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
-            this.navBarGroup3.Hint = "Transaction Report";
-            this.navBarGroup3.ImageOptions.LargeImageIndex = 5;
-            this.navBarGroup3.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemIGR),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemTransactionType),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem3),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemSchedule)});
-            this.navBarGroup3.Name = "navBarGroup3";
-            this.navBarGroup3.Tag = "011-002";
+            this.navBITmMinisrty.Caption = "Ministry Approval";
+            this.navBITmMinisrty.Hint = "Ministry Approval";
+            this.navBITmMinisrty.ImageOptions.SmallImageIndex = 27;
+            this.navBITmMinisrty.Name = "navBITmMinisrty";
+            this.navBITmMinisrty.Tag = "011-001-022";
             // 
-            // navBarItemIGR
+            // navBarItem6
             // 
-            this.navBarItemIGR.Caption = "IGR Report";
-            this.navBarItemIGR.Hint = "IGR Report";
-            this.navBarItemIGR.ImageOptions.SmallImageIndex = 42;
-            this.navBarItemIGR.Name = "navBarItemIGR";
-            this.navBarItemIGR.Tag = "011-002-001";
-            // 
-            // navBarItemTransactionType
-            // 
-            this.navBarItemTransactionType.Caption = "Transaction Type";
-            this.navBarItemTransactionType.Hint = "Transaction Type";
-            this.navBarItemTransactionType.ImageOptions.SmallImageIndex = 43;
-            this.navBarItemTransactionType.Name = "navBarItemTransactionType";
-            this.navBarItemTransactionType.Tag = "011-002-002";
-            this.navBarItemTransactionType.Visible = false;
-            // 
-            // navBarItem3
-            // 
-            this.navBarItem3.Caption = "Unswept Transaction";
-            this.navBarItem3.Hint = "Unswept Transaction";
-            this.navBarItem3.ImageOptions.SmallImageIndex = 42;
-            this.navBarItem3.Name = "navBarItem3";
-            this.navBarItem3.Tag = "011-002-004";
-            // 
-            // navBarItemSchedule
-            // 
-            this.navBarItemSchedule.Caption = "Reconciliation Report";
-            this.navBarItemSchedule.Hint = "Reconciliation Report";
-            this.navBarItemSchedule.Name = "navBarItemSchedule";
-            this.navBarItemSchedule.Tag = "011-002-003";
-            // 
-            // navBarGroup4
-            // 
-            this.navBarGroup4.Appearance.Options.UseTextOptions = true;
-            this.navBarGroup4.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.navBarGroup4.Caption = "System";
-            this.navBarGroup4.Expanded = true;
-            this.navBarGroup4.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.SmallIconsText;
-            this.navBarGroup4.Hint = "Applicaton Functions";
-            this.navBarGroup4.ImageOptions.LargeImageIndex = 1;
-            this.navBarGroup4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemHelp),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemToken),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItem6),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemCheck),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navBarItemExit)});
-            this.navBarGroup4.Name = "navBarGroup4";
-            this.navBarGroup4.Tag = "011-005";
-            // 
-            // navBarItemHelp
-            // 
-            this.navBarItemHelp.Caption = "Help";
-            this.navBarItemHelp.Hint = "Apllication Help";
-            this.navBarItemHelp.ImageOptions.SmallImageIndex = 4;
-            this.navBarItemHelp.Name = "navBarItemHelp";
-            this.navBarItemHelp.Tag = "011-005-003";
+            this.navBarItem6.Caption = "Change Password";
+            this.navBarItem6.Hint = "Change Password";
+            this.navBarItem6.Name = "navBarItem6";
+            this.navBarItem6.Tag = "003-005-007";
             // 
             // navBarItemToken
             // 
@@ -757,44 +760,6 @@
             this.navBarItemToken.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItemToken.ImageOptions.SmallImage")));
             this.navBarItemToken.Name = "navBarItemToken";
             this.navBarItemToken.Tag = "011-005-004";
-            // 
-            // navBarItem6
-            // 
-            this.navBarItem6.Caption = "Change Password";
-            this.navBarItem6.Hint = "Change Password";
-            this.navBarItem6.Name = "navBarItem6";
-            this.navBarItem6.Tag = "003-005-007";
-            // 
-            // navBarItemCheck
-            // 
-            this.navBarItemCheck.Caption = "Check Update";
-            this.navBarItemCheck.Hint = "Check Update";
-            this.navBarItemCheck.ImageOptions.SmallImageIndex = 0;
-            this.navBarItemCheck.Name = "navBarItemCheck";
-            this.navBarItemCheck.Tag = "011-005-002";
-            // 
-            // navBarItemExit
-            // 
-            this.navBarItemExit.Appearance.Options.UseTextOptions = true;
-            this.navBarItemExit.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.navBarItemExit.Caption = "Exit Application";
-            this.navBarItemExit.Hint = "Exit Application";
-            this.navBarItemExit.ImageOptions.SmallImageIndex = 44;
-            this.navBarItemExit.Name = "navBarItemExit";
-            this.navBarItemExit.Tag = "011-005-001";
-            // 
-            // navBarGroup5
-            // 
-            this.navBarGroup5.Caption = "navBarGroup5";
-            this.navBarGroup5.Name = "navBarGroup5";
-            // 
-            // navBarItemFiscal
-            // 
-            this.navBarItemFiscal.Caption = "Fiscal Period";
-            this.navBarItemFiscal.Hint = "Fiscal Period";
-            this.navBarItemFiscal.ImageOptions.SmallImageIndex = 41;
-            this.navBarItemFiscal.Name = "navBarItemFiscal";
-            this.navBarItemFiscal.Tag = "011-003-006";
             // 
             // panelContainer
             // 
