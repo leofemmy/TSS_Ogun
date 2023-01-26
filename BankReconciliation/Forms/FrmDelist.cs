@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using BankReconciliation.Class;
+﻿using BankReconciliation.Class;
 using DevExpress.Utils;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Selection;
-using DevExpress.XtraScheduler.Native;
 using DevExpress.XtraSplashScreen;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
 using TaxSmartSuite.Class;
 
 namespace BankReconciliation.Forms
@@ -180,7 +174,7 @@ namespace BankReconciliation.Forms
                 if (dts.Tables[0].Rows[0]["returnCode"].ToString() == "00" && dts2.Tables[0].Rows[0]["returnCode"].ToString() == "00")
                 {
                     //insert record local after delist from online
-               
+
                     using (SqlConnection connect = new SqlConnection(Logic.ConnectionString))
                     {
                         //gridControl1.DataSource = null;

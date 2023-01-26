@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Collection.Classess;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using TaxSmartSuite;
-using System.Windows.Forms;
 using System.Data.SqlClient;
-using Collection.Classess;
+using System.Windows.Forms;
 using TaxSmartSuite.Class;
 
 namespace Collection.Forms
@@ -79,7 +73,7 @@ namespace Collection.Forms
                 Common.setEmptyField("Download Sources", Program.ApplicationName);
                 cboSources.Focus(); return;
             }
-            else 
+            else
             {
                 if (cboSources.SelectedValue.ToString() == "0001")//paydirect code
                 {
@@ -90,7 +84,7 @@ namespace Collection.Forms
                 else if (cboSources.SelectedValue.ToString() == "0002")//reemsonline
                 {
                     MDIMain.publicMDIParent.RemoveControls();
-          MDIMain.publicMDIParent.tableLayoutPanel2.Controls.Add((new FrmDownload().panelContainer), 1, 0);
+                    MDIMain.publicMDIParent.tableLayoutPanel2.Controls.Add((new FrmDownload().panelContainer), 1, 0);
                 }
                 else if (cboSources.SelectedValue.ToString() == "0003")//update cheque state
                 {

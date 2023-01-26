@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using BankReconciliation.Class;
+using DevExpress.XtraGrid.Views.Grid;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Data.SqlClient;
+using System.Globalization;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using BankReconciliation.Class;
-using System.Data.SqlClient;
-using DevExpress.XtraGrid.Views.Grid;
-using System.Globalization;
 
 namespace BankReconciliation.Forms
 {
@@ -279,7 +274,7 @@ namespace BankReconciliation.Forms
                             {
                                 //MessageBox.Show(MDIMain.stateCode);
                                 //fieldid
-                                using (SqlCommand sqlCommand1 = new SqlCommand(String.Format(String.Format("UPDATE Reconciliation.tblTransDefinition SET [Description]='{{0}}',[Type]='{{1}}',[ElementCatCode]='{{2}}',IsActive='{{3}}'  where  TransID ='{0}'", ID), txtDescription.Text.Trim(), radioGroup1.EditValue, cboCatgory.SelectedValue,1), db, transaction))
+                                using (SqlCommand sqlCommand1 = new SqlCommand(String.Format(String.Format("UPDATE Reconciliation.tblTransDefinition SET [Description]='{{0}}',[Type]='{{1}}',[ElementCatCode]='{{2}}',IsActive='{{3}}'  where  TransID ='{0}'", ID), txtDescription.Text.Trim(), radioGroup1.EditValue, cboCatgory.SelectedValue, 1), db, transaction))
                                 {
                                     sqlCommand1.ExecuteNonQuery();
                                 }
@@ -314,7 +309,7 @@ namespace BankReconciliation.Forms
             txtDescription.Clear();
             radioGroup1.SelectedIndex = -1;
             cboCatgory.SelectedIndex = -1; ;
-            
+
         }
 
         void gridView1_DoubleClick(object sender, EventArgs e)

@@ -1,12 +1,4 @@
-﻿using System;
-using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
-using DevExpress.XtraReports.UI;
-using DevExpress.XtraPrinting.Drawing;
-using System.Linq;
-
-namespace Collection.Report
+﻿namespace Collection.Report
 {
     public partial class XRepReceiptoyo : DevExpress.XtraReports.UI.XtraReport
     {

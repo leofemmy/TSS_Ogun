@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
+﻿using Collection.Classess;
 using Collection.Forms;
-using System.Data;
-using Collection.Classess;
-using System.Globalization;
-using System.Threading;
-using BondForm = BondLibrary.Forms;
-using System.IO;
 using MosesClassLibrary;
+using System;
+using System.Data;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Threading;
+using System.Windows.Forms;
 
 namespace Collection
 {
@@ -40,7 +38,9 @@ namespace Collection
 
             //RpohR9gbCkfm68WwyTTPFA ==
             //RpohR9gCbkfm68WywTTPFA ==old
-            string var = MosesClassLibrary.Security.Encryption.Decrypt("wAJGdHnaqS8HiltluSOXVQ==");
+            string var = MosesClassLibrary.Security.Encryption.Decrypt("cowkqU3RAp5NnBQP5LAEFg==");
+
+            string var12 = MosesClassLibrary.Security.Encryption.Decrypt("OkEhP1L6PHCEaD8htyDcVcTQ7zDamR5x");
 
 
             string var2 = MosesClassLibrary.Security.Encryption.Decrypt("cowkqU3RAp5NnBQP5LAEFg==");
@@ -55,8 +55,7 @@ namespace Collection
 
             string varg5 = MosesClassLibrary.Security.Encryption.Decrypt("XGTBpxxY8m7A26IoVgykqg==");
 
-
-
+            
             string var4 = MosesClassLibrary.Security.Encryption.Decrypt("Udn/YDBdmprYCzNIai3VLHXPXP+jepSe");
 
             var gte = MosesClassLibrary.Security.Encryption.Encrypt("Hamad@1234");

@@ -1,30 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using TaxSmartSuite;
-using Collection.Forms;
-using TaxSmartSuite.Class;
-using DevExpress.XtraNavBar;
-using Collection.Classess;
+﻿using Collection.Classess;
 using Collection.Report;
-using System.Diagnostics;
-using System.IO;
+using DevExpress.XtraBars.Alerter;
+using DevExpress.XtraNavBar;
 //using Microsoft.SqlServer.Management.Smo;
 //using Microsoft.SqlServer.Management.Common;
 using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Parameters;
-using DevExpress.XtraGauges.Win;
-using DevExpress.XtraGauges.Core.Model;
-using DevExpress.XtraGauges.Core.Base;
-using DevExpress.XtraGauges.Win.Gauges.Digital;
-using TaxSmartSuite.AutoUpdate;
-using DevExpress.XtraBars.Alerter;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+//using TaxSmartSuite.AutoUpdate;
 
 namespace Collection.Forms
 {
@@ -970,25 +955,25 @@ namespace Collection.Forms
             //    }
             //});
 
-            AppAutoUpdate.GetUpdate(GetUpdateUrl).ContinueWith(task =>
-            {
+            //AppAutoUpdate.GetUpdate(GetUpdateUrl).ContinueWith(task =>
+            //{
 
 
 
-                var updateReturnMsg = task.Result;
-                if (updateReturnMsg.Status)
-                {
-                    BeginInvoke(new MethodInvoker(delegate ()
-                    {
-                        var msg = string.Format("<b>{0}</b>\n<i>{1}</i>", updateReturnMsg.AppName,
-                            updateReturnMsg.Version);
-                        AlertInfo info = new AlertInfo("<size=14><b><u>Update Available</u></b></size>", msg);
-                        AlertControl alertControl = new AlertControl { AllowHtmlText = true, AllowHotTrack = true };
-                        alertControl.AlertClick += alertControl_AlertClick;
-                        alertControl.Show(this, info);
-                    }));
-                }
-            });
+            //    var updateReturnMsg = task.Result;
+            //    if (updateReturnMsg.Status)
+            //    {
+            //        BeginInvoke(new MethodInvoker(delegate ()
+            //        {
+            //            var msg = string.Format("<b>{0}</b>\n<i>{1}</i>", updateReturnMsg.AppName,
+            //                updateReturnMsg.Version);
+            //            AlertInfo info = new AlertInfo("<size=14><b><u>Update Available</u></b></size>", msg);
+            //            AlertControl alertControl = new AlertControl { AllowHtmlText = true, AllowHotTrack = true };
+            //            alertControl.AlertClick += alertControl_AlertClick;
+            //            alertControl.Show(this, info);
+            //        }));
+            //    }
+            //});
         }
 
         //private void AutoCheckUpdate()

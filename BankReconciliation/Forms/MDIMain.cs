@@ -1,13 +1,10 @@
-﻿using System;
-using System.Data.SqlClient;
-using System.Windows.Forms;
-using MosesClassLibrary.Utilities;
+﻿using BankReconciliation.Class;
 using DevExpress.XtraNavBar;
-using TaxSmartSuite.Class;
+using System;
 using System.Data;
-using BankReconciliation.Class;
-using BankReconciliation.Forms;
 using System.Diagnostics;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 
 namespace BankReconciliation.Forms

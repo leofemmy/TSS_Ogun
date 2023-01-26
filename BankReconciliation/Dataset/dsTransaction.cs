@@ -14,9 +14,11 @@
     }
 }
 
-namespace BankReconciliation.Dataset.dsTransactionTableAdapters {
-    
-    
-    public partial class ViewConsolidateDetailsTransactionsTableAdapter {
+namespace BankReconciliation.Dataset.dsTransactionTableAdapters
+{
+
+
+    public partial class ViewConsolidateDetailsTransactionsTableAdapter
+    {
     }
 }

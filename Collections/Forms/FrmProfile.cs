@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using Collection.Classess;
+﻿using Collection.Classess;
 using Collections;
-using DevExpress.XtraSplashScreen;
-using TaxSmartSuite.Class;
-using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Selection;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraSplashScreen;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace Collection.Forms
 {
@@ -557,7 +552,7 @@ namespace Collection.Forms
             txtName.Text = String.Empty;
             cboBankEdt.EditValue = null; //cboBankEdt.RefreshEditValue();
             cboAgencyTest.EditValue = null; //cboAgencyTest.RefreshEditValue();
-            
+
         }
 
         private void setReload()

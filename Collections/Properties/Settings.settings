@@ -8,10 +8,10 @@
     <Setting Name="TaxSmartSuiteConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=FEMMY\SQLEXPRESS;Initial Catalog=CENAbeokuta;Persist Security Info=True;User ID=sa;Password=1964&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Data Source=.;Initial Catalog=TaxSmartSuiteRevisedABK;Persist Security Info=True;User ID=sa;Password=1975&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=FEMMY\SQLEXPRESS;Initial Catalog=CENAbeokuta;Persist Security Info=True;User ID=sa;Password=1964</Value>
+      <Value Profile="(Default)">Data Source=.;Initial Catalog=TaxSmartSuiteRevisedABK;Persist Security Info=True;User ID=sa;Password=1975</Value>
     </Setting>
     <Setting Name="Collections_TestReceiptServices_ReceiptService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost/oyo/ReceiptService.asmx</Value>
@@ -36,19 +36,27 @@
     </Setting>
     <Setting Name="TaxSmartSuiteRevisedConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=FEMMY;Initial Catalog=TaxSmartSuiteRevisedNew10032017;User ID=sa;Password=1975&lt;/ConnectionString&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=FEMMY;Initial Catalog=TaxSmartSuiteRevisedABK;User ID=sa;Password=1975&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=FEMMY;Initial Catalog=TaxSmartSuiteRevisedNew10032017;User ID=sa;Password=1975</Value>
+      <Value Profile="(Default)">Data Source=FEMMY;Initial Catalog=TaxSmartSuiteRevisedABK;User ID=sa;Password=1975</Value>
     </Setting>
     <Setting Name="TaxSmartSuiteRevisedNewOG14022017ConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=FEMSY;Initial Catalog=TaxSmartSuiteRevisedNewOG14022017;User ID=sa;Password=1975&lt;/ConnectionString&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=FEMSY;Initial Catalog=TaxSmartSuiteRevisedABK;User ID=sa;Password=1975&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=FEMSY;Initial Catalog=TaxSmartSuiteRevisedNewOG14022017;User ID=sa;Password=1975</Value>
+      <Value Profile="(Default)">Data Source=FEMSY;Initial Catalog=TaxSmartSuiteRevisedABK;User ID=sa;Password=1975</Value>
+    </Setting>
+    <Setting Name="TaxSmartSuiteRevisedABKConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=FEMSY;Initial Catalog=TaxSmartSuiteRevisedABK;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=FEMSY;Initial Catalog=TaxSmartSuiteRevisedABK;Integrated Security=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

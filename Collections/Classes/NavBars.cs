@@ -1,23 +1,19 @@
 ﻿//#define HOME
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Collections;
-using TaxSmartSuite.Class;
-using MosesClassLibrary;
-using System.Data.SqlClient;
-using System.Data;
-using Data = System.Data;
 using DevExpress.XtraNavBar;
+using MosesClassLibrary;
 using MosesClassLibrary.DataAccessLayer;
-using System.Windows.Forms;
-using System.Drawing;
-using System.Text.RegularExpressions;
+using System;
+using System.Collections;
 using System.Configuration;
-using System.Net.NetworkInformation;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
 using System.IO;
-using Collection.Classes;
+using System.Net.NetworkInformation;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
+using Data = System.Data;
 
 namespace Collection.Classess
 {
@@ -1198,7 +1194,8 @@ namespace Collection.Classess
                             item["PayerID"] = "Approach the BIR for your Tax Identification Number.";
                         }
                         else
-                        {item["PayerID"] = item["PayerID"].ToString();
+                        {
+                            item["PayerID"] = item["PayerID"].ToString();
                             item["PayerID"] = string.Format("Your Payer ID which is <<{0}>> must be quoted in all transaction", item["PayerID"]);
                         }
 

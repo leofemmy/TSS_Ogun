@@ -2,14 +2,9 @@
 using DevExpress.XtraNavBar;
 using DevExpress.XtraReports.UI;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 //using TaxSmartSuite.AutoUpdate;
 using TaxSmartSuite.Class;
@@ -377,25 +372,25 @@ namespace TaxSmartUtility.Forms
             //string.Format(@"/p:{1} {0}", GetUpdateUrl, System.IO.Path.GetFileName(Application.ExecutablePath)));
         }
 
-        private void AutoCheckUpdate()
-        {
-            AppAutoUpdate.GetUpdate(GetUpdateUrl).ContinueWith(task =>
-            {
-                var updateReturnMsg = task.Result;
-                if (updateReturnMsg.Status)
-                {
-                    BeginInvoke(new MethodInvoker(delegate ()
-                    {
-                        var msg = string.Format("<b>{0}</b>\n<i>{1}</i>", updateReturnMsg.AppName,
-                            updateReturnMsg.Version);
-                        AlertInfo info = new AlertInfo("<size=14><b><u>Update Available</u></b></size>", msg);
-                        AlertControl alertControl = new AlertControl { AllowHtmlText = true, AllowHotTrack = true };
-                        alertControl.AlertClick += alertControl_AlertClick;
-                        alertControl.Show(this, info);
-                    }));
-                }
-            });
-        }
+        //private void AutoCheckUpdate()
+        //{
+        //    AppAutoUpdate.GetUpdate(GetUpdateUrl).ContinueWith(task =>
+        //    {
+        //        var updateReturnMsg = task.Result;
+        //        if (updateReturnMsg.Status)
+        //        {
+        //            BeginInvoke(new MethodInvoker(delegate ()
+        //            {
+        //                var msg = string.Format("<b>{0}</b>\n<i>{1}</i>", updateReturnMsg.AppName,
+        //                    updateReturnMsg.Version);
+        //                AlertInfo info = new AlertInfo("<size=14><b><u>Update Available</u></b></size>", msg);
+        //                AlertControl alertControl = new AlertControl { AllowHtmlText = true, AllowHotTrack = true };
+        //                alertControl.AlertClick += alertControl_AlertClick;
+        //                alertControl.Show(this, info);
+        //            }));
+        //        }
+        //    });
+        //}
 
         void alertControl_AlertClick(object sender, AlertClickEventArgs e)
         {

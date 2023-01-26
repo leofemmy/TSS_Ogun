@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using Collection.Classess;
-using TaxSmartSuite;
+﻿using Collection.Classess;
 using DevExpress.XtraGrid.Views.Grid;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Windows.Forms;
 using TaxSmartSuite.Class;
 
 namespace Collection.Forms
@@ -39,7 +34,7 @@ namespace Collection.Forms
             setImages();
 
             setReload();
-            
+
             btnSearch.Click += btnSearch_Click;
 
             bttnUpdate.Click += bttnUpdate_Click;
@@ -52,7 +47,7 @@ namespace Collection.Forms
             //ds.AcceptChanges();
             ada.UpdateCommand = new SqlCommandBuilder(ada).GetUpdateCommand();
             ada.Update(ds);
-           
+
             setReload();
         }
 
@@ -111,9 +106,9 @@ namespace Collection.Forms
             {
                 Common.setMessageBox(" There are some Receipt Transaction to be completed " + " Please Complete them before continue ", Program.ApplicationName, 3);
                 return;
-        
+
             }
-            
+
         }
 
         private void setImages()
@@ -160,17 +155,17 @@ namespace Collection.Forms
             ada = new SqlDataAdapter("SELECT PaymentRefNumber,UPPER(PayerName) AS PayerName, Amount, EReceipts,ControlNumber,PrintedBY,DatePrinted FROM tblCollectionReport WHERE isPrinted=1 AND ControlNumber IS NULL", Logic.ConnectionString);
 
             //{
-                ada.Fill(ds, "table");
+            ada.Fill(ds, "table");
             //}
             dt = ds.Tables[0];
             //connect.connect.Close();
             gridControl1.DataSource = ds;
             gridControl1.DataMember = "table";
 
-            
+
             //ds.AcceptChanges();
 
-     
+
             gridView1.BestFitColumns();
             gridView1.Columns["PaymentRefNumber"].OptionsColumn.AllowEdit = false;
             gridView1.Columns["PayerName"].OptionsColumn.AllowEdit = false;
@@ -187,7 +182,7 @@ namespace Collection.Forms
             gridView1.Columns["DatePrinted"].DisplayFormat.FormatString = "dd MMM yyyy";
             AddUser(gridView1);
             gridControl1.ForceInitialize();
-        
+
 
         }
 
@@ -196,7 +191,7 @@ namespace Collection.Forms
             //if (Enumerable.Range(17251, 19250).Contains(range))
             //{ 
             //}
-            
+
             if (Enumerable.Range(17251, 19250).Contains(17350))
             {
                 MessageBox.Show(" Record Found ");

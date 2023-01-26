@@ -1,29 +1,19 @@
-﻿using DevExpress.Utils;
+﻿using BankStatementExcel.Forms;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraEditors.DXErrorProvider;
+using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraSplashScreen;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.OleDb;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
-using System.Xml.Linq;
 using System.Xml.Serialization;
-using BankStatementExcel.Forms;
-using DevExpress.XtraEditors.Repository;
-using DevExpress.XtraExport;
-using DevExpress.XtraPrinting;
-using DevExpress.XtraSplashScreen;
-using MosesClassLibrary.Utilities;
 using Formatting = Newtonsoft.Json.Formatting;
 
 namespace BankStatementExcel

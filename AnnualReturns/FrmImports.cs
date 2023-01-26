@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors.DXErrorProvider;
+﻿using DevExpress.XtraEditors.DXErrorProvider;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraSplashScreen;
 using LinqToExcel;
-using LinqToExcel.Domain;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 using ErrorInfo = DevExpress.XtraEditors.DXErrorProvider.ErrorInfo;
-using Formatting = Newtonsoft.Json.Formatting;
 
 namespace AnnualReturns
 {
@@ -187,7 +181,7 @@ namespace AnnualReturns
         {
             try
             {
-                SplashScreenManager.ShowForm(this, typeof (WaitForm1), true, true, false);
+                SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
 
                 List<string> columnNames = excel.GetColumnNames(cboSheet.Text.ToString().Trim()).ToList();
 

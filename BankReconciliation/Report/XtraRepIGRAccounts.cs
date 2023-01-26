@@ -1,14 +1,8 @@
-﻿using System;
-using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
-using DevExpress.XtraReports.UI;
-
-namespace BankReconciliation.Report
+﻿namespace BankReconciliation.Report
 {
     public partial class XtraRepIGRAccounts : DevExpress.XtraReports.UI.XtraReport
     {
-        double dbtotal,dbBank,dbcheque,dbcoll;
+        double dbtotal, dbBank, dbcheque, dbcoll;
 
         public XtraRepIGRAccounts()
         {

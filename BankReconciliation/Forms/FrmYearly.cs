@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.OleDb;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using BankReconciliation.Class;
+﻿using BankReconciliation.Class;
 using BankReconciliation.Report;
 using DevExpress.Utils;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraSplashScreen;
+using System;
+using System.Data;
+using System.Data.OleDb;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Windows.Forms;
 using TaxSmartSuite.Class;
 
 namespace BankReconciliation.Forms
@@ -244,21 +240,21 @@ namespace BankReconciliation.Forms
 
                                 var replist = (from DataRow row in ds.Tables[1].Rows
                                                select new Dataset.Reportyear
-                                                   {
-                                                       Date = Convert.ToDateTime(row["Date"]),
-                                                       Amount = Convert.ToDecimal(row["Credit"]),
-                                                       PaymentRef = row["RevenueCode"] as string
-                                                   }
+                                               {
+                                                   Date = Convert.ToDateTime(row["Date"]),
+                                                   Amount = Convert.ToDecimal(row["Credit"]),
+                                                   PaymentRef = row["RevenueCode"] as string
+                                               }
                                  ).ToList();
 
-                                repyear.xrLabel11.Text = string.Format("Bank Name: {0}",cboBank.Text.Trim());
+                                repyear.xrLabel11.Text = string.Format("Bank Name: {0}", cboBank.Text.Trim());
                                 repyear.xrLabel12.Text =
                                     string.Format("List of Transactions in Bank Statement not in Reems between {0:dd/MM/yyyy} and {1:dd/MM/yyyy}", dtpStart.Value, dtpEnd.Value);
                                 repyear.DataSource = replist;
 
-                               repyear.ShowPreviewDialog();
+                                repyear.ShowPreviewDialog();
 
-                   }
+                            }
                             else
                             {
                                 Common.setMessageBox("No Record Found", Program.ApplicationName, 1); return;

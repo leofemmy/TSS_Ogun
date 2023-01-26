@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Data.SqlClient ;
+using System.Data.SqlClient;
 
 namespace TaxSmartSuite.Class
 {
-  public  class DBConnection
+    public class DBConnection
     {
         public SqlConnection connect;
         public string constring;
@@ -31,7 +31,7 @@ namespace TaxSmartSuite.Class
             return constring;
         }
     }
-     
+
 
 
 }

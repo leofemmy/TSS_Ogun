@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using Collection.Classess;
+﻿using Collection.Classess;
 using Collection.Report;
 using Collections;
 using DevExpress.Utils;
 using DevExpress.XtraGrid.Selection;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraSplashScreen;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
 using TaxSmartSuite.Class;
 
 namespace Collection.Forms
@@ -295,7 +290,7 @@ namespace Collection.Forms
                 {
                     string strFormat = null; string query = string.Empty;
 
-         
+
                     switch (Program.intCode)
                     {
                         case 20://detla state
@@ -310,7 +305,7 @@ namespace Collection.Forms
                     DataTable Dt = dds.Tables.Add("CollectionReportTable");
                     ada = new SqlDataAdapter(query, Logic.ConnectionString);
                     ada.Fill(dds, "CollectionReportTable");
-                    Logic.ProcessDataTable(Dt);;
+                    Logic.ProcessDataTable(Dt); ;
                     //strCollectionReportID = strFormat;
                 }
 
@@ -331,7 +326,7 @@ namespace Collection.Forms
 
                     case 37://ogun state
                         XRepReceipt recportRec = new XRepReceipt { DataSource = dds.Tables[0] /*recportRec.DataAdapter = ada;*/, DataMember = "CollectionReportTable" };
-                        recportRec.logoPath= Logic.singaturepth;
+                        recportRec.logoPath = Logic.singaturepth;
                         recportRec.ShowPreviewDialog();
                         break;
 

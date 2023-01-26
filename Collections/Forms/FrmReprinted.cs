@@ -1,28 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using TaxSmartSuite.Class;
+﻿using Collection.Classes;
 using Collection.Classess;
-using System.Data.SqlClient;
-using Collection.Classes;
-using DevExpress.Utils;
-using DevExpress.XtraGrid.Selection;
 using Collection.ReceiptServices;
 using Collection.Report;
-using DevExpress.XtraPrinting.Drawing;
-using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Parameters;
-using DevExpress.XtraSplashScreen;
 using Collections;
+using DevExpress.Utils;
+using DevExpress.XtraGrid.Selection;
 using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraGrid.Views.Grid.ViewInfo;
-using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraReports.UI;
+using DevExpress.XtraSplashScreen;
 using LinqToExcel;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace Collection.Forms
 {
@@ -2297,7 +2290,7 @@ namespace Collection.Forms
         //    //}
         //}
 
-     
+
 
     }
 }

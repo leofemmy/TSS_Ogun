@@ -1,12 +1,9 @@
-﻿using System;
-using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
+﻿using BankReconciliation.Class;
 using DevExpress.XtraReports.UI;
-using System.Windows.Forms;
-using System.Data.SqlClient;
 using System.Data;
-using BankReconciliation.Class;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace BankReconciliation.Report
 {

@@ -1,12 +1,7 @@
-﻿using System;
-using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
+﻿using BankReconciliation.Class;
 using DevExpress.XtraReports.UI;
-using System.Data.SqlClient;
 using System.Data;
-using BankReconciliation.Class;
-using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace BankReconciliation.Report
 {
@@ -48,7 +43,7 @@ namespace BankReconciliation.Report
                         subrep.DataMember = "table";
 
                         subrep.Parameters["parameter1"].Value = GetCurrentColumnValue("BatchCode");
-                        
+
                     }
                     else
                     {

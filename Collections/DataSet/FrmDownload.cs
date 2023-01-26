@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Collection.Forms
@@ -33,7 +27,7 @@ namespace Collection.Forms
         private void FrmDownload_Load(object sender, EventArgs e)
         {
             //webBrowser1.Navigate("http://localhost/DataManager/index.html");
-            
+
         }
 
         private void setImages()
@@ -48,7 +42,7 @@ namespace Collection.Forms
 
             tsbClose.Image = MDIMain.publicMDIParent.i16x16.Images[11];
 
-          
+
 
         }
 

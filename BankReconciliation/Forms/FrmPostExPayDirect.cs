@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using BankReconciliation.Class;
+using DevExpress.XtraGrid.Views.Grid;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Data.SqlClient;
+using System.Globalization;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using System.Data.SqlClient;
-using BankReconciliation.Class;
-using System.Globalization;
-using DevExpress.XtraGrid.Views.Grid;
 
 namespace BankReconciliation.Forms
 {
@@ -93,12 +88,12 @@ namespace BankReconciliation.Forms
             else if (sender == tsbEdit)
             {
                 groupControl2.Text = "Edit Record Mode";
-      
+
                 iTransType = TransactionTypeCode.Edit;
                 //if (EditRecordMode())
                 //{
-                    ShowForm();
-                    //Unlockfield();
+                ShowForm();
+                //Unlockfield();
                 //    boolIsUpdate = true;
                 //}
             }
@@ -165,7 +160,7 @@ namespace BankReconciliation.Forms
 
         void gridView1_DoubleClick(object sender, EventArgs e)
         {
-               
+
             if (EditRecordMode())
             {
                 iTransType = TransactionTypeCode.New;
@@ -184,13 +179,13 @@ namespace BankReconciliation.Forms
                 txtEPeriod2.Focus(); return;
             }
             else
-            { 
-             
-                 split = txtEPeriod2.EditValue.ToString().Split(new Char[] { '/' });
-                Mth=Convert.ToInt32(split[0]);
-               Years= Convert.ToInt32(split[1]);
+            {
 
-               setReload(Mth, Years);
+                split = txtEPeriod2.EditValue.ToString().Split(new Char[] { '/' });
+                Mth = Convert.ToInt32(split[0]);
+                Years = Convert.ToInt32(split[1]);
+
+                setReload(Mth, Years);
             }
         }
 
@@ -371,8 +366,8 @@ namespace BankReconciliation.Forms
 
         void upDateRecord()
         {
-        //    string count;
-        //    count.PadLeft(7, '0');
+            //    string count;
+            //    count.PadLeft(7, '0');
             if (txtEPeriod.EditValue == null || txtEPeriod.EditValue == "")
             {
                 Common.setEmptyField("Transaction Period", Program.ApplicationName);
@@ -419,13 +414,13 @@ namespace BankReconciliation.Forms
                 }
                 else
                 {
-                               //get Agency name and code using revenue code
+                    //get Agency name and code using revenue code
                     DataTable dst = GetReceiptNumber.GetAgencyReveue(cboRevenue.SelectedValue.ToString());
 
                     //check record mode
                     if (!boolIsUpdate)
                     {
-                      
+
                         //Get Receipt Number
                         receiptno = GetReceiptNumber.ReceiptNo();
 
@@ -484,17 +479,17 @@ namespace BankReconciliation.Forms
                         }
                     }
 
-                  
 
-         
 
-              
+
+
+
                     //dst.Rows[0][0].ToString();
 
-                    
+
                     Common.setMessageBox("Record Update", Program.ApplicationName, 1);
-             //       recep = "ICM" + "|" + bankCode + "|" + Program.StatePayCode
-             //+ "|" + DateTime.Now.ToString("dd-MM-yyyy") + "|" + Convert.ToString(countrec).PadLeft(7, '0');
+                    //       recep = "ICM" + "|" + bankCode + "|" + Program.StatePayCode
+                    //+ "|" + DateTime.Now.ToString("dd-MM-yyyy") + "|" + Convert.ToString(countrec).PadLeft(7, '0');
                 }
             }
             //else
@@ -505,11 +500,11 @@ namespace BankReconciliation.Forms
             //}
         }
 
-        private void setReload(int Months,int years)
+        private void setReload(int Months, int years)
         {
             DataTable dt;
 
-           using (var ds = new System.Data.DataSet())
+            using (var ds = new System.Data.DataSet())
             {
                 string query = String.Format("SELECT paymentdate as Date,Paymentrefnumber,Amount,Bankname,Branchname ,Bankcode,Branchcode FROM tblcollectionreport WHERE PROVIDER='ICM'AND YEAR(paymentdate)='{0}' AND MONTH(paymentdate) ='{1}' ", years, Months);
 
@@ -518,7 +513,7 @@ namespace BankReconciliation.Forms
                     ada.Fill(ds, "table");
                 }
 
-               dt = ds.Tables[0];
+                dt = ds.Tables[0];
                 gridControl1.DataSource = dt.DefaultView;
             }
             gridView1.OptionsBehavior.Editable = false;
@@ -554,10 +549,10 @@ namespace BankReconciliation.Forms
         private bool FillField(string fieldid)
         {
             bool bResponse = false;
-      
+
             DataTable dts = (new Logic()).getSqlStatement((String.Format("SELECT * from tblcollectionreport where paymentrefnumber ='{0}'", fieldid))).Tables[0];
 
-            if (dts != null && dts.Rows.Count>0)
+            if (dts != null && dts.Rows.Count > 0)
             {
                 bResponse = true;
 
@@ -567,7 +562,7 @@ namespace BankReconciliation.Forms
                 txtAmount.Text = Convert.ToDecimal(dts.Rows[0]["amount"]).ToString("###,###,###.00");
                 cboRevenue.Text = dts.Rows[0]["Description"].ToString();
                 txtEPeriod.Text = txtEPeriod2.Text.Trim();
-                dtpDate.Value =Convert.ToDateTime(dts.Rows[0]["PaymentDate"]);
+                dtpDate.Value = Convert.ToDateTime(dts.Rows[0]["PaymentDate"]);
 
                 receiptno = dts.Rows[0]["ReceiptNo"].ToString();
                 payref = fieldid;

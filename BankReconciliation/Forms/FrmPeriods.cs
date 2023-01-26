@@ -1,19 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using TaxSmartSuite.Class;
-using BankReconciliation.Class;
-using System.Data.SqlClient;
-using System.Globalization;
-using DevExpress.XtraGrid.Columns;
+﻿using BankReconciliation.Class;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraSplashScreen;
-using MosesClassLibrary;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Globalization;
+using System.Windows.Forms;
 using TaxSmartSuite.Class;
 
 namespace BankReconciliation.Forms
@@ -334,7 +326,7 @@ namespace BankReconciliation.Forms
                         //    numberOfDays = numberOfDays - 1;
                         //}
 
-                        lastDay = firstday.AddDays(numberOfDays -1);
+                        lastDay = firstday.AddDays(numberOfDays - 1);
                     }
 
                     string monthName = dtf.GetMonthName(i);
@@ -385,7 +377,7 @@ namespace BankReconciliation.Forms
 
         }
 
-        
+
         void spinEdit1_KeyPress(object sender, KeyPressEventArgs e)
         {
             setReload(spinEdit1.EditValue.ToString());

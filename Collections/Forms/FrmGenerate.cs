@@ -1,20 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using TaxSmartSuite;
-using System.Windows.Forms;
-using TaxSmartSuite;
-using TaxSmartSuite.Class;
-using System.Data.SqlClient;
-using Collection.Classess;
+﻿using Collection.Classess;
 using Collection.Report;
-using Tripous;
 using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Parameters;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace Collection.Forms
 {

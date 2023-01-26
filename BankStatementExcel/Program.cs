@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Exceptionless;
+using System;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
-using System.Data.SqlClient;
-using Exceptionless;
 
 namespace BankStatementExcel
 {

@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using TaxSmartSuite;
+﻿using Collection.Classess;
 using DevExpress.XtraGrid.Selection;
-using TaxSmartSuite.Class;
+using System;
+using System.Data;
 using System.Data.SqlClient;
-using Collection.Classess;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace Collection.Forms
 {
@@ -92,28 +86,28 @@ namespace Collection.Forms
 
                 //insert new record into the database
                 using (SqlConnection db = new SqlConnection(Logic.ConnectionString))
+                {
+                    SqlTransaction transaction;
+                    SqlCommand sqlCommand1;
+
+                    db.Open();
+
+                    transaction = db.BeginTransaction();
+
+                    for (int i = 0; i < selection.SelectedCount; i++)
                     {
-                        SqlTransaction transaction;
-                        SqlCommand sqlCommand1;
+                        string lol = ((selection.GetSelectedRow(i) as DataRowView)["RevenueCode"].ToString());
+                        string query = String.Format("INSERT INTO [tblPrintingRevenueCode]([RevenueCode]) VALUES ('{0}')", lol);
 
-                        db.Open();
+                        sqlCommand1 = new SqlCommand(query, db, transaction);
+                        sqlCommand1.ExecuteNonQuery();
 
-                        transaction = db.BeginTransaction();
-
-                        for (int i = 0; i < selection.SelectedCount; i++)
-                        {
-                            string lol = ((selection.GetSelectedRow(i) as DataRowView)["RevenueCode"].ToString());
-                            string query = String.Format("INSERT INTO [tblPrintingRevenueCode]([RevenueCode]) VALUES ('{0}')", lol);
-
-                            sqlCommand1 = new SqlCommand(query, db, transaction);
-                            sqlCommand1.ExecuteNonQuery();
-
-                        }
-
-                        transaction.Commit();
                     }
+
+                    transaction.Commit();
+                }
                 Common.setMessageBox(" Transaction Completed Successfully ", Program.ApplicationName, 1);
-             
+
             }
         }
 

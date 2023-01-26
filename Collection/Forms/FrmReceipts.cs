@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Collection.Classess;
+using Collection.Report;
+using DevExpress.XtraGrid.Selection;
+using DevExpress.XtraReports.UI;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
+using System.Data.SqlClient;
+using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using System.Data.SqlClient;
-using Collection.Classess;
-using DevExpress.XtraGrid.Selection;
-using System.Security.Cryptography;
-using Collection.Report;
-using System.Text.RegularExpressions;
-using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Parameters;
 
 namespace Collection.Forms
 {
@@ -30,7 +25,7 @@ namespace Collection.Forms
 
         AmountToWords amounttowords = new AmountToWords();
 
-        string query,payerid,amount;
+        string query, payerid, amount;
 
         bool isFirstGrid = true;
 
@@ -42,7 +37,7 @@ namespace Collection.Forms
 
         //System.Data.DataSet ds = new System.Data.DataSet();
         DataTable dt = new DataTable();
-                
+
         public static FrmReceipts publicStreetGroup;
 
         protected TransactionTypeCode iTransType;
@@ -80,7 +75,7 @@ namespace Collection.Forms
                 user = Program.UserID;
             }
 
-           
+
 
         }
 
@@ -192,7 +187,7 @@ namespace Collection.Forms
 
             btnMain.Click += btnMain_Click;
 
-             isFirst = false;
+            isFirst = false;
 
             //generate number
             string test = String.Format("{0:d9}", (DateTime.Now.Ticks / 10) % 1000000000);
@@ -227,7 +222,7 @@ namespace Collection.Forms
 
         void btnPrint_Click(object sender, EventArgs e)
         {
-            PrintType = "Original"; 
+            PrintType = "Original";
 
             if (Program.stateCode == "20")
             {
@@ -239,7 +234,7 @@ namespace Collection.Forms
             { Url = "www.ogunbir.com"; }
             else if (Program.stateCode == "40")
             {
-                Url = "www.oyobir.com"; 
+                Url = "www.oyobir.com";
             }
             if (selection.SelectedCount == 0)
             {
@@ -258,7 +253,7 @@ namespace Collection.Forms
 
                     transaction = db.BeginTransaction();
 
-                    try 
+                    try
                     {
 
                         for (int i = 0; i < selection.SelectedCount; i++)
@@ -298,16 +293,16 @@ namespace Collection.Forms
                                 //amount
                                 //try
                                 //{
-                                    string desc = Regex.Replace(item["Description"].ToString(), @"[']", "");
+                                string desc = Regex.Replace(item["Description"].ToString(), @"[']", "");
 
-                                    string query2 = String.Format("INSERT INTO [BankReceipts]([PaymenRefNumber],[DepositSlipNumber],[PaymentDate],[PayerID],[PayerName] ,[RevenueCode] ,[Description] ,[Amount] ,[PaymentMethod] ,[AgencyName] ,[BankName] ,[BranchName] ,[ReceiptNumber] ,[PayerAddress],[PrintType],[URL],[AmountWords],[Users],StationName,TaxOffice) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}', '{14}','{15}','{16}','{17}' ,'{18}','{19}')", item["PaymentRefNumber"].ToString(), item["DepositSlipNumber"].ToString(), item["PaymentDate"].ToString(), payerid, item["PayerName"].ToString(), item["RevenueCode"].ToString(), desc, item["Amount"].ToString(), item["PaymentMethod"].ToString(), item["AgencyName"].ToString(), item["BankName"].ToString(), item["BranchName"].ToString(), item["EReceipts"].ToString(), item["PayerAddress"].ToString(), PrintType, Url, amount, user, item["StationName"].ToString(), item["ZoneName"].ToString());
+                                string query2 = String.Format("INSERT INTO [BankReceipts]([PaymenRefNumber],[DepositSlipNumber],[PaymentDate],[PayerID],[PayerName] ,[RevenueCode] ,[Description] ,[Amount] ,[PaymentMethod] ,[AgencyName] ,[BankName] ,[BranchName] ,[ReceiptNumber] ,[PayerAddress],[PrintType],[URL],[AmountWords],[Users],StationName,TaxOffice) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}', '{14}','{15}','{16}','{17}' ,'{18}','{19}')", item["PaymentRefNumber"].ToString(), item["DepositSlipNumber"].ToString(), item["PaymentDate"].ToString(), payerid, item["PayerName"].ToString(), item["RevenueCode"].ToString(), desc, item["Amount"].ToString(), item["PaymentMethod"].ToString(), item["AgencyName"].ToString(), item["BankName"].ToString(), item["BranchName"].ToString(), item["EReceipts"].ToString(), item["PayerAddress"].ToString(), PrintType, Url, amount, user, item["StationName"].ToString(), item["ZoneName"].ToString());
 
 
-                                    using (SqlCommand sqlCommand1 = new SqlCommand(query2, db, transaction))
-                                    {
-                                        sqlCommand1.ExecuteNonQuery();
-                                    }
-                                   
+                                using (SqlCommand sqlCommand1 = new SqlCommand(query2, db, transaction))
+                                {
+                                    sqlCommand1.ExecuteNonQuery();
+                                }
+
                                 //}
                                 //catch (Exception ex)
                                 //{
@@ -334,10 +329,10 @@ namespace Collection.Forms
 
                 }
 
-                
+
             }
 
-            
+
         }
 
         void ReceiptCall()
@@ -345,7 +340,7 @@ namespace Collection.Forms
             XRepReceipt recportRec = new XRepReceipt();
 
             recportRec.ShowPreviewDialog();
-          
+
         }
 
         void btnSearch_Click(object sender, EventArgs e)
@@ -414,11 +409,11 @@ namespace Collection.Forms
             {
                 query = String.Format("SELECT PaymentRefNumber,DepositSlipNumber,PaymentDate,PayerName,Description,Amount,BankName+ '-'+ BranchName AS Bank,EReceipts from tblCollectionReport  WHERE ([PaymentDate] >= '{0}' AND [PaymentDate] <= '{1}') and EReceipts IS NOT NULL AND ZoneCode= '{2}' AND BankCode= '{3}' AND BranchCode= '{4}' AND AgencyCode= '{5}' AND Amount >0 ", dtpfrom.Value.Date.ToString("yyyy-MM-dd"), dtpTo.Value.Date.ToString("yyyy-MM-dd"), cboZone.SelectedValue, cboBank.SelectedValue, cboBranch.SelectedValue, cboAgency.SelectedValue);
             }
-            
-           
-                try
-                {
-                    using (var ds = new System.Data.DataSet())
+
+
+            try
+            {
+                using (var ds = new System.Data.DataSet())
                 {
                     using (SqlDataAdapter ada = new SqlDataAdapter(query, Logic.ConnectionString))
                     {
@@ -432,7 +427,7 @@ namespace Collection.Forms
 
                 }
 
-                    label10.Text = String.Format("Total Number ot Payments: {0}", dt.Rows.Count);
+                label10.Text = String.Format("Total Number ot Payments: {0}", dt.Rows.Count);
 
                 if (isFirstGrid)
                 {
@@ -440,13 +435,13 @@ namespace Collection.Forms
                     selection.CheckMarkColumn.VisibleIndex = 0;
                     isFirstGrid = false;
                 }
-                }
-                catch (Exception ex)
-                {
-                 Common.setMessageBox(ex.Message,Program.ApplicationName,3);
-                    return;
-                }
-            
+            }
+            catch (Exception ex)
+            {
+                Common.setMessageBox(ex.Message, Program.ApplicationName, 3);
+                return;
+            }
+
         }
 
         public void setDBComboBox()
@@ -569,27 +564,27 @@ namespace Collection.Forms
         }
 
         private string GetUniqueKey()
-            {
-            int maxSize  = 8 ;
-            int minSize = 5 ;
+        {
+            int maxSize = 8;
+            int minSize = 5;
             char[] chars = new char[62];
             string a;
             a = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
             chars = a.ToCharArray();
-            int size  = maxSize ;
+            int size = maxSize;
             byte[] data = new byte[1];
-            RNGCryptoServiceProvider  crypto = new RNGCryptoServiceProvider();
-            crypto.GetNonZeroBytes(data) ;
-            size =  maxSize ;
+            RNGCryptoServiceProvider crypto = new RNGCryptoServiceProvider();
+            crypto.GetNonZeroBytes(data);
+            size = maxSize;
             data = new byte[size];
             crypto.GetNonZeroBytes(data);
-            StringBuilder result = new StringBuilder(size) ;
-            foreach(byte b in data )
+            StringBuilder result = new StringBuilder(size);
+            foreach (byte b in data)
             {
-            result.Append(chars[b % (chars.Length - 1)]);
+                result.Append(chars[b % (chars.Length - 1)]);
             }
             return result.ToString();
-            }
+        }
 
         void EmptyBankReceipts()
         {
@@ -602,25 +597,25 @@ namespace Collection.Forms
                 transaction = db.BeginTransaction();
 
                 try
-                { 
-string querydelte="delete from BankReceipts";
-                     using (SqlCommand sqlCommand1 = new SqlCommand(querydelte, db, transaction))
-                                {
-                                    sqlCommand1.ExecuteNonQuery();
-                                }
+                {
+                    string querydelte = "delete from BankReceipts";
+                    using (SqlCommand sqlCommand1 = new SqlCommand(querydelte, db, transaction))
+                    {
+                        sqlCommand1.ExecuteNonQuery();
+                    }
 
-                     transaction.Commit();
-                 }
+                    transaction.Commit();
+                }
                 catch (SqlException sqlError)
                 {
                     transaction.Rollback();
                 }
                 db.Close();
-                           
-                }
-                
+
             }
-        
+
+        }
+
 
     }
 

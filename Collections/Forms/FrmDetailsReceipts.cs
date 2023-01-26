@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Collection.Classess;
+using Collections;
+using DevExpress.XtraReports.UI;
+using DevExpress.XtraSplashScreen;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using TaxSmartSuite;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using Collection.Classess;
-using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Parameters;
-using DevExpress.XtraSplashScreen;
-using Collections;
-using System.Data.SqlClient;
 
 namespace Collection.Forms
 {
@@ -31,16 +24,16 @@ namespace Collection.Forms
 
         string BatchNumber;
 
-        string SQL,SQL1,SQL2,SQL3,SQL4;
-        
+        string SQL, SQL1, SQL2, SQL3, SQL4;
 
-         DateTime dt;
 
-        
+        DateTime dt;
+
+
         public FrmDetailsReceipts()
-         {
+        {
 
-             try
+            try
             {
                 SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
 
@@ -79,10 +72,10 @@ namespace Collection.Forms
             rep.xrLabel8.Text = lblTotal.Text;
             rep.xrLabel14.Text = lblInter.Text;
             rep.xrLabel17.Text = lblException.Text;
-            rep.xrLabel12.Text = String.Format("Printed By {0} on {1} ; Station Name : {2}", Program.UserID, DateTime.Now,Program.stationName);
+            rep.xrLabel12.Text = String.Format("Printed By {0} on {1} ; Station Name : {2}", Program.UserID, DateTime.Now, Program.stationName);
 
             rep.xrLabel15.Text = string.Format("Transaction Date: {0}", dateTimePicker1.Value.ToShortDateString());
-             
+
             rep.ShowPreviewDialog();
         }
 
@@ -98,12 +91,12 @@ namespace Collection.Forms
                 {
                     connect.Open();
                     _command = new SqlCommand("doDetailsReceipts", connect) { CommandType = CommandType.StoredProcedure };
-                    
+
                     _command.Parameters.Add(new SqlParameter("@date1", SqlDbType.VarChar)).Value =
                         string.Format("{0:yyyy/MM/dd 00:00:00}", dateTimePicker1.Value.ToString("MM/dd/yyyy"));
                     _command.Parameters.Add(new SqlParameter("@date2", SqlDbType.VarChar)).Value =
                         string.Format("{0:yyyy/MM/dd 00:00:00}", dateTimePicker1.Value.AddDays(1).ToString("MM/dd/yyyy"));
-                    
+
 
                     _command.CommandTimeout = 0;
 
@@ -258,15 +251,15 @@ namespace Collection.Forms
 
             SQL = string.Format("SELECT COUNT(*) FROM Collection.tblCollectionReport WHERE ([EReceiptsDate] BETWEEN '{0} 00:00:00' AND '{0} 23:59:59') AND PaymentMethod LIKE '%cash%'", dateTimePicker1.Value.ToString("MM/dd/yyyy"), dateTimePicker1.Value.AddDays(1).ToString("MM/dd/yyyy"));
 
-             lblCash.Text = (new Logic()).ExecuteScalar(SQL);
-            
+            lblCash.Text = (new Logic()).ExecuteScalar(SQL);
+
         }
 
         void OwnerCollection()
         {
 
             SQL1 = string.Format("SELECT COUNT(*) FROM Collection.tblCollectionReport WHERE ([EReceiptsDate] BETWEEN '{0} 00:00:00' AND '{0} 23:59:59') AND PaymentMethod LIKE '%Own%'", dateTimePicker1.Value.ToString("MM/dd/yyyy"), dateTimePicker1.Value.AddDays(1).ToString("MM/dd/yyyy"));
-            lblOwn.Text=(new Logic()).ExecuteScalar(SQL1);
+            lblOwn.Text = (new Logic()).ExecuteScalar(SQL1);
 
 
         }
@@ -295,7 +288,7 @@ namespace Collection.Forms
             SQL4 = string.Format("SELECT COUNT(*) FROM Collection.tblCollectionReport WHERE ([EReceiptsDate] BETWEEN '{0} 00:00:00' AND '{0} 23:59:59') AND  RevenueCode IN (SELECT RevenueCode FROM  Receipt.tblRevenueReceiptException )", dateTimePicker1.Value.ToString("MM/dd/yyyy"), dateTimePicker1.Value.AddDays(1).ToString("MM/dd/yyyy"));
 
             lblException.Text = (new Logic()).ExecuteScalar(SQL4);
-        
+
         }
 
     }

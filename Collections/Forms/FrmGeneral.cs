@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Collection.Classess;
+using Collection.Report;
+using DevExpress.XtraReports.UI;
+using System;
 using System.Data;
-using System.Drawing;
+using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using Collection.Classess;
-using System.Data.SqlClient;
-using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Parameters;
-using Collection.Report;
 
 namespace Collection.Forms
 {
@@ -290,7 +285,7 @@ namespace Collection.Forms
 
                                     // Reset all page numbers in the resulting document.
                                     Global.PrintingSystem.ContinuousPageNumbering = true;
-                                    
+
                                     // Show the Print Preview form.
                                     Global.ShowPreviewDialog();
                                 }
@@ -299,7 +294,7 @@ namespace Collection.Forms
                                     Common.setMessageBox("No Record Found for selected Period", "TCO Report", 2); return;
                                 }
 
-                             
+
                             }
                             else
                             {

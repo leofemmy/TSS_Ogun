@@ -4,13 +4,9 @@ using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraSplashScreen;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
 
@@ -167,7 +163,7 @@ namespace BankReconciliation.Forms
                     if (table.Columns.Contains("Amount")) table.Columns.Remove("Amount");
                     if (table.Columns.Contains("PaymentRefNumber")) table.Columns.Remove("PaymentRefNumber");
 
-                  
+
                     connect.Open();
                     _command = new SqlCommand("ReclassifiedTransaction", connect) { CommandType = CommandType.StoredProcedure };
                     _command.Parameters.Add(new SqlParameter("@userid", SqlDbType.VarChar)).Value = Program.UserID;
@@ -199,7 +195,7 @@ namespace BankReconciliation.Forms
             }
             catch (Exception ex)
             {
-                Tripous.Sys.ErrorBox(String.Format("{0}{1}", ex.Message, ex.StackTrace)); 
+                Tripous.Sys.ErrorBox(String.Format("{0}{1}", ex.Message, ex.StackTrace));
                 table.Clear(); return;
             }
         }
@@ -400,11 +396,11 @@ namespace BankReconciliation.Forms
 
         private void setReloadCD()
         {
-           
+
             gridControl1.DataSource = null;
             gridControl2.DataSource = null;
 
-            DataRowView oDataRowView =cboRecPeriod.SelectedItem as DataRowView;
+            DataRowView oDataRowView = cboRecPeriod.SelectedItem as DataRowView;
 
             if (oDataRowView != null)
             {
@@ -500,7 +496,7 @@ namespace BankReconciliation.Forms
                 }
 
             }
-             
+
 
         }
 

@@ -1,13 +1,6 @@
 ﻿using Collection.Classess;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using TaxSmartSuite;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
 
@@ -38,7 +31,7 @@ namespace Collection.Forms
             else if (string.IsNullOrEmpty(txtstationName.Text))
             {
                 Common.setEmptyField("Station Name", Program.ApplicationName); txtstationName.Focus();
-                 return;
+                return;
             }
             else
             {

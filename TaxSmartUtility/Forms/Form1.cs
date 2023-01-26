@@ -1,16 +1,9 @@
-﻿using DevExpress.Utils;
-using DevExpress.XtraEditors.Repository;
-using DevExpress.XtraGrid.Selection;
+﻿using DevExpress.XtraGrid.Selection;
 using DevExpress.XtraSplashScreen;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
 using TaxSmartSuite.CommonLibrary.Controls;
@@ -86,7 +79,7 @@ namespace TaxSmartUtility
                 int? vasl = rows["UTIN"] == DBNull.Value ? (int?)null : Convert.ToInt32(rows["UTIN"]);
 
                 string vals = rows["UTIN"].ToString();
-                 
+
                 var revRow = temTable.Select($"UTIN = {vasl}").Single();
 
                 temTable.Rows.Remove(revRow);
@@ -204,7 +197,7 @@ namespace TaxSmartUtility
                     selection.ClearSelection();
 
                 }
-                
+
                 //_Helper = new GridRadioGroupColumnHelper(gridView2);
             }
         }

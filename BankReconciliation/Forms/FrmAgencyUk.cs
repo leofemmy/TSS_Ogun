@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using BankReconciliation.Class;
+using DevExpress.XtraGrid.Views.Grid;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using System.Data.SqlClient;
-using BankReconciliation.Class;
-using DevExpress.XtraGrid.Views.Grid;
 
 namespace BankReconciliation.Forms
 {
@@ -67,7 +62,7 @@ namespace BankReconciliation.Forms
             else
             {
                 txtName.Text = txtName.Text.Trim().ToUpper();
-            } 
+            }
         }
 
         void cboNature_Leave(object sender, EventArgs e)
@@ -102,7 +97,7 @@ namespace BankReconciliation.Forms
             else
             {
                 txtName.Text = txtName.Text.Trim().ToUpper();
-            } 
+            }
         }
 
         void txtCode_LostFocus(object sender, EventArgs e)
@@ -468,7 +463,7 @@ namespace BankReconciliation.Forms
 
                 db.Close();
             }
-            
+
         }
 
         private void Clear()

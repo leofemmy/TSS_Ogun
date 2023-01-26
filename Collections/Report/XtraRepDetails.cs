@@ -1,14 +1,11 @@
-﻿using System;
-using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
+﻿using Collection.Classess;
+using DevExpress.XtraEditors;
+using DevExpress.XtraReports.Parameters;
 using DevExpress.XtraReports.UI;
-using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
-using Collection.Classess;
-using DevExpress.XtraReports.Parameters;
-using DevExpress.XtraEditors;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Collection.Report
 {
@@ -24,7 +21,7 @@ namespace Collection.Report
 
             xrLabel9.BeforePrint += xrLabel9_BeforePrint;
 
-            
+
         }
 
         void xrLabel9_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)

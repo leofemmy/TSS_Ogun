@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using TaxSmartSuite;
-using TaxSmartSuite.Class;
-using System.Data.SqlClient;
-using Collection.Classess;
-using DevExpress.XtraGrid.Views.Grid;
-using System.Globalization;
-using DevExpress.XtraSplashScreen;
+﻿using Collection.Classess;
 using Collections;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraSplashScreen;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Globalization;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace Collection.Forms
 {
@@ -370,7 +365,7 @@ namespace Collection.Forms
                                 }
                                 else
                                 {
-                                    int intFromto = Convert.ToInt32(cboFrom.Text) + Convert.ToInt32(Dt.Rows[0]["IssueQty"]) ;
+                                    int intFromto = Convert.ToInt32(cboFrom.Text) + Convert.ToInt32(Dt.Rows[0]["IssueQty"]);
                                     cboFrom.Text = Convert.ToString(intFromto.ToString().PadLeft(leng, '0'));
                                     int issueT = Convert.ToInt32(cboFrom.Text) + Convert.ToInt32(txtQty.Text) - 1;
                                     txtIssueTo.Text = Convert.ToString(issueT.ToString().PadLeft(leng, '0'));
@@ -618,7 +613,7 @@ namespace Collection.Forms
 
             gridView1.BestFitColumns();
         }
-        
+
         protected bool EditRecordMode()
         {
             bool bResponse = false;

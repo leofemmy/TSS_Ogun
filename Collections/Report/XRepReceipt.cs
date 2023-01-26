@@ -1,20 +1,10 @@
-using System;
-using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
-using DevExpress.XtraReports.UI;
-using System.Data.SqlClient;
-using Collection.Classess;
-using System.Data;
-using System.IO;
-using System.Linq;
-using System.Collections.Generic;
 using Collection.Classes;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Data;
+using System.Drawing;
 using System.Net;
-using System.Web.Script.Serialization;
 using System.Text;
+using System.Web.Script.Serialization;
 
 namespace Collection.Report
 {
@@ -52,7 +42,7 @@ namespace Collection.Report
             client.Headers["Content-type"] = "application/json";
             client.Encoding = Encoding.UTF8;
 
-            var paymentRefNo = stringraw;//"OYPDMS226QQ272";  //GTB|BRH|OGUNPYD|16-03-2021|489879
+            var paymentRefNo =  stringraw; //"OYPDMS226QQ272";  //GTB|BRH|OGUNPYD|16-03-2021|489879
             var encodedPaymentRefNo = AppWebExtension.Base64UrlEncode(paymentRefNo.TrimEnd().ToString());
             var serviceBaseUrl = System.Configuration.ConfigurationManager.AppSettings["serviceBaseUrl"]; //"http://services.oyostatebir.com/AssessmentRepositoryService";
             var serviceMethod = "/api/v1/PaymentCollections/int/generate-online-receipt?&P0dTUM4S=";
@@ -62,8 +52,12 @@ namespace Collection.Report
             {
                 rawString = receiptPathToEncode,// "P0dTUM4S=T1lQRE1TMjI2UVEyNzI",// stringraw.Trim(),
             };
+
             inputJson = (new JavaScriptSerializer()).Serialize(inputs);
+
             json = client.UploadString(apiUrl + "/api/v1/QrCoder/encode-string", inputJson);
+           
+
             BarcodeResponse myDeserializedClass = JsonConvert.DeserializeObject<BarcodeResponse>(json);
             sources = myDeserializedClass.data.qrImageUrl;
 

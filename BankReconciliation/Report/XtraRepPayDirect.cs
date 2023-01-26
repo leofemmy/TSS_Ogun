@@ -1,8 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraReports.UI;
 using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
-using DevExpress.XtraReports.UI;
 using System.Windows.Forms;
 
 namespace BankReconciliation.Report
@@ -27,7 +24,7 @@ namespace BankReconciliation.Report
 
         void xrLabel10_PreviewClick(object sender, PreviewMouseEventArgs e)
         {
-            
+
         }
 
         void xrLabel10_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)

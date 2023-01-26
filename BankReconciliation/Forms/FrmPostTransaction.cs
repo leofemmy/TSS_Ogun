@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using BankReconciliation.Class;
+using BankReconciliation.Report;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraReports.UI;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Data.SqlClient;
+using System.Globalization;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using System.Data.SqlClient;
-using BankReconciliation.Class;
-using DevExpress.XtraGrid.Views.Grid;
-using BankReconciliation.Report;
-using System.Globalization;
-using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Parameters;
 
 namespace BankReconciliation.Forms
 {

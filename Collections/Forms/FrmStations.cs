@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Collection.Classess;
+using DevExpress.XtraGrid.Views.Grid;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using TaxSmartSuite;
+using System.Data.SqlClient;
+using System.Globalization;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using System.Data.SqlClient;
-using Collection.Classess;
-using System.Globalization;
-using DevExpress.XtraGrid.Views.Grid;
 
 namespace Collection.Forms
 {
@@ -79,7 +73,7 @@ namespace Collection.Forms
                         try
                         {
 
-                            using (SqlCommand sqlCommand1 = new SqlCommand(String.Format("INSERT INTO Receipt.tblStation(StationCode,[StationName],StateCode)VALUES ('{0}','{1}','{2}');", txtStation.Text.Trim(), txtstationName.Text.Trim(),Program.stateCode), db, transaction))
+                            using (SqlCommand sqlCommand1 = new SqlCommand(String.Format("INSERT INTO Receipt.tblStation(StationCode,[StationName],StateCode)VALUES ('{0}','{1}','{2}');", txtStation.Text.Trim(), txtstationName.Text.Trim(), Program.stateCode), db, transaction))
                             {
                                 sqlCommand1.ExecuteNonQuery();
                             }
@@ -114,7 +108,7 @@ namespace Collection.Forms
                         Clear();
                         tsbReload.PerformClick();
                     }
-                    
+
                     //}
                 }
                 else
@@ -132,7 +126,7 @@ namespace Collection.Forms
                         {
                             //MessageBox.Show(MDIMain.stateCode);
                             //fieldid
-                            string query = String.Format("UPDATE Receipt.tblStation SET [StationCode]='{0}',StationName='{1}',StateCode='{2}' where  StationID ='{1}'", txtStation.Text.Trim(),txtstationName.Text.Trim(),Program.stateCode, ID);
+                            string query = String.Format("UPDATE Receipt.tblStation SET [StationCode]='{0}',StationName='{1}',StateCode='{2}' where  StationID ='{1}'", txtStation.Text.Trim(), txtstationName.Text.Trim(), Program.stateCode, ID);
 
                             using (SqlCommand sqlCommand1 = new SqlCommand(query, db, transaction))
                             {
@@ -209,8 +203,8 @@ namespace Collection.Forms
                 iTransType = TransactionTypeCode.Edit;
                 if (EditRecordMode())
                 {
-                ShowForm();
-                boolIsUpdate = true;
+                    ShowForm();
+                    boolIsUpdate = true;
                 }
             }
             else if (sender == tsbDelete)
@@ -263,11 +257,11 @@ namespace Collection.Forms
                     gridView1.Columns["StationID"].Visible = false;
                     gridView1.BestFitColumns();
                 }
-                
-                
-                
+
+
+
             }
-            
+
         }
 
         protected void ShowForm()

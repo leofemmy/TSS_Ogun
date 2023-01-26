@@ -1,29 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.OleDb;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.Utils;
+﻿using DevExpress.Utils;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraEditors.DXErrorProvider;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using DevExpress.XtraSplashScreen;
 using LinqToExcel;
-using LinqToExcel.Domain;
-using Formatting = Newtonsoft.Json.Formatting;
 using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Windows.Forms;
 using ErrorInfo = DevExpress.XtraEditors.DXErrorProvider.ErrorInfo;
+using Formatting = Newtonsoft.Json.Formatting;
 
 namespace BankStatementExcel.Forms
 {
@@ -100,7 +93,7 @@ namespace BankStatementExcel.Forms
         void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-            
+
         }
 
         void btnExport_Click(object sender, EventArgs e)
@@ -369,7 +362,7 @@ namespace BankStatementExcel.Forms
                     //    MessageBox.Show(string.Format("There are {0} Columnus, which Credit Value is Negative. Please Correct it along with their corresponding Values.", iCount2), "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //    //return;
                     //}
-                    
+
                 }
             }
             catch (Exception)

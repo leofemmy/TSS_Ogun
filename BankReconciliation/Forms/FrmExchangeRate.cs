@@ -3,13 +3,8 @@ using DevExpress.Utils;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraSplashScreen;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
 
@@ -79,7 +74,7 @@ namespace BankReconciliation.Forms
                         transaction = db.BeginTransaction();
                         try
                         {
-                            string query = String.Format("INSERT INTO [Reconciliation].[tblExchangeRate]([CurrencyID],[Rate]) VALUES ('{0}','{1}');", Convert.ToInt32(cboCurrency.SelectedValue),Convert.ToDouble(txtRate.EditValue));
+                            string query = String.Format("INSERT INTO [Reconciliation].[tblExchangeRate]([CurrencyID],[Rate]) VALUES ('{0}','{1}');", Convert.ToInt32(cboCurrency.SelectedValue), Convert.ToDouble(txtRate.EditValue));
 
                             using (SqlCommand sqlCommand1 = new SqlCommand(query, db, transaction))
                             {
@@ -127,7 +122,7 @@ namespace BankReconciliation.Forms
                         {
                             //MessageBox.Show(MDIMain.stateCode);
                             //fieldid
-                            string dry = String.Format(String.Format("UPDATE [Reconciliation].[tblExchangeRate] SET [CurrencyID]='{{0}}',[Rate]='{{1}}' where  ExchangeRateID ='{0}'", ID),Convert.ToInt32(cboCurrency.SelectedValue),Convert.ToDouble(txtRate.EditValue));
+                            string dry = String.Format(String.Format("UPDATE [Reconciliation].[tblExchangeRate] SET [CurrencyID]='{{0}}',[Rate]='{{1}}' where  ExchangeRateID ='{0}'", ID), Convert.ToInt32(cboCurrency.SelectedValue), Convert.ToDouble(txtRate.EditValue));
 
                             using (SqlCommand sqlCommand1 = new SqlCommand(dry, db, transaction))
                             {
@@ -361,7 +356,7 @@ namespace BankReconciliation.Forms
 
                 cboCurrency.Text = dts.Rows[0]["Description"].ToString();
                 txtRate.EditValue = String.Format("{0:N2}", dts.Rows[0]["Rate"]);
-                
+
             }
             else
                 bResponse = false;

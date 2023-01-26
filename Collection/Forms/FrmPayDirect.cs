@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.IO;
-using System.Data.Odbc;
-using System.Data.SqlClient;
-using Collection.Classess;
-using TaxSmartSuite;
+﻿using Collection.Classess;
 using DevExpress.Utils;
+using System;
+using System.Data;
+using System.Data.Odbc;
 using System.Data.OleDb;
+using System.Data.SqlClient;
+using System.IO;
+using System.Windows.Forms;
 using TaxSmartSuite.Class;
 
 namespace Collection.Forms
@@ -72,12 +66,12 @@ namespace Collection.Forms
             //label6.Text = dateTimePicker1.Value.Subtract(1);
 
             if (Program.UserID == "" || Program.UserID == null)
-            { 
-                user="Femi";
+            {
+                user = "Femi";
             }
             else
             {
-                user=Program.UserID;            
+                user = Program.UserID;
             }
 
         }
@@ -168,7 +162,7 @@ namespace Collection.Forms
                             openFileDialogCSV.FilterIndex = 1;
                             openFileDialogCSV.RestoreDirectory = true;
                         }
-                     
+
                     }
                     else
                     {
@@ -201,7 +195,8 @@ namespace Collection.Forms
         }
 
         public string //name (with extension) of file to import - property
-      FileNevCSV { get; set; }
+      FileNevCSV
+        { get; set; }
 
         private void Format()
         {
@@ -276,7 +271,7 @@ namespace Collection.Forms
                         //Connection for .xslx 2007 format
                         MyConnection = new OleDbConnection(String.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source='{0}';Extended Properties=Excel 12.0;", txtFiletoLoad.Text));
                     }
-                                      
+
 
                     //Select your Excel file
                     MyCommand = new System.Data.OleDb.OleDbDataAdapter("select * from [Sheet1$]", MyConnection);
@@ -295,7 +290,7 @@ namespace Collection.Forms
                     }
                     label4.Text = Dt.Rows.Count + "  Rows of Records to be Imported ";
 
-              
+
                 }
                 else//csv file
                 {
@@ -305,7 +300,7 @@ namespace Collection.Forms
                         Format();
                         Encoding();
                         writeSchema();
-                      
+
                         Dt = LoadCSV().Tables[0];
                         //dt.Columns.Add("MyRow", type(System.Int32));
                         Dt.Columns.Add("Cheque_Status", typeof(System.String));
@@ -320,7 +315,7 @@ namespace Collection.Forms
                             {
                                 row["Cheque_Status"] = "Pending";
                             }
-                      
+
                         }
                         Dt.AcceptChanges();
                         label4.Text = Dt.Rows.Count + "  Rows to be Imported ";
@@ -333,7 +328,7 @@ namespace Collection.Forms
                     }
                 }
 
-               
+
             }
 
         }
@@ -353,7 +348,7 @@ namespace Collection.Forms
                 conn = new OdbcConnection(strConnString.Trim());
                 conn.Open();
 
-               
+
                 sql_select = String.Format("select * from [{0}]", FileNevCSV.Trim());
 
                 //Creates the data adapter
@@ -455,7 +450,7 @@ namespace Collection.Forms
                 }
             }
 
-           
+
         }
 
         private void bttnImport_Click(object sender, EventArgs e)

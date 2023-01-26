@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
-using TaxSmartSuite;
-using TaxSmartSuite.Class;
+﻿using Collection.Classess;
 using Collection.Forms;
-using Collection.Classess;
+using System;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Collection
 {
@@ -48,7 +44,7 @@ namespace Collection
                 //Application.Run(new FrmLogin());
 
                 //if (APP_CONNECTED)
-                    Application.Run(new MDIMain());
+                Application.Run(new MDIMain());
 
 
             }

@@ -1,16 +1,13 @@
 ﻿//#define HOME
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data.SqlClient;
-using System.Data;
-using Data = System.Data;
 using DevExpress.XtraNavBar;
+using MosesClassLibrary;
+using System;
 using System.Collections;
+using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using MosesClassLibrary;
+using Data = System.Data;
 
 
 
@@ -38,7 +35,7 @@ namespace Collection.Classess
                         if (!Blogic.InsertNavModulesAccess(items.Tag as string, items.Caption, GroupList.Tag as string))
 
                         {
-                           Common.setMessageBox("Error Updating Application Modules Access", Program.ApplicationName, 3);
+                            Common.setMessageBox("Error Updating Application Modules Access", Program.ApplicationName, 3);
 
                             break;
                         }

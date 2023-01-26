@@ -1,18 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using BankReconciliation.Class;
+using DevExpress.Utils;
+using DevExpress.XtraSplashScreen;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using BankReconciliation.Class;
-using DevExpress.Utils;
-using DevExpress.XtraEditors.Repository;
-using DevExpress.XtraGrid.Columns;
-using DevExpress.XtraGrid.Selection;
-using DevExpress.XtraSplashScreen;
 using TaxSmartSuite.Class;
 
 namespace BankReconciliation.Forms
@@ -132,7 +124,7 @@ namespace BankReconciliation.Forms
         {
             string strv =
                 string.Format(
-                    "Transaction have been done on {0} for {1} financial period. Continue to clear this transaction will erase all that have been done",cboBank.Text.Trim().ToString(),cbofinancial.Text.Trim().ToString());
+                    "Transaction have been done on {0} for {1} financial period. Continue to clear this transaction will erase all that have been done", cboBank.Text.Trim().ToString(), cbofinancial.Text.Trim().ToString());
 
             DialogResult result = MessageBox.Show(strv, "Clear Transaction", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 

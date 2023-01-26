@@ -1,17 +1,12 @@
 ﻿using BankReconciliation.Report;
 using DevExpress.Utils;
+using DevExpress.XtraReports.UI;
 using DevExpress.XtraSplashScreen;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Parameters;
 
 namespace BankReconciliation.Forms
 {
@@ -84,7 +79,7 @@ namespace BankReconciliation.Forms
                                     ).ToList();
                     //string state=Program.StateName;
                     XtraRepPostedlist posted = new XtraRepPostedlist();
-                  
+
                     posted.xrLabel6.Text = string.Format("{0} STATE GOVERNMENT OF NIGERIA", Program.StateName.ToUpper());
 
                     posted.xrLabel7.Text = string.Format("List of Collections Posted for the month ");

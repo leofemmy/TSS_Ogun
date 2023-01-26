@@ -1,22 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using TaxSmartSuite;
-using TaxSmartSuite.Class;
-using Collection.Classess;
-using System.Data.SqlClient;
-using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.Utils;
+﻿using Collection.Classess;
 using Collection.ReceiptServices;
-using DevExpress.XtraGrid.Selection;
 using Collection.Report;
+using DevExpress.Utils;
+using DevExpress.XtraGrid.Selection;
+using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Parameters;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace Collection.Forms
 {
@@ -48,7 +41,7 @@ namespace Collection.Forms
         private string strCollectionReportID;
         private string user;
 
-        bool isEmpty ;
+        bool isEmpty;
 
         AmountToWords amounttowords = new AmountToWords();
 
@@ -310,7 +303,7 @@ namespace Collection.Forms
                     }
                     else
                     {
-                        
+
                         using (WaitDialogForm form = new WaitDialogForm("Application Working...,Please Wait...", "Sending Request"))
                         {
                             try
@@ -364,16 +357,16 @@ namespace Collection.Forms
                                 Common.setMessageBox("Call your Admin Office for Record Aproval..,Click on Get Record Approval to get Record", Program.ApplicationName, 1);
                             }
                         }
-                        
+
                         return;
                     }
                 }
-               
+
 
             }
             else if (sender == btnMain)
             {
-                using (FrmMainFest frmMainFest = new FrmMainFest(strCollectionReportID, criteria3, criteria2,true) { IDList = strCollectionReportID })
+                using (FrmMainFest frmMainFest = new FrmMainFest(strCollectionReportID, criteria3, criteria2, true) { IDList = strCollectionReportID })
                 {
                     frmMainFest.ShowDialog();
                 }
@@ -392,75 +385,6 @@ namespace Collection.Forms
                 {
                     //criteria3 = GetPayRef();
                     using (SqlConnection db = new SqlConnection(Logic.ConnectionString))
-                {
-                    SqlTransaction transaction;
-
-                    db.Open();
-
-                    transaction = db.BeginTransaction();
-
-                    try
-                    {
-                        using (System.Data.DataSet dds = new System.Data.DataSet("DsCollectionReport"))
-                        {
-                            SqlDataAdapter ada;
-
-                            using (WaitDialogForm form = new WaitDialogForm())
-                            {
-                                string strFormat = null;
-
-                                query = string.Format("SELECT [ID] ,PaymentPeriod, [Provider] , [Channel] ,[PaymentRefNumber] , [DepositSlipNumber] , CONVERT(VARCHAR,CONVERT(DATETime,[PaymentDate])) AS PaymentDate,[PayerID] , UPPER([PayerName]) AS [PayerName], [Amount] ,[PaymentMethod] ,[ChequeNumber] ,[ChequeValueDate] ,[ChequeStatus] ,[DateChequeReturned] ,[TelephoneNumber] ,[ReceiptNo] ,[ReceiptDate] ,UPPER([PayerAddress]) as [PayerAddress] ,[Status] ,[User] ,[RevenueCode] ,[Description] , [ChequeBankCode] ,[ChequeBankName] ,[AgencyName] ,[AgencyCode] ,[BankCode] ,[BankName] ,[BranchCode] ,[BranchName] ,[ZoneCode] ,[ZoneName] ,[Username] ,[State] ,[AmountWords] ,[URL] ,[EReceipts] ,[EReceiptsDate] ,[GeneratedBy] ,[DateValidatedAgainst] ,[DateDiff] ,[UploadStatus] ,[PrintedBY] ,[DatePrinted] ,[ControlNumber] ,[BatchNumber] ,[StationCode] ,(Select StationName from tblStation2 WHERE tblStation2.StationCode = tblCollectionReport.[StationCode]) AS StationName from tblCollectionReport WHERE RevenueCode NOT IN (SELECT RevenueCode FROM [tblPrintingRevenueCode]) AND PaymentRefNumber IN (SELECT PaymentRefNumber FROM  [tblReceipt] where sentby ='{0}' AND Isprinted=0) AND EReceipts IN (SELECT ReceiptNo FROM  [tblReceipt]) ORDER BY tblCollectionReport.StationCode , tblCollectionReport.AgencyCode ,tblCollectionReport.RevenueCode,tblCollectionReport.EReceipts", Program.UserID);
-
-                                DataTable Dt = dds.Tables.Add("CollectionReportTable");
-                                ada = new SqlDataAdapter(query, Logic.ConnectionString);
-                                ada.Fill(dds, "CollectionReportTable");
-                                Logic.ProcessDataTable(Dt);;
-                                strCollectionReportID = strFormat;
-                            }
-                            
-
-                            XRepReceipt recportRec = new XRepReceipt { DataSource = dds /*recportRec.DataAdapter = ada;*/, DataMember = "CollectionReportTable" };
-                                recportRec.logoPath= Logic.singaturepth;
-                                recportRec.ShowPreviewDialog();
-
-
-                        }
-
-
-                    }
-                    catch (SqlException sqlError)
-                    {
-                        //transaction.Rollback();
-
-                        Tripous.Sys.ErrorBox(sqlError);
-                    }
-                    catch (Exception ex)
-                    {
-                        Tripous.Sys.ErrorBox(ex);
-                    }
-                    db.Close();
-                }
-
-
-                btnMain.Enabled = true;
-
-                btnPrint.Enabled = false;
-
-                //btnSearch.Enabled = false;
-
-                gridControl4.Enabled = false;
-
-                //Common.setMessageBox(convert.tostring(DateTime.Now), Program.ApplicationName, 1);
-
-
-
-                //ask if the print was sucessfull
-                DialogResult result = MessageBox.Show(" Is Receipt Printing Successful ?", Program.ApplicationName, MessageBoxButtons.YesNo);
-
-                if (result == DialogResult.Yes)
-                {
-                    //update the collection table by seting the isprinted to true
-                    using (SqlConnection db = new SqlConnection(Logic.ConnectionString))
                     {
                         SqlTransaction transaction;
 
@@ -468,37 +392,106 @@ namespace Collection.Forms
 
                         transaction = db.BeginTransaction();
 
-
                         try
                         {
-                            string query1 = String.Format("UPDATE tblCollectionReport SET isPrinted=1,IsPrintedDate= '{0:MM/dd/yyyy HH:mm:ss tt}',PrintedBY='{1}' WHERE PaymentRefNumber IN (SELECT PaymentRefNumber FROM  [tblReceipt] where SentBy='{1}')", DateTime.Now, Program.UserID);
-
-                            using (SqlCommand sqlCommand = new SqlCommand(query1, db, transaction))
+                            using (System.Data.DataSet dds = new System.Data.DataSet("DsCollectionReport"))
                             {
-                                sqlCommand.ExecuteNonQuery();
+                                SqlDataAdapter ada;
+
+                                using (WaitDialogForm form = new WaitDialogForm())
+                                {
+                                    string strFormat = null;
+
+                                    query = string.Format("SELECT [ID] ,PaymentPeriod, [Provider] , [Channel] ,[PaymentRefNumber] , [DepositSlipNumber] , CONVERT(VARCHAR,CONVERT(DATETime,[PaymentDate])) AS PaymentDate,[PayerID] , UPPER([PayerName]) AS [PayerName], [Amount] ,[PaymentMethod] ,[ChequeNumber] ,[ChequeValueDate] ,[ChequeStatus] ,[DateChequeReturned] ,[TelephoneNumber] ,[ReceiptNo] ,[ReceiptDate] ,UPPER([PayerAddress]) as [PayerAddress] ,[Status] ,[User] ,[RevenueCode] ,[Description] , [ChequeBankCode] ,[ChequeBankName] ,[AgencyName] ,[AgencyCode] ,[BankCode] ,[BankName] ,[BranchCode] ,[BranchName] ,[ZoneCode] ,[ZoneName] ,[Username] ,[State] ,[AmountWords] ,[URL] ,[EReceipts] ,[EReceiptsDate] ,[GeneratedBy] ,[DateValidatedAgainst] ,[DateDiff] ,[UploadStatus] ,[PrintedBY] ,[DatePrinted] ,[ControlNumber] ,[BatchNumber] ,[StationCode] ,(Select StationName from tblStation2 WHERE tblStation2.StationCode = tblCollectionReport.[StationCode]) AS StationName from tblCollectionReport WHERE RevenueCode NOT IN (SELECT RevenueCode FROM [tblPrintingRevenueCode]) AND PaymentRefNumber IN (SELECT PaymentRefNumber FROM  [tblReceipt] where sentby ='{0}' AND Isprinted=0) AND EReceipts IN (SELECT ReceiptNo FROM  [tblReceipt]) ORDER BY tblCollectionReport.StationCode , tblCollectionReport.AgencyCode ,tblCollectionReport.RevenueCode,tblCollectionReport.EReceipts", Program.UserID);
+
+                                    DataTable Dt = dds.Tables.Add("CollectionReportTable");
+                                    ada = new SqlDataAdapter(query, Logic.ConnectionString);
+                                    ada.Fill(dds, "CollectionReportTable");
+                                    Logic.ProcessDataTable(Dt); ;
+                                    strCollectionReportID = strFormat;
+                                }
+
+
+                                XRepReceipt recportRec = new XRepReceipt { DataSource = dds /*recportRec.DataAdapter = ada;*/, DataMember = "CollectionReportTable" };
+                                recportRec.logoPath = Logic.singaturepth;
+                                recportRec.ShowPreviewDialog();
+
+
                             }
 
+
+                        }
+                        catch (SqlException sqlError)
+                        {
+                            //transaction.Rollback();
+
+                            Tripous.Sys.ErrorBox(sqlError);
                         }
                         catch (Exception ex)
                         {
-                            transaction.Rollback();
                             Tripous.Sys.ErrorBox(ex);
-                            return;
                         }
-                        transaction.Commit();
-
                         db.Close();
                     }
-                }
 
-                
 
-                
-                //    //}
-                //    //else
-                //    //{
-                //    //    return;
-                //    //}
+                    btnMain.Enabled = true;
+
+                    btnPrint.Enabled = false;
+
+                    //btnSearch.Enabled = false;
+
+                    gridControl4.Enabled = false;
+
+                    //Common.setMessageBox(convert.tostring(DateTime.Now), Program.ApplicationName, 1);
+
+
+
+                    //ask if the print was sucessfull
+                    DialogResult result = MessageBox.Show(" Is Receipt Printing Successful ?", Program.ApplicationName, MessageBoxButtons.YesNo);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        //update the collection table by seting the isprinted to true
+                        using (SqlConnection db = new SqlConnection(Logic.ConnectionString))
+                        {
+                            SqlTransaction transaction;
+
+                            db.Open();
+
+                            transaction = db.BeginTransaction();
+
+
+                            try
+                            {
+                                string query1 = String.Format("UPDATE tblCollectionReport SET isPrinted=1,IsPrintedDate= '{0:MM/dd/yyyy HH:mm:ss tt}',PrintedBY='{1}' WHERE PaymentRefNumber IN (SELECT PaymentRefNumber FROM  [tblReceipt] where SentBy='{1}')", DateTime.Now, Program.UserID);
+
+                                using (SqlCommand sqlCommand = new SqlCommand(query1, db, transaction))
+                                {
+                                    sqlCommand.ExecuteNonQuery();
+                                }
+
+                            }
+                            catch (Exception ex)
+                            {
+                                transaction.Rollback();
+                                Tripous.Sys.ErrorBox(ex);
+                                return;
+                            }
+                            transaction.Commit();
+
+                            db.Close();
+                        }
+                    }
+
+
+
+
+                    //    //}
+                    //    //else
+                    //    //{
+                    //    //    return;
+                    //    //}
 
 
                 }
@@ -549,7 +542,7 @@ namespace Collection.Forms
                             }
                             catch (Exception ex)
                             {
-                                
+
                             }
                             if (dsGetappup.Tables[0].Rows[0]["returnCode"].ToString() == "00")
                             {

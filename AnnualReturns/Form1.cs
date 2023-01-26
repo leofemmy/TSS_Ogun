@@ -1,24 +1,15 @@
 ﻿using DevExpress.XtraEditors.Controls;
+//using BankReconciliation.Forms;
+using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraGrid.Views.Grid;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.OleDb;
-using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraGrid.Views.Grid;
-using AnnualReturns.Class;
-//using BankReconciliation.Forms;
-using DevExpress.Utils;
-using DevExpress.XtraEditors.Repository;
-using DevExpress.XtraPrinting;
 //using TaxDrive.Class;
 
 
@@ -50,7 +41,7 @@ namespace AnnualReturns
 
             gridControl1.Enabled = false;
 
-            InitialiseSpinEdit(); btnImport.Click +=btnImport_Click;
+            InitialiseSpinEdit(); btnImport.Click += btnImport_Click;
 
             initialspinedit2();
 
@@ -58,7 +49,7 @@ namespace AnnualReturns
             btnSave.Click += btnSave_Click;
             btnClear.Click += btnClear_Click;
             btnExport.Click += btnExport_Click;
-            
+
         }
 
         void btnImport_Click(object sender, EventArgs e)
@@ -74,7 +65,7 @@ namespace AnnualReturns
                 this.Hide();
                 import.ShowDialog();
             }
-           
+
 
         }
 
@@ -235,8 +226,8 @@ namespace AnnualReturns
                 }
             }
 
-        } 
-        
+        }
+
         void gridView1_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
             if (e.Row != null)

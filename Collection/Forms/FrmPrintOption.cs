@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Collection.Classess;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using System.Data.SqlClient;
-using Collection.Classess;
+using System.Windows.Forms;
 using TaxSmartSuite.Class;
 
 namespace Collection.Forms
@@ -150,7 +145,7 @@ namespace Collection.Forms
 
         void OnFormLoad(object sender, EventArgs e)
         {
-          setDBComboBox();
+            setDBComboBox();
         }
 
         void Bttn_Click(object sender, EventArgs e)
@@ -162,9 +157,9 @@ namespace Collection.Forms
                     //MDIMain.publicMDIParent.RemoveControls();
                     MDIMain.publicMDIParent.tableLayoutPanel2.Controls.Add((new FrmReceipts().panelContainer), 1, 0);
                 }
-               
+
             }
-            
+
         }
 
 

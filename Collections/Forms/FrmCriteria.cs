@@ -1,20 +1,16 @@
 ﻿using Collection.Classess;
 using Collections;
-using DevExpress.XtraSplashScreen;
-using TaxSmartSuite.Class;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using DevExpress.XtraGrid.Views.Layout;
+using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Selection;
 using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraGrid.Views.Layout;
+using DevExpress.XtraSplashScreen;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace Collection.Forms
 {

@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using TaxSmartSuite.Class;
-using System.Data.SqlClient;
-using BankReconciliation.Class;
+﻿using BankReconciliation.Class;
 using BankReconciliation.Report;
 using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Parameters;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace BankReconciliation.Forms
 {
@@ -56,22 +50,22 @@ namespace BankReconciliation.Forms
         {
             if (radioGroup1.EditValue.ToString() == null)
             {
-                Common.setEmptyField("Transaction Type", Program.ApplicationName); 
-                return; 
+                Common.setEmptyField("Transaction Type", Program.ApplicationName);
+                return;
             }
             else if (radioGroup2.EditValue.ToString() == null)
-            { 
-                Common.setEmptyField("Bank", Program.ApplicationName); 
-                return; 
+            {
+                Common.setEmptyField("Bank", Program.ApplicationName);
+                return;
             }
             else if (string.IsNullOrEmpty(cboPeriods.Text))
-            { 
-                Common.setEmptyField("Transaction Month", Program.ApplicationName); cboPeriods.Focus(); 
+            {
+                Common.setEmptyField("Transaction Month", Program.ApplicationName); cboPeriods.Focus();
                 return;
             }
             else if (string.IsNullOrEmpty(cboYears.Text))
-            { 
-                Common.setEmptyField("Transaction Year", Program.ApplicationName); cboYears.Focus(); 
+            {
+                Common.setEmptyField("Transaction Year", Program.ApplicationName); cboYears.Focus();
                 return;
             }
             else

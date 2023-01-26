@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Collection.Classess;
+using DevExpress.XtraGrid.Views.Grid;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using TaxSmartSuite;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using System.Data.SqlClient;
-using Collection.Classess;
-using DevExpress.XtraGrid.Views.Grid;
 
 namespace Collection.Forms
 {
@@ -53,7 +47,7 @@ namespace Collection.Forms
 
         void gridView1_DoubleClick(object sender, EventArgs e)
         {
-            tsbEdit.PerformClick(); 
+            tsbEdit.PerformClick();
         }
 
         void bttnUpdate_Click(object sender, EventArgs e)
@@ -69,8 +63,8 @@ namespace Collection.Forms
                 txtCentreName.Clear(); txtCentreName.Focus(); return;
             }
             else
-            { 
-                 //check form status either new or edit
+            {
+                //check form status either new or edit
                 if (!boolIsUpdate)
                 {
                     using (SqlConnection db = new SqlConnection(Logic.ConnectionString))
@@ -94,7 +88,7 @@ namespace Collection.Forms
                         {
                             Tripous.Sys.ErrorBox(ex);
                             transaction.Rollback();
-                            return;  
+                            return;
                         }
                         db.Close();
                     }

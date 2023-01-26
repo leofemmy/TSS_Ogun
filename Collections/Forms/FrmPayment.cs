@@ -1,20 +1,15 @@
 ﻿using Collection.Classess;
 using Collection.Report;
 using Collections;
+using DevExpress.XtraReports.UI;
 using DevExpress.XtraSplashScreen;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using TaxSmartSuite;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using DevExpress.XtraPrinting;
-using DevExpress.XtraReports.UI;
 
 namespace Collection.Forms
 {
@@ -174,7 +169,7 @@ namespace Collection.Forms
                                         ).ToList();
 
                                     XtraRepPayments report = new XtraRepPayments();
-                                    
+
                                     var bindsoucre = (BindingSource)report.DataSource;
                                     bindsoucre.Clear();
                                     bindsoucre.DataSource = list;

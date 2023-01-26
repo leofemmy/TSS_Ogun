@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using TaxSmartSuite.Class;
-using System.Data.SqlClient;
-using BankReconciliation.Class;
-using System.Globalization;
+﻿using BankReconciliation.Class;
 using BankReconciliation.Report;
+using DevExpress.XtraPivotGrid;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraReports.UI.PivotGrid;
-using DevExpress.XtraPivotGrid;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Globalization;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace BankReconciliation.Forms
 {
@@ -89,7 +84,7 @@ namespace BankReconciliation.Forms
         {
             var dtf = CultureInfo.CurrentCulture.DateTimeFormat;
 
-            
+
             if (radioGroup1.SelectedIndex == -1)
             {
                 Common.setEmptyField(" IGR Report Options...", Program.ApplicationName);

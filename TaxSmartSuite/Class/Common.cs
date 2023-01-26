@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using DevExpress.XtraTab;
-using System.Data;
-using System.IO;
-using System.Drawing;
-using System.Text.RegularExpressions;
+﻿using DevExpress.XtraTab;
+using System;
 using System.Configuration;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace TaxSmartSuite.Class
 {
@@ -189,7 +186,7 @@ namespace TaxSmartSuite.Class
             }
             catch (Exception ex)
             {
-                Tripous.Sys.ErrorBox(ex); 
+                Tripous.Sys.ErrorBox(ex);
             }
         }
 

@@ -1,12 +1,11 @@
-﻿using System;
+﻿using Collection.Classess;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Text;
 using System.IO;
+using System.Text;
 using System.Windows.Forms;
-using TaxSmartSuite;
 using TaxSmartSuite.Class;
-using Collection.Classess;
 
 namespace Collection.Forms
 {
@@ -40,11 +39,11 @@ namespace Collection.Forms
             loadtype();
 
             //bttnCancel.Click += Bttn_Click;
-           btnExport.Click += Bttn_Click;
-           btnExport.Click += Bttn_Click;
+            btnExport.Click += Bttn_Click;
+            btnExport.Click += Bttn_Click;
             //bttnImport.Click += Bttn_Click;
 
-           NavBars.ToolStripEnableDisable(toolStrip, null, false);
+            NavBars.ToolStripEnableDisable(toolStrip, null, false);
         }
 
         private void loadtype()
@@ -77,9 +76,9 @@ namespace Collection.Forms
 
             //bttnCancel.Image = MDIMain.publicMDIParent.i32x32.Images[9];
 
-          btnExport.Image = MDIMain.publicMDIParent.i32x32.Images[8];
+            btnExport.Image = MDIMain.publicMDIParent.i32x32.Images[8];
 
-          btnRefresh.Image = MDIMain.publicMDIParent.i16x16.Images[0];
+            btnRefresh.Image = MDIMain.publicMDIParent.i16x16.Images[0];
 
         }
 
@@ -92,7 +91,7 @@ namespace Collection.Forms
             else if (sender == btnExport)
             {
                 Export();
-              
+
             }
         }
 
@@ -198,7 +197,7 @@ namespace Collection.Forms
         private void Export()
         {
             //exportToCSV();
-            if(radioGroup1.SelectedIndex <0)
+            if (radioGroup1.SelectedIndex < 0)
             {
                 MessageBox.Show("Please Data Export Options", "Data Export", MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
@@ -206,7 +205,7 @@ namespace Collection.Forms
             }
             else
             {
-                if(this.radioGroup1.SelectedIndex ==0)
+                if (this.radioGroup1.SelectedIndex == 0)
                 {
                     exportToExcel();
                 }
@@ -231,7 +230,7 @@ namespace Collection.Forms
                 }
             }
         }
-      
+
         private void exportToExcel()
         {
             //Asks the filenam with a SaveFileDialog control.
@@ -241,7 +240,7 @@ namespace Collection.Forms
                 if (saveFileDialogCSV.ShowDialog() == DialogResult.OK)
                 {
                     // Runs the export operation if the given filenam is valid.
-                    string filename = String.Format("{0}_{1}{2}", saveFileDialogCSV.FileName.Substring(0, saveFileDialogCSV.FileName.Length - 4),lstTable.SelectedItem, saveFileDialogCSV.FileName.Substring(saveFileDialogCSV.FileName.Length - 4));
+                    string filename = String.Format("{0}_{1}{2}", saveFileDialogCSV.FileName.Substring(0, saveFileDialogCSV.FileName.Length - 4), lstTable.SelectedItem, saveFileDialogCSV.FileName.Substring(saveFileDialogCSV.FileName.Length - 4));
                     exportToCSVfile(filename);
                 }
             }
@@ -263,7 +262,7 @@ namespace Collection.Forms
                 using (StreamWriter sw = new StreamWriter(fileOut, false, encodingCSV))
                 {
                     string strRow;
-                   
+
                     string fileContent = columnNames(dtSchema, FrmExport.separator) + Environment.NewLine;
                     while (dr.Read())
                     {
@@ -359,6 +358,6 @@ namespace Collection.Forms
             NavBars.ToolStripEnableDisableControls(toolStrip, Tag as String);
         }
 
-      
+
     }
 }

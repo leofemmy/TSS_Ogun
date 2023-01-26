@@ -1,30 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using Collection.Classess;
-using TaxSmartSuite;
-using TaxSmartSuite.Class;
-using System.Collections;
-using DevExpress.XtraGrid.Views.Grid;
+﻿using Collection.Classess;
 using Collection.Report;
+using Collections;
 using DevExpress.Utils;
-using System.Linq;
-using DevExpress.XtraGrid;
-using DevExpress.XtraGrid.Views.Base;
-using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraEditors.DXErrorProvider;
+using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraPrinting;
-using DevExpress.XtraSplashScreen;
-using Collections;
 using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Parameters;
+using DevExpress.XtraSplashScreen;
+using System;
+using System.Collections;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 
 

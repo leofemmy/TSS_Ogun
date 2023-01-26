@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using DevExpress.XtraGrid.Selection;
-using TaxSmartSuite.Class;
-using System.Data.SqlClient;
-using BankReconciliation.Class;
-using DevExpress.XtraGrid;
+﻿using BankReconciliation.Class;
 using BankReconciliation.Report;
+using DevExpress.XtraGrid.Selection;
 using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Parameters;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace BankReconciliation.Forms
 {
@@ -70,7 +63,7 @@ namespace BankReconciliation.Forms
 
             OnFormLoad(null, null);
 
-           
+
 
         }
 
@@ -82,7 +75,7 @@ namespace BankReconciliation.Forms
             dt2.Columns.Add("PaymentDate", typeof(string));
             dt2.Columns.Add("Amount", typeof(double));
         }
-    
+
         internal GridCheckMarksSelection Selection
         {
             get { return selection; }
@@ -147,7 +140,7 @@ namespace BankReconciliation.Forms
             gridView1.Columns["PaymentRefNumber"].Visible = false;
             gridView1.BestFitColumns();
 
-            
+
             gridView1.Columns["Amount"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
             gridView1.Columns["Amount"].SummaryItem.DisplayFormat = "Total Amount = {0:n}";
 
@@ -157,7 +150,7 @@ namespace BankReconciliation.Forms
 
             if (isFirstGrid)
             {
-                selection = new GridCheckMarksSelection(gridView1,ref label4);
+                selection = new GridCheckMarksSelection(gridView1, ref label4);
                 selection.CheckMarkColumn.VisibleIndex = 0;
                 isFirstGrid = false;
             }
@@ -219,7 +212,7 @@ namespace BankReconciliation.Forms
             else if (sender == bttnUndo)
             {
                 gridControl1.DataSource = string.Empty;
-                
+
                 if (dt != null)
                 {
 
@@ -232,7 +225,7 @@ namespace BankReconciliation.Forms
                     gridView1.BestFitColumns();
 
 
-                    
+
                     gridView1.Columns["Amount"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
                     gridView1.Columns["Amount"].SummaryItem.FieldName = "Amount";
                     gridView1.Columns["Amount"].SummaryItem.DisplayFormat = "Total Amount = {0:n}";
@@ -274,7 +267,7 @@ namespace BankReconciliation.Forms
                 {
                     //XtraRepReconDetails repRec = new XtraRepReconDetails();
                     XtraRepPayDirect repRec = new XtraRepPayDirect() { DataSource = dt2, DataMember = "ReportTable" };
-                    
+
 
                     repRec.xrLabel4.Text = String.Format("PayDirect Collections Not found in the Bank Statement from {0} to {1}", stDate, endDate);
                     repRec.xrLabel5.Text = String.Format("Bank Name: {0}", strBankName, strBankName);
@@ -284,9 +277,11 @@ namespace BankReconciliation.Forms
                 else
                 {
 
-                    XtraRepPayDirect repRec = new XtraRepPayDirect() { FilterString = "StartsWith([BankCode], ?paramBankCode) And [Period] = ?paramPeriod And [IsRecordExit] = ?paramRecord"
+                    XtraRepPayDirect repRec = new XtraRepPayDirect()
+                    {
+                        FilterString = "StartsWith([BankCode], ?paramBankCode) And [Period] = ?paramPeriod And [IsRecordExit] = ?paramRecord"
                         //String.Format("StartsWith([BankCode], {0}) And [Period] = {1} And [IsRecordExit] = {2}", BankCode, strPeriods, false)
-                };
+                    };
                     repRec.paramBankCode.Value = BankCode;
                     repRec.paramRecord.Value = false;
                     repRec.paramPeriod.Value = strPeriods;
@@ -295,7 +290,7 @@ namespace BankReconciliation.Forms
 
                     repRec.ShowPreviewDialog();
                 }
-               
+
             }
             else if (sender == bttnClose)
             {
@@ -347,36 +342,36 @@ namespace BankReconciliation.Forms
 
         void strProcess()
         {
-             gridControl1.DataSource = string.Empty;
+            gridControl1.DataSource = string.Empty;
 
-             //clear dt2 tabale
-             dt2.Clear();
-            
+            //clear dt2 tabale
+            dt2.Clear();
+
 
             for (int i = 0; i < selection.SelectedCount; i++)
             {
-               dt2.Rows.Add(new object[] { (string)(selection.GetSelectedRow(i) as DataRowView)["PaymentRefNumber"], (string)(selection.GetSelectedRow(i) as DataRowView)["PaymentDate"], Convert.ToDouble((selection.GetSelectedRow(i) as DataRowView)["Amount"]) });
+                dt2.Rows.Add(new object[] { (string)(selection.GetSelectedRow(i) as DataRowView)["PaymentRefNumber"], (string)(selection.GetSelectedRow(i) as DataRowView)["PaymentDate"], Convert.ToDouble((selection.GetSelectedRow(i) as DataRowView)["Amount"]) });
             }
 
-          DataTable dtChange=  getChanges(dt, dt2);
+            DataTable dtChange = getChanges(dt, dt2);
 
-          if (dtChange != null)
-          {
-              gridControl1.DataSource = dtChange.DefaultView;
-              gridView1.OptionsBehavior.Editable = false;
-              gridView1.Columns["Amount"].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-              gridView1.Columns["Amount"].DisplayFormat.FormatString = "n2";
+            if (dtChange != null)
+            {
+                gridControl1.DataSource = dtChange.DefaultView;
+                gridView1.OptionsBehavior.Editable = false;
+                gridView1.Columns["Amount"].DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+                gridView1.Columns["Amount"].DisplayFormat.FormatString = "n2";
 
-              gridView1.Columns["PaymentRefNumber"].Visible = false;
-              gridView1.BestFitColumns();
-              
-              gridView1.Columns["Amount"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
-              gridView1.Columns["Amount"].SummaryItem.FieldName = "Amount";
-              gridView1.Columns["Amount"].SummaryItem.DisplayFormat = "Total Amount = {0:n}";
+                gridView1.Columns["PaymentRefNumber"].Visible = false;
+                gridView1.BestFitColumns();
 
-              gridView1.OptionsView.ShowFooter = true;
-          }
-           
+                gridView1.Columns["Amount"].SummaryItem.SummaryType = DevExpress.Data.SummaryItemType.Sum;
+                gridView1.Columns["Amount"].SummaryItem.FieldName = "Amount";
+                gridView1.Columns["Amount"].SummaryItem.DisplayFormat = "Total Amount = {0:n}";
+
+                gridView1.OptionsView.ShowFooter = true;
+            }
+
         }
 
         static DataTable CompareTwoDataTable(DataTable dt1, DataTable dt2)
@@ -398,7 +393,7 @@ namespace BankReconciliation.Forms
                 {
                     query += string.Format("'{0}',", dr.ItemArray[0]);
                 }
-                if (!string.IsNullOrEmpty(query)) 
+                if (!string.IsNullOrEmpty(query))
                     query = query.Remove(query.Length - 1, 1);
                 var rows = dt1.Select(string.Format("{0} NOT IN ({1})", "PaymentRefNumber", query));
                 dt3 = rows.CopyToDataTable();
@@ -409,7 +404,7 @@ namespace BankReconciliation.Forms
         void processData()
         { //process data that are selected and stored in dt2
 
-            if (dt2 != null && dt2.Rows.Count>1)
+            if (dt2 != null && dt2.Rows.Count > 1)
             {
                 using (SqlConnection db = new SqlConnection(Logic.ConnectionString))
                 {
@@ -440,10 +435,10 @@ namespace BankReconciliation.Forms
                     }
 
                     db.Close();
-                } 
+                }
             }
 
-           
+
 
         }
 

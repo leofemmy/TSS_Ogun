@@ -1,29 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using TaxSmartSuite;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using Collection.Classess;
-using TaxSmartSuite.Class;
-using System.Collections;
-using DevExpress.XtraGrid.Views.Grid;
+﻿using Collection.Classess;
 using Collection.Report;
-using DevExpress.Utils;
-using DevExpress.XtraGrid;
-using DevExpress.XtraGrid.Views.Base;
-using DevExpress.XtraGrid.Columns;
-using DevExpress.XtraEditors.Controls;
-using DevExpress.XtraEditors.DXErrorProvider;
-using DevExpress.XtraPrinting;
-using DevExpress.XtraSplashScreen;
 using Collections;
+using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Parameters;
+using DevExpress.XtraSplashScreen;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace Collection.Forms
 {
@@ -161,7 +146,7 @@ namespace Collection.Forms
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            if (ds.Tables[0].Rows[0]["ManifestID"] == DBNull.Value )
+            if (ds.Tables[0].Rows[0]["ManifestID"] == DBNull.Value)
             {
                 Common.setMessageBox(" Manifest Not created yet !", Program.ApplicationName, 1);
                 return;
@@ -223,7 +208,7 @@ namespace Collection.Forms
                 }
                 catch (Exception ex)
                 {
-                    
+
                     Tripous.Sys.ErrorBox(ex.Message + ex.StackTrace.ToString());
                     return;
                 }

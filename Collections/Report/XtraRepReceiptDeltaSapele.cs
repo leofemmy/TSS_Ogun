@@ -1,8 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraReports.UI;
 using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
-using DevExpress.XtraReports.UI;
 
 namespace Collection.Report
 {
@@ -25,7 +22,7 @@ namespace Collection.Report
             var fullPath = System.IO.Path.Combine(System.Windows.Forms.Application.StartupPath, logoPath);
             if (!string.IsNullOrWhiteSpace(fullPath) && System.IO.File.Exists(fullPath))
                 xrPictureBox1.Image = Image.FromFile(fullPath);
-            
+
             var fullpath2 = System.IO.Path.Combine(System.Windows.Forms.Application.StartupPath, Imagepath);
             if (!string.IsNullOrWhiteSpace(fullpath2) && System.IO.File.Exists(fullpath2))
                 xrPictureBox2.Image = Image.FromFile(fullpath2);

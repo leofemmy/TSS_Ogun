@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using BankReconciliation.Class;
+using BankReconciliation.Forms;
+using DevExpress.XtraGrid.Views.Base;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using BankReconciliation.Forms;
-using System.Data.SqlClient;
-using BankReconciliation.Class;
-using DevExpress.XtraGrid.Views.Base;
-using DevExpress.XtraGrid.Columns;
 
 namespace BankReconciliation
 {
@@ -182,11 +176,11 @@ namespace BankReconciliation
         void gridView1_CellValueChanging(object sender, CellValueChangedEventArgs e)
         {
             //Dim intID As Integer = (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "IntegrationEntityID"));
- 
+
 
             //decimal credit;
 
-          object  credit = (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Bank Debit"));
+            object credit = (gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Bank Debit"));
             if (e.Column.FieldName == "Bank Debit")
             {
                 credit = Convert.ToDecimal(gridView1.GetRowCellValue(e.RowHandle, "Bank Debit"));

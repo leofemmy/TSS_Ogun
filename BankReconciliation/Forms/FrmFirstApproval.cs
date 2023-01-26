@@ -5,13 +5,8 @@ using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Selection;
 using DevExpress.XtraSplashScreen;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
 
@@ -442,7 +437,7 @@ namespace BankReconciliation.Forms
             if (DialogResults.InputBox(@"OTP", string.Format("Kindly enter the token to Authorize this transaction.", $"********{Program.Userphone.Substring(7)}"), ref value) == DialogResult.OK)
             {
                 if (Token.tokenInsertValidation(Program.UserID, Program.ApplicationCode, value.ToString(), true, string.Format("{0}", this.groupControl1.Text.Trim())))
-                    //if (validatetoken(value.ToString()))
+                //if (validatetoken(value.ToString()))
                 {
                     Processwork();
                     sbnUpdate.Enabled = true;
@@ -455,7 +450,7 @@ namespace BankReconciliation.Forms
 
                 }
             }
-          
+
         }
 
         void Processwork()

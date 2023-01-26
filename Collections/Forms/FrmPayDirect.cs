@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.IO;
-using System.Data.Odbc;
-using System.Data.SqlClient;
-using Collection.Classess;
-using TaxSmartSuite;
+﻿using Collection.Classess;
 using DevExpress.Utils;
-using System.Data.OleDb;
-using TaxSmartSuite.Class;
-using System.Globalization;
 using DevExpress.XtraGrid;
+using System;
+using System.Data;
+using System.Data.Odbc;
+using System.Data.OleDb;
+using System.Data.SqlClient;
+using System.IO;
+using System.Linq;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 
 namespace Collection.Forms
@@ -278,7 +272,8 @@ namespace Collection.Forms
         }
 
         public string //name (with extension) of file to import - property
-      FileNevCSV { get; set; }
+      FileNevCSV
+        { get; set; }
 
         private void Format()
         {
@@ -707,7 +702,7 @@ namespace Collection.Forms
                     }
 
                 }
-            Map:
+                Map:
                 if (isError)
                 {
                     using (FrmStationMap frmStationMap = new FrmStationMap())

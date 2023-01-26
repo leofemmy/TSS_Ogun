@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Collection.Classess;
+using DevExpress.XtraGrid.Views.Grid;
+using System;
 using System.Data;
-using System.Drawing;
+using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using System.Data.SqlClient;
-using DevExpress.XtraGrid.Views.Grid;
-using Collection.Classess;
 
 namespace Collection.Forms
 {
@@ -43,7 +39,7 @@ namespace Collection.Forms
 
         DataTable Dts, DtSR;
 
-        string retval, query, types, statecode, strMonth, payref,officecode;
+        string retval, query, types, statecode, strMonth, payref, officecode;
 
         public FrmCashiers()
         {
@@ -68,7 +64,7 @@ namespace Collection.Forms
 
             DataTable dts = (new Logic()).getSqlStatement((String.Format("select statename,TaxCode from tblState where StateCode= '{0}' ", Program.stateCode))).Tables[0];
 
-            if (dts != null && dts.Rows.Count > 0 )
+            if (dts != null && dts.Rows.Count > 0)
             {
                 statename = dts.Rows[0]["statename"].ToString();
                 payref = dts.Rows[0]["TaxCode"].ToString();
@@ -129,7 +125,7 @@ namespace Collection.Forms
             //bttnReset.Image = MDIMain.publicMDIParent.i32x32.Images[8];
             btnUpdate.Image = MDIMain.publicMDIParent.i32x32.Images[7];
             btnSearch.Image = MDIMain.publicMDIParent.i32x32.Images[2];
-            
+
         }
 
         void ToolStripEvent()
@@ -177,10 +173,10 @@ namespace Collection.Forms
 
                 iTransType = TransactionTypeCode.Edit;
 
-                    ShowForm();
+                ShowForm();
 
-                    boolIsUpdate = true;
-                
+                boolIsUpdate = true;
+
             }
             //else if (sender == tsbDelete)
             //{
@@ -213,7 +209,7 @@ namespace Collection.Forms
 
                 if (dr != null)
                 {
-                    ID =dr["PaymentRefNumber"].ToString();
+                    ID = dr["PaymentRefNumber"].ToString();
 
                     bResponse = FillField(dr["PaymentRefNumber"].ToString());
                 }
@@ -263,19 +259,19 @@ namespace Collection.Forms
         {
             if (cboRevenue.Text.Length < 1)
             {
-              Common.setMessageBox("Please Select Revenue Type", Program.ApplicationName, 1);
+                Common.setMessageBox("Please Select Revenue Type", Program.ApplicationName, 1);
 
-              cboRevenue.Focus();
-              return;
+                cboRevenue.Focus();
+                return;
             }
             else
 
                 receipts = Methods.generateRandomString(8);
 
-                txtReceiptsNo.Text =String.Format("ICM|{0}", receipts);
+            txtReceiptsNo.Text = String.Format("ICM|{0}", receipts);
 
-                 //string bankcode = retval.ToString();
-                txtPaymentRef.Text = String.Format("ICM|{0}|{1}|{2:dd-MM-yyyy}|{3}", cboBank.SelectedValue, payref, DateTime.Now, receipts);
+            //string bankcode = retval.ToString();
+            txtPaymentRef.Text = String.Format("ICM|{0}|{1}|{2:dd-MM-yyyy}|{3}", cboBank.SelectedValue, payref, DateTime.Now, receipts);
 
             //txtPaymentRef.Text = String.Format("{0}|{1}|{2}|{3}", cboBank.SelectedValue.ToString(), payref, DateTime.Now.ToString("dd-MM-yyyy"), txtReceiptsNo.Text.Trim());
 
@@ -283,7 +279,7 @@ namespace Collection.Forms
 
         private void searchRecord()
         {
-            
+
             string querys;
             //determine search string/ parameter
 
@@ -296,9 +292,9 @@ namespace Collection.Forms
             {
                 querys = String.Format("SELECT PaymentRefNumber, PaymentDate, DepositSlipNumber AS [Slip No], Amount, BankName, BranchName FROM tblCollectionReport where PaymentRefNumber LIKE '%{0}%'", txtSeachString.Text.Trim());
             }
-                    using (var ds = new System.Data.DataSet())
+            using (var ds = new System.Data.DataSet())
             {
-                
+
 
                 using (SqlDataAdapter ada = new SqlDataAdapter(querys, Logic.ConnectionString))
                 {
@@ -364,7 +360,7 @@ namespace Collection.Forms
                 }
                 else
                 {
-                               //check form status either new or edit
+                    //check form status either new or edit
                     if (!boolIsUpdate)
                     {
                         using (SqlConnection db = new SqlConnection(Logic.ConnectionString))
@@ -378,7 +374,7 @@ namespace Collection.Forms
                             try
                             {
 
-                                using (SqlCommand sqlCommand1 = new SqlCommand(String.Format("INSERT INTO [tblCollectionReport]([Provider],[Channel],[PaymentRefNumber],[DepositSlipNumber],[PaymentDate],[PayerName],[PayerID],[RevenueCode],[Description],[Amount],[PaymentMethod],[BankCode],[BankName],[BranchCode],[BranchName],[AgencyName],[AgencyCode],[ZoneCode],[ZoneName],[ReceiptNo],[ReceiptDate],[State],[TelephoneNumber],[ChequeNumber],[ChequeValueDate],[ChequeBankCode],[ChequeBankName]) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}');", "ICM", "Bank", txtPaymentRef.Text.Trim(), txtSlipNo.Text.Trim(), dtpDate.Value.Date.ToString("yyyy-MM-dd"), txtPayerID.Text.Trim(), txtPayerName.Text.Trim(), cboRevenue.SelectedValue, cboRevenue.Text.Trim(), cedDepositAmt.Text, cboPayMode.SelectedValue, cboBank.SelectedValue, cboBank.Text, cboPaidBranch.Text, cboPaidBranch.Text, Dts.Rows[0]["AgencyName"].ToString(), Dts.Rows[0]["AgencyCode"].ToString(), Dts.Rows[0]["ZoneID"].ToString(), Dts.Rows[0]["ZoneName"].ToString(), txtReceiptsNo.Text.Trim(), txtReceipDate.Value.Date.ToString("yyyy-MM-dd"), statename.ToString(), txtTelephone.Text.Trim(), txtChequeNo.Text.Trim(), dtpCheque.Value.Date.ToString("yyyy-MM-dd"), cboCheque.SelectedValue.ToString(),cboCheque.SelectedText.ToString()), db, transaction))
+                                using (SqlCommand sqlCommand1 = new SqlCommand(String.Format("INSERT INTO [tblCollectionReport]([Provider],[Channel],[PaymentRefNumber],[DepositSlipNumber],[PaymentDate],[PayerName],[PayerID],[RevenueCode],[Description],[Amount],[PaymentMethod],[BankCode],[BankName],[BranchCode],[BranchName],[AgencyName],[AgencyCode],[ZoneCode],[ZoneName],[ReceiptNo],[ReceiptDate],[State],[TelephoneNumber],[ChequeNumber],[ChequeValueDate],[ChequeBankCode],[ChequeBankName]) VALUES ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}','{15}','{16}','{17}','{18}','{19}','{20}','{21}','{22}','{23}','{24}','{25}','{26}');", "ICM", "Bank", txtPaymentRef.Text.Trim(), txtSlipNo.Text.Trim(), dtpDate.Value.Date.ToString("yyyy-MM-dd"), txtPayerID.Text.Trim(), txtPayerName.Text.Trim(), cboRevenue.SelectedValue, cboRevenue.Text.Trim(), cedDepositAmt.Text, cboPayMode.SelectedValue, cboBank.SelectedValue, cboBank.Text, cboPaidBranch.Text, cboPaidBranch.Text, Dts.Rows[0]["AgencyName"].ToString(), Dts.Rows[0]["AgencyCode"].ToString(), Dts.Rows[0]["ZoneID"].ToString(), Dts.Rows[0]["ZoneName"].ToString(), txtReceiptsNo.Text.Trim(), txtReceipDate.Value.Date.ToString("yyyy-MM-dd"), statename.ToString(), txtTelephone.Text.Trim(), txtChequeNo.Text.Trim(), dtpCheque.Value.Date.ToString("yyyy-MM-dd"), cboCheque.SelectedValue.ToString(), cboCheque.SelectedText.ToString()), db, transaction))
 
                                 {
                                     sqlCommand1.ExecuteNonQuery();
@@ -415,7 +411,7 @@ namespace Collection.Forms
                             {
                                 //MessageBox.Show(MDIMain.stateCode);
                                 //fieldid
-                                using (SqlCommand sqlCommand1 = new SqlCommand(String.Format(String.Format("UPDATE [tblCollectionReport] SET [Provider]='{{0}}',[Channel]='{{1}}',[PaymentRefNumber]='{{2}}',[DepositSlipNumber]='{{3}}',[PaymentDate]='{{4}}',[PayerID]='{{5}}',[PayerName]='{{6}}',[RevenueCode]='{{7}}',[Description]='{{8}}',[Amount]='{{9}}',[PaymentMethod]='{{10}}',[BankCode]='{{11}}',[BankName]='{{12}}',[BranchCode]='{{13}}',[BranchName]='{{14}}',[AgencyName]='{{15}}',[AgencyCode]='{{16}}',[ZoneCode]='{{17}}',[ZoneName]='{{18}}',[ReceiptNo]='{{19}}',[ReceiptDate]='{{20}}',[State]='{{21}}',[TelephoneNumber]='{{22}}' ,[ChequeNumber] = '{{23}}',[ChequeValueDate]='{{24}}',[ChequeBankCode]='{{25}}',[ChequeBankName]='{{26}}' where  [PaymentRefNumber] ='{0}'", ID), txtPaymentRef.Text.Trim(), txtSlipNo.Text.Trim(), dtpDate.Value.Date.ToString("yyyy-MM-dd"), txtPayerName.Text.Trim(), txtPayerID.Text.Trim(), cboRevenue.SelectedValue, cboRevenue.Text.Trim(), cedDepositAmt.Text, cboPayMode.SelectedValue, cboBank.SelectedValue, cboBank.Text, cboPaidBranch.Text, cboPaidBranch.Text, Dts.Rows[0]["AgencyName"].ToString(), Dts.Rows[0]["AgencyCode"].ToString(), Dts.Rows[0]["ZoneID"].ToString(), Dts.Rows[0]["ZoneName"].ToString(), txtReceiptsNo.Text.Trim(), txtReceipDate.Value.Date.ToString("yyyy-MM-dd"), statename.ToString(), txtTelephone.Text.Trim(), txtChequeNo.Text.Trim(), dtpCheque.Value.Date.ToString("yyyy-MM-dd"), cboCheque.SelectedValue.ToString(),cboCheque.SelectedText.ToString()), db, transaction))
+                                using (SqlCommand sqlCommand1 = new SqlCommand(String.Format(String.Format("UPDATE [tblCollectionReport] SET [Provider]='{{0}}',[Channel]='{{1}}',[PaymentRefNumber]='{{2}}',[DepositSlipNumber]='{{3}}',[PaymentDate]='{{4}}',[PayerID]='{{5}}',[PayerName]='{{6}}',[RevenueCode]='{{7}}',[Description]='{{8}}',[Amount]='{{9}}',[PaymentMethod]='{{10}}',[BankCode]='{{11}}',[BankName]='{{12}}',[BranchCode]='{{13}}',[BranchName]='{{14}}',[AgencyName]='{{15}}',[AgencyCode]='{{16}}',[ZoneCode]='{{17}}',[ZoneName]='{{18}}',[ReceiptNo]='{{19}}',[ReceiptDate]='{{20}}',[State]='{{21}}',[TelephoneNumber]='{{22}}' ,[ChequeNumber] = '{{23}}',[ChequeValueDate]='{{24}}',[ChequeBankCode]='{{25}}',[ChequeBankName]='{{26}}' where  [PaymentRefNumber] ='{0}'", ID), txtPaymentRef.Text.Trim(), txtSlipNo.Text.Trim(), dtpDate.Value.Date.ToString("yyyy-MM-dd"), txtPayerName.Text.Trim(), txtPayerID.Text.Trim(), cboRevenue.SelectedValue, cboRevenue.Text.Trim(), cedDepositAmt.Text, cboPayMode.SelectedValue, cboBank.SelectedValue, cboBank.Text, cboPaidBranch.Text, cboPaidBranch.Text, Dts.Rows[0]["AgencyName"].ToString(), Dts.Rows[0]["AgencyCode"].ToString(), Dts.Rows[0]["ZoneID"].ToString(), Dts.Rows[0]["ZoneName"].ToString(), txtReceiptsNo.Text.Trim(), txtReceipDate.Value.Date.ToString("yyyy-MM-dd"), statename.ToString(), txtTelephone.Text.Trim(), txtChequeNo.Text.Trim(), dtpCheque.Value.Date.ToString("yyyy-MM-dd"), cboCheque.SelectedValue.ToString(), cboCheque.SelectedText.ToString()), db, transaction))
 
                                 {
                                     sqlCommand1.ExecuteNonQuery();
@@ -454,7 +450,7 @@ namespace Collection.Forms
 
             //load data from the table into the forms for edit
             string query = String.Format(String.Format("select * from tblCollectionReport where PaymentRefNumber ='{0}'", fieldid));
-               DataTable dts = (new Logic()).getSqlStatement(query).Tables[0];
+            DataTable dts = (new Logic()).getSqlStatement(query).Tables[0];
 
 
             if (dts != null)
@@ -550,7 +546,7 @@ namespace Collection.Forms
 
             //populate months
             //Methods.PopulateMonth(cboMonth);
-           
+
             //get default currency
 
             string query = String.Format("select CurrencyName  from tblCurrency where Flag =1");
@@ -573,7 +569,7 @@ namespace Collection.Forms
             cboPayMode.KeyPress += cboPaymode_KeyPress;
 
             cboCheque.SelectedIndexChanged += cboCheque_SelectedIndexChanged;
-                   
+
 
             cboPaidBranch.KeyPress += cboPaidBranch_KeyPress;
 
@@ -606,7 +602,7 @@ namespace Collection.Forms
 
             }
 
-            txtPayerName.Text =(string) values;
+            txtPayerName.Text = (string)values;
 
             txtPayerID.Text = luePayeridPerson.Text;
 
@@ -635,7 +631,7 @@ namespace Collection.Forms
 
             }
 
-           txtPayerName.Text = values.ToString();
+            txtPayerName.Text = values.ToString();
             txtPayerID.Text = lupeAgent.Text;
             lupeAgent.Visible = false;
         }
@@ -644,11 +640,11 @@ namespace Collection.Forms
         {
             DataTable Dt;
 
-            
+
 
             using (var ds = new System.Data.DataSet())
             {
-                
+
 
                 string query = "select *  from tblBank";
 
@@ -675,7 +671,7 @@ namespace Collection.Forms
             using (var ds = new System.Data.DataSet())
             {
 
-               string query = "select *  from tblBank";
+                string query = "select *  from tblBank";
 
                 using (SqlDataAdapter ada = new SqlDataAdapter(query, Logic.ConnectionString))
                 {
@@ -715,11 +711,11 @@ namespace Collection.Forms
 
         public void setGetOffAgency()
         {
-           
+
 
             using (var ds = new System.Data.DataSet())
             {
-                
+
 
                 string query = String.Format("select AgencyCode ,AgencyName,ZoneID,ZoneName from ViewRevenueOffice where RevenueOfficeID = '{0}'", officecode);
 
@@ -730,18 +726,18 @@ namespace Collection.Forms
 
                 Dts = ds.Tables[0];
             }
-            
+
         }
 
         public void setDBComboBoxPay()
         {
             DataTable Dt;
 
-            
+
 
             using (var ds = new System.Data.DataSet())
             {
-                
+
 
                 string query = "select *  from tblPayMode";
 
@@ -760,18 +756,18 @@ namespace Collection.Forms
 
 
         }
-        
+
         public void setDBComboBoxAgent()
         {
             DataTable Dt;
 
             using (var ds = new System.Data.DataSet())
             {
-                
+
 
                 string query = "select TaxAgentReferenceNumber as [Agent Name], OrganizationName from tblTaxAgent";
 
-                using (SqlDataAdapter ada = new SqlDataAdapter(query,Logic.ConnectionString))
+                using (SqlDataAdapter ada = new SqlDataAdapter(query, Logic.ConnectionString))
                 {
                     ada.Fill(ds, "table");
                 }
@@ -783,7 +779,7 @@ namespace Collection.Forms
 
             //Common.setLookUpEdit(lupeAgent, Dt, "TaxAgentReferenceNumber", "OrganizationName");
 
-             cboBank.SelectedIndex = -1;
+            cboBank.SelectedIndex = -1;
 
 
         }
@@ -792,7 +788,7 @@ namespace Collection.Forms
         {
             DataTable Dt;
 
-            
+
             using (var ds = new System.Data.DataSet())
             {
 
@@ -808,20 +804,20 @@ namespace Collection.Forms
 
             //Common.setCheckEdit(luePayeridPerson, Dt, "BankShortCode", "BankName");
 
-           // Common.setLookUpEdit(luePayeridPerson, Dt, "TaxAgentReferenceNumber", "fullname");
+            // Common.setLookUpEdit(luePayeridPerson, Dt, "TaxAgentReferenceNumber", "fullname");
 
             cboBank.SelectedIndex = -1;
 
 
         }
-        
+
         public void setDBComboBoxRevenue()
         {
             DataTable Dt;
 
             using (var ds = new System.Data.DataSet())
             {
-                
+
 
                 string query = "select *  from tblRevenueType";
 
@@ -857,13 +853,13 @@ namespace Collection.Forms
 
         //    groupControl1.Text = string.Empty;
 
-            
+
         //    // set first day 
         //    firstday = extMethods.GetFirstDayOfMonth(Convert.ToInt32(cboMonth.SelectedValue),Convert.ToInt32( cboYear.SelectedValue)).ToShortDateString();
 
         //    // set last day 
         //    lastday = extMethods.GetLastDayOfMonth(Convert.ToInt32(cboMonth.SelectedValue), Convert.ToInt32(cboYear.SelectedValue)).ToShortDateString();
-            
+
 
         //    groupControl1.Text = texts + '-' + period + firstday + periodTo + lastday;
 
@@ -887,7 +883,7 @@ namespace Collection.Forms
 
             using (var ds = new System.Data.DataSet())
             {
-                
+
 
                 string query = String.Format("select BranchID ,BranchName from tblBankBranch where BankShortCode = '{0}'", parameter);
 
@@ -901,7 +897,7 @@ namespace Collection.Forms
 
             Common.setComboList(cboPaidBranch, Dt, "BranchID", "BranchName");
 
-            
+
             if (Dt.Rows.Count > 0)
                 cboPaidBranch.SelectedIndex = 0;
             else
@@ -918,7 +914,7 @@ namespace Collection.Forms
         //    else
         //        label20.Visible = false;
         //    txtCheque.Visible = false;
-           
+
         //}
 
         void cboPaidBranch_SelectedIndexChanged(object sender, EventArgs e)
@@ -927,7 +923,7 @@ namespace Collection.Forms
             {
                 //cboBranch.SelectedIndex = 0;
                 setDBComboBoxBranchAcct(Convert.ToInt32(cboPaidBranch.SelectedValue.ToString()));
-                
+
             }
         }
 
@@ -948,15 +944,15 @@ namespace Collection.Forms
                 else
                 {
                     label20.Visible = false;
-                   lblchequedate.Visible = false;
+                    lblchequedate.Visible = false;
                     lblChqueBank.Visible = false;
                     txtChequeNo.Visible = false;
                     cboCheque.Visible = false;
                     dtpCheque.Visible = false;
                 }
             }
-            
-            
+
+
         }
 
         void cboCheque_SelectedIndexChanged(object sender, EventArgs e)
@@ -987,7 +983,7 @@ namespace Collection.Forms
             using (var ds = new System.Data.DataSet())
             {
                 string query = String.Format("select AccountNumber from tblBankAccount where BranchID = '{0}'", parameter);
-                 using (SqlDataAdapter ada = new SqlDataAdapter(query, Logic.ConnectionString))
+                using (SqlDataAdapter ada = new SqlDataAdapter(query, Logic.ConnectionString))
                 {
                     ada.Fill(ds, "table");
                 }
@@ -1033,7 +1029,7 @@ namespace Collection.Forms
             //    {
             //        Common.setMessageBox("Date is Outside Current Entry Period", Program.ApplicationName, 2);
             //    }
-          
+
             //    iCount++;
             //}
             //else
@@ -1045,7 +1041,7 @@ namespace Collection.Forms
             NavBars.ToolStripEnableDisableControls(toolStrip, Tag as String);
         }
 
-     
+
 
     }
 }

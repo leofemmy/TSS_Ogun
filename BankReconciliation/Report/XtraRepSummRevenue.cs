@@ -1,12 +1,9 @@
-﻿using System;
-using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
+﻿using BankReconciliation.Class;
 using DevExpress.XtraReports.UI;
-using System.Windows.Forms;
 using System.Data;
-using BankReconciliation.Class;
 using System.Data.SqlClient;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace BankReconciliation.Report
 {
@@ -22,7 +19,7 @@ namespace BankReconciliation.Report
             xrLabel2.PreviewMouseMove += xrLabel2_PreviewMouseMove;
 
             xrLabel2.PreviewClick += xrLabel2_PreviewClick;
-           
+
         }
 
         void xrLabel2_PreviewClick(object sender, PreviewMouseEventArgs e)

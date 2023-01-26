@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Collection.Classess;
+using Collection.ReceiptServices;
+using Collections;
+using DevExpress.XtraSplashScreen;
+using System;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using Collection.Classess;
 using System.Data.SqlClient;
-using Collection.ReceiptServices;
-using TaxSmartSuite.Class;
-using DevExpress.Utils;
-using DevExpress.XtraSplashScreen;
-using Collections;
 using System.Threading;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace Collection.Forms
 {

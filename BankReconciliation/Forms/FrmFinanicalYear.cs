@@ -3,14 +3,8 @@ using DevExpress.Utils;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraSplashScreen;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
 
@@ -103,7 +97,7 @@ namespace BankReconciliation.Forms
 
                         if (AppNames == "Transaction")
                         {
-                            FrmTransaction.publicStreetGroup.label21.Text = strDecD; 
+                            FrmTransaction.publicStreetGroup.label21.Text = strDecD;
 
                             FrmTransaction.publicStreetGroup.label20.Text = "Period";
 

@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using DevExpress.XtraGrid.Views.Grid;
-//using Control_Panel.Class;
+﻿//using Control_Panel.Class;
 using BankReconciliation.Class;
-using BankReconciliation.Forms;
 using DevExpress.Utils;
+using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraSplashScreen;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
 using TaxSmartSuite.Class;
 
 namespace BankReconciliation.Forms
@@ -423,7 +417,7 @@ namespace BankReconciliation.Forms
                 //cboBranch.Text
                 txtOpneing.Text = String.Format("{0:N2}", dts.Rows[0]["OpenBal"]);
                 //chklink.CheckState = Convert.ToBoolean(dts.Rows[0]["IsLink"]);
-               
+
 
                 if (dts.Rows[0]["IsLink"] is DBNull)
                 {

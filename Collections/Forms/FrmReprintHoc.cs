@@ -6,14 +6,8 @@ using DevExpress.XtraGrid.Selection;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraSplashScreen;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
 
@@ -46,7 +40,7 @@ namespace Collection.Forms
 
             InitializeComponent();
 
-            
+
 
             Init();
 
@@ -153,7 +147,7 @@ namespace Collection.Forms
         void SetReload()
         {
             DataTable dt;
-            
+
             string values = string.Empty;
 
             if (dtse != null && dtse.Rows.Count > 0)
@@ -220,7 +214,7 @@ namespace Collection.Forms
 
             int j = 0;
 
-           
+
 
             for (int i = 0; i < selection.SelectedCount; i++)
             {
@@ -446,7 +440,7 @@ namespace Collection.Forms
                         return;
                     }
                     else
-                    { 
+                    {
                         using (Frmcontrol frmcontrol = new Frmcontrol())
                         {
                             frmcontrol.gridControl1.DataSource = response.Tables[1];

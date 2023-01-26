@@ -1,20 +1,11 @@
 ﻿using BankReconciliation.Class;
-using BankReconciliation.Report;
 using DevExpress.XtraGrid.Selection;
 using DevExpress.XtraSplashScreen;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Parameters;
-using DevExpress.XtraGrid.Views.Grid;
 
 namespace BankReconciliation.Forms
 {
@@ -293,7 +284,7 @@ namespace BankReconciliation.Forms
             }
             catch (Exception ex)
             {
-                
+
                 Tripous.Sys.ErrorBox(ex.Message); return;
             }
 
@@ -317,45 +308,45 @@ namespace BankReconciliation.Forms
 
         }
 
-//        bool CheckGridView(GridView view)
-//        {
-//#if false
-//            if (view == null || view.RowCount <= 0) return false;
-//            int errCount = 0;
-//            var col = view.Columns["BankShortCode"];
-//            for (int i = 0; i < view.RowCount; i++)
-//            {
-//                var value = view.GetRowCellValue(i, col);
-//                if (value == null || string.IsNullOrWhiteSpace(value.ToString()))
-//                {
-//                    view.SetColumnError(col, "This is required", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
-//                    ++errCount;
-//                }
-//            }
-//            return errCount == 0;
-//#else
-//            if (view == null || view.RowCount <= 0) return true;
-//            int errCount = 0;
-//            var dt = (view.GridControl).DataSource as DataTable;
-//            if (dt == null || dt.Rows.Count <= 0)
-//            {
-//                Common.setMessageBox("Error retrieving DataTable", Program.ApplicationName, 2);
-//                return false;
-//            }
-//            var col = dt.Columns["BankShortCode"];
-//            foreach (DataRow row in dt.Rows)
-//            {
-//                row.ClearErrors();
-//                var value = row["BankShortCode"];
-//                if (value == null || string.IsNullOrWhiteSpace(value.ToString()))
-//                {
-//                    row.SetColumnError(col, "This is required");
-//                    ++errCount;
-//                }
-//            }
-//            return errCount == 0;
-//#endif
-//        }
+        //        bool CheckGridView(GridView view)
+        //        {
+        //#if false
+        //            if (view == null || view.RowCount <= 0) return false;
+        //            int errCount = 0;
+        //            var col = view.Columns["BankShortCode"];
+        //            for (int i = 0; i < view.RowCount; i++)
+        //            {
+        //                var value = view.GetRowCellValue(i, col);
+        //                if (value == null || string.IsNullOrWhiteSpace(value.ToString()))
+        //                {
+        //                    view.SetColumnError(col, "This is required", DevExpress.XtraEditors.DXErrorProvider.ErrorType.Critical);
+        //                    ++errCount;
+        //                }
+        //            }
+        //            return errCount == 0;
+        //#else
+        //            if (view == null || view.RowCount <= 0) return true;
+        //            int errCount = 0;
+        //            var dt = (view.GridControl).DataSource as DataTable;
+        //            if (dt == null || dt.Rows.Count <= 0)
+        //            {
+        //                Common.setMessageBox("Error retrieving DataTable", Program.ApplicationName, 2);
+        //                return false;
+        //            }
+        //            var col = dt.Columns["BankShortCode"];
+        //            foreach (DataRow row in dt.Rows)
+        //            {
+        //                row.ClearErrors();
+        //                var value = row["BankShortCode"];
+        //                if (value == null || string.IsNullOrWhiteSpace(value.ToString()))
+        //                {
+        //                    row.SetColumnError(col, "This is required");
+        //                    ++errCount;
+        //                }
+        //            }
+        //            return errCount == 0;
+        //#endif
+        //        }
 
     }
 }

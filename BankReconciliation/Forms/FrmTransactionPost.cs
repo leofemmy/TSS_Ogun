@@ -1,21 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using TaxSmartSuite.Class;
-using BankReconciliation.Class;
-using System.Globalization;
+﻿using BankReconciliation.Class;
 using BankReconciliation.Report;
 using DevExpress.XtraGrid.Views.Grid;
-using System.Collections;
-using DevExpress.XtraGrid;
 using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Parameters;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Globalization;
+using System.Linq;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace BankReconciliation.Forms
 {
@@ -1209,7 +1202,7 @@ namespace BankReconciliation.Forms
 
                 Common.setMessageBox(" Transaction Post Successfully ", Program.ApplicationName, 1);
 
-    
+
 
                 clear(); txtDateds.Focus();
             }
@@ -1257,33 +1250,33 @@ namespace BankReconciliation.Forms
             else
 
                 if (Convert.ToInt32(cboPayMode.SelectedValue.ToString()) == 1)
-                {
-                    txtReceiptsNo.Text = string.Empty; status = string.Empty; uploading = string.Empty;
-                }
-                else
-                {
-                    status = "Cleared"; uploading = "Waiting";
+            {
+                txtReceiptsNo.Text = string.Empty; status = string.Empty; uploading = string.Empty;
+            }
+            else
+            {
+                status = "Cleared"; uploading = "Waiting";
 
-                     BatchNumber = String.Format("{0:d9}", (DateTime.Now.Ticks / 10) % 1000000000);
-                    //using (SqlConnection connect = new SqlConnection(Logic.ConnectionString))
-                    //{
-                    //    connect.Open();
-                    //    _command = new SqlCommand("doGeneratedReceipNumber", connect) { CommandType = CommandType.StoredProcedure };
+                BatchNumber = String.Format("{0:d9}", (DateTime.Now.Ticks / 10) % 1000000000);
+                //using (SqlConnection connect = new SqlConnection(Logic.ConnectionString))
+                //{
+                //    connect.Open();
+                //    _command = new SqlCommand("doGeneratedReceipNumber", connect) { CommandType = CommandType.StoredProcedure };
 
-                    //    using (System.Data.DataSet ds = new System.Data.DataSet())
-                    //    {
-                    //        adp = new SqlDataAdapter(_command);
-                    //        adp.Fill(ds);
-                    //        Dts = ds.Tables[0];
-                    //        connect.Close();
+                //    using (System.Data.DataSet ds = new System.Data.DataSet())
+                //    {
+                //        adp = new SqlDataAdapter(_command);
+                //        adp.Fill(ds);
+                //        Dts = ds.Tables[0];
+                //        connect.Close();
 
-                    //        txtReceiptsNo.Text = String.Format("{0}", (string)ds.Tables[0].Rows[0]["ReceipitNo"]);
-                           
-                    //    }
-                    //}
-                }
+                //        txtReceiptsNo.Text = String.Format("{0}", (string)ds.Tables[0].Rows[0]["ReceipitNo"]);
 
-        
+                //    }
+                //}
+            }
+
+
 
             receipts = Methods.generateRandomString(6);
 

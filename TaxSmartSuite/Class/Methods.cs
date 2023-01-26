@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 
 
 namespace TaxSmartSuite.Class
@@ -20,7 +20,7 @@ namespace TaxSmartSuite.Class
         public Methods()
         {
             connects.ConnectionString();
-            
+
         }
 
         //public string getQuery(string type, string query)
@@ -81,7 +81,7 @@ namespace TaxSmartSuite.Class
         //    }
         //    return retVal;
         //}
-         //AutoComplete
+        //AutoComplete
         public static void AutoComplete(System.Windows.Forms.ComboBox cb, System.Windows.Forms.KeyPressEventArgs e)
         {
             AutoComplete(cb, e, false);
@@ -245,7 +245,7 @@ namespace TaxSmartSuite.Class
         //    return retVal;
         //}
 
-        public static void  PopulateYear(System.Windows.Forms.ComboBox cb)
+        public static void PopulateYear(System.Windows.Forms.ComboBox cb)
         {
             cb.DataSource = null;
             var item = new System.Collections.ArrayList();
@@ -299,7 +299,7 @@ namespace TaxSmartSuite.Class
             //Loop ‘length’ times to generate a random number or character
             for (int i = 0; i < length; i++)
             {
-                 randNumber = rand.Next(48, 58);// random.Next(48, 58); //int {0-9}
+                randNumber = rand.Next(48, 58);// random.Next(48, 58); //int {0-9}
 
                 //append random char or digit to random string
                 randomString = randomString + (char)randNumber;
@@ -329,7 +329,7 @@ namespace TaxSmartSuite.Class
         /// </summary>
         /// <param name="iMonth"></param>
         /// <returns></returns>
-        public DateTime GetFirstDayOfMonth(int iMonth,int iYear)
+        public DateTime GetFirstDayOfMonth(int iMonth, int iYear)
         {
             // set return value to the last day of the month
             // for any date passed in to the method
@@ -348,7 +348,7 @@ namespace TaxSmartSuite.Class
             // return the first day of the month
             return dtFrom;
         }
-        
+
         /// <summary>
         /// Get the last day of a month expressed by it's
         /// integer value

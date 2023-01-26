@@ -1,19 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using BankReconciliation.Class;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using BankReconciliation.Class;
-using System.Data.SqlClient;
-using BankReconciliation.Report;
-using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.UI.PivotGrid;
-using DevExpress.XtraPivotGrid;
-using System.Globalization;
 
 namespace BankReconciliation.Forms
 {
@@ -406,17 +396,17 @@ namespace BankReconciliation.Forms
         //            }
         //            else
         //            {
-                        //XtraRepSummary repsummary = new XtraRepSummary();
-                        //repsummary.xrLabel32.Text = string.Format("{0} STATE GOVERNMENT ", Program.StateName.ToUpper());
-                        //repsummary.xrLabel33.Text = string.Format(" CONSOLIDATED SUMMARY ACCOUNT OF IGR FOR THE MONTH OF {0} , {1}", dtf.GetMonthName(dtpStart.Value.Month), dtpStart.Value.Year);
+        //XtraRepSummary repsummary = new XtraRepSummary();
+        //repsummary.xrLabel32.Text = string.Format("{0} STATE GOVERNMENT ", Program.StateName.ToUpper());
+        //repsummary.xrLabel33.Text = string.Format(" CONSOLIDATED SUMMARY ACCOUNT OF IGR FOR THE MONTH OF {0} , {1}", dtf.GetMonthName(dtpStart.Value.Month), dtpStart.Value.Year);
 
-                        //repsummary.DataSource = dataSet1;
+        //repsummary.DataSource = dataSet1;
 
-                        //repsummary.DataMember = "table";
+        //repsummary.DataMember = "table";
 
-                        ////repsummary.paramPeriod.Value = dtpStart.Value.Month;
-                        ////repsummary.paramYear.Value = dtpStart.Value.Year;
-                        //repsummary.ShowPreviewDialog();
+        ////repsummary.paramPeriod.Value = dtpStart.Value.Month;
+        ////repsummary.paramYear.Value = dtpStart.Value.Year;
+        //repsummary.ShowPreviewDialog();
         //            }
 
         //        }

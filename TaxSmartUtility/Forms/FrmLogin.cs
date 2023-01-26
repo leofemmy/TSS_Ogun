@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using MosesClassLibrary.Security;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using TaxSmartSuite;
-using MosesClassLibrary.Security;
 using TaxSmartSuite.Class;
 using TaxSmartUtility.Classes;
 
@@ -43,7 +37,7 @@ namespace TaxSmartUtility.Forms
             txtPassword.ForeColor = Color.FromArgb(224, 224, 224);
             txtPassword.Font = _Empty_Font;
             char ch;
-            bool lol  = Char.TryParse(string.Empty, out ch); //Convert.ToChar(" ");
+            bool lol = Char.TryParse(string.Empty, out ch); //Convert.ToChar(" ");
             txtPassword.PasswordChar = ch;
 
         }
@@ -142,7 +136,7 @@ namespace TaxSmartUtility.Forms
 
         public FrmLogin(bool isAutoLogin)
         {
-            
+
             InitializeComponent();
 
             isAutologins = isAutoLogin;
@@ -154,7 +148,7 @@ namespace TaxSmartUtility.Forms
 
             BttnOK.Click += OnButtonClicked;
             BttnCancel.Click += OnButtonClicked;
-            
+
             txtUsername.LostFocus += txtUsername_LostFocus;
             txtUsername.TextChanged += txtUsername_TextChanged;
             txtUsername.Leave += txtUsername_Leave;
@@ -230,7 +224,7 @@ namespace TaxSmartUtility.Forms
             }
             else
             {
-                string SQL = String.Format(@"SELECT COUNT(*) FROM [dbo].[ViewUserApplication] WHERE [UserID] = '{0}' AND [Password] = '{1}' AND [ApplicationCode] = '{2}' AND [Flag] = 1" , txtUsername.Text, Encryption.Encrypt(txtPassword.Text), Program.ApplicationCode);
+                string SQL = String.Format(@"SELECT COUNT(*) FROM [dbo].[ViewUserApplication] WHERE [UserID] = '{0}' AND [Password] = '{1}' AND [ApplicationCode] = '{2}' AND [Flag] = 1", txtUsername.Text, Encryption.Encrypt(txtPassword.Text), Program.ApplicationCode);
                 if (new Logic().IsRecordExist(SQL))
                 //if (true)
                 {
@@ -256,7 +250,7 @@ namespace TaxSmartUtility.Forms
             }
             return bResponse;
         }
-                public string Username { get; set; }
+        public string Username { get; set; }
         public string Password { get; set; }
     }
 }

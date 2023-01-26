@@ -1,27 +1,22 @@
-﻿using System;
+﻿using BankReconciliation.Class;
+using BankReconciliation.Report;
+using DevExpress.Utils;
+using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraGrid.Selection;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraReports.UI;
+using DevExpress.XtraSplashScreen;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Data.SqlClient;
-using BankReconciliation.Class;
-using TaxSmartSuite.Class;
-using DevExpress.Utils;
-using BankReconciliation.Report;
 using System.Globalization;
+using System.Linq;
 using System.Reflection;
-using System.Collections;
-using DevExpress.XtraGrid.Selection;
-using DevExpress.XtraGrid.Columns;
-using DevExpress.XtraEditors.Repository;
-using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraSplashScreen;
-using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Parameters;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace BankReconciliation.Forms
 {
@@ -717,7 +712,7 @@ namespace BankReconciliation.Forms
         void btnAllocate_Click(object sender, EventArgs e)
         {
 
-           
+
             try
             {
                 SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
@@ -1689,118 +1684,118 @@ namespace BankReconciliation.Forms
 
         void bttnUpdate_Click(object sender, EventArgs e)
         {
-                if (string.IsNullOrEmpty(cboAcct.SelectedValue.ToString()))
-                {
-                    Common.setEmptyField("Account No.", Program.ApplicationName);
-                    cboAcct.Focus(); return;
-                }
-                else if (string.IsNullOrEmpty(txtClosing.Text))
-                {
-                    Common.setEmptyField("Closing Balance for Transaction Period", Program.ApplicationName);
-                    txtClosing.Focus(); return;
-                }
-                else if (string.IsNullOrEmpty(txtOpening.Text))
-                {
-                    Common.setEmptyField("Opening Balance for Transaction Period", Program.ApplicationName);
-                    txtOpening.Focus(); return;
+            if (string.IsNullOrEmpty(cboAcct.SelectedValue.ToString()))
+            {
+                Common.setEmptyField("Account No.", Program.ApplicationName);
+                cboAcct.Focus(); return;
+            }
+            else if (string.IsNullOrEmpty(txtClosing.Text))
+            {
+                Common.setEmptyField("Closing Balance for Transaction Period", Program.ApplicationName);
+                txtClosing.Focus(); return;
+            }
+            else if (string.IsNullOrEmpty(txtOpening.Text))
+            {
+                Common.setEmptyField("Opening Balance for Transaction Period", Program.ApplicationName);
+                txtOpening.Focus(); return;
 
+            }
+            else
+            {
+
+                if (isPeriodClose(cboBank.SelectedValue.ToString(), dtpStart.Value, dtpEnd.Value))
+                {
+                    Common.setMessageBox("Sorry, Can't Saved,Transaction Period already Closed?", Program.ApplicationName, 3); return;
                 }
                 else
                 {
-                   
-                    if (isPeriodClose(cboBank.SelectedValue.ToString(), dtpStart.Value, dtpEnd.Value))
+
+                    if (tableTrans.Rows.Count == 0 && tableTrans != null)
                     {
-                        Common.setMessageBox("Sorry, Can't Saved,Transaction Period already Closed?", Program.ApplicationName, 3); return;
+                        ProcessClose();
                     }
                     else
                     {
 
-                        if (tableTrans.Rows.Count == 0 && tableTrans != null)
+                        if (!boolIsUpdate)
                         {
-                            ProcessClose();
+
+                            using (SqlConnection connect = new SqlConnection(Logic.ConnectionString))
+                            {
+                                connect.Open();
+                                _command = new SqlCommand("InsertUpdatePostRelationTransaction", connect) { CommandType = CommandType.StoredProcedure };
+                                _command.Parameters.Add(new SqlParameter("@AccountNo", SqlDbType.VarChar)).Value = cboAcct.Text.Trim();
+                                _command.Parameters.Add(new SqlParameter("@startdate", SqlDbType.VarChar)).Value = string.Format("{0:yyyy/MM/dd}", dtpStart.Value);
+                                _command.Parameters.Add(new SqlParameter("@enddate", SqlDbType.VarChar)).Value = string.Format("{0:yyyy/MM/dd}", dtpEnd.Value);
+                                _command.Parameters.Add(new SqlParameter("@closeBal", SqlDbType.Money)).Value = Convert.ToDouble(txtClosing.Text.Trim());
+                                _command.Parameters.Add(new SqlParameter("@OpenBal", SqlDbType.Money)).Value = Convert.ToDouble(txtOpening.Text);
+                                _command.Parameters.Add(new SqlParameter("@Isbool", SqlDbType.Bit)).Value = boolIsUpdate;
+                                _command.Parameters.Add(new SqlParameter("@pTransaction", SqlDbType.Structured)).Value = tableTrans;
+
+
+                                using (System.Data.DataSet ds = new System.Data.DataSet())
+                                {
+                                    adp = new SqlDataAdapter(_command);
+                                    adp.Fill(ds);
+                                    Dts = ds.Tables[0];
+                                    connect.Close();
+
+                                    if (ds.Tables[0].Rows[0]["returnCode"].ToString() != "00")
+                                    {
+                                        Common.setMessageBox(ds.Tables[0].Rows[0]["returnMessage"].ToString(), Program.ApplicationName, 3);
+                                    }
+                                    else
+                                    {
+                                        Common.setMessageBox(ds.Tables[0].Rows[0]["returnMessage"].ToString(), Program.ApplicationName, 3);
+                                    }
+
+                                }
+                            }
                         }
                         else
                         {
 
-                            if (!boolIsUpdate)
+                            using (SqlConnection connect = new SqlConnection(Logic.ConnectionString))
                             {
+                                connect.Open();
+                                _command = new SqlCommand("InsertUpdatePostRelationTransaction", connect) { CommandType = CommandType.StoredProcedure };
+                                _command.Parameters.Add(new SqlParameter("@AccountNo", SqlDbType.VarChar)).Value = cboAcct.Text.Trim();
+                                _command.Parameters.Add(new SqlParameter("@startdate", SqlDbType.VarChar)).Value = string.Format("{0:yyyy/MM/dd}", dtpStart.Value);
+                                _command.Parameters.Add(new SqlParameter("@enddate", SqlDbType.VarChar)).Value = string.Format("{0:yyyy/MM/dd}", dtpEnd.Value);
+                                _command.Parameters.Add(new SqlParameter("@closeBal", SqlDbType.Money)).Value = Convert.ToDouble(txtClosing.Text.Trim());
+                                _command.Parameters.Add(new SqlParameter("@OpenBal", SqlDbType.Money)).Value = Convert.ToDouble(txtOpening.Text.Trim());
+                                _command.Parameters.Add(new SqlParameter("@Isbool", SqlDbType.Bit)).Value = boolIsUpdate;
+                                _command.Parameters.Add(new SqlParameter("@Years", SqlDbType.Int)).Value = cboYears.SelectedValue;
+                                _command.Parameters.Add(new SqlParameter("@pTransaction", SqlDbType.Structured)).Value = dtEdit;
 
-                                using (SqlConnection connect = new SqlConnection(Logic.ConnectionString))
+                                using (System.Data.DataSet ds = new System.Data.DataSet())
                                 {
-                                    connect.Open();
-                                    _command = new SqlCommand("InsertUpdatePostRelationTransaction", connect) { CommandType = CommandType.StoredProcedure };
-                                    _command.Parameters.Add(new SqlParameter("@AccountNo", SqlDbType.VarChar)).Value = cboAcct.Text.Trim();
-                                    _command.Parameters.Add(new SqlParameter("@startdate", SqlDbType.VarChar)).Value = string.Format("{0:yyyy/MM/dd}", dtpStart.Value);
-                                    _command.Parameters.Add(new SqlParameter("@enddate", SqlDbType.VarChar)).Value = string.Format("{0:yyyy/MM/dd}", dtpEnd.Value);
-                                    _command.Parameters.Add(new SqlParameter("@closeBal", SqlDbType.Money)).Value = Convert.ToDouble(txtClosing.Text.Trim());
-                                    _command.Parameters.Add(new SqlParameter("@OpenBal", SqlDbType.Money)).Value = Convert.ToDouble(txtOpening.Text);
-                                    _command.Parameters.Add(new SqlParameter("@Isbool", SqlDbType.Bit)).Value = boolIsUpdate;
-                                    _command.Parameters.Add(new SqlParameter("@pTransaction", SqlDbType.Structured)).Value = tableTrans;
+                                    adp = new SqlDataAdapter(_command);
+                                    adp.Fill(ds);
+                                    Dts = ds.Tables[0];
+                                    connect.Close();
 
-
-                                    using (System.Data.DataSet ds = new System.Data.DataSet())
+                                    if (ds.Tables[0].Rows[0]["returnCode"].ToString() != "00")
                                     {
-                                        adp = new SqlDataAdapter(_command);
-                                        adp.Fill(ds);
-                                        Dts = ds.Tables[0];
-                                        connect.Close();
-
-                                        if (ds.Tables[0].Rows[0]["returnCode"].ToString() != "00")
-                                        {
-                                            Common.setMessageBox(ds.Tables[0].Rows[0]["returnMessage"].ToString(), Program.ApplicationName, 3);
-                                        }
-                                        else
-                                        {
-                                            Common.setMessageBox(ds.Tables[0].Rows[0]["returnMessage"].ToString(), Program.ApplicationName, 3);
-                                        }
+                                        Common.setMessageBox(ds.Tables[0].Rows[0]["returnMessage"].ToString(), Program.ApplicationName, 1);
 
                                     }
-                                }
-                            }
-                            else
-                            {
-
-                                using (SqlConnection connect = new SqlConnection(Logic.ConnectionString))
-                                {
-                                    connect.Open();
-                                    _command = new SqlCommand("InsertUpdatePostRelationTransaction", connect) { CommandType = CommandType.StoredProcedure };
-                                    _command.Parameters.Add(new SqlParameter("@AccountNo", SqlDbType.VarChar)).Value = cboAcct.Text.Trim();
-                                    _command.Parameters.Add(new SqlParameter("@startdate", SqlDbType.VarChar)).Value = string.Format("{0:yyyy/MM/dd}", dtpStart.Value);
-                                    _command.Parameters.Add(new SqlParameter("@enddate", SqlDbType.VarChar)).Value = string.Format("{0:yyyy/MM/dd}", dtpEnd.Value);
-                                    _command.Parameters.Add(new SqlParameter("@closeBal", SqlDbType.Money)).Value = Convert.ToDouble(txtClosing.Text.Trim());
-                                    _command.Parameters.Add(new SqlParameter("@OpenBal", SqlDbType.Money)).Value = Convert.ToDouble(txtOpening.Text.Trim());
-                                    _command.Parameters.Add(new SqlParameter("@Isbool", SqlDbType.Bit)).Value = boolIsUpdate;
-                                    _command.Parameters.Add(new SqlParameter("@Years", SqlDbType.Int)).Value = cboYears.SelectedValue;
-                                    _command.Parameters.Add(new SqlParameter("@pTransaction", SqlDbType.Structured)).Value = dtEdit;
-                                    
-                                    using (System.Data.DataSet ds = new System.Data.DataSet())
+                                    else
                                     {
-                                        adp = new SqlDataAdapter(_command);
-                                        adp.Fill(ds);
-                                        Dts = ds.Tables[0];
-                                        connect.Close();
-
-                                        if (ds.Tables[0].Rows[0]["returnCode"].ToString() != "00")
-                                        {
-                                            Common.setMessageBox(ds.Tables[0].Rows[0]["returnMessage"].ToString(), Program.ApplicationName, 1);
-
-                                        }
-                                        else
-                                        {
-                                            Common.setMessageBox(ds.Tables[0].Rows[0]["returnMessage"].ToString(), Program.ApplicationName, 1);
-                                        }
-
+                                        Common.setMessageBox(ds.Tables[0].Rows[0]["returnMessage"].ToString(), Program.ApplicationName, 1);
                                     }
+
                                 }
                             }
                         }
-                        ProcessClose();
                     }
-                    //ProcessClose();
-                    Common.setMessageBox("Transaction Posted Successfully", Program.ApplicationName, 1); return;
+                    ProcessClose();
                 }
+                //ProcessClose();
+                Common.setMessageBox("Transaction Posted Successfully", Program.ApplicationName, 1); return;
+            }
 
-            
+
         }
 
         void radioGroup2_SelectedIndexChanged(object sender, EventArgs e)

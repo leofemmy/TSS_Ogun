@@ -3,13 +3,8 @@ using DevExpress.Utils;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraSplashScreen;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
 
@@ -67,7 +62,7 @@ namespace BankReconciliation.Forms
             {
                 SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
 
-                if (dt!= null && dt.Rows.Count>0 )
+                if (dt != null && dt.Rows.Count > 0)
                 {
                     using (SqlConnection connect = new SqlConnection(Logic.ConnectionString))
                     {
@@ -114,12 +109,12 @@ namespace BankReconciliation.Forms
                     }
                 }
 
-                
-                
+
+
             }
             catch (Exception ex)
             {
-                
+
             }
             finally
             {
@@ -158,9 +153,9 @@ namespace BankReconciliation.Forms
 
         void btnUp_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty((string) cboAccount.SelectedValue.ToString()))
+            if (string.IsNullOrEmpty((string)cboAccount.SelectedValue.ToString()))
             {
-                Common.setEmptyField("Account Name",gridControl1.Text.ToString());
+                Common.setEmptyField("Account Name", gridControl1.Text.ToString());
                 return;
             }
             else if (string.IsNullOrEmpty((string)cboAgency.SelectedValue.ToString()))
@@ -168,7 +163,7 @@ namespace BankReconciliation.Forms
                 Common.setEmptyField("Agency Name", gridControl1.Text.ToString());
                 return;
             }
-            else if (string.IsNullOrEmpty((string) cboRevenue.SelectedValue.ToString()))
+            else if (string.IsNullOrEmpty((string)cboRevenue.SelectedValue.ToString()))
             {
                 Common.setEmptyField("Revenue Name", gridControl1.Text.ToString());
                 return;
@@ -208,10 +203,10 @@ namespace BankReconciliation.Forms
                             Tripous.Sys.ErrorBox(sqlError);
                             return;
                         }
-                        db.Close(); 
+                        db.Close();
                     }
                     Common.setMessageBox("Record has been successfully added. Contact your Admin officers for Approval", Program.ApplicationName, 1);
- 
+
                 }
                 else
                 {
@@ -226,7 +221,7 @@ namespace BankReconciliation.Forms
                         {
                             //MessageBox.Show(MDIMain.stateCode);
                             //fieldid
-                            string dry = String.Format(String.Format("UPDATE Reconciliation.tblSummaryAG SET BankAccountID='{{0}}',FinancialperiodID='{{1}}',Amount ='{{2}}',RevenueCode='{{3}}',AgencyCode='{{4}}' where  SummaryID ='{0}'", ID),cboAccount.SelectedValue,Convert.ToInt32(label22.Text),txtAmount.EditValue,cboRevenue.SelectedValue,cboAgency.SelectedValue);
+                            string dry = String.Format(String.Format("UPDATE Reconciliation.tblSummaryAG SET BankAccountID='{{0}}',FinancialperiodID='{{1}}',Amount ='{{2}}',RevenueCode='{{3}}',AgencyCode='{{4}}' where  SummaryID ='{0}'", ID), cboAccount.SelectedValue, Convert.ToInt32(label22.Text), txtAmount.EditValue, cboRevenue.SelectedValue, cboAgency.SelectedValue);
 
                             using (SqlCommand sqlCommand1 = new SqlCommand(dry, db, transaction))
                             {
@@ -245,7 +240,7 @@ namespace BankReconciliation.Forms
                     }
                     Common.setMessageBox("Record has been successfully added.Contact your Admin officers for Approval", Program.ApplicationName, 1);
                     setReload(); Clear();
-                
+
                 }
 
                 if (MessageBox.Show("Do you want to add another record?", Program.ApplicationName, MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.No)
@@ -445,7 +440,7 @@ namespace BankReconciliation.Forms
                     connect.Open();
                     _command = new SqlCommand("doSummaryAG", connect) { CommandType = CommandType.StoredProcedure };
                     _command.Parameters.Add(new SqlParameter("@FinancialperiodID", SqlDbType.VarChar)).Value = Convert.ToInt32(label22.Text);
-                   
+
                     using (System.Data.DataSet ds = new System.Data.DataSet())
                     {
                         ds.Clear();
@@ -527,7 +522,7 @@ namespace BankReconciliation.Forms
         {
             //txtStreetGroup.Clear();
             cboRevenue.SelectedValue = -1; cboAccount.SelectedValue = -1; cboAgency.SelectedValue = -1;
-            txtAmount.EditValue=0;
+            txtAmount.EditValue = 0;
 
 
         }

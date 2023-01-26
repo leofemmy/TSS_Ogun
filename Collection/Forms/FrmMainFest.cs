@@ -1,20 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using Collection.Classess;
-using TaxSmartSuite;
-using TaxSmartSuite.Class;
-using System.Collections;
-using DevExpress.XtraGrid.Views.Grid;
+﻿using Collection.Classess;
 using Collection.Report;
 using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Parameters;
+using System;
+using System.Collections;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 
 namespace Collection.Forms
@@ -24,7 +17,7 @@ namespace Collection.Forms
         private bool bResponse;
 
         private DataTable Dts;
-        
+
         string query;
 
         ArrayList myArrayList = new ArrayList();
@@ -33,7 +26,7 @@ namespace Collection.Forms
 
         string[] split;
         //int test;
-        int k, test,gbj;
+        int k, test, gbj;
 
         private SqlCommand command;
 
@@ -92,7 +85,7 @@ namespace Collection.Forms
             }
 
             //generate number
-             BatchNumber = String.Format("{0:d9}", (DateTime.Now.Ticks / 10) % 1000000000);
+            BatchNumber = String.Format("{0:d9}", (DateTime.Now.Ticks / 10) % 1000000000);
 
 
         }
@@ -106,7 +99,7 @@ namespace Collection.Forms
             tsbClose.Image = MDIMain.publicMDIParent.i16x16.Images[11];
 
             //bttnCancel.Image = MDIMain.publicMDIParent.i32x32.Images[9];
-           btnApply.Image = MDIMain.publicMDIParent.i32x32.Images[8];
+            btnApply.Image = MDIMain.publicMDIParent.i32x32.Images[8];
             btnPrint.Image = MDIMain.publicMDIParent.i32x32.Images[29];
             //btnSearch.Image = MDIMain.publicMDIParent.i32x32.Images[2];
 
@@ -125,7 +118,7 @@ namespace Collection.Forms
 
             if (string.IsNullOrEmpty(txtStart.Text))
             {
-               Common.setEmptyField("Please Enter Control Start Number",Program.ApplicationName);
+                Common.setEmptyField("Please Enter Control Start Number", Program.ApplicationName);
                 txtStart.Focus(); return;
             }
             else if (string.IsNullOrEmpty(txtEnd.Text))
@@ -138,7 +131,7 @@ namespace Collection.Forms
                 int range = Convert.ToInt32(txtEnd.Text) - Convert.ToInt32(txtStart.Text);
                 int leng = txtStart.Text.Length;
 
-                          
+
                 //generate control number base on enter range
 
                 for (int j = 0; j <= range; j++)
@@ -182,90 +175,90 @@ namespace Collection.Forms
                 }
                 arrycount1 = myArrayList.Count;
 
-                 foreach (DataRow item in dt.Rows)
-                 {
-                     string lol = item["PaymenRefNumber"].ToString();
-                     //gbj = 0;
-                     if (gbj == arrycount1)
-                     {
-                         break;
-                     }
-                     else
-                     {
-                         if (CheckRnageValue(myArrayList[gbj].ToString()))
-                         {
-                             Common.setMessageBox("Control Number Range already Exit", Program.ApplicationName, 2);
-                             break;
-                         }
-                         else
-                         {
-                             using (SqlConnection db = new SqlConnection(Logic.ConnectionString))
-                             {
-                                 SqlTransaction transaction;
+                foreach (DataRow item in dt.Rows)
+                {
+                    string lol = item["PaymenRefNumber"].ToString();
+                    //gbj = 0;
+                    if (gbj == arrycount1)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        if (CheckRnageValue(myArrayList[gbj].ToString()))
+                        {
+                            Common.setMessageBox("Control Number Range already Exit", Program.ApplicationName, 2);
+                            break;
+                        }
+                        else
+                        {
+                            using (SqlConnection db = new SqlConnection(Logic.ConnectionString))
+                            {
+                                SqlTransaction transaction;
 
-                                 db.Open();
+                                db.Open();
 
-                                 transaction = db.BeginTransaction();
+                                transaction = db.BeginTransaction();
 
-                                 try
-                                 {
+                                try
+                                {
 
-                                     /////update bamkreceipts with control number
-                                     string query = String.Format("UPDATE dbo.BankReceipts SET ControlNumber = '{0}',BatchNumber= '{1}',PrintedDate= '{2}',printedby= '{3}' WHERE PaymenRefNumber= '{4}'", myArrayList[gbj], BatchNumber, DateTime.Now.Date.ToString("yyyy-MM-dd hh:mm:ss"), user, lol);
+                                    /////update bamkreceipts with control number
+                                    string query = String.Format("UPDATE dbo.BankReceipts SET ControlNumber = '{0}',BatchNumber= '{1}',PrintedDate= '{2}',printedby= '{3}' WHERE PaymenRefNumber= '{4}'", myArrayList[gbj], BatchNumber, DateTime.Now.Date.ToString("yyyy-MM-dd hh:mm:ss"), user, lol);
 
-                                     using (SqlCommand sqlCommand1 = new SqlCommand(query, db, transaction))
-                                     {
-                                         sqlCommand1.ExecuteNonQuery();
-                                     }
+                                    using (SqlCommand sqlCommand1 = new SqlCommand(query, db, transaction))
+                                    {
+                                        sqlCommand1.ExecuteNonQuery();
+                                    }
 
-                                     //update collection table when receipt is been printed
-                                     string query1 = String.Format("UPDATE tblCollectionReport SET IsPrint = true,PrintedBY= '{0}',DatePrinted= '{1}',ControlNumber= '{2}',BatchNumber= '{3}' WHERE PaymenRefNumber= '{4}'", myArrayList[gbj], BatchNumber, DateTime.Now.Date.ToString("yyyy-MM-dd hh:mm:ss"), user, lol);
+                                    //update collection table when receipt is been printed
+                                    string query1 = String.Format("UPDATE tblCollectionReport SET IsPrint = true,PrintedBY= '{0}',DatePrinted= '{1}',ControlNumber= '{2}',BatchNumber= '{3}' WHERE PaymenRefNumber= '{4}'", myArrayList[gbj], BatchNumber, DateTime.Now.Date.ToString("yyyy-MM-dd hh:mm:ss"), user, lol);
 
-                                     using (SqlCommand sqlCommand = new SqlCommand(query, db, transaction))
-                                     {
-                                         sqlCommand.ExecuteNonQuery();
-                                     }
-
-
-                                 }
-
-                                 catch (SqlException sqlError)
-                                 {
-                                     transaction.Rollback();
-                                 }
-                                 transaction.Commit();
-
-                                 db.Close();
-                             }
-                         }
-                        
+                                    using (SqlCommand sqlCommand = new SqlCommand(query, db, transaction))
+                                    {
+                                        sqlCommand.ExecuteNonQuery();
+                                    }
 
 
-                     }
-                     gbj = gbj + 1;
+                                }
 
-                 }
+                                catch (SqlException sqlError)
+                                {
+                                    transaction.Rollback();
+                                }
+                                transaction.Commit();
 
-                 InsertReceiptHistory();
+                                db.Close();
+                            }
+                        }
+
+
+
+                    }
+                    gbj = gbj + 1;
+
+                }
+
+                InsertReceiptHistory();
 
                 SetReload();
-                
+
                 btnPrint.Enabled = true;
 
                 btnApply.Enabled = false;
 
-                 
+
             }
         }
 
         void InsertReceiptHistory()
         {
-            
+
             using (SqlConnection connect = new SqlConnection(Logic.ConnectionString))
             {
                 connect.Open();
                 command = new SqlCommand("InsertPrintReceiptHistory", connect) { CommandType = CommandType.StoredProcedure };
-       
+
                 using (System.Data.DataSet ds = new System.Data.DataSet())
                 {
                     adp = new SqlDataAdapter(command);
@@ -276,12 +269,12 @@ namespace Collection.Forms
                 }
             }
         }
-       
+
         void SetReload()
-        { 
-        try
         {
-                    using (var ds = new System.Data.DataSet())
+            try
+            {
+                using (var ds = new System.Data.DataSet())
                 {
                     query = "SELECT [PaymenRefNumber], [DepositSlipNumber], [PaymentDate], [PayerID], [PayerName], [Description], [Amount], [BankName], [BranchName], [ReceiptNumber], [Users], [ControlNumber],[BatchNumber],[printedby],[PrintedDate] FROM [BankReceipts] WHERE ([ControlNumber] IS NULL)";
 
@@ -290,7 +283,7 @@ namespace Collection.Forms
                         ada.Fill(ds, "table");
                     }
 
-                        
+
 
                     dt = ds.Tables[0];
                     //this.dataGridView1.DataSource = ds; //Logic.ConnectionString;                       
@@ -301,14 +294,14 @@ namespace Collection.Forms
                     label5.Text = "Total Number of Records Printed: " + "   " + dt.Rows.Count;
 
                 }
-            
 
-          }
-        catch (Exception ex)
-        {
-            Common.setMessageBox(ex.Message, Program.ApplicationName, 3);
-            return;
-        }
+
+            }
+            catch (Exception ex)
+            {
+                Common.setMessageBox(ex.Message, Program.ApplicationName, 3);
+                return;
+            }
         }
 
         static bool CheckRnageValue(string ContNum)

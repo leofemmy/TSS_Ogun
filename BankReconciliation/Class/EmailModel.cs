@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-namespace BankReconciliation.Class
+﻿namespace BankReconciliation.Class
 {
     public class EmailModel
     {
@@ -31,5 +24,5 @@ namespace BankReconciliation.Class
         public string ResponseMsg { get; set; }
     }
 
-   
+
 }

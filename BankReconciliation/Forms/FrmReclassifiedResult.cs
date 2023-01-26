@@ -1,22 +1,15 @@
 ﻿using DevExpress.Utils;
 using DevExpress.XtraSplashScreen;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BankReconciliation.Forms
 {
     public partial class FrmReclassifiedResult : Form
     {
-        System.Data.DataSet dts; 
+        System.Data.DataSet dts;
 
-          System.Data.DataSet dts2 = new System.Data.DataSet();
+        System.Data.DataSet dts2 = new System.Data.DataSet();
         public FrmReclassifiedResult()
         {
             InitializeComponent();
@@ -26,7 +19,7 @@ namespace BankReconciliation.Forms
         public FrmReclassifiedResult(System.Data.DataSet ds)
         {
             InitializeComponent();
-          
+
             dts2.Clear();
             dts2 = ds;
             Init();

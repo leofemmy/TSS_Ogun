@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Collection.Classes
 {
-   public class PasswordStrength
+    public class PasswordStrength
     {
         private DataTable dtDetails;
         private string PreviousPassword = "";

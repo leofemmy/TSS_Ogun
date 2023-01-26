@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Data;
-using System.Configuration;
-using System.Web;
 //using System.Web.Security;
 //using System.Web.UI;
 //using System.Web.UI.HtmlControls;
@@ -17,12 +14,12 @@ public class AmountToWords
     long numb;
     int numbDec;
 
-	public AmountToWords()
-	{
-		//
-		// TODO: Add constructor logic here
-		//
-	}
+    public AmountToWords()
+    {
+        //
+        // TODO: Add constructor logic here
+        //
+    }
 
     public string convertToWords(string amount)
     {

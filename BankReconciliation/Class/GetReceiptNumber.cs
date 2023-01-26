@@ -1,21 +1,18 @@
 ﻿//#define HOME
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Collections;
 using DevExpress.XtraNavBar;
-using System.Data.SqlClient;
-using System.Data;
-using Data = System.Data;
 using MosesClassLibrary;
+using MosesClassLibrary.DataAccessLayer;
+using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Globalization;
+using System.IO;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using MosesClassLibrary.DataAccessLayer;
-using System.Text.RegularExpressions;
-using System.Globalization;
-using System.Configuration;
-using System.IO;
+using Data = System.Data;
 
 namespace BankReconciliation.Class
 {

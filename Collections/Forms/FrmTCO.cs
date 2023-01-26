@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Collection.Classess;
+using Collection.Report;
+using Collections;
+using DevExpress.XtraReports.UI;
+using DevExpress.XtraSplashScreen;
+using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using Collection.Classess;
-using Collection.Report;
-using DevExpress.XtraPrinting;
-using DevExpress.XtraSplashScreen;
-using DevExpress.XtraReports.UI;
-using Collections;
 
 namespace Collection.Forms
 {
@@ -296,7 +291,7 @@ namespace Collection.Forms
                                 }
                             }
 
-                            
+
                             // Reset all page numbers in the resulting document.
                             repManifest.PrintingSystem.ContinuousPageNumbering = true;
 
@@ -309,7 +304,7 @@ namespace Collection.Forms
                         }
 
 
-                        
+
                     }
                     else
                     {

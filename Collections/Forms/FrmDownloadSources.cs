@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Collection.Classess;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using System.Data.SqlClient;
-using TaxSmartSuite;
-using Collection.Classess;
+using System.Windows.Forms;
 using TaxSmartSuite.Class;
 
 namespace Collection.Forms
@@ -33,7 +27,7 @@ namespace Collection.Forms
             LoadGrid();
             bttnClose.Click += Bttn_Click;
             bttnBrowse.Click += Bttn_Click;
-            time.Tick += time_Tick;            
+            time.Tick += time_Tick;
             time.Interval = 1000;
             time.Start();
         }
@@ -101,7 +95,7 @@ namespace Collection.Forms
                 }
                 else if (cboSources.SelectedValue.ToString() == "0002")//reemsonline
                 {
-            using (FrmDownload frmDownload = new FrmDownload())
+                    using (FrmDownload frmDownload = new FrmDownload())
                     {
                         frmDownload.ShowDialog();
                     }

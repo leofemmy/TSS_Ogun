@@ -1,10 +1,4 @@
-﻿using System;
-using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
-using DevExpress.XtraReports.UI;
-
-namespace BankReconciliation.Report
+﻿namespace BankReconciliation.Report
 {
     public partial class XtraRepIGRAccountDetails : DevExpress.XtraReports.UI.XtraReport
     {
@@ -15,7 +9,7 @@ namespace BankReconciliation.Report
 
         private void xrPivotGrid1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
-          
+
         }
 
         private void XtraRepIGRAccountDetails_ParametersRequestSubmit(object sender, DevExpress.XtraReports.Parameters.ParametersRequestEventArgs e)

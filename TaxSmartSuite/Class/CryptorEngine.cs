@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Security.Cryptography;
 using System.Configuration;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace TaxSmartSuite.Class
 {
-   public class CryptorEngine
+    public class CryptorEngine
     {
         // <summary>
         /// Encrypt a string using dual encryption method. Return a encrypted cipher Text

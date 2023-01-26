@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using DevExpress.XtraSplashScreen;
-using System.Data.SqlClient;
-using TaxSmartSuite.Class;
-using BankReconciliation.Class;
+﻿using BankReconciliation.Class;
+using BankReconciliation.Report;
 using DevExpress.Utils;
 using DevExpress.XtraGrid.Views.Grid;
-using BankReconciliation.Report;
 using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Parameters;
+using DevExpress.XtraSplashScreen;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace BankReconciliation.Forms
 {
@@ -92,7 +87,8 @@ namespace BankReconciliation.Forms
                 //ShowForm();
             }
 
-        }void OnFormLoad(object sender, EventArgs e)
+        }
+        void OnFormLoad(object sender, EventArgs e)
         {
             setReload();
 
@@ -248,7 +244,7 @@ namespace BankReconciliation.Forms
                                 }
                             }
 
-                            
+
 
                         }
                         //BReems

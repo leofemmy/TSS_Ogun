@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using BankReconciliation.Class;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using System.Data.SqlClient;
-using BankReconciliation.Class;
 
 namespace BankReconciliation.Forms
 {
@@ -248,7 +243,7 @@ namespace BankReconciliation.Forms
             {
                 label8.Text = Dt.Rows[0][0].ToString();
             }
-        
+
         }
 
         public void RefreshForm()

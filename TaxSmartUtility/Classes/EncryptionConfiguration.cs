@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace TaxSmartUtility.Classes
 {
-   public class EncryptionConfiguration
+    public class EncryptionConfiguration
     {
         /// <summary>
         /// Replace this value with some unique key of your own

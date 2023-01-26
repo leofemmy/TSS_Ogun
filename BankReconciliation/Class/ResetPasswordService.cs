@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BankReconciliation.Class
 {
-  public  class ResetPasswordService
+    public class ResetPasswordService
     {
         private HttpServiceManager _httpService;
         public ResetPasswordService(string baseUrl)

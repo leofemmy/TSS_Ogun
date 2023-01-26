@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using TaxSmartSuite;
-using TaxSmartSuite.Class;
-using Collection.Classess;
+﻿using Collection.Classess;
 //using System.Data.SqlClient;
 using DevExpress.Utils;
+using System;
+using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace Collection.Forms
 {
@@ -197,9 +191,9 @@ namespace Collection.Forms
             //SQLiteCommand sqlite_cmd;
             //SQLiteDataReader sqlite_datareader;
 
-         SqlConnection sqlite_conn;
-         SqlCommand sqlite_cmd;
-         SqlDataReader sqlite_datareader;
+            SqlConnection sqlite_conn;
+            SqlCommand sqlite_cmd;
+            SqlDataReader sqlite_datareader;
 
             // create a new database connection:
             sqlite_conn = new SqlConnection(Logic.ConnectionString);
@@ -212,7 +206,7 @@ namespace Collection.Forms
 
             sqlite_cmd.CommandText = "IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[tblReceiptCancel]') AND type in (N'U')) BEGIN CREATE TABLE    create table if not exists CREATE TABLE [tblReceiptCancel]([ReceiptCancelID] [int] IDENTITY(1,1) NOT NULL,	[ReceiptNo] [varchar](50) NULL,	[PaymentRefNo] [varchar](50) NULL,	[Reason] [varchar](1000) NULL,	[Userid] [varchar](50) NULL,	[CancelDate] [datetime] NULL) END";
 
-           int row= sqlite_cmd.ExecuteNonQuery();
+            int row = sqlite_cmd.ExecuteNonQuery();
         }
     }
 }

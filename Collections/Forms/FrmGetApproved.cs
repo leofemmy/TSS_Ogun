@@ -4,19 +4,13 @@ using Collection.Report;
 using Collections;
 using DevExpress.Utils;
 using DevExpress.XtraGrid.Selection;
+using DevExpress.XtraReports.UI;
 using DevExpress.XtraSplashScreen;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using DevExpress.XtraPrinting.Drawing;
-using DevExpress.XtraReports.UI;
 
 
 

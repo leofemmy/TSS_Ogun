@@ -1,12 +1,12 @@
-﻿using System;
+﻿using Collection.Classess;
+using System;
 using System.Data;
 using System.Data.Odbc;
+using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.IO;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using Collection.Classess;
-using System.Data.OleDb;
 //using TaxSmartSuite.Dataset;
 
 namespace Collection.Forms
@@ -24,15 +24,15 @@ namespace Collection.Forms
         OleDbConnection MyConnection = null;
         System.Data.DataSet DtSet = null;
         OleDbDataAdapter MyCommand = null;
-       
+
         private string fileCSV;		//full file name
 
-        private string dirCSV;		//directory of file to import
-//name (with extension) of file to import - field
+        private string dirCSV;      //directory of file to import
+                                    //name (with extension) of file to import - field
 
         private long rowCount = 0;
 
-        private string dbowner,strtablename;
+        private string dbowner, strtablename;
 
         public static FrmImports publicStreetGroup;
 
@@ -41,9 +41,9 @@ namespace Collection.Forms
             InitializeComponent();
 
             //connects.ConnectionString();
-            
+
             dbowner = "dbo";
-            
+
             setImages();
 
             ToolStripEvent();
@@ -52,23 +52,23 @@ namespace Collection.Forms
 
             publicStreetGroup = this;
 
-             //bttnCancel.Click += Bttn_Click;
-             bttnPreview.Click += Bttn_Click;
+            //bttnCancel.Click += Bttn_Click;
+            bttnPreview.Click += Bttn_Click;
 
-             bttnBrowse.Click += Bttn_Click;
+            bttnBrowse.Click += Bttn_Click;
 
-             bttnImport.Click += Bttn_Click;
+            bttnImport.Click += Bttn_Click;
 
-             NavBars.ToolStripEnableDisable(toolStrip, null, false);
+            NavBars.ToolStripEnableDisable(toolStrip, null, false);
 
-             txtFiletoLoad.TextChanged += txtFiletoLoad_TextChanged;
+            txtFiletoLoad.TextChanged += txtFiletoLoad_TextChanged;
         }
 
         private void loadtype()
         {
             if (tableType == 1)
             {
-              groupControl1.Text = " Collection Data Import";
+                groupControl1.Text = " Collection Data Import";
             }
             else if (tableType == 2)
             {
@@ -110,12 +110,12 @@ namespace Collection.Forms
                     if (openFileDialogCSV.ShowDialog() == DialogResult.OK)
                         txtFiletoLoad.Text = openFileDialogCSV.FileName.ToString();
                 }
-            }       
+            }
         }
 
-         private void loadPreview()
+        private void loadPreview()
         {
-           
+
             try
             {
                 // select format, encoding, an write the schema file
@@ -137,8 +137,8 @@ namespace Collection.Forms
                 //gridControl1.DataSource = dt;
                 //gridControl1.DataMember = "csv";
 
-                    //this.dataGridView_preView.DataSource = LoadCSV(500);
-                    //this.dataGridView_preView.DataMember = "csv";
+                //this.dataGridView_preView.DataSource = LoadCSV(500);
+                //this.dataGridView_preView.DataMember = "csv";
 
                 //this.dataGridView_preView.DataMember = "csv";
             }
@@ -149,7 +149,8 @@ namespace Collection.Forms
         }
 
         public string //name (with extension) of file to import - property
-         FileNevCSV { get; set; }
+         FileNevCSV
+        { get; set; }
 
         private bool fileCheck()
         {
@@ -163,14 +164,14 @@ namespace Collection.Forms
                 return true;
             }
         }
-        
+
         private void Format()
         {
             try
             {
 
                 strFormat = "Delimited(;)";
-                
+
             }
             catch (Exception ex)
             {
@@ -243,7 +244,7 @@ namespace Collection.Forms
 
         public System.Data.DataSet LoadCSV()
         {
-           System.Data.DataSet ds = new  System.Data.DataSet();
+            System.Data.DataSet ds = new System.Data.DataSet();
             try
             {
                 // Creates and opens an ODBC connection
@@ -318,7 +319,7 @@ namespace Collection.Forms
             // Copies all rows to the database from the dataset.
             //using (SqlBulkCopy bc = new SqlBulkCopy(connects.constring))
             using (SqlBulkCopy bc = new SqlBulkCopy(Classess.Logic.ConnectionString))
-            
+
             {
                 // Destination table with owner - this example doesn't
                 // check the owner and table names!
@@ -405,7 +406,7 @@ namespace Collection.Forms
             else if (sender == bttnPreview)
             {
                 loadPreview();
-            
+
             }
             else if (sender == bttnImport)
             {
@@ -429,7 +430,7 @@ namespace Collection.Forms
             {
                 MDIMain.publicMDIParent.RemoveControls();
             }
-            
+
         }
 
         public void RefreshForm()

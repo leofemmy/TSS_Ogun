@@ -1,31 +1,24 @@
-﻿using System;
+﻿using Collection.Classes;
+using Collection.Classess;
+using Collection.Report;
+using Collections;
+using DevExpress.Utils;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Selection;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraReports.UI;
+using DevExpress.XtraSplashScreen;
+using LinqToExcel;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using System.Data.SqlClient;
-using Collection.Classess;
-using DevExpress.XtraGrid.Selection;
-using System.Security.Cryptography;
-using Collection.Report;
-using System.Text.RegularExpressions;
-using Collection.Classes;
-using DevExpress.Utils;
-using DevExpress.XtraPrinting;
-using DevExpress.XtraReports.UI;
-using DevExpress.XtraSplashScreen;
-using Collections;
-using DevExpress.XtraGrid;
-using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraPrinting.Drawing;
-using LinqToExcel;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using Newtonsoft.Json;
 
 namespace Collection.Forms
 {
@@ -1621,6 +1614,7 @@ namespace Collection.Forms
 
                                             DataTable Dt = dds.Tables.Add("CollectionReportTable");
                                             ada = new SqlDataAdapter(query, Logic.ConnectionString);
+                                            ada.SelectCommand.CommandTimeout = 0;
                                             ada.Fill(dds, "CollectionReportTable");
                                             Logic.ProcessDataTable(Dt); ;
                                             //strCollectionReportID = strFormat;
@@ -1739,6 +1733,7 @@ namespace Collection.Forms
 
                                 DataTable Dt = dds.Tables.Add("CollectionReportTable");
                                 ada = new SqlDataAdapter(query, Logic.ConnectionString);
+                                ada.SelectCommand.CommandTimeout = 0;
                                 ada.Fill(dds, "CollectionReportTable");
                                 Logic.ProcessDataTable(Dt); ;
                                 //strCollectionReportID = strFormat;
@@ -2221,7 +2216,7 @@ namespace Collection.Forms
             NavBars.ToolStripEnableDisableControls(toolStrip, Tag as String);
         }
 
-      
+
 
 
         void CountMain()

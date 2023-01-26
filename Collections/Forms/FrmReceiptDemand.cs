@@ -1,23 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using TaxSmartSuite;
-using Collection.Classess;
-using TaxSmartSuite.Class;
+﻿using Collection.Classess;
 using Collection.Report;
 using DevExpress.Utils;
-using Microsoft.VisualBasic;
-using System.Text.RegularExpressions;
-using Collection.Classess;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 using WindowsApplication1;
-using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Parameters;
 
 
 namespace Collection.Forms
@@ -121,7 +110,7 @@ namespace Collection.Forms
             if (result == DialogResult.Yes)
             {
 
-            Restart:
+                Restart:
                 InputBoxResult value = InputBox.Show(" Enter Receipt Control Number ", "Print Receipts On Demand", "Default", 100, 50);
 
                 //check the return value

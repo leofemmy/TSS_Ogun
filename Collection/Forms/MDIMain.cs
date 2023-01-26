@@ -1,11 +1,7 @@
-﻿using System;
-using System.Data.SqlClient;
+﻿using DevExpress.XtraNavBar;
+using System;
 using System.Windows.Forms;
-using Collection.Forms;
 using TaxSmartSuite.Class;
-using MosesClassLibrary.Utilities;
-using Collection.Classess;
-using DevExpress.XtraNavBar;
 
 
 
@@ -36,7 +32,7 @@ namespace Collection.Forms
         {
             InitializeComponent();
 
-            
+
             //stateCode = extMethods.getQuery("statecode", "");
 
             publicMDIParent = this;
@@ -241,7 +237,7 @@ namespace Collection.Forms
                 tableLayoutPanel2.Controls.Add((new FrmDownloadSources().panelContainer), 1, 0);
             }
             else if (sender == navBarItemSummary)
-            { 
+            {
                 //FrmSummaryReport
                 tableLayoutPanel2.Controls.Add((new FrmSummaryReport().panelContainer), 1, 0);
 
@@ -278,6 +274,6 @@ namespace Collection.Forms
                 bRes = false;
             return bRes;
         }
- 
+
     }
 }

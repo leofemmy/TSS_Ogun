@@ -1,11 +1,7 @@
+using DevExpress.XtraEditors;
+using DevExpress.XtraReports.Parameters;
 using System;
 using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
-using DevExpress.XtraReports.UI;
-using DevExpress.XtraEditors.Repository;
-using DevExpress.XtraReports.Parameters;
-using DevExpress.XtraEditors;
 
 namespace Collection.Report
 {
@@ -52,11 +48,11 @@ namespace Collection.Report
             {
                 if (info.Parameter.Name == paramDate.Name)
                 {
-                   
+
                     var editor = info.Editor as DateEdit;
                     if (editor != null)
                     {
-                        
+
                         editor.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
                         editor.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
                     }

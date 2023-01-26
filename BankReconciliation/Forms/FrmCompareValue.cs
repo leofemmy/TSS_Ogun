@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using TaxSmartSuite.Class;
-using BankReconciliation.Class;
-using System.Data.SqlClient;
+﻿using BankReconciliation.Class;
+using DevExpress.Data;
 using DevExpress.Utils;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Columns;
-using DevExpress.XtraEditors.Controls;
-using DevExpress.Data;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace BankReconciliation.Forms
 {
@@ -126,7 +121,7 @@ namespace BankReconciliation.Forms
 
             btnAllocate.Click += btnAllocate_Click;
             btnCancel.Click += btnCancel_Click;
-            
+
         }
 
         void btnCancel_Click(object sender, EventArgs e)
@@ -147,7 +142,7 @@ namespace BankReconciliation.Forms
                     DialogResult = System.Windows.Forms.DialogResult.Cancel;
             }
             else
-                Common.setMessageBox("Please click on the Check box",Program.ApplicationName,1);
+                Common.setMessageBox("Please click on the Check box", Program.ApplicationName, 1);
             return;
 
         }

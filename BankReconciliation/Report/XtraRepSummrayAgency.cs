@@ -1,12 +1,9 @@
-﻿using System;
-using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
+﻿using BankReconciliation.Class;
 using DevExpress.XtraReports.UI;
-using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
-using BankReconciliation.Class;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace BankReconciliation.Report
 {
@@ -48,15 +45,15 @@ namespace BankReconciliation.Report
                 ada = new SqlDataAdapter(query, Logic.ConnectionString);
                 ada.Fill(dds, "dsTransaction1");
 
-                 XtraRepReconDetailsReport reportst = new XtraRepReconDetailsReport() { DataSource = dds, DataMember = "ViewReconciliationDetailsReport" };
+                XtraRepReconDetailsReport reportst = new XtraRepReconDetailsReport() { DataSource = dds, DataMember = "ViewReconciliationDetailsReport" };
 
-                 reportst.xrLabel14.Text = xrLabel32.Text; reportst.xrLabel15.Text = string.Format("Detail of Collections by {0} for {1} ", ((DataRowView)e.Brick.Value).Row["AgencyName"], ((DataRowView)e.Brick.Value).Row["BatchName"]);
+                reportst.xrLabel14.Text = xrLabel32.Text; reportst.xrLabel15.Text = string.Format("Detail of Collections by {0} for {1} ", ((DataRowView)e.Brick.Value).Row["AgencyName"], ((DataRowView)e.Brick.Value).Row["BatchName"]);
 
-                 reportst.ShowPreviewDialog();
+                reportst.ShowPreviewDialog();
             }
-           
 
-            
+
+
         }
 
     }

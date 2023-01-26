@@ -36,7 +36,7 @@ namespace BankReconciliation
             string vars = MosesClassLibrary.Security.Encryption.Decrypt("TPa7tFbIUYRBs5LESu/2Hg==");
             string var2 = MosesClassLibrary.Security.Encryption.Decrypt("TPa7tFbIUYRBs5LESu/2Hg==");
             string var4 = MosesClassLibrary.Security.Encryption.Decrypt("D30t9qV1aA8NKPPPz61kmjatzwmaDX2S");
-            
+
 
             var gte = TaxSmartConfiguration.ConfigManager.EncryptString("james007");
 
@@ -85,7 +85,7 @@ namespace BankReconciliation
 
             //StatePayCode = getStatePayCode();
 
-         
+
 
             //stationName = getStationName();
 
@@ -132,7 +132,7 @@ namespace BankReconciliation
                 if (APP_CONNECTED)
                     Application.Run(new MDIMains());
 
-             //run the main menu form
+                //run the main menu form
                 //Application.Run(new MDIMain());
 
                 //SingleApplication.Run(new MDIMain());

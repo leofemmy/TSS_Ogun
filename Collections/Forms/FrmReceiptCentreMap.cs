@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
+﻿using Collection.Classess;
 using DevExpress.XtraGrid.Selection;
-using TaxSmartSuite.Class;
-using System.Data.SqlClient;
-using Collection.Classess;
 using DevExpress.XtraGrid.Views.Grid;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace Collection.Forms
 {
@@ -33,7 +28,7 @@ namespace Collection.Forms
         bool isFirstGrid = true;
 
         bool isFirst = true;
-      
+
         string querys = string.Empty;
 
         string lol = string.Empty;
@@ -77,15 +72,15 @@ namespace Collection.Forms
             else if ((Int32)this.radioGroup1.EditValue == 2)//Bank Branch
             {
 
-                 groupBox2.Text = "Check Bank Branch to Map With Printing Centre";
+                groupBox2.Text = "Check Bank Branch to Map With Printing Centre";
 
-                 querys = "SELECT BranchCode,BranchName,BankName FROM dbo.ViewBankBranch ORDER BY PlatFormCode";
+                querys = "SELECT BranchCode,BranchName,BankName FROM dbo.ViewBankBranch ORDER BY PlatFormCode";
             }
 
             //call setreload
 
             isFirstGrid = true;
-            
+
             setReload(querys);
 
         }
@@ -98,7 +93,7 @@ namespace Collection.Forms
                 Common.setMessageBox("Select Mapping Option", Program.ApplicationName, 2);
                 return;
             }
-            else 
+            else
             {
                 selection.ClearSelection();
 
@@ -124,7 +119,7 @@ namespace Collection.Forms
                     }
                 }
             }
-            
+
         }
 
         private void setImages()
@@ -245,7 +240,7 @@ namespace Collection.Forms
             //gridControl4.DataSource = null;
 
             //gridView4.Columns.Clear();
-          
+
 
             using (var ds = new System.Data.DataSet())
             {
@@ -370,7 +365,7 @@ namespace Collection.Forms
                                 {
                                     lol = ((selection.GetSelectedRow(i) as DataRowView)["BranchCode"].ToString());
                                 }
-                               
+
 
                                 string query = String.Format("INSERT INTO [tblPrintingCenterMap]([CentreCode],[CentreName],[StationName],[StationCode],[RevenueCode]) VALUES ('{0}','{1}','{2}','{3}','{4}')", cboCentre.SelectedValue.ToString(), cboCentre.Text.Trim(), cboStation.Text, cboStation.SelectedValue.ToString(), lol);
 
@@ -424,64 +419,64 @@ namespace Collection.Forms
                         }
                         db.Close();
                     }
-                        using (SqlConnection dbs = new SqlConnection(Logic.ConnectionString))
+                    using (SqlConnection dbs = new SqlConnection(Logic.ConnectionString))
+                    {
+                        SqlTransaction transactions;
+                        SqlCommand sqlCommand2;
+
+                        dbs.Open();
+
+                        transactions = dbs.BeginTransaction();
+
+                        try
                         {
-                            SqlTransaction transactions;
-                            SqlCommand sqlCommand2;
 
-                            dbs.Open();
-
-                            transactions = dbs.BeginTransaction();
-
-                            try
+                            for (int i = 0; i < selection.SelectedCount; i++)
                             {
-
-                                for (int i = 0; i < selection.SelectedCount; i++)
+                                if ((Int32)this.radioGroup1.EditValue == 1)//Revenue Code
                                 {
-                                    if ((Int32)this.radioGroup1.EditValue == 1)//Revenue Code
-                                    {
-                                        lol = ((selection.GetSelectedRow(i) as DataRowView)["RevenueCode"].ToString());
-                                    }
-                                    else if ((Int32)this.radioGroup1.EditValue == 2)//Bank Branch
-                                    {
-                                        lol = ((selection.GetSelectedRow(i) as DataRowView)["BranchCode"].ToString());
-                                    }
-                                    string query = String.Format("INSERT INTO [tblPrintingCenterMap]([CentreCode],[CentreName],[StationName],[StationCode],[RevenueCode]) VALUES ('{0}','{1}','{2}','{3}','{4}')", cboCentre.SelectedValue.ToString(), cboCentre.Text.Trim(), cboStation.Text, cboStation.SelectedValue.ToString(), lol);
-
-
-                                    sqlCommand2 = new SqlCommand(query, dbs, transactions);
-                                    sqlCommand2.ExecuteNonQuery();
-
+                                    lol = ((selection.GetSelectedRow(i) as DataRowView)["RevenueCode"].ToString());
                                 }
+                                else if ((Int32)this.radioGroup1.EditValue == 2)//Bank Branch
+                                {
+                                    lol = ((selection.GetSelectedRow(i) as DataRowView)["BranchCode"].ToString());
+                                }
+                                string query = String.Format("INSERT INTO [tblPrintingCenterMap]([CentreCode],[CentreName],[StationName],[StationCode],[RevenueCode]) VALUES ('{0}','{1}','{2}','{3}','{4}')", cboCentre.SelectedValue.ToString(), cboCentre.Text.Trim(), cboStation.Text, cboStation.SelectedValue.ToString(), lol);
 
 
-                                //call report for Print
-                                transactions.Commit();
-                                //ReceiptCall();
+                                sqlCommand2 = new SqlCommand(query, dbs, transactions);
+                                sqlCommand2.ExecuteNonQuery();
+
                             }
-                            catch (SqlException sqlError)
-                            {
-                                transactions.Rollback();
-                                Tripous.Sys.ErrorBox(sqlError);
-                                return;
-                            }
-                            dbs.Close();
 
+
+                            //call report for Print
+                            transactions.Commit();
+                            //ReceiptCall();
                         }
+                        catch (SqlException sqlError)
+                        {
+                            transactions.Rollback();
+                            Tripous.Sys.ErrorBox(sqlError);
+                            return;
+                        }
+                        dbs.Close();
+
                     }
                 }
+            }
 
 
             setReload1();
-            setReload(querys); 
+            setReload(querys);
 
-                cboStation.SelectedIndex = -1;
+            cboStation.SelectedIndex = -1;
 
-                cboCentre.SelectedValue = -1;
+            cboCentre.SelectedValue = -1;
 
-                Common.setMessageBox(" Transaction Completed Successfully ", Program.ApplicationName, 1);
-                selection.ClearSelection();
-            
+            Common.setMessageBox(" Transaction Completed Successfully ", Program.ApplicationName, 1);
+            selection.ClearSelection();
+
         }
 
         public void RefreshForm()
@@ -522,7 +517,7 @@ namespace Collection.Forms
                     {
                         objRevCode = gridView4.GetRowCellValue(i, "BranchCode");
                     }
-                    
+
                     if (objRevCode != null)
                     {
                         for (int j = 0; j < dt.Rows.Count; j++)
@@ -534,7 +529,7 @@ namespace Collection.Forms
                             {
                                 //gridView4.SelectRow(i);
                                 selection.SelectRow(i, true);
-                            } 
+                            }
                         }
                     }
                 }

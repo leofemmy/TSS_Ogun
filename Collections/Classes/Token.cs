@@ -1,15 +1,11 @@
 ﻿//using Collection.Classess;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Collection.Classes
 {
-   public static class Token
+    public static class Token
     {
         static string strtoken;
 

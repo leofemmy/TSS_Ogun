@@ -1,22 +1,14 @@
 ﻿using BankReconciliation.Class;
 using BankReconciliation.Report;
 using DevExpress.Utils;
+using DevExpress.XtraReports.UI;
 using DevExpress.XtraSplashScreen;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
-using DevExpress.XtraReports.UI.PivotGrid;
-using DevExpress.XtraPivotGrid;
-using DevExpress.XtraPrinting;
-using DevExpress.XtraReports.UI;
 
 namespace BankReconciliation.Forms
 {
@@ -68,12 +60,12 @@ namespace BankReconciliation.Forms
 
         void bttnprint_Click(object sender, EventArgs e)
         {
-           
+
 
             xtrarepPayAnalysis analysis = new xtrarepPayAnalysis();
 
             analysis.ShowPreviewDialog();
-            
+
         }
 
         void bttnUpdateExcel_Click(object sender, EventArgs e)
@@ -192,11 +184,11 @@ namespace BankReconciliation.Forms
                                             else
                                             {
                                                 rw["PAYER"] = row["PAYER"];
-                                                rw["AMOUNT"] = row["AMOUNT"] is DBNull ? 0m : row["AMOUNT"] == string.Empty ? 
-                                                                                                  0m : 
+                                                rw["AMOUNT"] = row["AMOUNT"] is DBNull ? 0m : row["AMOUNT"] == string.Empty ?
+                                                                                                  0m :
                                                                                                   Convert.ToDecimal(row["AMOUNT"]);
 
-                                                
+
                                                 //rw["CREDIT"] = row["CREDIT"] is DBNull ? 0m : Convert.ToDecimal(row["CREDIT"]);
                                             }
 

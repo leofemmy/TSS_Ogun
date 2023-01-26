@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using TaxSmartSuite;
-using System.Windows.Forms;
-using TaxSmartSuite.Class;
-using System.Data.SqlClient;
-using Collection.Classess;
+﻿using Collection.Classess;
+using Collections;
 using DevExpress.Utils;
 using DevExpress.XtraSplashScreen;
-using Collections;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace Collection.Forms
 {
@@ -245,7 +240,7 @@ namespace Collection.Forms
 
 
 
-                    
+
 
                     using (var ds = new System.Data.DataSet())
                     {

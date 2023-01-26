@@ -1,14 +1,8 @@
 ﻿using DevExpress.XtraGrid.Selection;
 using DevExpress.XtraSplashScreen;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TaxSmartSuite.Class;
 using TaxSmartUtility.Classes;
@@ -119,7 +113,7 @@ namespace TaxSmartUtility.Forms
                 }
                 SplashScreenManager.CloseForm(false);
             }
-           
+
         }
 
         private void SbnUpdate_Click(object sender, EventArgs e)
@@ -390,7 +384,7 @@ namespace TaxSmartUtility.Forms
             if (DialogResults.InputBox(@"OTP", string.Format("Kindly enter the token to Authorize this transaction.", $"********{Program.Userphone.Substring(7)}"), ref value) == DialogResult.OK)
             {
                 if (Token.tokenInsertValidation(Program.UserID, Program.ApplicationCode, value.ToString(), true, string.Format("{0}", this.groupControl1.Text.Trim())))
-                    //if (validatetoken(value.ToString()))
+                //if (validatetoken(value.ToString()))
                 {
                     Processwork();
                     sbnUpdate.Enabled = true;
@@ -444,7 +438,7 @@ namespace TaxSmartUtility.Forms
                     if (ds.Tables[0].Rows[0]["returnCode"].ToString() == "0")
                     {
                         Common.setMessageBox(ds.Tables[0].Rows[0]["returnMessage"].ToString(), Program.ApplicationName, 2);
-                       
+
                         return;
                     }
                     else
@@ -452,11 +446,11 @@ namespace TaxSmartUtility.Forms
                         Common.setMessageBox(ds.Tables[0].Rows[0]["returnMessage"].ToString(), Program.ApplicationName, 2);
                         return;
                     }
-                    
+
                 }
                 setReload();
             }
-          
+
         }
         void Processwork()
         {
@@ -504,7 +498,7 @@ namespace TaxSmartUtility.Forms
 
                         if (dts != null || dts.Tables[0].Rows.Count > 0)
                         {
-                            
+
                             switch (Program.intCode)
                             {
                                 case 13://Akwa Ibom state
@@ -546,7 +540,7 @@ namespace TaxSmartUtility.Forms
                 SplashScreenManager.CloseForm(false);
 
 
-               
+
             }
         }
 

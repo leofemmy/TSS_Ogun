@@ -15,18 +15,16 @@
 // You can find sample updates and versions for different programming languages here:
 // http://www.devexpress.com/example=E1271
 
-using System;
-using System.Drawing;
-using System.Collections;
-using System.Windows.Forms;
-using DevExpress.XtraGrid;
-using DevExpress.XtraGrid.Columns;
-using DevExpress.XtraEditors.Controls;
+using DevExpress.Utils.Drawing;
 using DevExpress.XtraEditors.Repository;
+using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Views.Grid.ViewInfo;
-using DevExpress.Utils.Drawing;
+using System;
+using System.Collections;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace DevExpress.XtraGrid.Selection
 {

@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using TaxSmartSuite;
-using DevExpress.XtraGrid.Selection;
-using TaxSmartSuite.Class;
-using System.Data.SqlClient;
-//using Control_Panel.Class;
+﻿//using Control_Panel.Class;
 using Collection.Classess;
-using Collection.Report;
 using DevExpress.Utils;
+using DevExpress.XtraGrid.Selection;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace Collection.Forms
 {
@@ -82,7 +75,7 @@ namespace Collection.Forms
                             DataTable Dt = dds.Tables.Add("Stationmap");
                             ada = new SqlDataAdapter((string)"SELECT stationcode,stationname,RevenueOfficeCode, RevenueOfficeName, BranchName, BankName FROM viewStationBankBranch", Logic.ConnectionString);
                             ada.Fill(dds, "Stationmap");
-                           
+
                         }
 
                         //XtraRepMap repstation = new XtraRepMap { DataSource = dds, DataMember = "Stationmap" };
@@ -119,7 +112,7 @@ namespace Collection.Forms
             }
             else
             {
-                
+
                 //return;
                 using (SqlConnection db = new SqlConnection(Logic.ConnectionString))
                 {
@@ -308,7 +301,7 @@ namespace Collection.Forms
 
             if (isFirstGrid)
             {
-                selection = new GridCheckMarksSelection(gridView4,ref label3);
+                selection = new GridCheckMarksSelection(gridView4, ref label3);
                 selection.CheckMarkColumn.VisibleIndex = 0;
                 isFirstGrid = false;
             }

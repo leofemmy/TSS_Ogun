@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using MosesClassLibrary.Security;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using TaxSmartSuite;
-using MosesClassLibrary.Security;
 using TaxSmartSuite.Class;
 
 namespace Collection.Forms
@@ -41,7 +35,7 @@ namespace Collection.Forms
             txtPassword.ForeColor = Color.FromArgb(224, 224, 224);
             txtPassword.Font = _Empty_Font;
             char ch;
-            bool lol  = Char.TryParse(string.Empty, out ch); //Convert.ToChar(" ");
+            bool lol = Char.TryParse(string.Empty, out ch); //Convert.ToChar(" ");
             txtPassword.PasswordChar = ch;
 
         }
@@ -148,7 +142,7 @@ namespace Collection.Forms
 
             BttnOK.Click += OnButtonClicked;
             BttnCancel.Click += OnButtonClicked;
-            
+
             txtUsername.LostFocus += txtUsername_LostFocus;
             txtUsername.TextChanged += txtUsername_TextChanged;
             txtUsername.Leave += txtUsername_Leave;
@@ -218,7 +212,7 @@ namespace Collection.Forms
             }
             else
             {
-                string SQL = String.Format(@"SELECT COUNT(*) FROM [dbo].[ViewUserApplication] WHERE [UserID] = '{0}' AND [Password] = '{1}' AND [ApplicationCode] = '{2}' AND [Flag] = 1" , txtUsername.Text, Encryption.Encrypt(txtPassword.Text), Program.ApplicationCode);
+                string SQL = String.Format(@"SELECT COUNT(*) FROM [dbo].[ViewUserApplication] WHERE [UserID] = '{0}' AND [Password] = '{1}' AND [ApplicationCode] = '{2}' AND [Flag] = 1", txtUsername.Text, Encryption.Encrypt(txtPassword.Text), Program.ApplicationCode);
                 if (new Classess.Logic().IsRecordExist(SQL))
                 //if (true)
                 {

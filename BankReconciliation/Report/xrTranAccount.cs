@@ -1,8 +1,6 @@
+using DevExpress.XtraReports.UI;
 using System;
 using System.Drawing;
-using System.Collections;
-using System.ComponentModel;
-using DevExpress.XtraReports.UI;
 
 namespace BankReconciliation.Report
 {
@@ -33,7 +31,7 @@ namespace BankReconciliation.Report
             //total = (debit + closebal) - (openbal + credit );
             //total = openbal + credit - debit - closebal
             paramCloseDb.Value = debit + closebal;
-          
+
             double total = (debit + closebal) - (openbal + credit);
             difAmt = total - reemAmt;
             xrLabel16.Text = string.Format("# {0:n2}", total);
@@ -41,7 +39,7 @@ namespace BankReconciliation.Report
 
             xrDiffAmt.ForeColor = Color.DeepSkyBlue;
             xrLabel16.ForeColor = Color.Brown;
-           
+
         }
 
         private void xrTranAccount_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
@@ -116,7 +114,7 @@ namespace BankReconciliation.Report
             xrOpenBal.Summary = sumOpen;
             xrOpenBal.ForeColor = Color.DarkOliveGreen;
 
-            
+
             SummaryFunc res = default(SummaryFunc);
             res = SummaryFunc.Sum;
 
@@ -126,9 +124,9 @@ namespace BankReconciliation.Report
             XRSummary totcd = default(XRSummary);
             totcd = xrSummaryCr.Summary;
 
-            
 
-     
+
+
 
         }
 

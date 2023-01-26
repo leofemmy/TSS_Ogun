@@ -1,21 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Collection.Classess;
+using Collection.ReceiptServices;
+using Collections;
+using DevExpress.XtraSplashScreen;
+using System;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-
 using System.Data.SqlClient;
-using Collection.Classess;
-
-using Collection.ReceiptServices;
-using TaxSmartSuite.Class;
-using DevExpress.Utils;
-using DevExpress.XtraSplashScreen;
-using Collections;
 using System.Threading;
+using System.Windows.Forms;
+using TaxSmartSuite.Class;
 
 namespace Collection.Forms
 {
@@ -100,7 +93,7 @@ namespace Collection.Forms
 
         void timer3_Tick(object sender, EventArgs e)
         {
-            doUpload();
+            //  doUpload();
         }
 
         void m_oWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -184,7 +177,7 @@ namespace Collection.Forms
         void timer1_Tick(object sender, EventArgs e)
         {
 
-            uploadReceipts();
+           // uploadReceipts();
             doDownload();
             //if (m_oWorker.IsBusy == false)
             //    m_oWorker.RunWorkerAsync();
