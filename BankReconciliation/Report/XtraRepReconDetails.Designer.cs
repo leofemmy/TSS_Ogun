@@ -79,7 +79,7 @@
             // 
             this.xrLabel6.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewReconciliationCollectionReport.Amount", "{0:n2}")});
-            this.xrLabel6.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F);
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(295.2084F, 0F);
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -93,7 +93,7 @@
             // 
             this.xrLabel2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewReconciliationCollectionReport.Period")});
-            this.xrLabel2.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F);
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(4.000007F, 0F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -108,7 +108,7 @@
             // 
             this.xrLabel1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewReconciliationCollectionReport.PaymentDate", "{0:dd/MM/yyyy}")});
-            this.xrLabel1.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F);
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(104F, 0F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -134,7 +134,7 @@
             // 
             // xrLabel10
             // 
-            this.xrLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F);
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(196.875F, 16.45834F);
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -162,7 +162,7 @@
             // 
             // xrLabel5
             // 
-            this.xrLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 9.75F);
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(125.875F, 39.45834F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -173,7 +173,7 @@
             // 
             // xrLabel3
             // 
-            this.xrLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 9.75F);
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(106.0833F, 78.00001F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -260,7 +260,7 @@
             // 
             // xrLine2
             // 
-            this.xrLine2.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.xrLine2.LineStyle = DevExpress.Drawing.DXDashStyle.Dash;
             this.xrLine2.LineWidth = 2;
             this.xrLine2.LocationFloat = new DevExpress.Utils.PointFloat(263.75F, 0F);
             this.xrLine2.Name = "xrLine2";
@@ -268,7 +268,7 @@
             // 
             // xrLine1
             // 
-            this.xrLine1.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.xrLine1.LineStyle = DevExpress.Drawing.DXDashStyle.Dash;
             this.xrLine1.LineWidth = 2;
             this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(263.75F, 29.50001F);
             this.xrLine1.Name = "xrLine1";
@@ -276,7 +276,7 @@
             // 
             // xrLabel9
             // 
-            this.xrLabel9.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 10.00001F);
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -288,7 +288,7 @@
             // 
             this.xrLabel4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewReconciliationCollectionReport.Amount")});
-            this.xrLabel4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(295.2084F, 10.00001F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -328,7 +328,7 @@
             this.DataAdapter = this.viewReconciliationCollectionReportTableAdapter;
             this.DataMember = "ViewReconciliationCollectionReport";
             this.DataSource = this.dsTransaction1;
-            this.Margins = new System.Drawing.Printing.Margins(100, 84, 141, 54);
+            this.Margins = new DevExpress.Drawing.DXMargins(100, 84, 141, 54);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.paramPeriod,
             this.paramBankCode,

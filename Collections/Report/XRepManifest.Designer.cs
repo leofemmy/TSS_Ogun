@@ -114,7 +114,7 @@ namespace Collection.Report
             // 
             // xrTable2
             // 
-            this.xrTable2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrTable2.Font = new DevExpress.Drawing.DXFont("Tahoma", 9.75F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrTable2.LocationFloat = new DevExpress.Utils.PointFloat(2.04169F, 2.00001F);
             this.xrTable2.Name = "xrTable2";
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -143,7 +143,7 @@ namespace Collection.Report
             // 
             this.xrTableCell4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.PaymentRefNumber")});
-            this.xrTableCell4.Font = new System.Drawing.Font("Tahoma", 6F);
+            this.xrTableCell4.Font = new DevExpress.Drawing.DXFont("Tahoma", 6F);
             this.xrTableCell4.Name = "xrTableCell4";
             this.xrTableCell4.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 0, 0, 0, 100F);
             this.xrTableCell4.StylePriority.UseFont = false;
@@ -158,7 +158,7 @@ namespace Collection.Report
             // 
             this.xrTableCell7.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.EReceipts")});
-            this.xrTableCell7.Font = new System.Drawing.Font("Tahoma", 6F);
+            this.xrTableCell7.Font = new DevExpress.Drawing.DXFont("Tahoma", 6F);
             this.xrTableCell7.Name = "xrTableCell7";
             this.xrTableCell7.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 5, 0, 0, 100F);
             this.xrTableCell7.StylePriority.UseFont = false;
@@ -170,7 +170,7 @@ namespace Collection.Report
             // 
             this.xrTableCell22.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.PaymentRefNumber")});
-            this.xrTableCell22.Font = new System.Drawing.Font("Tahoma", 6F);
+            this.xrTableCell22.Font = new DevExpress.Drawing.DXFont("Tahoma", 6F);
             this.xrTableCell22.Name = "xrTableCell22";
             this.xrTableCell22.StylePriority.UseFont = false;
             this.xrTableCell22.Text = "xrTableCell22";
@@ -180,7 +180,7 @@ namespace Collection.Report
             // 
             this.xrTableCell18.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.PaymentDate", "{0:dd-MMM-yy}")});
-            this.xrTableCell18.Font = new System.Drawing.Font("Tahoma", 6F);
+            this.xrTableCell18.Font = new DevExpress.Drawing.DXFont("Tahoma", 6F);
             this.xrTableCell18.Name = "xrTableCell18";
             this.xrTableCell18.StylePriority.UseFont = false;
             this.xrTableCell18.Text = "xrTableCell18";
@@ -190,7 +190,7 @@ namespace Collection.Report
             // 
             this.xrTableCell5.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.PayerName")});
-            this.xrTableCell5.Font = new System.Drawing.Font("Tahoma", 6F);
+            this.xrTableCell5.Font = new DevExpress.Drawing.DXFont("Tahoma", 6F);
             this.xrTableCell5.Name = "xrTableCell5";
             this.xrTableCell5.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 15, 0, 0, 100F);
             this.xrTableCell5.StylePriority.UseFont = false;
@@ -202,7 +202,7 @@ namespace Collection.Report
             // 
             this.xrTableCell23.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.calcBankDetails")});
-            this.xrTableCell23.Font = new System.Drawing.Font("Tahoma", 6F);
+            this.xrTableCell23.Font = new DevExpress.Drawing.DXFont("Tahoma", 6F);
             this.xrTableCell23.Name = "xrTableCell23";
             this.xrTableCell23.StylePriority.UseFont = false;
             this.xrTableCell23.Text = "xrTableCell23";
@@ -212,7 +212,7 @@ namespace Collection.Report
             // 
             this.xrTableCell20.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.Description")});
-            this.xrTableCell20.Font = new System.Drawing.Font("Tahoma", 6F);
+            this.xrTableCell20.Font = new DevExpress.Drawing.DXFont("Tahoma", 6F);
             this.xrTableCell20.Name = "xrTableCell20";
             this.xrTableCell20.StylePriority.UseFont = false;
             this.xrTableCell20.Text = "xrTableCell20";
@@ -222,7 +222,7 @@ namespace Collection.Report
             // 
             this.xrTableCell10.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.DepositSlipNumber")});
-            this.xrTableCell10.Font = new System.Drawing.Font("Tahoma", 6F);
+            this.xrTableCell10.Font = new DevExpress.Drawing.DXFont("Tahoma", 6F);
             this.xrTableCell10.Name = "xrTableCell10";
             this.xrTableCell10.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 10, 0, 0, 100F);
             this.xrTableCell10.StylePriority.UseFont = false;
@@ -234,7 +234,7 @@ namespace Collection.Report
             // 
             this.xrTableCell13.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.Amount", "{0:n2}")});
-            this.xrTableCell13.Font = new System.Drawing.Font("Tahoma", 6F);
+            this.xrTableCell13.Font = new DevExpress.Drawing.DXFont("Tahoma", 6F);
             this.xrTableCell13.Name = "xrTableCell13";
             this.xrTableCell13.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 15, 0, 0, 100F);
             this.xrTableCell13.StylePriority.UseFont = false;
@@ -248,7 +248,7 @@ namespace Collection.Report
             // 
             this.xrTableCell12.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.ControlNumber")});
-            this.xrTableCell12.Font = new System.Drawing.Font("Tahoma", 6F);
+            this.xrTableCell12.Font = new DevExpress.Drawing.DXFont("Tahoma", 6F);
             this.xrTableCell12.Name = "xrTableCell12";
             this.xrTableCell12.StylePriority.UseFont = false;
             this.xrTableCell12.Text = "xrTableCell12";
@@ -258,7 +258,7 @@ namespace Collection.Report
             // 
             this.xrTableCell16.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.StationName")});
-            this.xrTableCell16.Font = new System.Drawing.Font("Tahoma", 6F);
+            this.xrTableCell16.Font = new DevExpress.Drawing.DXFont("Tahoma", 6F);
             this.xrTableCell16.Name = "xrTableCell16";
             this.xrTableCell16.StylePriority.UseFont = false;
             this.xrTableCell16.Text = "xrTableCell16";
@@ -292,7 +292,7 @@ namespace Collection.Report
             // 
             this.xrLabel1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.AgencyName", "Agency: {0}")});
-            this.xrLabel1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(9.999998F, 0F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -306,7 +306,7 @@ namespace Collection.Report
             // 
             this.xrLabel8.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.ReceiptDate", "Printed Date & Time: {0:dddd, dd MMMM, yyyy}")});
-            this.xrLabel8.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
+            this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Arial", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(728.2222F, 68.75F);
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -317,7 +317,7 @@ namespace Collection.Report
             // xrTable1
             // 
             this.xrTable1.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom;
-            this.xrTable1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrTable1.Font = new DevExpress.Drawing.DXFont("Tahoma", 9.75F, DevExpress.Drawing.DXFontStyle.Bold, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrTable1.LocationFloat = new DevExpress.Utils.PointFloat(2.041991F, 103.9167F);
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -345,7 +345,7 @@ namespace Collection.Report
             // xrTableCell1
             // 
             this.xrTableCell1.CanGrow = false;
-            this.xrTableCell1.Font = new System.Drawing.Font("Tahoma", 7.75F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell1.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell1.Name = "xrTableCell1";
             this.xrTableCell1.StylePriority.UseFont = false;
             this.xrTableCell1.Text = "S/No.";
@@ -354,7 +354,7 @@ namespace Collection.Report
             // xrTableCell8
             // 
             this.xrTableCell8.CanGrow = false;
-            this.xrTableCell8.Font = new System.Drawing.Font("Tahoma", 7.75F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell8.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell8.Multiline = true;
             this.xrTableCell8.Name = "xrTableCell8";
             this.xrTableCell8.StylePriority.UseFont = false;
@@ -364,7 +364,7 @@ namespace Collection.Report
             // xrTableCell21
             // 
             this.xrTableCell21.CanGrow = false;
-            this.xrTableCell21.Font = new System.Drawing.Font("Tahoma", 7.75F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell21.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell21.Name = "xrTableCell21";
             this.xrTableCell21.StylePriority.UseFont = false;
             this.xrTableCell21.Text = "Payment Ref.";
@@ -373,7 +373,7 @@ namespace Collection.Report
             // xrTableCell6
             // 
             this.xrTableCell6.CanGrow = false;
-            this.xrTableCell6.Font = new System.Drawing.Font("Tahoma", 7.75F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell6.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell6.Multiline = true;
             this.xrTableCell6.Name = "xrTableCell6";
             this.xrTableCell6.StylePriority.UseFont = false;
@@ -383,7 +383,7 @@ namespace Collection.Report
             // xrTableCell2
             // 
             this.xrTableCell2.CanGrow = false;
-            this.xrTableCell2.Font = new System.Drawing.Font("Tahoma", 7.75F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell2.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell2.Name = "xrTableCell2";
             this.xrTableCell2.StylePriority.UseFont = false;
             this.xrTableCell2.StylePriority.UseTextAlignment = false;
@@ -394,7 +394,7 @@ namespace Collection.Report
             // xrTableCell3
             // 
             this.xrTableCell3.CanGrow = false;
-            this.xrTableCell3.Font = new System.Drawing.Font("Tahoma", 7.75F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell3.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell3.Name = "xrTableCell3";
             this.xrTableCell3.StylePriority.UseFont = false;
             this.xrTableCell3.StylePriority.UseTextAlignment = false;
@@ -405,7 +405,7 @@ namespace Collection.Report
             // xrTableCell19
             // 
             this.xrTableCell19.CanGrow = false;
-            this.xrTableCell19.Font = new System.Drawing.Font("Tahoma", 7.75F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell19.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell19.Name = "xrTableCell19";
             this.xrTableCell19.StylePriority.UseFont = false;
             this.xrTableCell19.StylePriority.UseTextAlignment = false;
@@ -416,7 +416,7 @@ namespace Collection.Report
             // xrTableCell9
             // 
             this.xrTableCell9.CanGrow = false;
-            this.xrTableCell9.Font = new System.Drawing.Font("Tahoma", 7.75F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell9.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell9.Name = "xrTableCell9";
             this.xrTableCell9.StylePriority.UseFont = false;
             this.xrTableCell9.StylePriority.UseTextAlignment = false;
@@ -427,7 +427,7 @@ namespace Collection.Report
             // xrTableCell11
             // 
             this.xrTableCell11.CanGrow = false;
-            this.xrTableCell11.Font = new System.Drawing.Font("Tahoma", 7.75F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell11.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell11.Name = "xrTableCell11";
             this.xrTableCell11.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 15, 0, 0, 100F);
             this.xrTableCell11.StylePriority.UseFont = false;
@@ -440,7 +440,7 @@ namespace Collection.Report
             // xrTableCell14
             // 
             this.xrTableCell14.CanGrow = false;
-            this.xrTableCell14.Font = new System.Drawing.Font("Tahoma", 7.75F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell14.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell14.Name = "xrTableCell14";
             this.xrTableCell14.StylePriority.UseFont = false;
             this.xrTableCell14.Text = "Control Number";
@@ -449,7 +449,7 @@ namespace Collection.Report
             // xrTableCell15
             // 
             this.xrTableCell15.CanGrow = false;
-            this.xrTableCell15.Font = new System.Drawing.Font("Tahoma", 7.75F, System.Drawing.FontStyle.Bold);
+            this.xrTableCell15.Font = new DevExpress.Drawing.DXFont("Tahoma", 7.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell15.Multiline = true;
             this.xrTableCell15.Name = "xrTableCell15";
             this.xrTableCell15.StylePriority.UseFont = false;
@@ -499,7 +499,7 @@ namespace Collection.Report
             // 
             // xrLabel12
             // 
-            this.xrLabel12.Font = new System.Drawing.Font("Trebuchet MS", 8F, System.Drawing.FontStyle.Bold);
+            this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Trebuchet MS", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(100F, 28.00001F);
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -510,7 +510,7 @@ namespace Collection.Report
             // 
             // xrLabel9
             // 
-            this.xrLabel9.Font = new System.Drawing.Font("Trebuchet MS", 10.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Trebuchet MS", 10.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(100F, 3.000005F);
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -550,7 +550,7 @@ namespace Collection.Report
             // 
             this.xrLabel2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.Amount")});
-            this.xrLabel2.Font = new System.Drawing.Font("Arial", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Arial", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(816.208F, 2.083333F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -577,7 +577,7 @@ namespace Collection.Report
             // 
             // xrLabel3
             // 
-            this.xrLabel3.Font = new System.Drawing.Font("Verdana", 7F, System.Drawing.FontStyle.Bold);
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Verdana", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(32.38888F, 21.58333F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -611,7 +611,7 @@ namespace Collection.Report
             // 
             // xrLabel10
             // 
-            this.xrLabel10.Font = new System.Drawing.Font("Verdana", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Verdana", 9.75F, ((DevExpress.Drawing.DXFontStyle)((DevExpress.Drawing.DXFontStyle.Bold | DevExpress.Drawing.DXFontStyle.Italic))));
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(61.84835F, 0F);
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -624,7 +624,7 @@ namespace Collection.Report
             // 
             this.xrLabel7.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "BankReceipts.BatchNumber", "Batch Number: {0}")});
-            this.xrLabel7.Font = new System.Drawing.Font("Trebuchet MS", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Trebuchet MS", 6.75F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(438.0556F, 34.08337F);
             this.xrLabel7.Name = "xrLabel7";
             this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -634,7 +634,7 @@ namespace Collection.Report
             // 
             // xrPageInfo2
             // 
-            this.xrPageInfo2.Font = new System.Drawing.Font("Trebuchet MS", 6.75F);
+            this.xrPageInfo2.Font = new DevExpress.Drawing.DXFont("Trebuchet MS", 6.75F);
             this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(19.80546F, 34.08337F);
             this.xrPageInfo2.Name = "xrPageInfo2";
             this.xrPageInfo2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -645,7 +645,7 @@ namespace Collection.Report
             // 
             // xrPageInfo1
             // 
-            this.xrPageInfo1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrPageInfo1.Font = new DevExpress.Drawing.DXFont("Tahoma", 8.25F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(941.2516F, 34.08337F);
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -668,7 +668,7 @@ namespace Collection.Report
             // 
             // xrLabel5
             // 
-            this.xrLabel5.Font = new System.Drawing.Font("Verdana", 7F, System.Drawing.FontStyle.Bold);
+            this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Verdana", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(289.0971F, 21.58333F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -680,7 +680,7 @@ namespace Collection.Report
             // 
             // xrLabel6
             // 
-            this.xrLabel6.Font = new System.Drawing.Font("Verdana", 7F, System.Drawing.FontStyle.Bold);
+            this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Verdana", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(534.8958F, 21.58333F);
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -749,7 +749,7 @@ namespace Collection.Report
             this.FormattingRuleSheet.AddRange(new DevExpress.XtraReports.UI.FormattingRule[] {
             this.formattingRule1});
             this.Landscape = true;
-            this.Margins = new System.Drawing.Printing.Margins(27, 0, 38, 0);
+            this.Margins = new DevExpress.Drawing.DXMargins(27, 0, 38, 0);
             this.PageHeight = 850;
             this.PageWidth = 1100;
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {

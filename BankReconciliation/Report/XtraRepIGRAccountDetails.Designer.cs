@@ -56,7 +56,7 @@
             // 
             // xrPivotGrid1
             // 
-            this.xrPivotGrid1.Appearance.FieldHeader.Font = new System.Drawing.Font("Times New Roman", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrPivotGrid1.Appearance.FieldHeader.Font = new DevExpress.Drawing.DXFont("Times New Roman", 7F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrPivotGrid1.DataAdapter = this.viewIGRAccountDetailsTableAdapter;
             this.xrPivotGrid1.DataMember = "ViewIGRAccountDetails";
             this.xrPivotGrid1.Fields.AddRange(new DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField[] {
@@ -72,7 +72,7 @@
             this.xrPivotGrid1.OptionsView.ShowDataHeaders = false;
             this.xrPivotGrid1.OptionsView.ShowRowHeaders = false;
             this.xrPivotGrid1.SizeF = new System.Drawing.SizeF(744.3751F, 51.04168F);
-            this.xrPivotGrid1.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrPivotGrid1_BeforePrint);
+            this.xrPivotGrid1.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.xrPivotGrid1_BeforePrint);
             // 
             // viewIGRAccountDetailsTableAdapter
             // 
@@ -164,7 +164,7 @@
             this.FormattingRuleSheet.AddRange(new DevExpress.XtraReports.UI.FormattingRule[] {
             this.formattingRule1});
             this.Landscape = true;
-            this.Margins = new System.Drawing.Printing.Margins(15, 10, 100, 100);
+            this.Margins = new DevExpress.Drawing.DXMargins(15, 10, 100, 100);
             this.PageHeight = 850;
             this.PageWidth = 1100;
             this.Version = "11.2";

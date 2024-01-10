@@ -17,7 +17,7 @@ namespace Collection.Report
             xrLabel43.BeforePrint += xrLabel43_BeforePrint;
         }
 
-        private void XtraRepReceiptDelta_BeforePrint1(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void XtraRepReceiptDelta_BeforePrint1(object sender, System.ComponentModel.CancelEventArgs e)
         {
             var fullPath = System.IO.Path.Combine(System.Windows.Forms.Application.StartupPath, logoPath);
             if (!string.IsNullOrWhiteSpace(fullPath) && System.IO.File.Exists(fullPath))
@@ -29,14 +29,14 @@ namespace Collection.Report
             //xrPictureBox2.Image = Image.FromFile(fullPath);
         }
 
-        void xrLabel43_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        void xrLabel43_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             string testrval = string.Format("<{0}><{1}><{2}>", this.GetCurrentColumnValue("PayerName").ToString().Trim(), string.Format("{0:n}", this.GetCurrentColumnValue("Amount")), this.GetCurrentColumnValue("EReceipts").ToString());
 
             xrLabel43.Text = testrval.ToUpper();
         }
 
-        private void XtraRepReceiptDelta_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void XtraRepReceiptDelta_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             SetTextWatermark((XtraRepReceiptDelta)sender);
         }
@@ -45,7 +45,7 @@ namespace Collection.Report
         {
             //report.Watermark.Text = "DUPLICATE";
             report.Watermark.TextDirection = DevExpress.XtraPrinting.Drawing.DirectionMode.ForwardDiagonal;
-            report.Watermark.Font = new Font(report.Watermark.Font.FontFamily, 20);
+            //report.Watermark.Font = new Font(report.Watermark.Font.FontFamily, 20);
             report.Watermark.TextTransparency = 20;
             report.Watermark.ShowBehind = false;
             report.Watermark.ForeColor = Color.Gray;

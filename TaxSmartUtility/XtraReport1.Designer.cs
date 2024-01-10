@@ -196,7 +196,7 @@
             // xrLabel11
             // 
             this.xrLabel11.Dpi = 100F;
-            this.xrLabel11.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Tahoma", 12F);
             this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(176.0417F, 53.08332F);
             this.xrLabel11.Name = "xrLabel11";
             this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -215,7 +215,7 @@
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.objectDataSource1});
             this.DataSource = this.objectDataSource1;
-            this.Margins = new System.Drawing.Printing.Margins(100, 100, 135, 100);
+            this.Margins = new DevExpress.Drawing.DXMargins(100, 100, 135, 100);
             this.Version = "16.1";
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

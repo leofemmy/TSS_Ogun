@@ -65,15 +65,15 @@
             // 
             // xrPivotGrid1
             // 
-            this.xrPivotGrid1.Appearance.Cell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrPivotGrid1.Appearance.CustomTotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrPivotGrid1.Appearance.FieldHeader.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrPivotGrid1.Appearance.FieldValue.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrPivotGrid1.Appearance.FieldValueGrandTotal.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrPivotGrid1.Appearance.FieldValueTotal.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrPivotGrid1.Appearance.GrandTotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrPivotGrid1.Appearance.Lines.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrPivotGrid1.Appearance.TotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.xrPivotGrid1.Appearance.Cell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.xrPivotGrid1.Appearance.CustomTotalCell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.xrPivotGrid1.Appearance.FieldHeader.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.xrPivotGrid1.Appearance.FieldValue.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.xrPivotGrid1.Appearance.FieldValueGrandTotal.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.xrPivotGrid1.Appearance.FieldValueTotal.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.xrPivotGrid1.Appearance.GrandTotalCell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.xrPivotGrid1.Appearance.Lines.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.xrPivotGrid1.Appearance.TotalCell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
             this.xrPivotGrid1.DataSource = this.bindingSource1;
             this.xrPivotGrid1.Fields.AddRange(new DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField[] {
             this.fieldOpeningbal1,

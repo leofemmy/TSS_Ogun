@@ -118,7 +118,7 @@
             // xrLabel3
             // 
             this.xrLabel3.Dpi = 100F;
-            this.xrLabel3.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(355.2083F, 0F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -129,7 +129,7 @@
             // xrLabel7
             // 
             this.xrLabel7.Dpi = 100F;
-            this.xrLabel7.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(25F, 2.083333F);
             this.xrLabel7.Name = "xrLabel7";
             this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -161,7 +161,7 @@
             this.DataSource = this.dsTransaction1;
             this.FilterString = "[BankShortCode] = ?parameter1 And [prevCredit] = ?parameter2 And [prevCredit] > 0" +
     "";
-            this.Margins = new System.Drawing.Printing.Margins(100, 100, 10, 0);
+            this.Margins = new DevExpress.Drawing.DXMargins(100, 100, 10, 0);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.parameter1,
             this.parameter2});

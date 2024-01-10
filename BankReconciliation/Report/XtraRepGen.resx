@@ -117,8 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="DevExpress.Data.v22.1" name="DevExpress.Data.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-  <data name="xrLabel20.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <assembly alias="DevExpress.Data.v23.2" name="DevExpress.Data.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xrLabel20.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>170.854126, 0</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
@@ -132,7 +132,7 @@
   <data name="xrLabel20.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="xrLabel19.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrLabel19.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>699.958557, 2.49999356</value>
   </data>
   <data name="xrLabel19.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -144,10 +144,11 @@
   <data name="xrLabel19.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="xrLabel8.Font" type="System.Drawing.Font, System.Drawing">
+  <assembly alias="DevExpress.Drawing.v23.2" name="DevExpress.Drawing.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xrLabel8.Font" type="DevExpress.Drawing.DXFont, DevExpress.Drawing.v23.2">
     <value>Times New Roman, 8pt</value>
   </data>
-  <data name="xrLabel8.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrLabel8.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>822.9166, 6.25</value>
   </data>
   <data name="xrLabel8.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -156,13 +157,13 @@
   <data name="xrLabel8.Text" xml:space="preserve">
     <value>xrLabel8</value>
   </data>
-  <data name="xrLabel8.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="xrLabel8.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>TopRight</value>
   </data>
-  <data name="xrLabel6.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="xrLabel6.Font" type="DevExpress.Drawing.DXFont, DevExpress.Drawing.v23.2">
     <value>Times New Roman, 8pt</value>
   </data>
-  <data name="xrLabel6.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrLabel6.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>599.958557, 2.49999356</value>
   </data>
   <data name="xrLabel6.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -171,13 +172,13 @@
   <data name="xrLabel6.Text" xml:space="preserve">
     <value>xrLabel6</value>
   </data>
-  <data name="xrLabel6.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="xrLabel6.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>BottomRight</value>
   </data>
-  <data name="xrLabel5.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="xrLabel5.Font" type="DevExpress.Drawing.DXFont, DevExpress.Drawing.v23.2">
     <value>Times New Roman, 8pt</value>
   </data>
-  <data name="xrLabel5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrLabel5.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>488.500153, 2.49999356</value>
   </data>
   <data name="xrLabel5.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -186,13 +187,13 @@
   <data name="xrLabel5.Text" xml:space="preserve">
     <value>xrLabel5</value>
   </data>
-  <data name="xrLabel5.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="xrLabel5.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>BottomRight</value>
   </data>
-  <data name="xrLabel4.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="xrLabel4.Font" type="DevExpress.Drawing.DXFont, DevExpress.Drawing.v23.2">
     <value>Times New Roman, 8pt</value>
   </data>
-  <data name="xrLabel4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrLabel4.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>388.500153, 2.49999356</value>
   </data>
   <data name="xrLabel4.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -201,13 +202,13 @@
   <data name="xrLabel4.Text" xml:space="preserve">
     <value>xrLabel4</value>
   </data>
-  <data name="xrLabel4.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="xrLabel4.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>BottomRight</value>
   </data>
-  <data name="xrLabel3.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="xrLabel3.Font" type="DevExpress.Drawing.DXFont, DevExpress.Drawing.v23.2">
     <value>Times New Roman, 8pt</value>
   </data>
-  <data name="xrLabel3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrLabel3.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>288.500153, 2.49999356</value>
   </data>
   <data name="xrLabel3.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -216,13 +217,13 @@
   <data name="xrLabel3.Text" xml:space="preserve">
     <value>xrLabel3</value>
   </data>
-  <data name="xrLabel3.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="xrLabel3.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>BottomRight</value>
   </data>
-  <data name="xrLabel2.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="xrLabel2.Font" type="DevExpress.Drawing.DXFont, DevExpress.Drawing.v23.2">
     <value>Times New Roman, 8pt</value>
   </data>
-  <data name="xrLabel2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrLabel2.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>196.08342, 2.49999356</value>
   </data>
   <data name="xrLabel2.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -231,13 +232,13 @@
   <data name="xrLabel2.Text" xml:space="preserve">
     <value>xrLabel2</value>
   </data>
-  <data name="xrLabel2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="xrLabel2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>BottomLeft</value>
   </data>
-  <data name="xrLabel1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="xrLabel1.Font" type="DevExpress.Drawing.DXFont, DevExpress.Drawing.v23.2">
     <value>Times New Roman, 8pt, style=Underline</value>
   </data>
-  <data name="xrLabel1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrLabel1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>44.3334579, 2.49999356</value>
   </data>
   <data name="xrLabel1.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -246,13 +247,13 @@
   <data name="xrLabel1.Text" xml:space="preserve">
     <value>xrLabel1</value>
   </data>
-  <data name="xrLabel1.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="xrLabel1.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>BottomLeft</value>
   </data>
-  <data name="xrLabel7.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="xrLabel7.Font" type="DevExpress.Drawing.DXFont, DevExpress.Drawing.v23.2">
     <value>Times New Roman, 8pt</value>
   </data>
-  <data name="xrLabel7.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrLabel7.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>8.375104, 2.49999356</value>
   </data>
   <data name="xrLabel7.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -261,19 +262,19 @@
   <data name="xrLabel7.Text" xml:space="preserve">
     <value>xrLabel7</value>
   </data>
-  <data name="xrLabel7.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="xrLabel7.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>BottomLeft</value>
   </data>
   <data name="Detail.HeightF" type="System.Single, mscorlib">
     <value>29.25</value>
   </data>
-  <data name="Detail.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="Detail.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>TopLeft</value>
   </data>
-  <data name="xrLabel16.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="xrLabel16.Font" type="DevExpress.Drawing.DXFont, DevExpress.Drawing.v23.2">
     <value>Times New Roman, 9pt</value>
   </data>
-  <data name="xrLabel16.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrLabel16.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>822.9166, 115.458313</value>
   </data>
   <data name="xrLabel16.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -282,13 +283,13 @@
   <data name="xrLabel16.Text" xml:space="preserve">
     <value>Collections</value>
   </data>
-  <data name="xrLabel16.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="xrLabel16.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>TopLeft</value>
   </data>
-  <data name="xrLabel9.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="xrLabel9.Font" type="DevExpress.Drawing.DXFont, DevExpress.Drawing.v23.2">
     <value>Times New Roman, 9pt</value>
   </data>
-  <data name="xrLabel9.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrLabel9.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>44.33339, 115.458313</value>
   </data>
   <data name="xrLabel9.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -297,13 +298,13 @@
   <data name="xrLabel9.Text" xml:space="preserve">
     <value>Bank Name</value>
   </data>
-  <data name="xrLabel9.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="xrLabel9.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>TopCenter</value>
   </data>
-  <data name="xrLabel10.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="xrLabel10.Font" type="DevExpress.Drawing.DXFont, DevExpress.Drawing.v23.2">
     <value>Times New Roman, 9pt</value>
   </data>
-  <data name="xrLabel10.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrLabel10.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>196.083359, 115.458313</value>
   </data>
   <data name="xrLabel10.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -312,13 +313,13 @@
   <data name="xrLabel10.Text" xml:space="preserve">
     <value>Account No.</value>
   </data>
-  <data name="xrLabel10.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="xrLabel10.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>TopCenter</value>
   </data>
-  <data name="xrLabel11.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="xrLabel11.Font" type="DevExpress.Drawing.DXFont, DevExpress.Drawing.v23.2">
     <value>Times New Roman, 9pt</value>
   </data>
-  <data name="xrLabel11.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrLabel11.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>288.5001, 115.458313</value>
   </data>
   <data name="xrLabel11.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -327,13 +328,13 @@
   <data name="xrLabel11.Text" xml:space="preserve">
     <value>Closing Balance</value>
   </data>
-  <data name="xrLabel11.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="xrLabel11.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>TopCenter</value>
   </data>
-  <data name="xrLabel12.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="xrLabel12.Font" type="DevExpress.Drawing.DXFont, DevExpress.Drawing.v23.2">
     <value>Times New Roman, 9pt</value>
   </data>
-  <data name="xrLabel12.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrLabel12.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>400.25, 115.458328</value>
   </data>
   <data name="xrLabel12.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -342,13 +343,13 @@
   <data name="xrLabel12.Text" xml:space="preserve">
     <value>Debit</value>
   </data>
-  <data name="xrLabel12.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="xrLabel12.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>TopCenter</value>
   </data>
-  <data name="xrLabel13.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="xrLabel13.Font" type="DevExpress.Drawing.DXFont, DevExpress.Drawing.v23.2">
     <value>Times New Roman, 9pt</value>
   </data>
-  <data name="xrLabel13.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrLabel13.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>503.083435, 115.458328</value>
   </data>
   <data name="xrLabel13.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -357,13 +358,13 @@
   <data name="xrLabel13.Text" xml:space="preserve">
     <value>Credit</value>
   </data>
-  <data name="xrLabel13.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="xrLabel13.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>TopCenter</value>
   </data>
-  <data name="xrLabel14.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="xrLabel14.Font" type="DevExpress.Drawing.DXFont, DevExpress.Drawing.v23.2">
     <value>Times New Roman, 9pt</value>
   </data>
-  <data name="xrLabel14.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrLabel14.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>599.9585, 115.458328</value>
   </data>
   <data name="xrLabel14.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -372,13 +373,13 @@
   <data name="xrLabel14.Text" xml:space="preserve">
     <value>Opening Balance</value>
   </data>
-  <data name="xrLabel14.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="xrLabel14.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>TopCenter</value>
   </data>
-  <data name="xrLabel15.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="xrLabel15.Font" type="DevExpress.Drawing.DXFont, DevExpress.Drawing.v23.2">
     <value>Times New Roman, 9pt</value>
   </data>
-  <data name="xrLabel15.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrLabel15.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>8.375054, 115.458313</value>
   </data>
   <data name="xrLabel15.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -387,22 +388,22 @@
   <data name="xrLabel15.Text" xml:space="preserve">
     <value>S/N</value>
   </data>
-  <data name="xrLabel18.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="xrLabel18.Font" type="DevExpress.Drawing.DXFont, DevExpress.Drawing.v23.2">
     <value>SimSun-ExtB, 11pt, style=Bold</value>
   </data>
-  <data name="xrLabel18.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrLabel18.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>248.979126, 60.458374</value>
   </data>
   <data name="xrLabel18.SizeF" type="System.Drawing.SizeF, System.Drawing">
     <value>298.9583, 23</value>
   </data>
-  <data name="xrLabel18.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="xrLabel18.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>TopCenter</value>
   </data>
-  <data name="xrLabel17.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="xrLabel17.Font" type="DevExpress.Drawing.DXFont, DevExpress.Drawing.v23.2">
     <value>SimSun-ExtB, 16pt, style=Bold</value>
   </data>
-  <data name="xrLabel17.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrLabel17.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>170.854126, 19.4583569</value>
   </data>
   <data name="xrLabel17.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -411,7 +412,7 @@
   <data name="xrLabel17.Text" xml:space="preserve">
     <value>General Account Reconciliation</value>
   </data>
-  <data name="xrLabel17.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="xrLabel17.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>TopCenter</value>
   </data>
   <data name="xrPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -520,7 +521,7 @@
         XyZtfxHcMfh6jWiA+PcQ8/TNMfYU67JkT7H8XUUX9kKLTxABAQA7
 </value>
   </data>
-  <data name="xrPictureBox1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrPictureBox1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>8.375056, 19.4583569</value>
   </data>
   <data name="xrPictureBox1.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -529,13 +530,13 @@
   <data name="TopMargin.HeightF" type="System.Single, mscorlib">
     <value>145.124985</value>
   </data>
-  <data name="TopMargin.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="TopMargin.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>TopLeft</value>
   </data>
   <data name="xrPageInfo1.Format" xml:space="preserve">
     <value>Page {0} of {1}</value>
   </data>
-  <data name="xrPageInfo1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v22.1">
+  <data name="xrPageInfo1.LocationFloat" type="DevExpress.Utils.PointFloat, DevExpress.Data.v23.2">
     <value>648.0415, 10.0000067</value>
   </data>
   <data name="xrPageInfo1.SizeF" type="System.Drawing.SizeF, System.Drawing">
@@ -544,7 +545,7 @@
   <data name="BottomMargin.HeightF" type="System.Single, mscorlib">
     <value>40.54165</value>
   </data>
-  <data name="BottomMargin.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v22.1">
+  <data name="BottomMargin.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Data.v23.2">
     <value>TopLeft</value>
   </data>
   <metadata name="dsTransaction1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -556,7 +557,7 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="$this.Margins" type="System.Drawing.Printing.Margins, System.Drawing">
+  <data name="$this.Margins" type="DevExpress.Drawing.DXMargins, DevExpress.Drawing.v23.2">
     <value>100, 16, 145, 41</value>
   </data>
 </root>

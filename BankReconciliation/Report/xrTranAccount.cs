@@ -21,7 +21,7 @@ namespace BankReconciliation.Report
             xrLabel16.BeforePrint += xrLabel16_BeforePrint;
         }
 
-        void xrLabel16_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        void xrLabel16_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             debit = Convert.ToDouble(xrSummaryDr.Summary.GetResult());
             closebal = Convert.ToDouble(xrCloseBal.Summary.GetResult());
@@ -42,7 +42,7 @@ namespace BankReconciliation.Report
 
         }
 
-        private void xrTranAccount_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void xrTranAccount_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             // Create a data binding object.
             XRBinding binding = new XRBinding("Text", null, "ViewTransactionPostCollectionBank.Dr");

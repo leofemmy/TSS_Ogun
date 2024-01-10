@@ -48,7 +48,7 @@ namespace BankReconciliation.Report
             Cursor.Current = Cursors.Hand;
         }
 
-        void xrLabel1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        void xrLabel1_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             xrLabel1.ForeColor = Color.Navy;
 

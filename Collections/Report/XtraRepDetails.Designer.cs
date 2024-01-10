@@ -114,7 +114,7 @@
             // 
             this.xrLabel7.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.calculatedField1", "Date Receipt Created:{0:dddd, dd MMMM, yyyy}")});
-            this.xrLabel7.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F);
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(111.4583F, 139.2083F);
             this.xrLabel7.Name = "xrLabel7";
             this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -140,7 +140,7 @@
             // 
             // xrLabel3
             // 
-            this.xrLabel3.Font = new System.Drawing.Font("Times New Roman", 13F);
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Times New Roman", 13F);
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(221.875F, 97.00001F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -253,7 +253,7 @@
             // 
             this.xrLabel9.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.calculatedStationCode")});
-            this.xrLabel9.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Underline);
+            this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F, DevExpress.Drawing.DXFontStyle.Underline);
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(29.16667F, 10.00001F);
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -336,7 +336,7 @@
             this.DataMember = "tblCollectionReport";
             this.DataSource = this.dataSet11;
             this.FilterString = "[calculatedField1] = ?paramDate";
-            this.Margins = new System.Drawing.Printing.Margins(100, 77, 216, 48);
+            this.Margins = new DevExpress.Drawing.DXMargins(100, 77, 216, 48);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.paramDate});
             this.Version = "11.2";

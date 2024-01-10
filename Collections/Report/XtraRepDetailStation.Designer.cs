@@ -87,7 +87,7 @@
             // 
             this.xrLabel13.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.StationName")});
-            this.xrLabel13.Font = new System.Drawing.Font("SansSerif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("SansSerif", 6.75F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(2)))});
             this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(820.8333F, 0F);
             this.xrLabel13.Name = "xrLabel13";
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -101,7 +101,7 @@
             // 
             this.xrLabel7.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.Channel")});
-            this.xrLabel7.Font = new System.Drawing.Font("SansSerif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.xrLabel7.Font = new DevExpress.Drawing.DXFont("SansSerif", 6.75F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(2)))});
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(8.00001F, 1.375008F);
             this.xrLabel7.Name = "xrLabel7";
             this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -117,7 +117,7 @@
             // 
             this.xrLabel5.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.BranchName")});
-            this.xrLabel5.Font = new System.Drawing.Font("SansSerif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.xrLabel5.Font = new DevExpress.Drawing.DXFont("SansSerif", 6.75F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(2)))});
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(706.25F, 0F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -131,7 +131,7 @@
             // 
             this.xrLabel4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.BankName")});
-            this.xrLabel4.Font = new System.Drawing.Font("SansSerif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("SansSerif", 6.75F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(2)))});
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(552.0833F, 0F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -145,7 +145,7 @@
             // 
             this.xrLabel3.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.AgencyName")});
-            this.xrLabel3.Font = new System.Drawing.Font("SansSerif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("SansSerif", 6.75F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(2)))});
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(313.5417F, 1.375008F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -157,7 +157,7 @@
             // 
             this.xrLabel2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.PaymentDate", "{0:dd/MM/yyyy}")});
-            this.xrLabel2.Font = new System.Drawing.Font("SansSerif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("SansSerif", 6.75F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(2)))});
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(225.625F, 0F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -171,7 +171,7 @@
             // 
             this.xrLabel1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.PaymentRefNumber")});
-            this.xrLabel1.Font = new System.Drawing.Font("SansSerif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("SansSerif", 6.75F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(2)))});
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(32.91667F, 0F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -210,7 +210,7 @@
             // 
             // xrLabel15
             // 
-            this.xrLabel15.Font = new System.Drawing.Font("Times New Roman", 13F);
+            this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Times New Roman", 13F);
             this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(273.9583F, 15.62502F);
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -380,7 +380,7 @@
             // 
             this.xrLabel18.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.Amount", "{0:n2}")});
-            this.xrLabel18.Font = new System.Drawing.Font("SansSerif", 6F);
+            this.xrLabel18.Font = new DevExpress.Drawing.DXFont("SansSerif", 6F);
             this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(470.8333F, 1.375008F);
             this.xrLabel18.Name = "xrLabel18";
             this.xrLabel18.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -411,7 +411,7 @@
             this.DataSource = this.dataSet11;
             this.FilterString = "[StationCode] = ?paramStationCode And [calculatedField1] = ?paramDate";
             this.Landscape = true;
-            this.Margins = new System.Drawing.Printing.Margins(100, 100, 157, 38);
+            this.Margins = new DevExpress.Drawing.DXMargins(100, 100, 157, 38);
             this.PageHeight = 850;
             this.PageWidth = 1100;
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {

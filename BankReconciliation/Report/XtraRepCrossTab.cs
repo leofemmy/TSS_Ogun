@@ -8,7 +8,7 @@
 
         }
 
-        private void XtraRepCrossTab_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void XtraRepCrossTab_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             //     fieldCategoryID.FilterValues.Clear()
             //fieldCategoryID.FilterValues.FilterType = DevExpress.Data.PivotGrid.PivotFilterType.Included

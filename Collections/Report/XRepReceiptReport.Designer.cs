@@ -126,7 +126,7 @@ namespace Collection.Report
             // 
             // xrLabel12
             // 
-            this.xrLabel12.Font = new System.Drawing.Font("Trebuchet MS", 8F, System.Drawing.FontStyle.Bold);
+            this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Trebuchet MS", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(93.75F, 27.08333F);
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -154,7 +154,7 @@ namespace Collection.Report
             // 
             // xrLabel9
             // 
-            this.xrLabel9.Font = new System.Drawing.Font("Trebuchet MS", 10.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Trebuchet MS", 10.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(93.75F, 2.083333F);
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -179,7 +179,7 @@ namespace Collection.Report
             // 
             // xrLabel7
             // 
-            this.xrLabel7.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
+            this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Trebuchet MS", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 10.00001F);
             this.xrLabel7.Name = "xrLabel7";
             this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -189,7 +189,7 @@ namespace Collection.Report
             // 
             // xrLabel6
             // 
-            this.xrLabel6.Font = new System.Drawing.Font("Trebuchet MS", 8F, System.Drawing.FontStyle.Bold);
+            this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Trebuchet MS", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(198.8333F, 45.70834F);
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -199,7 +199,7 @@ namespace Collection.Report
             // 
             // xrLabel5
             // 
-            this.xrLabel5.Font = new System.Drawing.Font("Trebuchet MS", 8F, System.Drawing.FontStyle.Bold);
+            this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Trebuchet MS", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 45.70834F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -211,7 +211,7 @@ namespace Collection.Report
             // 
             this.xrLabel2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.StationName")});
-            this.xrLabel2.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Trebuchet MS", 10F);
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(198.8333F, 10.00001F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -236,7 +236,7 @@ namespace Collection.Report
             // 
             // xrLabel11
             // 
-            this.xrLabel11.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
+            this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Trebuchet MS", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 0F);
             this.xrLabel11.Name = "xrLabel11";
             this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -248,7 +248,7 @@ namespace Collection.Report
             // 
             this.xrLabel4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.EReceipts")});
-            this.xrLabel4.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Trebuchet MS", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(198.8333F, 0F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -274,7 +274,7 @@ namespace Collection.Report
             // 
             this.xrLabel10.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.calculatedField1")});
-            this.xrLabel10.Font = new System.Drawing.Font("Trebuchet MS", 9F);
+            this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Trebuchet MS", 9F);
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(198.8333F, 0F);
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -289,7 +289,7 @@ namespace Collection.Report
             // 
             this.xrLabel8.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "tblCollectionReport.calculatedField1", "{0:dd/MM/yyyy}")});
-            this.xrLabel8.Font = new System.Drawing.Font("Trebuchet MS", 9F);
+            this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Trebuchet MS", 9F);
             this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 0F);
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -312,7 +312,7 @@ namespace Collection.Report
             this.DataAdapter = this.tblCollectionReportTableAdapter;
             this.DataMember = "tblCollectionReport";
             this.DataSource = this.dataSet11;
-            this.Margins = new System.Drawing.Printing.Margins(100, 100, 35, 4);
+            this.Margins = new DevExpress.Drawing.DXMargins(100, 100, 35, 4);
             this.Version = "15.1";
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

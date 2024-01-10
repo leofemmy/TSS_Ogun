@@ -387,7 +387,7 @@
             this.Title.BorderColor = System.Drawing.Color.Black;
             this.Title.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Title.BorderWidth = 1F;
-            this.Title.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold);
+            this.Title.Font = new DevExpress.Drawing.DXFont("Times New Roman", 20F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Title.ForeColor = System.Drawing.Color.Maroon;
             this.Title.Name = "Title";
             // 
@@ -397,7 +397,7 @@
             this.FieldCaption.BorderColor = System.Drawing.Color.Black;
             this.FieldCaption.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.FieldCaption.BorderWidth = 1F;
-            this.FieldCaption.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.FieldCaption.Font = new DevExpress.Drawing.DXFont("Arial", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.FieldCaption.ForeColor = System.Drawing.Color.Maroon;
             this.FieldCaption.Name = "FieldCaption";
             // 
@@ -407,7 +407,7 @@
             this.PageInfo.BorderColor = System.Drawing.Color.Black;
             this.PageInfo.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.PageInfo.BorderWidth = 1F;
-            this.PageInfo.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.PageInfo.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.PageInfo.ForeColor = System.Drawing.Color.Black;
             this.PageInfo.Name = "PageInfo";
             // 
@@ -417,7 +417,7 @@
             this.DataField.BorderColor = System.Drawing.Color.Black;
             this.DataField.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.DataField.BorderWidth = 1F;
-            this.DataField.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.DataField.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F);
             this.DataField.ForeColor = System.Drawing.Color.Black;
             this.DataField.Name = "DataField";
             this.DataField.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -457,7 +457,7 @@
             this.ComponentStorage.Add(this.objectDataSource1);
             this.DataSource = this.objectDataSource1;
             this.Landscape = true;
-            this.Margins = new System.Drawing.Printing.Margins(100, 79, 100, 20);
+            this.Margins = new DevExpress.Drawing.DXMargins(100, 79, 100, 20);
             this.PageHeight = 850;
             this.PageWidth = 1100;
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {

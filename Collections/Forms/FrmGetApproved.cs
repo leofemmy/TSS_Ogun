@@ -195,7 +195,7 @@ namespace Collection.Forms
                                 //    sqlCommand.ExecuteNonQuery();
                                 //}
 
-                                string query = String.Format("DELETE  FROM Receipt.tblReceipt where SentBy='{0}')", Program.UserID);
+                                string query = String.Format("DELETE  FROM Receipt.tblReceipt where SentBy='{0}'", Program.UserID);
 
                                 using (SqlCommand sqlCommand1 = new SqlCommand(query, db, transaction))
                                 {
@@ -577,7 +577,7 @@ namespace Collection.Forms
                 ++j;
             }
 
-            Program.IsReprint = false;
+            Program.IsReprint = true;
             try
             {
                 SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
@@ -748,7 +748,7 @@ namespace Collection.Forms
                             {
                                 string strFormat = null;
 
-                                query = string.Format("SELECT  [ID] , [Provider] , [Channel] , tblCollectionReport.PaymentRefNumber , [DepositSlipNumber] ,CONVERT(VARCHAR, CONVERT(DATE, [PaymentDate])) AS PaymentDate , [PayerID] , UPPER([PayerName]) AS [PayerName] , [Amount] , [PaymentMethod] ,[ChequeNumber] , [ChequeValueDate] , [ChequeStatus] ,[DateChequeReturned] ,[TelephoneNumber] ,  [ReceiptNo] , [ReceiptDate] , UPPER([PayerAddress]) AS [PayerAddress] ,[User] ,   [RevenueCode] , tblCollectionReport.Description , [ChequeBankCode] ,[ChequeBankName] ,   [AgencyName] , [AgencyCode] , [BankCode] , [BankName] , [BranchCode] ,[BranchName] , [ZoneCode] , [ZoneName] ,  [Username] ,[AmountWords] , [EReceipts] , [EReceiptsDate] ,[GeneratedBy] ,[StationCode] ,ControlNumber ,ControlNumberDate , ( SELECT TOP 1 StationName  FROM  Receipt.tblStation  WHERE     tblStation.StationCode = Collection.tblCollectionReport.[StationCode]) AS StationName, Symbol , Surfix , tblCurrency.Description AS prefix FROM    Collection.tblCollectionReport INNER JOIN Reconciliation.tblCurrency ON tblCurrency.CurrencyCode = tblCollectionReport.CurrencyCode LEFT JOIN Receipt.tblReprintedReceipts ON tblCollectionReport.PaymentRefNumber = tblReprintedReceipts.PaymentRefNumber WHERE  tblCollectionReport.PaymentRefNumber IN ({0}) ORDER BY Collection.tblCollectionReport.EReceipts", values);
+                                query = string.Format("SELECT  [ID] , [Provider] , [Channel] , tblCollectionReport.PaymentRefNumber , [DepositSlipNumber] ,CONVERT(VARCHAR, CONVERT(DATE, [PaymentDate])) AS PaymentDate , [PayerID] , UPPER([PayerName]) AS [PayerName] , [Amount] , [PaymentMethod] ,[ChequeNumber] , [ChequeValueDate] , [ChequeStatus] ,[DateChequeReturned] ,[TelephoneNumber] ,  [ReceiptNo] , [ReceiptDate] , UPPER([PayerAddress]) AS [PayerAddress] ,[User] ,   [RevenueCode] , tblCollectionReport.Description , [ChequeBankCode] ,[ChequeBankName] ,   [AgencyName] , [AgencyCode] , [BankCode] , [BankName] , [BranchCode] ,[BranchName] , [ZoneCode] , [ZoneName] ,  [Username] ,[AmountWords] , [EReceipts] , [EReceiptsDate] ,[GeneratedBy] ,[StationCode] ,ControlNumber ,ControlNumberDate ,PaymentPeriod, ( SELECT TOP 1 StationName  FROM  Receipt.tblStation  WHERE     tblStation.StationCode = Collection.tblCollectionReport.[StationCode]) AS StationName, Symbol , Surfix , tblCurrency.Description AS prefix FROM    Collection.tblCollectionReport INNER JOIN Reconciliation.tblCurrency ON tblCurrency.CurrencyCode = tblCollectionReport.CurrencyCode LEFT JOIN Receipt.tblReprintedReceipts ON tblCollectionReport.PaymentRefNumber = tblReprintedReceipts.PaymentRefNumber WHERE  tblCollectionReport.PaymentRefNumber IN ({0}) ORDER BY Collection.tblCollectionReport.EReceipts", values);
 
                                 DataTable Dt = dds.Tables.Add("CollectionReportTable");
                                 ada = new SqlDataAdapter(query, Logic.ConnectionString);

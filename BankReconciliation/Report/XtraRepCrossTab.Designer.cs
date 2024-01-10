@@ -58,10 +58,10 @@
             // 
             // xrPivotGrid1
             // 
-            this.xrPivotGrid1.Appearance.Cell.Font = new System.Drawing.Font("Arial", 7F);
-            this.xrPivotGrid1.Appearance.CustomTotalCell.Font = new System.Drawing.Font("Times New Roman", 8F);
-            this.xrPivotGrid1.Appearance.FieldHeader.Font = new System.Drawing.Font("Times New Roman", 8F);
-            this.xrPivotGrid1.Appearance.FieldValue.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrPivotGrid1.Appearance.Cell.Font = new DevExpress.Drawing.DXFont("Arial", 7F);
+            this.xrPivotGrid1.Appearance.CustomTotalCell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
+            this.xrPivotGrid1.Appearance.FieldHeader.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
+            this.xrPivotGrid1.Appearance.FieldValue.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
             this.xrPivotGrid1.DataAdapter = this.viewIGRAccountDetailsTableAdapter;
             this.xrPivotGrid1.DataMember = "ViewIGRAccountDetails";
             this.xrPivotGrid1.DataSource = this.dsTransaction1;
@@ -150,7 +150,7 @@
             // 
             // xrLabel2
             // 
-            this.xrLabel2.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Trebuchet MS", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(47.91667F, 89.16668F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -161,7 +161,7 @@
             // 
             // xrLabel1
             // 
-            this.xrLabel1.Font = new System.Drawing.Font("Trebuchet MS", 11F, System.Drawing.FontStyle.Bold);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Trebuchet MS", 11F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(303.125F, 55.83334F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -193,14 +193,14 @@
             this.TopMargin,
             this.BottomMargin});
             this.Landscape = true;
-            this.Margins = new System.Drawing.Printing.Margins(10, 10, 122, 8);
+            this.Margins = new DevExpress.Drawing.DXMargins(10, 10, 122, 8);
             this.PageHeight = 850;
             this.PageWidth = 1100;
-            this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
+            this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.Custom;
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.paramPeriod});
             this.Version = "14.2";
-            this.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.XtraRepCrossTab_BeforePrint);
+            this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.XtraRepCrossTab_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this.dsTransaction1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

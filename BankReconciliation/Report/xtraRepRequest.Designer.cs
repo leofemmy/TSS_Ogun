@@ -90,7 +90,7 @@
             // 
             this.xrLabel6.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "Description")});
-            this.xrLabel6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 0F);
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -124,7 +124,7 @@
             // 
             // xrLabel2
             // 
-            this.xrLabel2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 9.916718F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -180,7 +180,7 @@
             // 
             this.xrLabel5.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "calculatedField2")});
-            this.xrLabel5.Font = new System.Drawing.Font("Tempus Sans ITC", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Tempus Sans ITC", 9F, ((DevExpress.Drawing.DXFontStyle)((DevExpress.Drawing.DXFontStyle.Bold | DevExpress.Drawing.DXFontStyle.Italic))));
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(43.00001F, 0F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -211,7 +211,7 @@
             // 
             // xrLine3
             // 
-            this.xrLine3.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.xrLine3.LineStyle = DevExpress.Drawing.DXDashStyle.Dash;
             this.xrLine3.LineWidth = 2F;
             this.xrLine3.LocationFloat = new DevExpress.Utils.PointFloat(342F, 0F);
             this.xrLine3.Name = "xrLine3";
@@ -219,7 +219,7 @@
             // 
             // xrLine4
             // 
-            this.xrLine4.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.xrLine4.LineStyle = DevExpress.Drawing.DXDashStyle.Dash;
             this.xrLine4.LineWidth = 2F;
             this.xrLine4.LocationFloat = new DevExpress.Utils.PointFloat(342F, 35.41667F);
             this.xrLine4.Name = "xrLine4";
@@ -266,7 +266,7 @@
             // 
             // xrLine2
             // 
-            this.xrLine2.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.xrLine2.LineStyle = DevExpress.Drawing.DXDashStyle.Dash;
             this.xrLine2.LineWidth = 2F;
             this.xrLine2.LocationFloat = new DevExpress.Utils.PointFloat(342F, 36.99999F);
             this.xrLine2.Name = "xrLine2";
@@ -274,7 +274,7 @@
             // 
             // xrLine1
             // 
-            this.xrLine1.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.xrLine1.LineStyle = DevExpress.Drawing.DXDashStyle.Dash;
             this.xrLine1.LineWidth = 2F;
             this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(342F, 0F);
             this.xrLine1.Name = "xrLine1";
@@ -282,7 +282,7 @@
             // 
             // xrLabel17
             // 
-            this.xrLabel17.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.xrLabel17.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(136.0417F, 62.29165F);
             this.xrLabel17.Multiline = true;
             this.xrLabel17.Name = "xrLabel17";
@@ -295,7 +295,7 @@
             // 
             // xrLabel9
             // 
-            this.xrLabel9.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 14F);
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -322,7 +322,7 @@
             this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("parameter1", null, "PostingRequestID"));
             this.xrSubreport1.ReportSource = new BankReconciliation.Report.XtraReport1();
             this.xrSubreport1.SizeF = new System.Drawing.SizeF(240.625F, 69.875F);
-            this.xrSubreport1.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrSubreport1_BeforePrint);
+            this.xrSubreport1.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.xrSubreport1_BeforePrint);
             // 
             // calculatedField3
             // 
@@ -398,7 +398,7 @@
             // 
             // xrRichText1
             // 
-            this.xrRichText1.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.xrRichText1.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
             this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(151.0417F, 99.45831F);
             this.xrRichText1.Name = "xrRichText1";
             this.xrRichText1.SerializableRtfString = resources.GetString("xrRichText1.SerializableRtfString");
@@ -472,7 +472,7 @@
             this.calculatedField4,
             this.calculatedField5});
             this.DataSource = this.bindingSource1;
-            this.Margins = new System.Drawing.Printing.Margins(100, 100, 7, 75);
+            this.Margins = new DevExpress.Drawing.DXMargins(100, 100, 7, 75);
             this.Version = "18.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();

@@ -24,7 +24,7 @@ namespace Collection.Report
 
         }
 
-        void xrLabel9_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        void xrLabel9_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             xrLabel9.ForeColor = Color.Navy;
 

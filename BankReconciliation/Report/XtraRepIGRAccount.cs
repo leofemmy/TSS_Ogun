@@ -7,7 +7,7 @@
             InitializeComponent();
         }
 
-        private void XtraRepIGRAccount_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void XtraRepIGRAccount_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             //XRLabel lblcr = new XRLabel();
             //XRBinding binding = new XRBinding("Text", null, "ViewIGRAccountDetails.Dr");

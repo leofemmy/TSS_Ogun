@@ -176,7 +176,7 @@
             this.DataAdapter = this.viewConsolidatedSummIGRTableAdapter;
             this.DataMember = "ViewConsolidatedSummIGR";
             this.DataSource = this.dsTransaction1;
-            this.Margins = new System.Drawing.Printing.Margins(100, 100, 100, 16);
+            this.Margins = new DevExpress.Drawing.DXMargins(100, 100, 100, 16);
             this.Version = "11.2";
             ((System.ComponentModel.ISupportInitialize)(this.dsTransaction1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

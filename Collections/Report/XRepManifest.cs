@@ -12,7 +12,7 @@ namespace Collection.Report
             this.BeforePrint += XRepManifest_BeforePrint;
         }
 
-        private void XRepManifest_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void XRepManifest_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             var fullPath = System.IO.Path.Combine(System.Windows.Forms.Application.StartupPath, logoPath);
             if (!string.IsNullOrWhiteSpace(fullPath) && System.IO.File.Exists(fullPath))

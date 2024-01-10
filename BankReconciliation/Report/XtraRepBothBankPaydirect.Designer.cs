@@ -175,7 +175,7 @@
             // 
             // xrLabel11
             // 
-            this.xrLabel11.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(0F, 94.54164F);
             this.xrLabel11.Name = "xrLabel11";
             this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -304,7 +304,7 @@
             this.DataAdapter = this.viewBothBankPayDirectTableAdapter;
             this.DataMember = "ViewBothBankPayDirect";
             this.DataSource = this.dsTransaction1;
-            this.Margins = new System.Drawing.Printing.Margins(100, 100, 52, 50);
+            this.Margins = new DevExpress.Drawing.DXMargins(100, 100, 52, 50);
             this.Version = "13.2";
             ((System.ComponentModel.ISupportInitialize)(this.dsTransaction1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

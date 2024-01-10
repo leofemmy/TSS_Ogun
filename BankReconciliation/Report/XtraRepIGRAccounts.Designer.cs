@@ -130,7 +130,7 @@
             // 
             this.xrLabel8.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewIGRAccount.calTransferTo", "{0:n2}")});
-            this.xrLabel8.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
             this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(786.0834F, 0F);
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -159,7 +159,7 @@
             // 
             this.xrLabel7.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewIGRAccount.calPrevCredit", "{0:n2}")});
-            this.xrLabel7.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(686.0833F, 0F);
             this.xrLabel7.Name = "xrLabel7";
             this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -173,7 +173,7 @@
             // 
             this.xrLabel6.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewIGRAccount.calCredit", "{0:n2}")});
-            this.xrLabel6.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(587.125F, 0F);
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -187,7 +187,7 @@
             // 
             this.xrLabel5.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewIGRAccount.calCollection", "{0:n2}")});
-            this.xrLabel5.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(390.2917F, 0F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -201,7 +201,7 @@
             // 
             this.xrLabel4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewIGRAccount.calCheque", "{0:n2}")});
-            this.xrLabel4.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(290.8333F, 0F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -215,7 +215,7 @@
             // 
             this.xrLabel3.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewIGRAccount.calBank", "{0:n2}")});
-            this.xrLabel3.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(190.8333F, 0F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -229,7 +229,7 @@
             // 
             this.xrLabel1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewIGRAccount.BankName")});
-            this.xrLabel1.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(28.12497F, 0F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -359,7 +359,7 @@
             // 
             this.xrLabel26.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewIGRAccount.calTransferTo")});
-            this.xrLabel26.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrLabel26.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
             this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(791.6666F, 12F);
             this.xrLabel26.Name = "xrLabel26";
             this.xrLabel26.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -377,7 +377,7 @@
             // 
             this.xrLabel25.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewIGRAccount.calPrevCredit")});
-            this.xrLabel25.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrLabel25.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
             this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(687.125F, 12F);
             this.xrLabel25.Name = "xrLabel25";
             this.xrLabel25.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -395,7 +395,7 @@
             // 
             this.xrLabel24.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewIGRAccount.calCredit")});
-            this.xrLabel24.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrLabel24.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
             this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(587.125F, 12F);
             this.xrLabel24.Name = "xrLabel24";
             this.xrLabel24.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -413,7 +413,7 @@
             // 
             this.xrLabel23.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewIGRAccount.calTransferFrom")});
-            this.xrLabel23.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrLabel23.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
             this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(487.125F, 12F);
             this.xrLabel23.Name = "xrLabel23";
             this.xrLabel23.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -431,7 +431,7 @@
             // 
             this.xrLabel22.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewIGRAccount.calCollection")});
-            this.xrLabel22.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrLabel22.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
             this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(390.2917F, 12F);
             this.xrLabel22.Name = "xrLabel22";
             this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -449,7 +449,7 @@
             // 
             this.xrLabel21.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewIGRAccount.calCheque")});
-            this.xrLabel21.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrLabel21.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
             this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(290.8333F, 12.00002F);
             this.xrLabel21.Name = "xrLabel21";
             this.xrLabel21.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -467,7 +467,7 @@
             // 
             this.xrLabel20.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewIGRAccount.calBank")});
-            this.xrLabel20.Font = new System.Drawing.Font("Times New Roman", 8F);
+            this.xrLabel20.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
             this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(190.8333F, 12.00002F);
             this.xrLabel20.Name = "xrLabel20";
             this.xrLabel20.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -591,7 +591,7 @@
             // 
             // xrLabel27
             // 
-            this.xrLabel27.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.xrLabel27.Font = new DevExpress.Drawing.DXFont("Tahoma", 12F);
             this.xrLabel27.LocationFloat = new DevExpress.Utils.PointFloat(136.3333F, 23.00002F);
             this.xrLabel27.Name = "xrLabel27";
             this.xrLabel27.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -602,7 +602,7 @@
             // 
             // xrLabel28
             // 
-            this.xrLabel28.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.xrLabel28.Font = new DevExpress.Drawing.DXFont("Tahoma", 12F);
             this.xrLabel28.LocationFloat = new DevExpress.Utils.PointFloat(108.3333F, 62.45832F);
             this.xrLabel28.Name = "xrLabel28";
             this.xrLabel28.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -679,7 +679,7 @@
             this.DataMember = "ViewIGRAccount";
             this.DataSource = this.dsTransaction1;
             this.Landscape = true;
-            this.Margins = new System.Drawing.Printing.Margins(100, 100, 96, 24);
+            this.Margins = new DevExpress.Drawing.DXMargins(100, 100, 96, 24);
             this.PageHeight = 850;
             this.PageWidth = 1100;
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {

@@ -151,7 +151,7 @@ namespace BankReconciliation.Report
             // 
             // xrLabel18
             // 
-            this.xrLabel18.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.xrLabel18.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(172.9167F, 42.00004F);
             this.xrLabel18.Name = "xrLabel18";
             this.xrLabel18.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -162,7 +162,7 @@ namespace BankReconciliation.Report
             // 
             // xrLabel1
             // 
-            this.xrLabel1.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Times New Roman", 11F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(64.5833F, 10.00001F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -214,7 +214,7 @@ namespace BankReconciliation.Report
             // 
             // xrLabel15
             // 
-            this.xrLabel15.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(461.4583F, 74.00001F);
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -224,7 +224,7 @@ namespace BankReconciliation.Report
             // 
             // xrLabel14
             // 
-            this.xrLabel14.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel14.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(302.0833F, 74.00001F);
             this.xrLabel14.Name = "xrLabel14";
             this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -234,7 +234,7 @@ namespace BankReconciliation.Report
             // 
             // xrLabel13
             // 
-            this.xrLabel13.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(25F, 74.00001F);
             this.xrLabel13.Name = "xrLabel13";
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -244,7 +244,7 @@ namespace BankReconciliation.Report
             // 
             // xrLabel11
             // 
-            this.xrLabel11.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(15.62494F, 39.24999F);
             this.xrLabel11.Name = "xrLabel11";
             this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -254,7 +254,7 @@ namespace BankReconciliation.Report
             // 
             // xrLabel8
             // 
-            this.xrLabel8.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(25F, 0F);
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -264,7 +264,7 @@ namespace BankReconciliation.Report
             // 
             // xrLabel7
             // 
-            this.xrLabel7.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(349.625F, 39.24999F);
             this.xrLabel7.Name = "xrLabel7";
             this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -303,7 +303,7 @@ namespace BankReconciliation.Report
             // 
             // xrDiffAmt
             // 
-            this.xrDiffAmt.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.xrDiffAmt.Font = new DevExpress.Drawing.DXFont("Times New Roman", 11F);
             this.xrDiffAmt.ForeColor = System.Drawing.Color.Red;
             this.xrDiffAmt.LocationFloat = new DevExpress.Utils.PointFloat(451.0416F, 110.125F);
             this.xrDiffAmt.Name = "xrDiffAmt";
@@ -314,7 +314,7 @@ namespace BankReconciliation.Report
             // 
             // xrLabel17
             // 
-            this.xrLabel17.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.xrLabel17.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(4.124991F, 110.125F);
             this.xrLabel17.Name = "xrLabel17";
             this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -324,7 +324,7 @@ namespace BankReconciliation.Report
             // 
             // xrLabel10
             // 
-            this.xrLabel10.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(4.124991F, 54.12496F);
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -334,7 +334,7 @@ namespace BankReconciliation.Report
             // 
             // xrLabel9
             // 
-            this.xrLabel9.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(4.124896F, 77.12498F);
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -366,7 +366,7 @@ namespace BankReconciliation.Report
             // 
             // xrAmt
             // 
-            this.xrAmt.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.xrAmt.Font = new DevExpress.Drawing.DXFont("Times New Roman", 11F);
             this.xrAmt.LocationFloat = new DevExpress.Utils.PointFloat(451.0415F, 54.12499F);
             this.xrAmt.Name = "xrAmt";
             this.xrAmt.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -375,7 +375,7 @@ namespace BankReconciliation.Report
             // 
             // xrLabel16
             // 
-            this.xrLabel16.Font = new System.Drawing.Font("Times New Roman", 11F);
+            this.xrLabel16.Font = new DevExpress.Drawing.DXFont("Times New Roman", 11F);
             this.xrLabel16.ForeColor = System.Drawing.Color.Navy;
             this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(451.0416F, 77.12498F);
             this.xrLabel16.Name = "xrLabel16";
@@ -402,14 +402,14 @@ namespace BankReconciliation.Report
             // 
             // xrLine4
             // 
-            this.xrLine4.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.xrLine4.LineStyle = DevExpress.Drawing.DXDashStyle.Dash;
             this.xrLine4.LocationFloat = new DevExpress.Utils.PointFloat(433.4583F, 100.125F);
             this.xrLine4.Name = "xrLine4";
             this.xrLine4.SizeF = new System.Drawing.SizeF(195.875F, 9.375F);
             // 
             // xrLine5
             // 
-            this.xrLine5.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.xrLine5.LineStyle = DevExpress.Drawing.DXDashStyle.Dash;
             this.xrLine5.LocationFloat = new DevExpress.Utils.PointFloat(433.4583F, 134.0833F);
             this.xrLine5.Name = "xrLine5";
             this.xrLine5.SizeF = new System.Drawing.SizeF(195.875F, 9.375F);
@@ -476,7 +476,7 @@ namespace BankReconciliation.Report
             this.DataSource = this.dsTransaction1;
             this.FilterString = "[Period] Like Concat(\'%\', ?paramPeriod, \'%\') And [AccountNo] = ?paramAccount And " +
     "[IsRecordExit] = ?paramRecord And [IsPayDirect] = ?paramPayDirect";
-            this.Margins = new System.Drawing.Printing.Margins(100, 99, 50, 100);
+            this.Margins = new DevExpress.Drawing.DXMargins(100, 99, 50, 100);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.paramCloseDb,
             this.paramAccount,
@@ -484,7 +484,7 @@ namespace BankReconciliation.Report
             this.paramRecord,
             this.paramPayDirect});
             this.Version = "11.2";
-            this.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrTranAccount_BeforePrint);
+            this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.xrTranAccount_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this.dsTransaction1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

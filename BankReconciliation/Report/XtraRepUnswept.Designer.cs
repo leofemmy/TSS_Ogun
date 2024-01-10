@@ -270,7 +270,7 @@
             // 
             this.xrLabel2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewUnsweptTransaction.Periods")});
-            this.xrLabel2.Font = new System.Drawing.Font("Times New Roman", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F, ((DevExpress.Drawing.DXFontStyle)((DevExpress.Drawing.DXFontStyle.Bold | DevExpress.Drawing.DXFontStyle.Italic))));
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(2.458328F, 0F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -404,7 +404,7 @@
             this.DataAdapter = this.viewUnsweptTransactionTableAdapter1;
             this.DataMember = "ViewUnsweptTransaction";
             this.DataSource = this.tblTransactionPostingRequestViewPostBankStatment1;
-            this.Margins = new System.Drawing.Printing.Margins(100, 51, 100, 33);
+            this.Margins = new DevExpress.Drawing.DXMargins(100, 51, 100, 33);
             this.Version = "13.2";
             ((System.ComponentModel.ISupportInitialize)(this.tblTransactionPostingRequestViewPostBankStatment1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

@@ -284,7 +284,7 @@
             this.ComponentStorage.Add(this.objectDataSource1);
             this.ComponentStorage.Add(this.objectDataSource1);
             this.DataSource = this.objectDataSource1;
-            this.Margins = new System.Drawing.Printing.Margins(100, 100, 44, 38);
+            this.Margins = new DevExpress.Drawing.DXMargins(100, 100, 44, 38);
             this.Version = "14.2";
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

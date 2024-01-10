@@ -115,40 +115,40 @@ namespace Collection.Forms
             }
         }
 
-        private void loadPreview()
-        {
+        //private void loadPreview()
+        //{
 
-            try
-            {
-                // select format, encoding, an write the schema file
-                Format();
-                Encoding();
-                writeSchema();
-                //LoadAndDecryptTable();
-                // loads the first 500 rows from CSV file, and fills the
-                // DataGridView control.
-                Dt = LoadAndDecryptTable();
-                //this.dataGridView_preView.DataSource = Dt;
-                //this.gridControl1
-                gridControl1.DataSource = Dt.DefaultView;
-                gridView1.OptionsBehavior.Editable = false;
-                gridView1.BestFitColumns();
+        //    try
+        //    {
+        //        // select format, encoding, an write the schema file
+        //        Format();
+        //        Encoding();
+        //        writeSchema();
+        //        //LoadAndDecryptTable();
+        //        // loads the first 500 rows from CSV file, and fills the
+        //        // DataGridView control.
+        //        Dt = LoadAndDecryptTable();
+        //        //this.dataGridView_preView.DataSource = Dt;
+        //        //this.gridControl1
+        //        gridControl1.DataSource = Dt.DefaultView;
+        //        gridView1.OptionsBehavior.Editable = false;
+        //        gridView1.BestFitColumns();
 
-                // dt = LoadCSV().Tables[0];
-                // label4.Text = dt.Rows.Count + "Rows";
-                //gridControl1.DataSource = dt;
-                //gridControl1.DataMember = "csv";
+        //        // dt = LoadCSV().Tables[0];
+        //        // label4.Text = dt.Rows.Count + "Rows";
+        //        //gridControl1.DataSource = dt;
+        //        //gridControl1.DataMember = "csv";
 
-                //this.dataGridView_preView.DataSource = LoadCSV(500);
-                //this.dataGridView_preView.DataMember = "csv";
+        //        //this.dataGridView_preView.DataSource = LoadCSV(500);
+        //        //this.dataGridView_preView.DataMember = "csv";
 
-                //this.dataGridView_preView.DataMember = "csv";
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message, "Error - loadPreview", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        //        //this.dataGridView_preView.DataMember = "csv";
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        MessageBox.Show(e.Message, "Error - loadPreview", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
 
         public string //name (with extension) of file to import - property
          FileNevCSV
@@ -231,18 +231,18 @@ namespace Collection.Forms
             { }
         }
 
-        private DataTable LoadAndDecryptTable()
-        {
-            string fileContent = CryptorEngine.Decrypt(File.ReadAllText(txtFiletoLoad.Text), true);
-            //string fileContent = File.ReadAllText(txtFiletoLoad.Text);
-            string outfilename = Path.Combine(Path.GetTempPath(), "test.csv");
-            File.WriteAllText(outfilename, fileContent);
-            DataTable Dt = LoadCSV(outfilename).Tables[0];
-            File.Delete(outfilename);
+        //private DataTable LoadAndDecryptTable()
+        //{
+        //    //string fileContent = CryptorEngine.Decrypt(File.ReadAllText(txtFiletoLoad.Text), true);
+        //    ////string fileContent = File.ReadAllText(txtFiletoLoad.Text);
+        //    //string outfilename = Path.Combine(Path.GetTempPath(), "test.csv");
+        //    //File.WriteAllText(outfilename, fileContent);
+        //    //DataTable Dt = LoadCSV(outfilename).Tables[0];
+        //    //File.Delete(outfilename);
 
 
-            return Dt;
-        }
+        //    //return Dt;
+        //}
 
         public System.Data.DataSet LoadCSV()
         {
@@ -407,7 +407,7 @@ namespace Collection.Forms
             }
             else if (sender == bttnPreview)
             {
-                loadPreview();
+                //loadPreview();
 
             }
             else if (sender == bttnImport)

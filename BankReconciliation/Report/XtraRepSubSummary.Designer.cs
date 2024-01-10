@@ -182,7 +182,7 @@
             // xrLabel3
             // 
             this.xrLabel3.Dpi = 100F;
-            this.xrLabel3.Font = new System.Drawing.Font("Times New Roman", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Times New Roman", 11F, ((DevExpress.Drawing.DXFontStyle)((DevExpress.Drawing.DXFontStyle.Bold | DevExpress.Drawing.DXFontStyle.Italic))));
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(22.91667F, 3F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -250,7 +250,7 @@
             // xrLabel2
             // 
             this.xrLabel2.Dpi = 100F;
-            this.xrLabel2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 8.250014F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -302,7 +302,7 @@
             this.DataMember = "ViewSummaryIGRAccount";
             this.DataSource = this.dsTransaction1;
             this.FilterString = "[prevCredit] > 0 And [BatchCode] = ?parameter1";
-            this.Margins = new System.Drawing.Printing.Margins(100, 100, 9, 0);
+            this.Margins = new DevExpress.Drawing.DXMargins(100, 100, 9, 0);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.parameter1});
             this.Version = "16.1";

@@ -16,14 +16,14 @@ namespace Collection.Report
 
         }
 
-        void xrLabel43_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        void xrLabel43_BeforePrint(object sender, CancelEventArgs e)
         {
             string testrval = string.Format("<{0}><{1}><{2}>", this.GetCurrentColumnValue("PayerName").ToString(), string.Format("{0:n}", this.GetCurrentColumnValue("Amount")), this.GetCurrentColumnValue("EReceipts").ToString());
 
             xrLabel43.Text = testrval;
         }
 
-        private void XtraRepReceiptDelta_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void XtraRepReceiptDelta_BeforePrint(object sender, CancelEventArgs e)
         {
             SetTextWatermark((XtraRepReceiptDelta)sender);
         }

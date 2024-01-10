@@ -73,7 +73,7 @@
             // 
             this.xrLabel10.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewReconciliationCollectionReport.PaymentRefNumber")});
-            this.xrLabel10.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F);
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(204.1667F, 0F);
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -85,7 +85,7 @@
             // 
             this.xrLabel3.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewReconciliationCollectionReport.Amount", "{0:n2}")});
-            this.xrLabel3.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F);
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(513.5417F, 0.333341F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -99,7 +99,7 @@
             // 
             this.xrLabel2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewReconciliationCollectionReport.PaymentDate")});
-            this.xrLabel2.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F);
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(73.95834F, 0F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -111,7 +111,7 @@
             // 
             this.xrLabel1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewReconciliationCollectionReport.Period")});
-            this.xrLabel1.Font = new System.Drawing.Font("Times New Roman", 10F);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Times New Roman", 10F);
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 0F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -259,7 +259,7 @@
             // 
             // xrLine2
             // 
-            this.xrLine2.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.xrLine2.LineStyle = DevExpress.Drawing.DXDashStyle.Dash;
             this.xrLine2.LineWidth = 2;
             this.xrLine2.LocationFloat = new DevExpress.Utils.PointFloat(485.4166F, 0F);
             this.xrLine2.Name = "xrLine2";
@@ -267,7 +267,7 @@
             // 
             // xrLine1
             // 
-            this.xrLine1.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.xrLine1.LineStyle = DevExpress.Drawing.DXDashStyle.Dash;
             this.xrLine1.LineWidth = 2;
             this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(485.4166F, 29.50001F);
             this.xrLine1.Name = "xrLine1";
@@ -275,7 +275,7 @@
             // 
             // xrLabel9
             // 
-            this.xrLabel9.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold);
+            this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 10.00001F);
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -293,7 +293,7 @@
             this.DataAdapter = this.viewReconciliationCollectionReportTableAdapter;
             this.DataMember = "ViewReconciliationCollectionReport";
             this.DataSource = this.dsTransaction1;
-            this.Margins = new System.Drawing.Printing.Margins(100, 100, 149, 60);
+            this.Margins = new DevExpress.Drawing.DXMargins(100, 100, 149, 60);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.paramBankCode,
             this.paramPeriod,

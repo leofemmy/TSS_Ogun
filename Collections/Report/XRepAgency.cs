@@ -12,7 +12,7 @@ namespace Collection.Report
             InitializeComponent();
         }
 
-        private void xrLabel1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void xrLabel1_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             xrLabel1.ForeColor = Color.Blue;
 

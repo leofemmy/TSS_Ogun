@@ -1,10 +1,16 @@
 using Collection.Classes;
+using DevExpress.ClipboardSource.SpreadsheetML;
 using Newtonsoft.Json;
 using System.Data;
 using System.Drawing;
 using System.Net;
 using System.Text;
 using System.Web.Script.Serialization;
+using DevExpress.XtraPrinting.BarCode;
+using QRCoder;
+using System.Windows.Forms;
+using System;
+using System.IO;
 
 namespace Collection.Report
 {
@@ -14,21 +20,23 @@ namespace Collection.Report
 
         BarCode barcode = new BarCode();
 
+        //private readonly IQRCodeGenerator _iQRCodeGenerator;
         public string logoPath;
 
         //const string serviceMethod = "/api/v1/QrCoder/encode-string";
 
-        public XRepReceipt()
+        public XRepReceipt(/*IQRCodeGenerator iQRCodeGenerator*/)
         {
             InitializeComponent();
+            //_iQRCodeGenerator = iQRCodeGenerator;
 
             xrLabel49.BeforePrint += xrLabel49_BeforePrint;
 
-            //var BarcodeServiceUrl = System.Configuration.ConfigurationManager.AppSettings["BaseURL"];
         }
 
         private string PopulatebarCode(string stringraw)
         {
+
             string apiUrl = System.Configuration.ConfigurationManager.AppSettings["BaseURL"];
 
             //string apiUrl = "http://services.oyostatebir.com/AssessmentRepositoryService";
@@ -42,41 +50,52 @@ namespace Collection.Report
             client.Headers["Content-type"] = "application/json";
             client.Encoding = Encoding.UTF8;
 
-            var paymentRefNo =  stringraw; //"OYPDMS226QQ272";  //GTB|BRH|OGUNPYD|16-03-2021|489879
+            var paymentRefNo = stringraw; //"OYPDMS226QQ272";  //GTB|BRH|OGUNPYD|16-03-2021|489879
+
+            QRCodeGeneratorService qRCodeGeneratorService = new QRCodeGeneratorService();
+
             var encodedPaymentRefNo = AppWebExtension.Base64UrlEncode(paymentRefNo.TrimEnd().ToString());
-            var serviceBaseUrl = System.Configuration.ConfigurationManager.AppSettings["serviceBaseUrl"]; //"http://services.oyostatebir.com/AssessmentRepositoryService";
+
+            var serviceBaseUrl = System.Configuration.ConfigurationManager.AppSettings["serviceBaseUrl"];
             var serviceMethod = "/api/v1/PaymentCollections/int/generate-online-receipt?&P0dTUM4S=";
             var receiptPathToEncode = $"{serviceBaseUrl}{serviceMethod}{encodedPaymentRefNo}";
 
-            object inputs = new
-            {
-                rawString = receiptPathToEncode,// "P0dTUM4S=T1lQRE1TMjI2UVEyNzI",// stringraw.Trim(),
-            };
+            var qrCodeBase64 = qRCodeGeneratorService.GenerateQRCode(receiptPathToEncode);
 
-            inputJson = (new JavaScriptSerializer()).Serialize(inputs);
+            sources = qrCodeBase64.Data.Base64QrImage;
 
-            json = client.UploadString(apiUrl + "/api/v1/QrCoder/encode-string", inputJson);
-           
 
-            BarcodeResponse myDeserializedClass = JsonConvert.DeserializeObject<BarcodeResponse>(json);
-            sources = myDeserializedClass.data.qrImageUrl;
+            //"http://services.oyostatebir.com/AssessmentRepositoryService";
+            //object inputs = new
+            //{
+            //    rawString = receiptPathToEncode,// "P0dTUM4S=T1lQRE1TMjI2UVEyNzI",// stringraw.Trim(),
+            //};
+
+            //inputJson = (new JavaScriptSerializer()).Serialize(inputs);
+
+            //json = client.UploadString(apiUrl + "/api/v1/QrCoder/encode-string", inputJson);
+
+
+            //BarcodeResponse myDeserializedClass = JsonConvert.DeserializeObject<BarcodeResponse>(json);
+            //sources = myDeserializedClass.data.qrImageUrl;
 
 
             return sources;
 
         }
-        void xrLabel49_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+
+        void xrLabel49_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
         }
 
-        private void XRepReceipt_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void XRepReceipt_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             //SetTextWatermark((XRepReceipt)sender);
         }
 
 
-        private void Detail_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void Detail_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             var fullPath = System.IO.Path.Combine(System.Windows.Forms.Application.StartupPath, logoPath);
 
@@ -95,9 +114,23 @@ namespace Collection.Report
 
             // var bvcode = PopulatebarCode("GTB|BRH|OGUNPYD|16-03-2021|489879");
 
-            xrPictureBox3.ImageUrl = bvcode;
+            // Assuming qrCodeBase64 contains your base64-encoded image data
+            byte[] imageBytes = Convert.FromBase64String(bvcode);
+            Image image;
 
-            xrPictureBox4.ImageUrl = bvcode;
+            using (MemoryStream ms = new MemoryStream(imageBytes))
+            {
+                image = Image.FromStream(ms);
+
+
+            }
+
+            xrPictureBox3.Image = image; // Set the PictureBox image property
+
+            //xrPictureBox3.Image = image;
+
+            xrPictureBox4.Image = image;
+
 
 
             //var gh = BarCode.GenerateConfirmDocBarcode1(payval);
@@ -122,13 +155,13 @@ namespace Collection.Report
 
             string strrep = string.Format("REPRINTED");
 
-            //if (Program.isCentralData || Program.IsReprint)
-            //{
-            //    xrLabel54.Visible = true;
-            //    xrLabel55.Visible = true;
-            //    xrLabel55.Text = strrep;
-            //    xrLabel54.Text = strrep;
-            //}
+            if (Program.isCentralData || Program.IsReprint)
+            {
+                xrLabel54.Visible = true;
+                xrLabel55.Visible = true;
+                xrLabel55.Text = strrep;
+                xrLabel54.Text = strrep;
+            }
 
 
         }

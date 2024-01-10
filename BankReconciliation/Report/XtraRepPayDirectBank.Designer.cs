@@ -160,7 +160,7 @@
             // 
             // xrLabel13
             // 
-            this.xrLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 12F);
             this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(159.6251F, 1.708317F);
             this.xrLabel13.Name = "xrLabel13";
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -172,7 +172,7 @@
             // 
             // xrLabel12
             // 
-            this.xrLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 9.75F);
             this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(235.5833F, 110.6666F);
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -225,7 +225,7 @@
             // 
             // xrLabel10
             // 
-            this.xrLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(0F, 81.41664F);
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -238,7 +238,7 @@
             // 
             this.xrLabel1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "ViewPayDirectBank.BankName")});
-            this.xrLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 9.75F);
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(181.5001F, 24.7083F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -322,7 +322,7 @@
             this.DataAdapter = this.viewPayDirectBankTableAdapter;
             this.DataMember = "ViewPayDirectBank";
             this.DataSource = this.dsTransaction1;
-            this.Margins = new System.Drawing.Printing.Margins(100, 100, 42, 46);
+            this.Margins = new DevExpress.Drawing.DXMargins(100, 100, 42, 46);
             this.Version = "13.2";
             ((System.ComponentModel.ISupportInitialize)(this.dsTransaction1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

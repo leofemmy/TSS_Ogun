@@ -11,7 +11,7 @@
             //xrLabel19.BeforePrint += xrLabel19_BeforePrint;
         }
 
-        void xrLabel19_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        void xrLabel19_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             //dbBank = calBank.GetValue();
             //dbcheque = Convert.ToDouble(calCheque.GetType());

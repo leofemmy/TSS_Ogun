@@ -1577,6 +1577,11 @@ namespace Collection.Forms
 
         }
 
+        private void btnGet_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
         void ToolStripEvent()
         {
             tsbClose.Click += OnToolStripItemsClicked;

@@ -21,6 +21,10 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Bank Rec", "Bank Rec\Bank R
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CollctionsSetup", "CollctionsSetup\CollctionsSetup.vdproj", "{B5CD12C0-2994-4F52-9CD0-C1C0635117F0}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CollectionReceipt", "CollectionReceipt\CollectionReceipt.vdproj", "{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupCollections", "SetupCollections\SetupCollections.vdproj", "{D5B262D5-56B7-4F21-8D59-1C4633170301}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
@@ -325,6 +329,46 @@ Global
 		{B5CD12C0-2994-4F52-9CD0-C1C0635117F0}.SingleImage|Mixed Platforms.ActiveCfg = Release
 		{B5CD12C0-2994-4F52-9CD0-C1C0635117F0}.SingleImage|x64.ActiveCfg = Release
 		{B5CD12C0-2994-4F52-9CD0-C1C0635117F0}.SingleImage|x86.ActiveCfg = Release
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.CD_ROM|Any CPU.ActiveCfg = Debug
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.CD_ROM|Mixed Platforms.ActiveCfg = Debug
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.CD_ROM|x64.ActiveCfg = Debug
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.CD_ROM|x86.ActiveCfg = Debug
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.Debug|Any CPU.ActiveCfg = Debug
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.Debug|x64.ActiveCfg = Debug
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.Debug|x86.ActiveCfg = Debug
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.DVD-5|Any CPU.ActiveCfg = Debug
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.DVD-5|Mixed Platforms.ActiveCfg = Debug
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.DVD-5|x64.ActiveCfg = Debug
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.DVD-5|x86.ActiveCfg = Debug
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.Release|Any CPU.ActiveCfg = Release
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.Release|Mixed Platforms.ActiveCfg = Release
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.Release|x64.ActiveCfg = Release
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.Release|x86.ActiveCfg = Release
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.SingleImage|Any CPU.ActiveCfg = Debug
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.SingleImage|Mixed Platforms.ActiveCfg = Debug
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.SingleImage|x64.ActiveCfg = Debug
+		{64201DEC-3E19-4A7E-9980-0127EBAFD8CE}.SingleImage|x86.ActiveCfg = Debug
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.CD_ROM|Any CPU.ActiveCfg = Debug
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.CD_ROM|Mixed Platforms.ActiveCfg = Debug
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.CD_ROM|x64.ActiveCfg = Debug
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.CD_ROM|x86.ActiveCfg = Debug
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.Debug|Any CPU.ActiveCfg = Debug
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.Debug|Mixed Platforms.ActiveCfg = Debug
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.Debug|x64.ActiveCfg = Debug
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.Debug|x86.ActiveCfg = Debug
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.DVD-5|Any CPU.ActiveCfg = Debug
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.DVD-5|Mixed Platforms.ActiveCfg = Debug
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.DVD-5|x64.ActiveCfg = Debug
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.DVD-5|x86.ActiveCfg = Debug
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.Release|Any CPU.ActiveCfg = Release
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.Release|Mixed Platforms.ActiveCfg = Release
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.Release|x64.ActiveCfg = Release
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.Release|x86.ActiveCfg = Release
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.SingleImage|Any CPU.ActiveCfg = Debug
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.SingleImage|Mixed Platforms.ActiveCfg = Debug
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.SingleImage|x64.ActiveCfg = Debug
+		{D5B262D5-56B7-4F21-8D59-1C4633170301}.SingleImage|x86.ActiveCfg = Debug
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

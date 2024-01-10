@@ -3,7 +3,7 @@ using DevExpress.XtraBars.Alerter;
 using DevExpress.XtraNavBar;
 using System;
 using System.Windows.Forms;
-using TaxSmartSuite.AutoUpdate;
+//using TaxSmartSuite.AutoUpdate;
 
 
 namespace BankReconciliation.Forms
@@ -619,22 +619,22 @@ namespace BankReconciliation.Forms
 
         private void AutoCheckUpdate()
         {
-            AppAutoUpdate.GetUpdate(GetUpdateUrl).ContinueWith(task =>
-            {
-                var updateReturnMsg = task.Result;
-                if (updateReturnMsg.Status)
-                {
-                    BeginInvoke(new MethodInvoker(delegate ()
-                    {
-                        var msg = string.Format("<b>{0}</b>\n<i>{1}</i>", updateReturnMsg.AppName,
-                            updateReturnMsg.Version);
-                        AlertInfo info = new AlertInfo("<size=14><b><u>Update Available</u></b></size>", msg);
-                        AlertControl alertControl = new AlertControl { AllowHtmlText = true, AllowHotTrack = true };
-                        alertControl.AlertClick += alertControl_AlertClick;
-                        alertControl.Show(this, info);
-                    }));
-                }
-            });
+            //AppAutoUpdate.GetUpdate(GetUpdateUrl).ContinueWith(task =>
+            //{
+            //    var updateReturnMsg = task.Result;
+            //    if (updateReturnMsg.Status)
+            //    {
+            //        BeginInvoke(new MethodInvoker(delegate ()
+            //        {
+            //            var msg = string.Format("<b>{0}</b>\n<i>{1}</i>", updateReturnMsg.AppName,
+            //                updateReturnMsg.Version);
+            //            AlertInfo info = new AlertInfo("<size=14><b><u>Update Available</u></b></size>", msg);
+            //            AlertControl alertControl = new AlertControl { AllowHtmlText = true, AllowHotTrack = true };
+            //            alertControl.AlertClick += alertControl_AlertClick;
+            //            alertControl.Show(this, info);
+            //        }));
+            //    }
+            //});
         }
 
         void alertControl_AlertClick(object sender, AlertClickEventArgs e)

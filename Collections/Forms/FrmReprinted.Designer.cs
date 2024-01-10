@@ -141,7 +141,7 @@
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HelpProviderHG.SetHelpKeyword(this.splitContainer1, "FrmReprinted.htm#splitContainer1");
             this.HelpProviderHG.SetHelpNavigator(this.splitContainer1, System.Windows.Forms.HelpNavigator.Topic);
-            this.splitContainer1.Location = new System.Drawing.Point(2, 20);
+            this.splitContainer1.Location = new System.Drawing.Point(2, 22);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -178,8 +178,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.label9);
             this.splitContainer1.Panel2.Controls.Add(this.btnPrint);
             this.HelpProviderHG.SetShowHelp(this.splitContainer1, true);
-            this.splitContainer1.Size = new System.Drawing.Size(669, 608);
-            this.splitContainer1.SplitterDistance = 500;
+            this.splitContainer1.Size = new System.Drawing.Size(669, 606);
+            this.splitContainer1.SplitterDistance = 498;
             this.splitContainer1.TabIndex = 0;
             // 
             // label10
@@ -316,6 +316,7 @@
             this.btnGet.TabIndex = 449;
             this.btnGet.UseVisualStyleBackColor = true;
             this.btnGet.Visible = false;
+            this.btnGet.Click += new System.EventHandler(this.btnGet_Click_1);
             // 
             // txtcontrol
             // 

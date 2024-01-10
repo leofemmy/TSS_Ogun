@@ -27,7 +27,7 @@ namespace BankReconciliation.Report
 
         }
 
-        void xrLabel10_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        void xrLabel10_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             xrLabel10.ForeColor = Color.Blue;
 

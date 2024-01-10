@@ -6,7 +6,7 @@
         {
             InitializeComponent();
         }
-        private void xrSubreport1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void xrSubreport1_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             //((XtraReport1)((XRSubreport)sender).ReportSource).parameter1.Value = Convert.ToInt32(GetCurrentColumnValue("PostingRequestID"));
             //[Posting Request ID] 

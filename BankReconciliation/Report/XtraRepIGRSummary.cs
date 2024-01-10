@@ -13,7 +13,7 @@ namespace BankReconciliation.Report
             InitializeComponent();
         }
 
-        private void xrSubreport1_BeforePrint_2(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void xrSubreport1_BeforePrint_2(object sender, System.ComponentModel.CancelEventArgs e)
         {
             using (SqlConnection connect = new SqlConnection(Logic.ConnectionString))
             {

@@ -7,7 +7,7 @@
             InitializeComponent();
         }
 
-        private void xrPivotGrid1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void xrPivotGrid1_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
         }

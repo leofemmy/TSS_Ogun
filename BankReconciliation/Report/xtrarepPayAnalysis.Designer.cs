@@ -162,15 +162,15 @@
             // 
             // xrPivotGrid1
             // 
-            this.xrPivotGrid1.Appearance.Cell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrPivotGrid1.Appearance.CustomTotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrPivotGrid1.Appearance.FieldHeader.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrPivotGrid1.Appearance.FieldValue.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrPivotGrid1.Appearance.FieldValueGrandTotal.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrPivotGrid1.Appearance.FieldValueTotal.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrPivotGrid1.Appearance.GrandTotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrPivotGrid1.Appearance.Lines.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.xrPivotGrid1.Appearance.TotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.xrPivotGrid1.Appearance.Cell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.xrPivotGrid1.Appearance.CustomTotalCell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.xrPivotGrid1.Appearance.FieldHeader.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.xrPivotGrid1.Appearance.FieldValue.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.xrPivotGrid1.Appearance.FieldValueGrandTotal.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.xrPivotGrid1.Appearance.FieldValueTotal.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.xrPivotGrid1.Appearance.GrandTotalCell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.xrPivotGrid1.Appearance.Lines.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.xrPivotGrid1.Appearance.TotalCell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
             this.xrPivotGrid1.DataAdapter = this.viewPayAnalysisTableAdapter1;
             this.xrPivotGrid1.DataMember = "ViewPayAnalysis";
             this.xrPivotGrid1.Fields.AddRange(new DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField[] {
@@ -185,13 +185,13 @@
             // 
             // fieldMONTH1
             // 
-            this.fieldMONTH1.Appearance.Cell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldMONTH1.Appearance.CustomTotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldMONTH1.Appearance.FieldHeader.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldMONTH1.Appearance.FieldValueGrandTotal.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldMONTH1.Appearance.FieldValueTotal.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldMONTH1.Appearance.GrandTotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldMONTH1.Appearance.TotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.fieldMONTH1.Appearance.Cell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldMONTH1.Appearance.CustomTotalCell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldMONTH1.Appearance.FieldHeader.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldMONTH1.Appearance.FieldValueGrandTotal.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldMONTH1.Appearance.FieldValueTotal.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldMONTH1.Appearance.GrandTotalCell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldMONTH1.Appearance.TotalCell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
             this.fieldMONTH1.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
             this.fieldMONTH1.AreaIndex = 0;
             this.fieldMONTH1.Caption = "MONTH";
@@ -200,13 +200,13 @@
             // 
             // fieldyear1
             // 
-            this.fieldyear1.Appearance.Cell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldyear1.Appearance.CustomTotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldyear1.Appearance.FieldHeader.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldyear1.Appearance.FieldValueGrandTotal.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldyear1.Appearance.FieldValueTotal.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldyear1.Appearance.GrandTotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldyear1.Appearance.TotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.fieldyear1.Appearance.Cell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldyear1.Appearance.CustomTotalCell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldyear1.Appearance.FieldHeader.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldyear1.Appearance.FieldValueGrandTotal.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldyear1.Appearance.FieldValueTotal.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldyear1.Appearance.GrandTotalCell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldyear1.Appearance.TotalCell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
             this.fieldyear1.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
             this.fieldyear1.AreaIndex = 1;
             this.fieldyear1.Caption = "year";
@@ -215,13 +215,13 @@
             // 
             // fieldPayer1
             // 
-            this.fieldPayer1.Appearance.Cell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldPayer1.Appearance.CustomTotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldPayer1.Appearance.FieldHeader.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldPayer1.Appearance.FieldValueGrandTotal.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldPayer1.Appearance.FieldValueTotal.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldPayer1.Appearance.GrandTotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldPayer1.Appearance.TotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.fieldPayer1.Appearance.Cell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldPayer1.Appearance.CustomTotalCell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldPayer1.Appearance.FieldHeader.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldPayer1.Appearance.FieldValueGrandTotal.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldPayer1.Appearance.FieldValueTotal.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldPayer1.Appearance.GrandTotalCell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldPayer1.Appearance.TotalCell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
             this.fieldPayer1.Area = DevExpress.XtraPivotGrid.PivotArea.RowArea;
             this.fieldPayer1.AreaIndex = 0;
             this.fieldPayer1.Caption = "Payer";
@@ -230,13 +230,13 @@
             // 
             // fieldMonthAmt1
             // 
-            this.fieldMonthAmt1.Appearance.Cell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldMonthAmt1.Appearance.CustomTotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldMonthAmt1.Appearance.FieldHeader.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldMonthAmt1.Appearance.FieldValueGrandTotal.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldMonthAmt1.Appearance.FieldValueTotal.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldMonthAmt1.Appearance.GrandTotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.fieldMonthAmt1.Appearance.TotalCell.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.fieldMonthAmt1.Appearance.Cell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldMonthAmt1.Appearance.CustomTotalCell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldMonthAmt1.Appearance.FieldHeader.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldMonthAmt1.Appearance.FieldValueGrandTotal.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldMonthAmt1.Appearance.FieldValueTotal.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldMonthAmt1.Appearance.GrandTotalCell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
+            this.fieldMonthAmt1.Appearance.TotalCell.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9.75F);
             this.fieldMonthAmt1.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
             this.fieldMonthAmt1.AreaIndex = 0;
             this.fieldMonthAmt1.Caption = "Month Amt";
@@ -266,7 +266,7 @@
             this.DataMember = "ViewPayAnalysis";
             this.DataSource = this.tblTransactionPostingRequestViewPostBankStatment1;
             this.Landscape = true;
-            this.Margins = new System.Drawing.Printing.Margins(100, 9, 100, 100);
+            this.Margins = new DevExpress.Drawing.DXMargins(100, 9, 100, 100);
             this.PageHeight = 850;
             this.PageWidth = 1100;
             this.Version = "13.2";

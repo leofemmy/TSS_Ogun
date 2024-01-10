@@ -16,7 +16,7 @@ namespace Collection.Report
             //paramDate.Value=string.Format("{0:dd/MM/yyyy}",DateTime.Today.AddDays(-1));
         }
 
-        private void XRepGlobalManifest_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void XRepGlobalManifest_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             var fullPath = System.IO.Path.Combine(System.Windows.Forms.Application.StartupPath, logoPath);
             if (!string.IsNullOrWhiteSpace(fullPath) && System.IO.File.Exists(fullPath))

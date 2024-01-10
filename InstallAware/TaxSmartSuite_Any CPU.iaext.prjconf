@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<iasettings>
+  <projectproperties>
+    <manufacturer>Femsy</manufacturer>
+    <productname>TaxSmartSuite</productname>
+    <productversion>1.0.0.0</productversion>
+    <productcode>{fd9d66ae-d43b-458c-aa49-3bbaea02fbcf}</productcode>
+    <upgradecode>{9239b462-a4c1-43f3-8b5e-4346c7810e30}</upgradecode>
+    <language>0</language>
+    <languagename>English</languagename>
+  </projectproperties>
+  <summary>
+    <title>TaxSmartSuite</title>
+    <subject>TaxSmartSuite</subject>
+    <author>Femsy</author>
+    <summarycomments>TaxSmartSuite</summarycomments>
+    <revisioncode>{b3c8d44b-40b9-4f34-99ff-4531fe58de15}</revisioncode>
+    <uacelevation>highestAvailable</uacelevation>
+  </summary>
+  <addremove>
+    <publishername>Femsy</publishername>
+    <contactname>Femsy</contactname>
+    <helplink>http://www.mywebsite.com</helplink>
+    <productupdatelink>http://www.mywebsite.com</productupdatelink>
+    <addremovecomments>All Rights Reserved</addremovecomments>
+    <iconfile />
+  </addremove>
+  <codegen>
+    <generateincludefiles>0</generateincludefiles>
+    <generatefeatures>1</generatefeatures>
+    <refreshscript>0</refreshscript>
+  </codegen>
+  <compilervariables>
+    <variables />
+  </compilervariables>
+  <build>
+    <buildtype>0</buildtype>
+    <buildasmsi>False</buildasmsi>
+    <cachesources>1</cachesources>
+  </build>
+  <targetfolders />
+  <files>
+    <filedetails filename="E:\Project\ICMA Project\Windows\TSS_Ogun\BankReconciliation\bin\Debug\BankReconciliation.exe" targetlocation="$TARGETDIR$" type="1" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="1" runprogram="0" installfilecommand="1" VsProjectOutputfile ="1" />
+    <filedetails filename="E:\Project\ICMA Project\Windows\TSS_Ogun\Collection\bin\Debug\Collection.exe" targetlocation="$TARGETDIR$" type="1" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="1" runprogram="0" installfilecommand="1" VsProjectOutputfile ="1" />
+    <filedetails filename="E:\Project\ICMA Project\Windows\TSS_Ogun\Collections\bin\Debug\Collections.exe" targetlocation="$TARGETDIR$" type="1" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="1" runprogram="0" installfilecommand="1" VsProjectOutputfile ="1" />
+    <filedetails filename="E:\Project\ICMA Project\Windows\TSS_Ogun\TaxSmartSuite\bin\Debug\TaxSmartSuite.exe" targetlocation="$TARGETDIR$" type="1" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="1" runprogram="0" installfilecommand="1" VsProjectOutputfile ="1" />
+    <filedetails filename="E:\Project\ICMA Project\Windows\TSS_Ogun\BankStatementExcel\bin\Debug\BankStatementExcel.exe" targetlocation="$TARGETDIR$" type="1" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="1" runprogram="0" installfilecommand="1" VsProjectOutputfile ="1" />
+    <filedetails filename="E:\Project\ICMA Project\Windows\TSS_Ogun\AnnualReturns\bin\Debug\AnnualReturns.exe" targetlocation="$TARGETDIR$" type="1" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="1" runprogram="0" installfilecommand="1" VsProjectOutputfile ="1" />
+    <filedetails filename="E:\Project\ICMA Project\Windows\TSS_Ogun\TaxSmartUtility\bin\Debug\TaxSmartUtility.exe" targetlocation="$TARGETDIR$" type="1" generatenativeimage="0" registerassembly="0" runinstallerclass="0" createshortcut="1" runprogram="0" installfilecommand="1" VsProjectOutputfile ="1" />
+  </files>
+  <dependencies />
+  <registry />
+  <dialogtheme>
+    <themename>Official</themename>
+  </dialogtheme>
+  <authenticode>
+    <sign>0</sign>
+    <mode>0</mode>
+    <certificatefile />
+    <keyfile />
+    <pfxfile />
+    <productinfourl />
+    <authpassword />
+    <timestampurl />
+    <evCertFile />
+    <evKeyContainerName />
+    <signall>0</signall>
+  </authenticode>
+  <compression>
+    <compressiontype>6</compressiontype>
+    <encrypt>0</encrypt>
+    <compressionpassword />
+  </compression>
+  <output>
+    <outputtype>0</outputtype>
+    <location />
+    <filename />
+    <calculatefilehash>0</calculatefilehash>
+    <refreshrevisioncode>1</refreshrevisioncode>
+  </output>
+</iasettings>
